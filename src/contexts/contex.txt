@@ -1,0 +1,5 @@
+Se puede crear los context que se nesecite
+Context
+=Fecha,Moneda,Usuario,Configuracion global de la pagina
+=Cunado se use informacion para toda la APP
+||
