@@ -1,4 +1,4 @@
-.Father{
+.FT{
 background-color: #4AADC2;
 display: flex;
 align-items: center;
@@ -6,10 +6,10 @@ justify-content: center;
 width: 100%;
 height: 100vh;
 }
-#Father{
+#FT{
     background: linear-gradient(rgb(0, 149, 255), pink);
 }
-.Child{
+.CD{
     background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(5px); 
     box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.726); 
@@ -24,12 +24,12 @@ height: 100vh;
     padding-bottom: 30px;
 }
 @media(max-width:800px){
-    .Child{
+    .CD{
         width: 40%;
         box-shadow: 0 0 1rem 0 rgba(3, 48, 246, 0.93); 
     }
 }
-.Child input{
+.CD input{
     width: 100%;
     height: 20px;
 }

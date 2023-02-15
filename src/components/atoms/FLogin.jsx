@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import LogoLogin from "../../assets/img/3dfingerprint.png";
+import LogoLogin from "../../assets/img/LogoColor.png";
 
 function FLogin() {
   const formDataL = useRef();
