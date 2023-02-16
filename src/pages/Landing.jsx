@@ -1,8 +1,10 @@
-
+import Footer from "../components/organism/Footer";
+import Header from "../components/organism/Header";
 function Landing() {
   return (
     <>
-      <H1>HOLAAAAAAAA</H1>
+    <Header></Header>
+    <Footer></Footer>
     </>
   );
 }

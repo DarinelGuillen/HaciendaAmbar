@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import FLogin from "../components/atoms/FLogin";
+import FLogin from "../components/organism/FLogin";
 import "../assets/style/style.css";
 function Home() {
   const formL = useRef();

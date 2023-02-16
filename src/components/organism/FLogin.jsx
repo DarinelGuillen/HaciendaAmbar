@@ -14,7 +14,7 @@ function FLogin() {
     e.preventDefault();
     const formData = new FormData(formDataL.current);
 
-    let URI = "http://34.225.239.102/api/iniciar"; //default post
+    let URI = "http://localhost/api/iniciar"; //default post
 
     let options = {
       method: "POST",
@@ -38,33 +38,29 @@ function FLogin() {
 
   return (
     <form ref={formDataL}>
-      <div className="LittleBoxy">
+      <div>
         <img className="LogosGeneric" src={LogoLogin} alt="" />
       </div>
-      <div className="LittleBoxy">
+      <div>
         <h1>Login</h1>
       </div>
-      <div className="LittleBoxy">
+      <div>
         <label htmlFor="username">Username</label>
       </div>
-      <div className="LittleBoxy">
+      <div>
         <input type="text" name="usuario" />
       </div>
-      <div className="LittleBoxy">
+      <div>
         <label htmlFor="password">Password</label>
       </div>
-      <div className="LittleBoxy">
+      <div>
         <input type="password" name="contrasenia" />
       </div>
 
-      <div className="LittleBoxy">
+      <div>
         <button onClick={handlerClick}>Iniciar Sesion </button>
-        <Link to="/Regist">
-          <button>Registrar Algo</button>
-        </Link>
-        <Link to="/Registration">No tienes cuenta?, registrate</Link>
-        <Link to="/RickAndMorty">
-          <button> RickAndMorty</button>
+        <Link to="/">
+          <button>Landing</button>
         </Link>
       </div>
     </form>
