@@ -8,13 +8,13 @@ import LogoLogin from "../../assets/img/LogoColor.png";
 
 function FLogin() {
   const formDataL = useRef();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const formL = useRef();
   const handlerClick = (e) => {
     e.preventDefault();
     const formData = new FormData(formDataL.current);
 
-    let URI = "http://localhost/api/iniciar"; //default post
+    let URI = "http://localhost:3000/users/"; //default post
 
     let options = {
       method: "POST",
@@ -28,11 +28,11 @@ function FLogin() {
     fetch(URI, options)
       .then((response) => response.json())
       .then((MSN) => {
-        
-        if (MSN.status) {
-          alert("YOU EXIST")
-          navigate("/Regist");
-        }
+        console.log(JSON.stringify(MSN));
+        // if (MSN.status) {
+        //   alert("YOU EXIST")
+        //   navigate("/Regist");
+        // }
       });
   };
 
