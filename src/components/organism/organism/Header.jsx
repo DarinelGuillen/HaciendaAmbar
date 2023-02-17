@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import Icon from "./atoms/Icon";
-import Label from "./atoms/Label";
-import logo from "../../assets/img/LogoColor.png"
-import "../../assets/style/Header.css"
+import Label from "../atoms/Label";
+import Icon from "../atoms/Icon"
+import logo from "../../../assets/img/LogoColor.png"
+import "../../../assets/style/Header.css"
 function Header() {  
     return (
       <>
@@ -26,6 +26,7 @@ function Header() {
         <Link to="/Login">
           Iniciar sesión
         </Link>
+        <br />
         <Link to="/General">
           General
         </Link>

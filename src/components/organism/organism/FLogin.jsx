@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import LogoLogin from "../../assets/img/LogoColor.png";
+import LogoLogin from "../../../assets/img/LogoColor.png"
+
 
 function FLogin() {
   const formDataL = useRef();
@@ -14,25 +14,34 @@ function FLogin() {
     e.preventDefault();
     const formData = new FormData(formDataL.current);
 
-    let URI = "http://localhost:3000/users/"; //default post
+    /* const userName = "darinelxxgx"; // replace with the desired user name
+    const url = `http://localhost:3000/users/darinelxxgx`;
+    
+    fetch(url)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error)); */
+    let URI = "http://52.70.194.247:3000/users/"; //default post
 
     let options = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: "GET",
       body: JSON.stringify({
-        usuario: formData.get("usuario"),
-        contrasenia: formData.get("contrasenia"),
+        nombreDeUsuario: formData.get("nombreDeUsuario"),
       }),
     };
 
-    fetch(URI, options)
+    fetch(URI)
       .then((response) => response.json())
       .then((MSN) => {
-        console.log(JSON.stringify(MSN));
-        // if (MSN.status) {
-        //   alert("YOU EXIST")
-        //   navigate("/Regist");
-        // }
+        console.log("MESSAGE",JSON.stringify(MSN));
+          for (let i = 0; i < MSN.length; i++) {
+            console.log("VUELTA", i);
+            if (MSN.nombreDenombre[i]==formData.get("nombreDeUsuario")) {
+              alert("YOU EXIST")
+              //navigate("/Regist");
+            }
+          }
+        
       });
   };
 
@@ -48,7 +57,7 @@ function FLogin() {
         <label htmlFor="username">Username</label>
       </div>
       <div>
-        <input type="text" name="usuario" />
+        <input type="text" name="nombreDeUsuario" />
       </div>
       <div>
         <label htmlFor="password">Password</label>
