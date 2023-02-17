@@ -1,7 +1,14 @@
 body{
-    background-color: gray;
-    margin: 0cm;
     padding: 0cm;
     font-family: 'Times New Roman', Times, serif;
     background-attachment: fixed;
+    margin: 0;
+
+}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color:  #FFFFFF;
 }
