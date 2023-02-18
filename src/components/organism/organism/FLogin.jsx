@@ -14,14 +14,20 @@ function FLogin() {
     e.preventDefault();
     const formData = new FormData(formDataL.current);
 
-    /* const userName = "darinelxxgx"; // replace with the desired user name
-    const url = `http://localhost:3000/users/darinelxxgx`;
-    
+    const userName = formData.get("nombreDeUsuario"); // replace with the desired user name
+    const url = `http://52.70.194.247:3000/users/${userName}`;
+    let password="123"
     fetch(url)
       .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error(error)); */
-    let URI = "http://52.70.194.247:3000/users/"; //default post
+      .then(data => {
+        console.log("DATA?\n", data);
+        console.log("admin?",data.correo);
+        password === formData.get("contrasenia") ? 
+          (data.admin ? console.log("Bienvenido, admin") : console.log("Bienvenido, usuario regular")) 
+          : alert("Contraseña incorrecta");
+      })
+      .catch(error => console.error("ERROR\n",error));
+    /* let URI = "http://52.70.194.247:3000/users/"; //default post
 
     let options = {
       method: "GET",
@@ -42,7 +48,7 @@ function FLogin() {
             }
           }
         
-      });
+      }); */
   };
 
   return (
