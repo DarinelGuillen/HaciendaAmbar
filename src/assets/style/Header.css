@@ -1,65 +1,37 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #ffffff;
+    padding: 2%;
+    color: #4B4B4C;
+}
+.iconoAmbar img{
+    height: 100%;
+    float: left;
+}
 .iconoAmbar{
-    display: flex;
-    width: 100%;
-    height: 76px;
-    left: 116px;
-    top: 14px;
-    background: url(logoColor.png);
+    width: 30vw;
+    padding: 0%;
+    justify-content:left;
 }
-.NavBarInicioSesion{
-    display: flex;
-    width: 100%;
-    height: 17px;
-    left: 517px;
-    top: 49px;
-    font-family: 'Quattrocento';
+.pruebita{
+    display:flex;
+    justify-content:space-evenly;
+    width: 70vw;
+    align-items: center;
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 1em;
     line-height: 17px;
     text-align: center;
     color: #4B4B4C;
 }
-.NavBarTipoReserva{
-   display: flex;
-    width: 100%;
-    height: 17px;
-    font-family: 'Quattrocento';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 17px;
-    text-align: center;
-    color: #4B4B4C;
-}
-.NavBarCorrexto{
-    display: flex;
-    width: 100%;
-    height: 17px;
-    left: 963px;
-    top: 49px;
-    font-family: 'Quattrocento';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 17px;
-    text-align: center;
-    color: #4B4B4C;
-}
-.NavBarAcercaNosotros{
-    display: flex;
-    width: 100%;
-    height: 17px;
-    left: 1195px;
-    top: 49px;
-    font-family: 'Quattrocento';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 17px;
-    text-align: center;
-    color: #4B4B4C;
-}
+
+
+
+
+
 .links{
-    margin-top: 100px;
+    padding-top: 50px;
 }
