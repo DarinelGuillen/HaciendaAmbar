@@ -1,6 +1,6 @@
-function Inputs() {
+function Inputs({inputcito}) {
     return ( 
-        <input></input>
+        <input>{inputcito}</input>
      );
 }
 

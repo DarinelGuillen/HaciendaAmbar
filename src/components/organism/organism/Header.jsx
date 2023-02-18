@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Label from "../atoms/Label";
 import Icon from "../atoms/Icon"
-import logo from "../../../assets/img/LogoColor.png"
+import logoColor from "../../../assets/img/logoColor.png"
 import "../../../assets/style/Header.css"
 function Header() {  
     return (
       <>
-       <div>
-          <Icon icon={logo}></Icon>
+       <div className="iconoAmbar">
+          <Icon icon={logoColor}></Icon>
        </div>
        <div className="NavBarInicioSesion">
           <Label label={"Iniciar sesión"}></Label>

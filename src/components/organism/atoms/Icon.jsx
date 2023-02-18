@@ -1,4 +1,4 @@
-function Icon(icon) {
+function Icon({icon}) {
     return ( 
         <img src={icon}></img>
      );
