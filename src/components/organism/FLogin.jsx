@@ -1,8 +1,11 @@
 import { useRef } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import {useState, useContext} from 'react'
+
 import { Link } from "react-router-dom";
+import UserContext from "../../contexts/UserContext";
+import AdminContext from "../../contexts/AdminContext"
 import LogoLogin from "../../assets/img/LogoColor.png"
 
 
@@ -10,8 +13,14 @@ function FLogin() {
   const formDataL = useRef();
   const navigate = useNavigate();
   const formL = useRef();
+  const {isLoged, setIsLoged} = useContext(UserContext)
+  const {isAdmin, setIsAdmin} = useContext(AdminContext)
   const handlerClick = (e) => {
+    let array= new Array
     e.preventDefault();
+    console.log("TUE FLAS==",isAdmin,"=",isLoged);
+
+    
     const formData = new FormData(formDataL.current);
 
     const userName = formData.get("nombreDeUsuario"); // replace with the desired user name
@@ -20,13 +29,21 @@ function FLogin() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
+        array=data
         console.log("DATA?\n", data);
-        console.log("admin?",data.correo);
-        password === formData.get("contrasenia") ? 
-          (data.admin ? console.log("Bienvenido, admin") : console.log("Bienvenido, usuario regular")) 
+        console.log("admin?=",data[0].admin);
+        data[0].nombreDeUsuario === formData.get("contrasenia") ? 
+      setIsLoged(true)
           : alert("Contraseña incorrecta");
+          
       })
       .catch(error => console.error("ERROR\n",error));
+      setTimeout(() => {
+        console.log("==", isAdmin, "=", isLoged);
+      }, 2000);
+      setIsAdmin(array[0].admin)
+      //(isAdmin)?Navigate("/Admin"):Navigate("/CommonUser")
+      
     /* let URI = "http://52.70.194.247:3000/users/"; //default post
 
     let options = {

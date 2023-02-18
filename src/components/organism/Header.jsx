@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Label from "../atoms/Label";
-import "../../assets/img/logoColor.png"
+import "../../assets/img/LogoColor.png"
 import "../../assets/style/Header.css"
 function Header() {  
     return (
