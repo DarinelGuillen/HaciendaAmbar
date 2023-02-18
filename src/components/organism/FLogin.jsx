@@ -24,14 +24,14 @@ function FLogin() {
     const formData = new FormData(formDataL.current);
 
     const userName = formData.get("nombreDeUsuario"); // replace with the desired user name
-    const url = `http://52.70.194.247:3000/users/${userName}`;
+    const contrasenia = formData.get("contrasenia"); // replace with the desired user name
+    const url = `http://52.70.194.247:3000/users/${userName}`;///${contrasenia}
     let password="123"
     fetch(url)
       .then(response => response.json())
       .then(data => {
         array=data
         console.log("DATA?\n", data);
-        console.log("admin?=",data[0].admin);
         data[0].nombreDeUsuario === formData.get("contrasenia") ? 
       setIsLoged(true)
           : alert("Contraseña incorrecta");
@@ -41,7 +41,7 @@ function FLogin() {
       setTimeout(() => {
         console.log("==", isAdmin, "=", isLoged);
       }, 2000);
-      setIsAdmin(array[0].admin)
+      setIsAdmin(true)
       //(isAdmin)?Navigate("/Admin"):Navigate("/CommonUser")
       
     /* let URI = "http://52.70.194.247:3000/users/"; //default post
