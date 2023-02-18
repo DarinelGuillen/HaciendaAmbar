@@ -1,6 +1,6 @@
 
-import Footer from "../components/organism/organism/Footer";
-import Header from "../components/organism/organism/Header";
+import Footer from "../components/organism/Footer";
+import Header from "../components/organism/Header";
 function Landing() {
   return (
     <>

@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-
-import iconoFooter from "../../../assets/img/iconoBlancoNegro.png"
-import iconoRedes from "../../../assets/img/iconoRedes.png"
-import Icon from "../atoms/Icon";
-import Label from "../atoms/Label";
-import "../../../assets/style/Footer.css"
+import iconoFooter from "../../assets/img/iconoBlancoNegro.png"
+import iconoRedes from "../../assets/img/iconoRedes.png"
+import Icon from "../atoms/Icon"
+import Label from "../atoms/Label"
+import "../../assets/style/Footer.css"
 
 function Footer() {
   return (

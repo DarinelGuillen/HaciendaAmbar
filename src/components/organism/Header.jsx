@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Label from "../atoms/Label";
-import Icon from "../atoms/Icon"
-import "../../../assets/img/logoColor.png"
-import "../../../assets/style/Header.css"
+import "../../assets/img/logoColor.png"
+import "../../assets/style/Header.css"
 function Header() {  
     return (
       <>
