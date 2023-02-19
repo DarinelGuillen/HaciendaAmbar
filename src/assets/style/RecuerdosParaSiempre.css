@@ -1,0 +1,26 @@
+.cardFondo{
+    width: 100%;
+    height: 800px;
+    background: rgba(116, 57, 58, 0.8);
+}
+.tituloRecuerdosParaSiempre{
+    
+    width: 100%;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: end;  
+    color: #FFFFFF;
+}
+.tablaNoOrdenada{
+    align-content: flex-end;
+    width: 40%;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 37px;
+    color: #FFFFFF;    
+}
