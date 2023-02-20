@@ -1,4 +1,4 @@
-function RecuadroPaquete({ _id, nombrePaquete, precio, img, descipcion }) {
+function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
   return (
     <>
       <div classNameName="">
@@ -10,7 +10,7 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descipcion }) {
           <br></br>
           <span>PRECIO={precio}</span>
           <br></br>
-          <span>DESCRIPTION= {descipcion}</span>
+          <span>DESCRIPTION= {descripcion}</span>
           <br></br>
         </div>
       </div>

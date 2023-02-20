@@ -10,11 +10,11 @@ function ListPaquetes() {
 
   useEffect(() => {
     if (isLoged) {
-      fetch("http://haciendaambar.iothings.com.mx:3000/paquetes")
+      fetch("http://localhost:3000/paquetes")
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-        //   console.log("data id on useEffect", data[0]._id);
+          //   console.log("data id on useEffect", data[0]._id);
           setPaquete(data);
         });
     }
@@ -24,7 +24,7 @@ function ListPaquetes() {
     <>
       <div>
         <h2>Lista de Paquetes </h2>
-        <button>Mostrar Paquetes</button>
+
         <div className="">
           {isLoged &&
             paquetes.map((paquete) => {
@@ -36,7 +36,7 @@ function ListPaquetes() {
                   nombrePaquete={paquete.nombrePaquete}
                   precio={paquete.precio}
                   img={paquete.img}
-                  descipcion={paquete.descripcion}
+                  descripcion={paquete.descripcion}
                 />
               );
             })}

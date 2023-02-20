@@ -14,14 +14,14 @@ function FLogin() {
   const formL = useRef();
   const { isLoged, setIsLoged } = useContext(UserContext);
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
-  const [ Label, setLabel ] = useState("");
+  const [Label, setLabel] = useState("");
   const handlerClick = (e) => {
     e.preventDefault();
 
     const formData = new FormData(formDataL.current);
     const userName = formData.get("nombreDeUsuario");
     const contrasenia = formData.get("contrasenia");
-    const url = `http://haciendaambar.iothings.com.mx:3000/users/${userName}/${contrasenia}`;
+    const url = `http://localhost:3000/users/${userName}/${contrasenia}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -67,7 +67,6 @@ function FLogin() {
         <Link to="/">
           <button>Landing</button>
         </Link>
-        
       </div>
       <label>{Label}</label>
     </form>
