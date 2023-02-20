@@ -6,6 +6,8 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descipcion }) {
         <div>
           <span>NOMBRE= {nombrePaquete}</span>
           <br></br>
+          <span>NOMBRE= {_id}</span>
+          <br></br>
           <span>PRECIO={precio}</span>
           <br></br>
           <span>DESCRIPTION= {descipcion}</span>
