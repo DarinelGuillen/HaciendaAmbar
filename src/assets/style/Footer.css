@@ -1,75 +1,23 @@
+.Footer{
+    display: flex;
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #5e5e5e;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 .iconoFooter{
-    display: flex;
-    width: 100%;
-    height: 73px;
-    left: 149px;
-    background: url(iconoBlancoNegro.png);
-}
-.formaFooter{
-    display: flex;
-    width: 100%;
-    height: 230px;
-    left: 0px;
-    align-items:center;
-    background: #5E5E5E;
-}
-.iconRedes{
-    display: flex;
-    width: 100%;
-    height: 50px;
-}
-.iconFooter{
-    display: flex;
-    width: 100%;
-    height: 73px;
-}
-.labelFooterSlogan{
-    display: flex;
-    width: 100%;
-    height: 41.53px;
-    left: 32px;
-    font-family: 'Quattrocento';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 17px;
     text-align: center;
-    color: #FFFFFF;
 }
-.labelFooter3{
-    display: flex;
-    width: 100%;
-    height: 15px;
-    left: 1082px;
-    font-family: 'Quattrocento';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 11px;
+
+.redesFooter{
+    padding-top: 2%;
     text-align: center;
-    color: #FFFDFD;
-}
-.labelFooterConjunto1{
-    display: flex;
-    width: 100%;
-    height: 118px;
-    left: 497px;
-    font-family: 'Quattrocento';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 17px;
-    color: #FFFDFD;
-}
-.labelFooterConjunto2{
-    display: flex;
-    width: 100%;
-    height: 118px;
-    left: 731px;
-    font-family: 'Quattrocento';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 17px;
-    color: #FFFFFF;
 }
