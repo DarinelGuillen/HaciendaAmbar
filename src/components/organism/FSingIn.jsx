@@ -9,7 +9,7 @@ function FSingIn() {
     e.preventDefault();
     console.log("handlerClick called");
     const formData = new FormData(formSingIn.current);
-    const URI = "http://localhost:3000/users";
+    const URI = "http://haciendaambar.iothings.com.mx:3000/users";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -31,7 +31,7 @@ function FSingIn() {
       })
       .then((data) => {
         console.log("Data:", data);
-       // alert(JSON.stringify(data));
+        // alert(JSON.stringify(data));
       })
       .catch((error) => {
         console.log("Error:", error);
@@ -78,7 +78,7 @@ function FSingIn() {
           <input type="email" name="correo" required />
         </div>
         <div>
-        <label htmlFor="password">Contraseña</label>
+          <label htmlFor="password">Contraseña</label>
         </div>
         <div>
           <input type="password" name="password" required />

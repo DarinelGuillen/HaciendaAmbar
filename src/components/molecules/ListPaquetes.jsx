@@ -10,7 +10,7 @@ function ListPaquetes() {
 
   useEffect(() => {
     if (isLoged) {
-      fetch("http://localhost:3000/paquetes")
+      fetch("http://haciendaambar.iothings.com.mx:3000/paquetes")
         .then((response) => response.json())
         .then((data) => {
           console.log(data);

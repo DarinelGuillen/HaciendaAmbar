@@ -1,4 +1,9 @@
 function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
+  
+  const handlerClickPaquete=(e)=>{
+    e.preventDefault();
+    
+  }
   return (
     <>
       <div classNameName="">
@@ -12,6 +17,9 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
           <br></br>
           <span>DESCRIPTION= {descripcion}</span>
           <br></br>
+          
+          <button onClick={handlerClickPaquete}>{_id}</button>
+
         </div>
       </div>
     </>

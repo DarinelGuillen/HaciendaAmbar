@@ -21,7 +21,7 @@ function FLogin() {
     const formData = new FormData(formDataL.current);
     const userName = formData.get("nombreDeUsuario");
     const contrasenia = formData.get("contrasenia");
-    const url = `http://localhost:3000/users/${userName}/${contrasenia}`;
+    const url = `http://haciendaambar.iothings.com.mx:3000/users/${userName}/${contrasenia}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -37,7 +37,7 @@ function FLogin() {
         }
       })
       .catch(() => {
-        setLabel("Error en la conexión con el servidor");
+        setLabel("Algo inesperado a pasado de nuestro lado");
       });
   };
 
@@ -66,6 +66,12 @@ function FLogin() {
         <button onClick={handlerClick}>Iniciar Sesion </button>
         <Link to="/">
           <button>Landing</button>
+        </Link>
+        <Link to="/">
+          <label>Olvide mi contraseña</label>
+        </Link>
+        <Link to="/">
+          <label>Registrarte</label>
         </Link>
       </div>
       <label>{Label}</label>
