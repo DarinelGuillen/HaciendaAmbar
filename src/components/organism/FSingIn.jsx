@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import LogoLogin from "../../assets/img/LogoColor.png";
-
+import "../../assets/style/FSingln.css"
+import Label from "../atoms/Label"
 function FSingIn() {
   const formSingIn = useRef();
 
@@ -42,49 +43,54 @@ function FSingIn() {
     <>
       <form ref={formSingIn}>
         <div>
-          <img className="LogosGeneric" src={LogoLogin} alt="" />
-        </div>
-        <div>
-          <h1>Registrate ahora</h1>
-        </div>
-        <div>
-          <label htmlFor="nombreDeUsuario">Nombre de usuario</label>
-        </div>
-        <div>
-          <input type="text" name="nombreDeUsuario" required />
-        </div>
-        <div>
-          <label htmlFor="nombreCompleto">Nombre completo</label>
-        </div>
-        <div>
-          <input type="text" name="nombreCompleto" />
-        </div>
-        <div>
-          <label htmlFor="numTel">Número de teléfono</label>
-        </div>
-        <div>
-          <input type="text" name="numTel" />
-        </div>
-        <div>
-          <label htmlFor="edad">Edad</label>
-        </div>
-        <div>
-          <input type="text" name="edad" required />
-        </div>
-        <div>
-          <label htmlFor="correo">Correo electrónico</label>
-        </div>
-        <div>
-          <input type="email" name="correo" required />
-        </div>
-        <div>
-        <label htmlFor="password">Contraseña</label>
-        </div>
-        <div>
-          <input type="password" name="password" required />
-        </div>
-        <div>
-          <button onClick={handlerClick}>Registrate</button>
+            <div className="formRegister">
+              <div className="registrarteAhora">
+                <Label label={"Regístrate ahora"}></Label>
+              </div>
+              <label htmlFor="nombreDeUsuario" className="labelNombreUsuario">Nombre de usuario</label>
+            </div>
+            <div>
+              <input type="text" name="nombreDeUsuario" className="inputNombreUsario" required />
+            </div>
+            <div>
+              <label htmlFor="nombreCompleto" className="labelNombreCompleto">Nombre completo</label>
+            </div>
+            <div>
+              <input type="text" name="nombreCompleto" className="inputNombreCompleto" />
+            </div>
+            <div>
+              <label htmlFor="numTel" className="labelNumeroTel">Número de teléfono</label>
+            </div>
+            <div>
+              <input type="text" name="numTel" className="inputNumeroTel"/>
+            </div>
+            <div>
+              <label htmlFor="edad" className="labelEdad">Edad</label>
+            </div>
+            <div>
+              <input type="text" name="edad"  className="inputEdad" required />
+            </div>
+            <div>
+              <label htmlFor="correo" className="labelCorreo">Correo electrónico</label>
+            </div>
+            <div>
+              <input type="email" name="correo" className="inputCorreo" required />
+            </div>
+            <div>
+            <label htmlFor="password" className="labelPassword">Contraseña</label>
+            </div>
+            <div>
+              <input type="password" name="password" className="inputPassword" required />
+            </div>
+            <div>
+              <button onClick={handlerClick} className="botonRegister">Registrate</button>
+              <div className="iniciarSesionLink">
+                <Label label={"Iniciar sesión"}></Label>
+              </div>
+              <div className="regresarLink">
+                <Label label={"Regresar"}></Label>
+              </div>
+            </div>
         </div>
       </form>
     </>
