@@ -10,6 +10,7 @@ import General from "../pages/General";
 import Admin from "../pages/Admin";
 import CommonUser from "../pages/CommonUser";
 import SingIn from "../pages/SingIn";
+import RentPackage from "../pages/RentPackage";
 function App() {
   const [isLoged, setIsLoged] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -24,6 +25,7 @@ function App() {
             <Route element={<ProtectedParentRoute isLoged={isLoged} />}>
               <Route path="/General" element={<General />} />
               <Route path="/CommonUser" element={<CommonUser />} />
+              <Route path="/RentPackage" element={<RentPackage />} />
             </Route>
             <Route element={<ProtectedParentRouteAdmin isLoged={isAdmin} />}>
               <Route path="/Admin" element={<Admin />} />

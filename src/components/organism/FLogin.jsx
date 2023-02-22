@@ -26,6 +26,7 @@ function FLogin() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         if (data.datos && data.datos.length === 3) {
           const [id, admin, nombreDeUsuario] = data.datos;
           setIsAdmin(admin);
