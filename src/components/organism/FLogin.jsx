@@ -6,7 +6,8 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../contexts/UserContext";
 import AdminContext from "../../contexts/AdminContext";
-import LogoLogin from "../../assets/img/LogoColor.png";
+import imgLogin from "../../assets/img/imagenLogin.png";
+import "../../assets/style/FLogin.css"
 
 function FLogin() {
   const formDataL = useRef();
@@ -43,40 +44,31 @@ function FLogin() {
   };
 
   return (
+<>
+  <div>
+    <img className="LogosGeneric" src={imgLogin} alt="" />
+  </div>
     <form ref={formDataL}>
-      <div>
-        <img className="LogosGeneric" src={LogoLogin} alt="" />
-      </div>
-      <div>
-        <h1>Login</h1>
-      </div>
-      <div>
-        <label htmlFor="username">Username</label>
-      </div>
-      <div>
-        <input type="text" name="nombreDeUsuario" />
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-      </div>
-      <div>
-        <input type="password" name="contrasenia" />
-      </div>
-
-      <div>
-        <button onClick={handlerClick}>Iniciar Sesion </button>
-        <Link to="/">
-          <button>Landing</button>
-        </Link>
-        <Link to="/">
-          <label>Olvide mi contraseña</label>
-        </Link>
-        <Link to="/">
-          <label>Registrarte</label>
-        </Link>
-      </div>
-      <label>{Label}</label>
-    </form>
+          <div className="ordenamiento">
+            <label className="labelTitulo">Inicio de sesión</label> 
+            <label  htmlFor="username">Username</label>
+            <input type="text" name="nombreDeUsuario" />
+            <label htmlFor="password">Password</label>
+            <input type="password" name="contrasenia" />
+            <button onClick={handlerClick}>Iniciar Sesion </button>
+          <Link to="/">
+            <label>Landing</label>
+          </Link>
+          <Link to="/">
+            <label>Olvide mi contraseña</label>
+          </Link>
+          <Link to="/">
+            <label>Registrarte</label>
+          </Link>
+        <label>{Label}</label>
+     </div>
+  </form>
+</>
   );
 }
 export default FLogin;

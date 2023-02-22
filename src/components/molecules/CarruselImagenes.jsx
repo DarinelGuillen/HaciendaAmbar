@@ -1,6 +1,5 @@
 import Imagen from "../atoms/Imagen";
 import imgCarrusel from "../../assets/img/imgCarrusel1.png";
-import {LogicaCarrusel} from "../../assets/Js/LogicaCarrusel.js"
 import "../../assets/style/Imagenes.css";
 import "../../assets/style/ListPaquetes.css"
 
@@ -8,7 +7,7 @@ import "../../assets/style/ListPaquetes.css"
 function CarruselImagenes() {
   return (
     <>
-    <button onClick={LogicaCarrusel}>holaaa</button>
+    <button >holaaa</button>
 <div className="contenedor" >
       <div className="imagen actual">
         <img src="http://www.reciclay.com.ve/gio/lake-tahoe.jpg" />
@@ -30,19 +29,19 @@ function CarruselImagenes() {
         <div className="texto">Parque Nacional Yosemite</div>
       </div>
       
-      <a href="#" className="anterior" onclick="anterior();">&#10094;</a>
-      <a href="#" className="siguiente" onclick="siguiente();">&#10095;</a>
+      <a href="#" className="anterior" onclick="anterior()">&#10094;</a>
+      <a href="#" className="siguiente" onclick="siguiente()">&#10095;</a>
       
       <div className="puntos">
-        <span className="punto activo" onclick="mostrar(0);"></span>
-        <span className="punto" onclick="mostrar(1);"></span>
-        <span className="punto" onclick="mostrar(2);"></span>
-        <span className="punto" onclick="mostrar(3);"></span>
+        <span className="punto activo" onclick="mostrar(0)"></span>
+        <span className="punto" onclick="mostrar(1)"></span>
+        <span className="punto" onclick="mostrar(2)"></span>
+        <span className="punto" onclick="mostrar(3)"></span>
       </div>
       
       <div className="boton">
         <a href="#">
-          <img src="http://www.reciclay.com.ve/gio/pause.png" id="btn" onclick="playpause();" />
+          <img src="http://www.reciclay.com.ve/gio/pause.png" id="btn" onclick="playpause()" />
         </a>
       </div>
     </div>

@@ -42,7 +42,10 @@ function FSingIn() {
   return (
     <>
       <form ref={formSingIn}>
-        <div>
+        <div className="divPadre">
+        <div className="imgRegister">
+          <img src="src/assets/img/imagenRegister.png"></img>
+        </div>
             <div className="formRegister">
               <div className="registrarteAhora">
                 <Label label={"Regístrate ahora"}></Label>
