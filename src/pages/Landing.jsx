@@ -11,7 +11,6 @@ function Landing() {
     <Main/>
     <CarruselImagenes></CarruselImagenes>
     <RecuerdosParaSiempre></RecuerdosParaSiempre>
-    <CarruselImagenes></CarruselImagenes>
     <Footer></Footer>
 </>
   );
