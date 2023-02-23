@@ -9,23 +9,23 @@ function FRentPackage() {
     console.log("handleClickTerminateRent called");
     const formData = new FormData(formSignIn.current);
     
-    // const URI = "http://haciendaambar.iothings.com.mx:3000/users";
-    // const options = {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({
-    //     idRenta: "",
-    //     idPaquete: "",
-    //     idUser: "",
-    //     fechaInicio: formData.get("fechaInicio"),
-    //     fechaFinalizacion: formData.get("fechaFinalizacion"),
-    //     fechaDeReserva: "Current date",
-    //     precioTotal: "",
-    //     estadoRenta: false,
-    //     observaciones: formData.get("observaciones"),
-    //     SeEjecutoConExitoLarenta: false,
-    //   }),
-    // };
+    const URI = "http://haciendaambar.iothings.com.mx:3000/rentasUsuario";
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+       
+        idPaquete: "",
+        idUser: "",
+        fechaInicio: formData.get("fechaInicio"),
+        fechaFinalizacion: formData.get("fechaFinalizacion"),
+        fechaDeReserva: "Current date",
+        precioTotal: "",
+        estadoRenta: false,
+        observaciones: formData.get("observaciones"),
+        SeEjecutoConExitoLarenta: false,
+      }),
+    };
 
     // fetch(URI, options)
     //   .then((response) => {
