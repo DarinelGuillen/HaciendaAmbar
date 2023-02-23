@@ -1,4 +1,6 @@
 import { useNavigate, Navigate } from "react-router-dom";
+import TextoCard from "./textoCard";
+
 function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
   const navigate = useNavigate();
   const handlerClickPaquete = (e, _id) => {
@@ -28,22 +30,19 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
   };
 
   return (
-    <>
-      <div className="">
-        <img src={img} alt={_id} />
-        <div>
-          <span>NOMBRE= {nombrePaquete}</span>
-          <br></br>
-          <span>NOMBRE= {_id}</span>
-          <br></br>
-          <span>PRECIO={precio}</span>
-          <br></br>
-          <span>DESCRIPTION= {descripcion}</span>
-          <br></br>
-          <button onClick={(e) => handlerClickPaquete(e, _id)}>Rentarlo</button>
-        </div>
+    
+      <div className="cardCompleta">
+          <TextoCard span={nombrePaquete}></TextoCard>
+        
+            <span>otracosa= </span>
+            <span>NOMBRE= {_id}</span>
+            <span>PRECIO={precio}</span>
+            <span>DESCRIPTION= {descripcion}</span>
+            <button onClick={(e) => handlerClickPaquete(e, _id)}>
+              Rentarlo
+            </button>
       </div>
-    </>
+  
   );
 }
 

@@ -16,6 +16,9 @@ function App() {
   const [isLoged, setIsLoged] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   return (
+    // <PaqueteContext.Provider value={{ isPaquete, setIsPaquete }}>
+    //         </PaqueteContext.Provider>
+
     <BrowserRouter>
       <UserContext.Provider value={{ isLoged, setIsLoged }}>
         <AdminContext.Provider value={{ isAdmin, setIsAdmin }}>
@@ -25,13 +28,11 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/SingIn" element={<SingIn />} />
-            <PaqueteContext.Provider value={{ isPaquete, setIsPaquete }}>
               <Route element={<ProtectedParentRoute isLoged={isLoged} />}>
                 <Route path="/General" element={<General />} />
                 <Route path="/CommonUser" element={<CommonUser />} />
                 <Route path="/RentPackage" element={<RentPackage />} />
               </Route>
-            </PaqueteContext.Provider>
             <Route element={<ProtectedParentRouteAdmin isLoged={isAdmin} />}>
               <Route path="/Admin" element={<Admin />} />
             </Route>

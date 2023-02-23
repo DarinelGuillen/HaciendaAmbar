@@ -1,29 +1,19 @@
 .LogosGeneric{
-    position: absolute;
-    width: 594px;
-    height: 1000px;
-    left: 846px;  
-}
-.formulario{
-    width: 100%;
-    height: 676px;
-    display: flex;
-    flex-direction: column;
-    background: rgba(75, 75, 76, 0.06);
-    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    width: 50vw;
+    height: auto;
+    float: right;
+    max-width: 600px;
 }
 .ordenamiento{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
-    height: 676px;
     background: rgba(75, 75, 76, 0.06);
     box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
+
 label{
     font-family: 'Inter';
     font-style: normal;
@@ -52,9 +42,25 @@ input{
     bottom: 0%;
 }
 button{
-    width: 13vw;
+    width: 25vw;
     height: 45px;
     color: #ffffff;
     background: #C51515;
     border-radius: 15px;
+}
+.contenedorFormulario{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    width: 50vw;
+    margin: 1rem;
+
+}
+
+.contenedorFormulario form{
+    width: 80%;
+}
+
+.contenedorFormulario label{
+    margin-top: 1rem;
 }

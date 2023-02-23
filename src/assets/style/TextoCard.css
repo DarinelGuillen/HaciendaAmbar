@@ -1,0 +1,14 @@
+.spanCard{
+    display: flex;
+    width: 135.03px;
+    height: 34px;
+    justify-content: center;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}

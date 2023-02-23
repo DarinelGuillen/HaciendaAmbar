@@ -45,9 +45,11 @@ function FLogin() {
 
   return (
 <>
+
   <div>
     <img className="LogosGeneric" src={imgLogin} alt="" />
   </div>
+  <div className="contenedorFormulario">
     <form ref={formDataL}>
           <div className="ordenamiento">
             <label className="labelTitulo">Inicio de sesión</label> 
@@ -68,6 +70,7 @@ function FLogin() {
         <label>{Label}</label>
      </div>
   </form>
+  </div>
 </>
   );
 }

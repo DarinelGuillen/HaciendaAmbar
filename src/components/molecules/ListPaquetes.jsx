@@ -16,6 +16,7 @@ function ListPaquetes() {
           console.log(data);
           //   console.log("data id on useEffect", data[0]._id);
           setPaquete(data);
+          
         });
     }
   }, [isLoged]);
