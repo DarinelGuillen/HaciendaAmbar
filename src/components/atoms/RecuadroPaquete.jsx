@@ -1,46 +1,48 @@
 import { useNavigate, Navigate } from "react-router-dom";
 import TextoCard from "./textoCard";
-
 function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
   const navigate = useNavigate();
-  const handlerClickPaquete = (e, _id) => {
+  const handlerClickPaquete = (e, id) => {
     e.preventDefault();
-    console.log(_id);
-    alert("Tu renta Fue procesada correctamente!");
-    
-    // Make API call using the id parameter
-    const URI = `http://localhost:3000/paquetes/${_id}`;
-    const options = {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    };
+    console.log(id);
+    alert("Tu renta Fue procesada correctamente!")
+    //navigate("/RentPackage");
+    /*  //Make API call using the id parameter
+     const URI = `http://localhost:3000/paquetes/${id}`;
+     const options = {
+       method: "POST",
+       headers: { "Content-Type": "application/json" },
+       body: JSON.stringify({
+         // Add your request body here
+       }),
+     };
 
-    fetch(URI, options)
+     fetch(URI, options)
       .then((response) => {
-        console.log("Response:", response);
+         console.log("Response:", response);
         return response.json();
-      })
-      .then((data) => {
-        console.log("Paquete data:", data);
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
-     // navigate("/RentPackage");
+       })
+       .then((data) => {
+         console.log("Data:", data);
+         alert(JSON.stringify(data));
+       })
+       .catch((error) => {
+         console.log("Error:", error);
+       }); */
+
+    // // Redirect to a different page after making the API call
   };
 
   return (
     
       <div className="cardCompleta">
-          <TextoCard span={nombrePaquete}></TextoCard>
-        
-            <span>otracosa= </span>
-            <span>NOMBRE= {_id}</span>
-            <span>PRECIO={precio}</span>
-            <span>DESCRIPTION= {descripcion}</span>
-            <button onClick={(e) => handlerClickPaquete(e, _id)}>
+        <TextoCard span={nombrePaquete}></TextoCard>
+        <TextoCard span={precio}></TextoCard>  
+        <img width={100} src={img} alt="" />
+        <TextoCard span={"descripcion"}></TextoCard>
+        <button onClick={(e) => handlerClickPaquete(e, _id)}>
               Rentarlo
-            </button>
+         </button>
       </div>
   
   );
