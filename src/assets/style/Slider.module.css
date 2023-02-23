@@ -1,10 +1,13 @@
 .container {
-	width: 100%;
-	height: 100%;
+	width:100%;
+	height:300px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	z-index: 0;
+	
 }
 
 .slide {
@@ -16,4 +19,38 @@
 
 .slide.active {
 	opacity: 1;
+}
+.imgSlider{
+	position: relative;
+	width:100%;
+	height:100%;
+	
+}
+
+.buttonSlider1{
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	z-index: 1;
+	opacity: 0;
+
+}
+.buttonSlider2{
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	left: 50%;
+	z-index: 1;
+	opacity: 0;
+}
+
+.contCarrusel{
+	height: 300px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	
+
+	
 }
