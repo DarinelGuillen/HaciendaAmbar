@@ -29,7 +29,6 @@ main{
     flex-direction: column;
 }
 .textoTips{
-    
     font-family: 'Quattrocento';
     font-style: normal;
     font-weight: 700;
@@ -38,16 +37,13 @@ main{
     text-align: center;
     color: #4B4B4C;
 }
+
 .acercaDeNosotros{
     display: flex;
-    
-}
-.textoACDN{
-    position: absolute;
-    width: 1144px;
-    height: 802px;
-    left: 148px;
-    top: 3427px;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%; 
     font-family: 'Quattrocento';
     font-style: normal;
     font-weight: 700;
@@ -55,4 +51,13 @@ main{
     line-height: 35px;
     text-align: center;
     color: #000000;
+}
+.txt{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 71px;
+    text-align: center;
+    color: #4B4B4C;
 }

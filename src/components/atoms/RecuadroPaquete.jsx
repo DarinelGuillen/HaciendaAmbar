@@ -34,7 +34,8 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
 
   return (
     <>
-      <div className="">
+      <div className="cardCompleta">
+      <img src="src/assets/img/iconoPaquetes.png"></img>
         <img src={img} alt={_id} />
         <div>
           <span>NOMBRE= {nombrePaquete}</span>

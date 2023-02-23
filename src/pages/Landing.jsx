@@ -18,6 +18,7 @@ function Landing() {
     <Main/>
     <Slider imagenes={mockImagenes}/>
     <RecuerdosParaSiempre></RecuerdosParaSiempre>
+    
     <Footer></Footer>
 </>
   );
