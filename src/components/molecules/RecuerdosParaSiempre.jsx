@@ -22,9 +22,9 @@ function RecuerdosParaSiempre() {
                 </div>
            </main>
            <div className="cards">
-           <div className="textoTips">
-                <Label label={"Tips"}></Label>
-           </div>
+               <div className="textoTips">
+                    <Label label={"Tips"}></Label>
+               </div>
                 <img src="src/assets/img/cards.png"></img>
                 <RecuadroPaquete></RecuadroPaquete>
            </div>

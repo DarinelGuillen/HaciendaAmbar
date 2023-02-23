@@ -33,25 +33,19 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
   };
 
   return (
-    <>
+    
       <div className="cardCompleta">
-      <img src="src/assets/img/iconoPaquetes.png"></img>
-        <img src={img} alt={_id} />
-        <div>
-          <span>NOMBRE= {nombrePaquete}</span>
-          <br></br>
-          <span>NOMBRE= {_id}</span>
-          <br></br>
-          <span>PRECIO={precio}</span>
-          <br></br>
-          <span>DESCRIPTION= {descripcion}</span>
-          <br></br>
-          <button onClick={(e) => handlerClickPaquete(e, _id)}>
-            Rentarlo
-          </button>
-        </div>
+          
+        
+            <span>otracosa= {nombrePaquete}</span>
+            <span>NOMBRE= {_id}</span>
+            <span>PRECIO={precio}</span>
+            <span>DESCRIPTION= {descripcion}</span>
+            <button onClick={(e) => handlerClickPaquete(e, _id)}>
+              Rentarlo
+            </button>
       </div>
-    </>
+  
   );
 }
 
