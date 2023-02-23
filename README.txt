@@ -1,3 +1,6 @@
+oooooooooo
+
+
 haciendaambar.iothingss.com.mx:3000
 haciendaambar.iothings.com.mx:3000
 Al estar logeado que puedo compar un paquete o agregarlo a su cuenta 
