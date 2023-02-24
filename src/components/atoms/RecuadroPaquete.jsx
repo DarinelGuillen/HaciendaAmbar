@@ -11,8 +11,8 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
     console.log("IDIDIDIDIDIDID", id);
     alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
-    //localhost:3000  localhost:3000
-    fetch(`http://localhost:3000/paquetes/${paqueteID}`)
+    //haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
+    fetch(`http://haciendaambar.iothings.com.mx:3000/paquetes/${paqueteID}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -22,7 +22,7 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
 
     navigate("/RentPackage");
     /*  //Make API call using the id parameter
-     const URI = `http://localhost:3000/paquetes/${id}`;
+     const URI = `http://haciendaambar.iothings.com.mx:3000/paquetes/${id}`;
      const options = {
        method: "POST",
        headers: { "Content-Type": "application/json" },
@@ -48,17 +48,13 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
   };
 
   return (
-    
-      <div className="cardCompleta">
-        <TextoCard span={nombrePaquete}></TextoCard>
-        <TextoCard span={precio}></TextoCard>  
-        <img width={100} src={img} alt="" />
-        <TextoCard span={"descripcion"}></TextoCard>
-        <button onClick={(e) => handlerClickPaquete(e, _id)}>
-              Rentarlo
-         </button>
-      </div>
-  
+    <div className="cardCompleta">
+      <TextoCard span={nombrePaquete}></TextoCard>
+      <TextoCard span={precio}></TextoCard>
+      <img width={100} src={img} alt="" />
+      <TextoCard span={"descripcion"}></TextoCard>
+      <button onClick={(e) => handlerClickPaquete(e, _id)}>Rentarlo</button>
+    </div>
   );
 }
 

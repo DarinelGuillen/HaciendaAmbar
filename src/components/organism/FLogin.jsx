@@ -24,7 +24,7 @@ function FLogin() {
     const formData = new FormData(formDataL.current);
     const userName = formData.get("nombreDeUsuario");
     const contrasenia = formData.get("contrasenia");
-    const url = `http://localhost:3000/users/${userName}/${contrasenia}`;
+    const url = `http://haciendaambar.iothings.com.mx:3000/users/${userName}/${contrasenia}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -47,34 +47,33 @@ function FLogin() {
   };
 
   return (
-<>
-
-  <div>
-    <img className="LogosGeneric" src={imgLogin} alt="" />
-  </div>
-  <div className="contenedorFormulario">
-    <form ref={formDataL}>
+    <>
+      <div>
+        <img className="LogosGeneric" src={imgLogin} alt="" />
+      </div>
+      <div className="contenedorFormulario">
+        <form ref={formDataL}>
           <div className="ordenamiento">
-            <label className="labelTitulo">Inicio de sesión</label> 
-            <label  htmlFor="username">Username</label>
+            <label className="labelTitulo">Inicio de sesión</label>
+            <label htmlFor="username">Username</label>
             <input type="text" name="nombreDeUsuario" />
             <label htmlFor="password">Password</label>
             <input type="password" name="contrasenia" />
             <button onClick={handlerClick}>Iniciar Sesion </button>
-          <Link to="/">
-            <label>Landing</label>
-          </Link>
-          <Link to="/">
-            <label>Olvide mi contraseña</label>
-          </Link>
-          <Link to="/">
-            <label>Registrarte</label>
-          </Link>
-        <label>{Label}</label>
-     </div>
-  </form>
-  </div>
-</>
+            <Link to="/">
+              <label>Landing</label>
+            </Link>
+            <Link to="/">
+              <label>Olvide mi contraseña</label>
+            </Link>
+            <Link to="/">
+              <label>Registrarte</label>
+            </Link>
+            <label>{Label}</label>
+          </div>
+        </form>
+      </div>
+    </>
   );
 }
 export default FLogin;

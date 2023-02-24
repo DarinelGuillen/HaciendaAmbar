@@ -7,7 +7,7 @@ function FRentPackage() {
   const formTerminateRent = useRef();
   const { isPaquete, setIsPaquete } = useContext(PaqueteContext);
   const { isLoged, setIsLoged } = useContext(UserContext);
-  const {isIduser, setIsiduser } = useContext(IdContex);
+  const { isIduser, setIsiduser } = useContext(IdContex);
 
   const date = new Date();
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ function FRentPackage() {
     console.log("IDD USER CONTEXT ISLOGED\n", isIduser, "\n");
     const formData = new FormData(formTerminateRent.current);
     //haciendaambar.iothings.com.mx
-    const URI = "http://localhost:3000/rentasUsuario";
+    const URI = "http://haciendaambar.iothings.com.mx:3000/rentasUsuario";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
