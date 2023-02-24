@@ -41,7 +41,7 @@ input{
     left: 148px;
     bottom: 0%;
 }
-button{
+.botonFlogin{
     width: 25vw;
     height: 45px;
     color: #ffffff;
@@ -54,7 +54,6 @@ button{
     justify-content: center;
     width: 50vw;
     margin: 1rem;
-
 }
 
 .contenedorFormulario form{

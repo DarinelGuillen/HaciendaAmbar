@@ -57,7 +57,7 @@ function FLogin() {
             <input type="text" name="nombreDeUsuario" />
             <label htmlFor="password">Password</label>
             <input type="password" name="contrasenia" />
-            <button onClick={handlerClick}>Iniciar Sesion </button>
+            <button className="botonFlogin" onClick={handlerClick}>Iniciar Sesion </button>
           <Link to="/">
             <label>Landing</label>
           </Link>

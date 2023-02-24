@@ -6,7 +6,7 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
     e.preventDefault();
     console.log(id);
     alert("Tu renta Fue procesada correctamente!")
-    //navigate("/RentPackage");
+    navigate("/RentPackage");
     /*  //Make API call using the id parameter
      const URI = `http://localhost:3000/paquetes/${id}`;
      const options = {
