@@ -20,8 +20,8 @@ function Header() {
         <div className="pruebita">
           {!isLoged ? (
             <>
-            <Link to="/Login">Iniciar sesión</Link>
-            <Link to="/SingIn">Registrate</Link>
+            <Link className="loginNav" to="/Login">Iniciar sesión</Link>
+            <Link className="loginNav" to="/SingIn">Registrate</Link>
             </>
           ) : (
             <Link to="/">EJEMPLO 'log out' or IMG</Link>
@@ -33,7 +33,7 @@ function Header() {
       </div>
 
       <br />
-      <Link to="/General">General</Link>
+     {/*  <Link to="/General">General</Link> */}
     </>
   );
 }

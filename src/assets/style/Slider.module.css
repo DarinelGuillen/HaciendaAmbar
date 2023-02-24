@@ -7,7 +7,6 @@
 	align-items: center;
 	overflow: hidden;
 	z-index: 0;
-	
 }
 
 .slide {
@@ -50,7 +49,4 @@
 	display: flex;
 	flex-direction: column;
 	justify-content:center;
-	
-
-	
 }

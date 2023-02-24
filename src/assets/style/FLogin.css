@@ -15,7 +15,7 @@
 }
 
 label{
-    font-family: 'Inter';
+    font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -25,7 +25,7 @@ label{
     color: #000000;
 }
 .labelTitulo{
-    font-family: 'Quattrocento';
+    font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
