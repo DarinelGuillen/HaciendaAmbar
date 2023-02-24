@@ -6,7 +6,7 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../contexts/UserContext";
 import AdminContext from "../../contexts/AdminContext";
-import imgLogin from "../../assets/img/imagenLogin.png";
+import imgLogin from "../../assets/img/img_login.jpg";
 import "../../assets/style/FLogin.css"
 
 function FLogin() {
@@ -46,18 +46,18 @@ function FLogin() {
   return (
 <>
 
-  <div>
-    <img className="LogosGeneric" src={imgLogin} alt="" />
-  </div>
+  <div className="formLoginG">
+  <img className="LogosGeneric" src={imgLogin} alt="" />
+
   <div className="contenedorFormulario">
     <form ref={formDataL}>
           <div className="ordenamiento">
             <label className="labelTitulo">Inicio de sesión</label> 
             <label  htmlFor="username">Username</label>
-            <input type="text" name="nombreDeUsuario" />
+            <input className="inputsLogin" type="text" name="nombreDeUsuario" />
             <label htmlFor="password">Password</label>
-            <input type="password" name="contrasenia" />
-            <button onClick={handlerClick}>Iniciar Sesion </button>
+            <input className="inputsLogin" type="password" name="contrasenia" />
+            <button className="buttonLogin" onClick={handlerClick}>Iniciar Sesion </button>
           <Link to="/">
             <label>Landing</label>
           </Link>
@@ -71,6 +71,9 @@ function FLogin() {
      </div>
   </form>
   </div>
+
+  </div>
+  
 </>
   );
 }
