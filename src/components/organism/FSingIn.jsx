@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LogoLogin from "../../assets/img/LogoColor.png";
 import "../../assets/style/FSingln.css"
 import Label from "../atoms/Label"
@@ -41,59 +41,33 @@ function FSingIn() {
 
   return (
     <>
+      <img className="LogosGeneric" src="src/assets/img/imagenRegister.png"></img>
       <form ref={formSingIn}>
-        <div className="divPadre">
-        <div className="imgRegister">
-          <img src="src/assets/img/imagenRegister.png"></img>
-        </div>
-            <div className="formRegister">
-              <div className="registrarteAhora">
+      <div className="ordenamiento">
+            <div className="labelTitulo">
                 <Label label={"Regístrate ahora"}></Label>
-              </div>
+            </div>
+              
               <label htmlFor="nombreDeUsuario" className="labelNombreUsuario">Nombre de usuario</label>
-            </div>
-            <div>
-              <input type="text" name="nombreDeUsuario" className="inputNombreUsario" required />
-            </div>
-            <div>
+                <input type="text" name="nombreDeUsuario" className="inputNombreUsario" required />      
               <label htmlFor="nombreCompleto" className="labelNombreCompleto">Nombre completo</label>
-            </div>
-            <div>
-              <input type="text" name="nombreCompleto" className="inputNombreCompleto" />
-            </div>
-            <div>
+                <input type="text" name="nombreCompleto" className="inputNombreCompleto" />
               <label htmlFor="numTel" className="labelNumeroTel">Número de teléfono</label>
-            </div>
-            <div>
-              <input type="text" name="numTel" className="inputNumeroTel"/>
-            </div>
-            <div>
+                <input type="text" name="numTel" className="inputNumeroTel"/>
               <label htmlFor="edad" className="labelEdad">Edad</label>
-            </div>
-            <div>
-              <input type="text" name="edad"  className="inputEdad" required />
-            </div>
-            <div>
+                <input type="text" name="edad"  className="inputEdad" required />
               <label htmlFor="correo" className="labelCorreo">Correo electrónico</label>
-            </div>
-            <div>
-              <input type="email" name="correo" className="inputCorreo" required />
-            </div>
-            <div>
-            <label htmlFor="password" className="labelPassword">Contraseña</label>
-            </div>
-            <div>
-              <input type="password" name="password" className="inputPassword" required />
-            </div>
-            <div>
-              <button onClick={handlerClick} className="botonRegister">Registrate</button>
+                <input type="email" name="correo" className="inputCorreo" required />
+              <label htmlFor="password" className="labelPassword">Contraseña</label>
+                <input type="password" name="password" className="inputPassword" required />
+              
+              <button className="botonRegister" onClick={handlerClick}>Registrate</button>
               <div className="iniciarSesionLink">
-                <Label label={"Iniciar sesión"}></Label>
+                <Link to="/Login"><label>Iniciar sesión</label></Link>
               </div>
               <div className="regresarLink">
-                <Label label={"Regresar"}></Label>
+                <Link to="/"><label>Regresar</label></Link>
               </div>
-            </div>
         </div>
       </form>
     </>

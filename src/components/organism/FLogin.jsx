@@ -47,8 +47,7 @@ function FLogin() {
 <>
 
   <div className="formLoginG">
-  <img className="LogosGeneric" src={imgLogin} alt="" />
-
+    <img className="LogosGeneric" src={imgLogin} alt="" />
   <div className="contenedorFormulario">
     <form ref={formDataL}>
           <div className="ordenamiento">
@@ -56,13 +55,8 @@ function FLogin() {
             <label  htmlFor="username">Username</label>
             <input className="inputsLogin" type="text" name="nombreDeUsuario" />
             <label htmlFor="password">Password</label>
-<<<<<<< HEAD
             <input type="password" name="contrasenia" />
             <button className="botonFlogin" onClick={handlerClick}>Iniciar Sesion </button>
-=======
-            <input className="inputsLogin" type="password" name="contrasenia" />
-            <button className="buttonLogin" onClick={handlerClick}>Iniciar Sesion </button>
->>>>>>> 2675e76f42cb5b7253af00e5bf8aebecb09df355
           <Link to="/">
             <label>Landing</label>
           </Link>

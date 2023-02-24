@@ -1,20 +1,29 @@
-.divPadre{
-    display: flex;
-
-}
-.formRegister{
+.LogosGeneric{
     width: 50vw;
-    height: 150vh;
+    height: 100%;
+    float: right;
+    max-width: 600px;
+}
+.ordenamiento{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     background: rgba(75, 75, 76, 0.06);
     box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
-.registrarteAhora{
-    position: absolute;
-    width: 562px;
-    height: 38px;
-    left: 148px;
-    top: 3px;
+.label{
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.labelTitulo{
     font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 700;
@@ -23,243 +32,11 @@
     text-align: center;
     color: #000000;
 }
-.labelNombreUsuario{
-    position: absolute;
-    width: 562px;
-    height: 39px;
-    left: 148px;
-    top: 145px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    
-    color: #000000;
-     
-}
-.inputNombreUsario{
-    position: absolute;
-    width: 562px;
-    height: 57px;
-    left: 148px;
-    top: 261px;
-    background: #D9D9D9;
-    border-radius: 10px;
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-}
-.labelNombreCompleto{
-    position: absolute;
-    width: 562px;
-    height: 39px;
-    left: 148px;
-    top: 350px;
-    
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    
-    color: #000000;
-    
-}
-.inputNombreCompleto{
-    position: absolute;
-    width: 562px;
-    height: 57px;
-    left: 148px;
-    top: 408px;
-    background: #D9D9D9;
-    border-radius: 10px;
-}
-.labelNumeroTel{
-    position: absolute;
-    width: 562px;
-    height: 39px;
-    left: 148px;
-    top: 496px;
-    
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    
-    color: #000000;
-}
-.inputNumeroTel{
-    position: absolute;
-    width: 562px;
-    height: 57px;
-    left: 148px;
-    top: 556px;
-    background: #D9D9D9;
-    border-radius: 10px;
-}
-.labelEdad{
-    position: absolute;
-    width: 562px;
-    height: 39px;
-    left: 148px;
-    top: 640px;
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-}
-.inputEdad{
-    position: absolute;
-    width: 562px;
-    height: 57px;
-    left: 148px;
-    top: 704px;
-    background: #D9D9D9;
-    border-radius: 10px;
-}
-.labelCorreo{
-    position: absolute;
-    width: 562px;
-    height: 39px;
-    left: 149px;
-    top: 790px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    
-    color: #000000;
-}
-.inputCorreo{
-    position: absolute;
-    width: 562px;
-    height: 57px;
-    left: 149px;
-    top: 858px;
-    background: #D9D9D9;
-    border-radius: 10px;
-}
-.labelPassword{
-    position: absolute;
-    width: 562px;
-    height: 39px;
-    left: 149px;
-    top: 943px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    
-    color: #000000;
-}
-.inputPassword{
-    position: absolute;
-    width: 562px;
-    height: 57px;
-    left: 149px;
-    top: 1010px;
-    background: #D9D9D9;
-    border-radius: 10px;
-}
 .botonRegister{
-    position: absolute;
-    width: 329px;
-    height: 53px;
-    left: 265px;
-    top: 1126px;
+    
+    width: 25vw;
+    height: 45px;
+    color: #ffffff;
     background: #C51515;
     border-radius: 15px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
-}
-.labelLogin{
-    position: absolute;
-    width: 562px;
-    height: 48px;
-    left: 148px;
-    top: 958px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #000000;
-    
-}
-.iniciarSesionLink{
-    position: absolute;
-    width: 562px;
-    height: 48px;
-    left: 390px;
-    top: 1196px;
-    
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #000000;
-    
-}
-.regresarLink{
-    position: absolute;
-    width: 213px;
-    height: 48px;
-    left: 75px;
-    top: 1196px;
-    
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #000000;
-    
-}
-.imgRegister{
-    position: absolute;
-    width: 594px;
-    height: 995px;
-    left: 846px;
-    top: 0px; 
-    background: url(imagenRegister.png);
-    filter: blur(2.5px);   
 }

@@ -40,16 +40,16 @@ main{
 
 .acercaDeNosotros{
     display: flex;
-    align-content: center;
     flex-direction: column;
-    text-align: center;
-    width: 100%; 
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
+    justify-content: space-between;
+    font-size: 1.4rem;
     line-height: 35px;
     text-align: center;
+    gap: 10px;
+    width: 70%;
+    height: 804px;    
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
     color: #000000;
 }
 .txt{
@@ -60,4 +60,15 @@ main{
     line-height: 71px;
     text-align: center;
     color: #4B4B4C;
+}
+.iconoAboutUs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 17px 488px;    
+    width: 1438px;
+    height: 398.52px;
+   
+    
 }

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import "../../assets/style/FRentPackage.css"
 
 function FRentPackage() {
   const formSignIn = useRef();
@@ -42,42 +43,54 @@ function FRentPackage() {
 
   return (
     <>
-      <form ref={formSignIn}>
-        <div>
-          <label htmlFor="">Termina Tu Renta</label>
-        </div>
+   
+       
+    <div class="login-box">
 
-        <div>
-          <label htmlFor="fechaInicio">Fecha de inicio</label>
-        </div>
-        <div>
-          <input type="datetime-local" name="fechaInicio"  />
-        </div>
+    <label className="labelPackage" htmlFor="fechaInicio">Fecha de inicio</label>   
+  <form ref={formSignIn}>
 
-        <div>
-          <label htmlFor="fechaFinalizacion">Fecha de finalización</label>
-        </div>
-        <div>
-          <input type="datetime-local" name="fechaFinalizacion"  />
-        </div>
+  <div class="user-box">
+    <input type="datetime-local" name="fechaInicio"  />
+  </div>
+    <label className="labelPackage" htmlFor="fechaFinalizacion">Fecha de finalización</label>
+  <div class="user-box">
+    <input type="datetime-local" name="fechaFinalizacion"  />
+  </div>
+    <label className="labelPackage" htmlFor="fechaDeReserva">Fecha de reserva</label>
+  <div class="user-box">
+    <input type="date" name="fechaDeReserva"  /> 
+  </div>
+    <label className="labelPackage" htmlFor="onservaciones">Fecha de reserva</label>
+  <div class="user-box">
+    <input type="text" name="onservaciones"  />
+  </div> 
+    <button className="botonFormularioPackage" onClick={handleClickTerminateRent}>Terminar</button>
+  </form>
+</div>
 
-        <div>
-          <label htmlFor="fechaDeReserva">Fecha de reserva</label>
-        </div>
-        <div>
-          <input type="date" name="fechaDeReserva"  />
-        </div> 
-        <div>
-          <label htmlFor="onservaciones">Fecha de reserva</label>
-        </div>
-        <div>
-          <input type="text" name="onservaciones"  />
-        </div>
-
-        <button onClick={handleClickTerminateRent}>Terminar</button>
-      </form>
     </>
   );
 }
 
 export default FRentPackage;
+/* 
+<div className="login-box">
+<form className="formularioPackage" ref={formSignIn}>
+
+  
+    <label htmlFor="">Termina Tu Renta</label> 
+    <label htmlFor="fechaInicio">Fecha de inicio</label>   
+    <input type="datetime-local" name="fechaInicio"  />
+
+    <label htmlFor="fechaFinalizacion">Fecha de finalización</label>
+    <input type="datetime-local" name="fechaFinalizacion"  />
+
+    <label htmlFor="fechaDeReserva">Fecha de reserva</label>
+    <input type="date" name="fechaDeReserva"  /> 
+      
+      <label htmlFor="onservaciones">Fecha de reserva</label>
+    <input type="text" name="onservaciones"  />
+
+</form>
+</div> */
