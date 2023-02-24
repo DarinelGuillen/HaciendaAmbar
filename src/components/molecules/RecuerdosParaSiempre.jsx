@@ -27,7 +27,7 @@ function RecuerdosParaSiempre() {
                     <Label label={"Tips"}></Label>
                </div>
                 <img src="src/assets/img/cards.png"></img>
-                <RecuadroPaquete></RecuadroPaquete>
+                
            </div>
            <div className="acercaDeNosotros">
            <div className="txt">
