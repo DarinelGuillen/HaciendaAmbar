@@ -4,7 +4,6 @@ function TestAdminView() {
     return ( 
         <>
         <h1>VIEW ADMIN</h1>
-        <Main/>
         <table class="default">
             <tr>
                 <th>Usuario</th>
@@ -12,7 +11,7 @@ function TestAdminView() {
                 <th>Domingo</th>
             </tr>
             <tr>
-                <td>...</td>
+                <td>{}</td>
                 <td>...</td>
                 <td>...</td>
             </tr>
