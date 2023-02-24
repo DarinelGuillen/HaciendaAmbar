@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LogoLogin from "../../assets/img/LogoColor.png";
-import "../../assets/style/FSingln.css"
-import Label from "../atoms/Label"
+import "../../assets/style/FSingln.css";
+import Label from "../atoms/Label";
 function FSingIn() {
   const formSingIn = useRef();
 
@@ -15,13 +15,13 @@ function FSingIn() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        admin:false,
+        admin: false,
         nombreDeUsuario: formData.get("nombreDeUsuario"),
         nombreCompleto: formData.get("nombreCompleto"),
         numTel: formData.get("numTel"),
         edad: formData.get("edad"),
         correo: formData.get("correo"),
-        password: formData.get("password")
+        password: formData.get("password"),
       }),
     };
 

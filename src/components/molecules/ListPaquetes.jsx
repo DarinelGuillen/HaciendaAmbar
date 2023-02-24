@@ -16,17 +16,16 @@ function ListPaquetes() {
           console.log(data);
           //   console.log("data id on useEffect", data[0]._id);
           setPaquete(data);
-          
         });
     }
   }, [isLoged]);
 
   return (
     <>
-      <div>
+      <div className="">
         <h2>Lista de Paquetes </h2>
 
-        <div className="">
+        <div className="prueba">
           {isLoged &&
             paquetes.map((paquete) => {
               console.log("///data id", paquete._id);

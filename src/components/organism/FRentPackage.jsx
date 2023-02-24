@@ -1,44 +1,50 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import PaqueteContext from "../../contexts/PaqueteContext";
+import UserContext from "../../contexts/UserContext";
+import IdContex from "../../contexts/IdContex";
 import "../../assets/style/FRentPackage.css"
 
 function FRentPackage() {
   const formSignIn = useRef();
+  const { isPaquete, setIsPaquete } = useContext(PaqueteContext);
+  const { isLoged, setIsLoged } = useContext(UserContext);
+  const { isIduser, setIsiduser } = useContext(IdContex);
 
+  const date = new Date();
+  const navigate = useNavigate();
   const handleClickTerminateRent = (e) => {
     e.preventDefault();
     console.log("handleClickTerminateRent called");
+    console.log("ISPAQUETE CONTEXT\n", isPaquete, "\n");
+    console.log("ISPAQUETE CONTEXT IDDDDD\n", isPaquete._id, "\n");
+    console.log("IDD USER CONTEXT ISLOGED\n", isIduser, "\n");
     const formData = new FormData(formSignIn.current);
-    
+    //haciendaambar.iothings.com.mx
     const URI = "http://haciendaambar.iothings.com.mx:3000/rentasUsuario";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-       
-        idPaquete: "",
-        idUser: "",
+        idPaquete: isPaquete._id, //
+        idUser: isIduser,
         fechaInicio: formData.get("fechaInicio"),
         fechaFinalizacion: formData.get("fechaFinalizacion"),
-        fechaDeReserva: "Current date",
-        precioTotal: "",
+        fechaDeReserva: date,
+        precioTotal: isPaquete.precio,
         estadoRenta: false,
         observaciones: formData.get("observaciones"),
         SeEjecutoConExitoLarenta: false,
       }),
     };
-
-    // fetch(URI, options)
-    //   .then((response) => {
-    //     console.log("Response:", response);
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     console.log("Data:", data);
-    //   })
-    //   .catch((error) => {
-    //     console.log("Error:", error);
-    //   });
+    fetch(URI, options)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("RENTAL CREATED", data);
+        alert("Renta creada con éxito");
+        navigate("/CommonUser");
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -74,23 +80,3 @@ function FRentPackage() {
 }
 
 export default FRentPackage;
-/* 
-<div className="login-box">
-<form className="formularioPackage" ref={formSignIn}>
-
-  
-    <label htmlFor="">Termina Tu Renta</label> 
-    <label htmlFor="fechaInicio">Fecha de inicio</label>   
-    <input type="datetime-local" name="fechaInicio"  />
-
-    <label htmlFor="fechaFinalizacion">Fecha de finalización</label>
-    <input type="datetime-local" name="fechaFinalizacion"  />
-
-    <label htmlFor="fechaDeReserva">Fecha de reserva</label>
-    <input type="date" name="fechaDeReserva"  /> 
-      
-      <label htmlFor="onservaciones">Fecha de reserva</label>
-    <input type="text" name="onservaciones"  />
-
-</form>
-</div> */

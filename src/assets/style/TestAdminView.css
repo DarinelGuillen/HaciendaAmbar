@@ -1,0 +1,17 @@
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+table.default th {
+    padding: 0.2em 0.8em;
+    border: 1px solid rgba(20,50,90,.25);
+    background: rgba(0,102,255,.25);
+    text-align: center;
+}

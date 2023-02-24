@@ -1,9 +1,7 @@
 
 import RecuerdosParaSiempre from "../components/molecules/RecuerdosParaSiempre";
-import CarruselImagenes from "../components/molecules/CarruselImagenes";
 import Footer from "../components/molecules/Footer";
 import Header from "../components/molecules/Header";
-import Main from "../components/organism/Main";
 import Slider from "../components/atoms/Slider";
 
 function Landing() {

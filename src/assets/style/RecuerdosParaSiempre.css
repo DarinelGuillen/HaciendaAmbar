@@ -1,9 +1,9 @@
-main{
+.RecuerdosParaSiempreMain{
     display: flex;
     justify-content: flex-end;
     height: 90vh;
     background: rgba(116, 57, 58, 0.8);
-    overflow: auto;
+   
     
 }
 .tituloRecuerdosParaSiempre{
@@ -26,7 +26,8 @@ main{
 .cards{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-flow: row wrap;
+
 }
 .textoTips{
     font-family: 'Quattrocento', serif;

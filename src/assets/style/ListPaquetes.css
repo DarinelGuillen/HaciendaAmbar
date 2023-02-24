@@ -77,3 +77,8 @@
   .activo {
     background-color: gray;
   }
+  .prueba{
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+  }
