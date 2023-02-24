@@ -42,6 +42,7 @@ function FRentPackage() {
       .then((data) => {
         console.log("RENTAL CREATED", data);
         alert("Renta creada con éxito");
+        alert("Él Administrador se contactará con usted");
         navigate("/CommonUser");
       })
       .catch((error) => console.error(error));
@@ -63,13 +64,10 @@ function FRentPackage() {
   <div class="user-box">
     <input type="datetime-local" name="fechaFinalizacion"  />
   </div>
-    <label className="labelPackage" htmlFor="fechaDeReserva">Fecha de reserva</label>
+  
+    <label className="labelPackage" htmlFor="observaciones">observaciones</label>
   <div class="user-box">
-    <input type="date" name="fechaDeReserva"  /> 
-  </div>
-    <label className="labelPackage" htmlFor="onservaciones">Fecha de reserva</label>
-  <div class="user-box">
-    <input type="text" name="onservaciones"  />
+    <input type="text" name="observaciones"  />
   </div> 
     <button className="botonFormularioPackage" onClick={handleClickTerminateRent}>Terminar</button>
   </form>
