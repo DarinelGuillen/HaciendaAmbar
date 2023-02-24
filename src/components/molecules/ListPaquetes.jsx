@@ -10,13 +10,12 @@ function ListPaquetes() {
 
   useEffect(() => {
     if (isLoged) {
-      fetch("http://haciendaambar.iothings.com.mx:3000/paquetes")
+      fetch("http://localhost:3000/paquetes")
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
           //   console.log("data id on useEffect", data[0]._id);
           setPaquete(data);
-          
         });
     }
   }, [isLoged]);
