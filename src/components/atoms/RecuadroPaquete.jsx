@@ -40,7 +40,7 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
         <TextoCard span={precio}></TextoCard>  
         <img width={100} src={img} alt="" />
         <TextoCard span={"descripcion"}></TextoCard>
-        <button onClick={(e) => handlerClickPaquete(e, _id)}>
+        <button className="botonCard" onClick={(e) => handlerClickPaquete(e, _id)}>
               Rentarlo
          </button>
       </div>
