@@ -1,8 +1,10 @@
 .LogosGeneric{
     width: 50vw;
-    height: auto;
+    height: 100%;
     float: right;
     max-width: 600px;
+    
+  
 }
 .ordenamiento{
     display: flex;
@@ -53,7 +55,12 @@ input{
     align-items:center ;
     justify-content: center;
     width: 50vw;
+<<<<<<< HEAD
     margin: 1rem;
+=======
+    margin: 1vw;
+
+>>>>>>> 2675e76f42cb5b7253af00e5bf8aebecb09df355
 }
 
 .contenedorFormulario form{
@@ -62,4 +69,18 @@ input{
 
 .contenedorFormulario label{
     margin-top: 1rem;
+}
+.formLoginG{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.buttonLogin{
+    font-weight: bold;
+    border: none;
+    margin-top: 3vw;
+}
+.inputsLogin{
+    border: none;
 }
