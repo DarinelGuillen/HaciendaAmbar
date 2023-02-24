@@ -15,7 +15,7 @@ function Landing() {
   return (
     <>
     <Header></Header>
-    <Main/>
+    {/* se borro Main */}
     <Slider imagenes={mockImagenes}/>
     <RecuerdosParaSiempre></RecuerdosParaSiempre>
     

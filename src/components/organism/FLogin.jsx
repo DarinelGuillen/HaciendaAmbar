@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import UserContext from "../../contexts/UserContext";
 import AdminContext from "../../contexts/AdminContext";
 import IdContex from "../../contexts/IdContex";
-import imgLogin from "../../assets/img/imagenLogin.png";
+import imgLogin from "../../assets/img/img_login.jpg";
 import "../../assets/style/FLogin.css";
 
 function FLogin() {
@@ -47,33 +47,34 @@ function FLogin() {
   };
 
   return (
-    <>
-      <div>
-        <img className="LogosGeneric" src={imgLogin} alt="" />
-      </div>
-      <div className="contenedorFormulario">
-        <form ref={formDataL}>
+<>
+
+  <div>
+    <img className="LogosGeneric" src={imgLogin} alt="" />
+  </div>
+  <div className="contenedorFormulario">
+    <form ref={formDataL}>
           <div className="ordenamiento">
-            <label className="labelTitulo">Inicio de sesión</label>
-            <label htmlFor="username">Username</label>
+            <label className="labelTitulo">Inicio de sesión</label> 
+            <label  htmlFor="username">Username</label>
             <input type="text" name="nombreDeUsuario" />
             <label htmlFor="password">Password</label>
             <input type="password" name="contrasenia" />
             <button onClick={handlerClick}>Iniciar Sesion </button>
-            <Link to="/">
-              <label>Landing</label>
-            </Link>
-            <Link to="/">
-              <label>Olvide mi contraseña</label>
-            </Link>
-            <Link to="/">
-              <label>Registrarte</label>
-            </Link>
-            <label>{Label}</label>
-          </div>
-        </form>
-      </div>
-    </>
+          <Link to="/">
+            <label>Landing</label>
+          </Link>
+          <Link to="/">
+            <label>Olvide mi contraseña</label>
+          </Link>
+          <Link to="/">
+            <label>Registrarte</label>
+          </Link>
+        <label>{Label}</label>
+     </div>
+  </form>
+  </div>
+</>
   );
 }
 export default FLogin;

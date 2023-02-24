@@ -1,9 +1,10 @@
 .navBar{
+    font-family: 'Quattrocento', serif;
     display: flex;
     justify-content: space-between;
     height: 10vh;
     background-color: #ffffff;
-    padding: 2%;
+    padding: 1%;
     color: #4B4B4C;
 }
 .iconoAmbar img{
@@ -29,4 +30,8 @@
 }
 .links{
     padding-top: 50px;
+}
+.loginNav{
+    text-decoration: none;
+    color: #4B4B4C;
 }

@@ -10,7 +10,7 @@ function Footer() {
     <>
     <div className="Footer">
       <div className="iconoFooter">
-          <Icon icon={iconoFooter}/>  
+          <Icon  icon={iconoFooter}/>  
           <Label label={"Recuerdos para siempre"}/>
       </div>
       <div className="informacion">

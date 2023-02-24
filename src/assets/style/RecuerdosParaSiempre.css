@@ -9,7 +9,7 @@ main{
 .tituloRecuerdosParaSiempre{
     width: 40%;
     margin: 4%;
-    font-family: 'Quattrocento';
+    font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 450;
     font-size: 2em;
@@ -29,7 +29,7 @@ main{
     flex-direction: column;
 }
 .textoTips{
-    font-family: 'Quattrocento';
+    font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
@@ -44,7 +44,7 @@ main{
     flex-direction: column;
     text-align: center;
     width: 100%; 
-    font-family: 'Quattrocento';
+    font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -53,7 +53,7 @@ main{
     color: #000000;
 }
 .txt{
-    font-family: 'Quattrocento';
+    font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 64px;

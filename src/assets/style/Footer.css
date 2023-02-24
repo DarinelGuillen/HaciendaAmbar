@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: #5e5e5e;
-    font-family: 'Quattrocento';
+    font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -14,7 +14,15 @@
 }
 
 .iconoFooter{
+    font-family: 'Quattrocento';
+    font-style:normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
     text-align: center;
+    
+    color: #FFFFFF;
+    
 }
 
 .redesFooter{
