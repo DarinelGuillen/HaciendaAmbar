@@ -8,7 +8,7 @@ function FSingIn() {
 
   const handlerClick = (e) => {
     e.preventDefault();
-    console.log("handlerClick called");
+    //console.log("handlerClick called");
     const formData = new FormData(formSingIn.current);
     const URI = "http://haciendaambar.iothings.com.mx:3000/users";
     const options = {
@@ -27,47 +27,82 @@ function FSingIn() {
 
     fetch(URI, options)
       .then((response) => {
-        console.log("Response:", response);
+        //console.log("Response:", response);
         return response.json();
       })
       .then((data) => {
-        console.log("Data:", data);
+        //console.log("Data:", data);
         // alert(JSON.stringify(data));
       })
       .catch((error) => {
-        console.log("Error:", error);
+        //console.log("Error:", error);
       });
   };
 
   return (
     <>
-      <img className="LogosGeneric" src="src/assets/img/imagenRegister.png"></img>
+      <img
+        className="LogosGeneric"
+        src="src/assets/img/imagenRegister.png"
+      ></img>
       <form ref={formSingIn}>
-      <div className="ordenamiento">
-            <div className="labelTitulo">
-                <Label label={"Regístrate ahora"}></Label>
-            </div>
-              
-              <label htmlFor="nombreDeUsuario" className="labelNombreUsuario">Nombre de usuario</label>
-                <input type="text" name="nombreDeUsuario" className="inputNombreUsario" required />      
-              <label htmlFor="nombreCompleto" className="labelNombreCompleto">Nombre completo</label>
-                <input type="text" name="nombreCompleto" className="inputNombreCompleto" />
-              <label htmlFor="numTel" className="labelNumeroTel">Número de teléfono</label>
-                <input type="text" name="numTel" className="inputNumeroTel"/>
-              <label htmlFor="edad" className="labelEdad">Edad</label>
-                <input type="text" name="edad"  className="inputEdad" required />
-              <label htmlFor="correo" className="labelCorreo">Correo electrónico</label>
-                <input type="email" name="correo" className="inputCorreo" required />
-              <label htmlFor="password" className="labelPassword">Contraseña</label>
-                <input type="password" name="password" className="inputPassword" required />
-              
-              <button className="botonRegister" onClick={handlerClick}>Registrate</button>
-              <div className="iniciarSesionLink">
-                <Link to="/Login"><label>Iniciar sesión</label></Link>
-              </div>
-              <div className="regresarLink">
-                <Link to="/"><label>Regresar</label></Link>
-              </div>
+        <div className="ordenamiento">
+          <div className="labelTitulo">
+            <Label label={"Regístrate ahora"}></Label>
+          </div>
+
+          <label htmlFor="nombreDeUsuario" className="labelNombreUsuario">
+            Nombre de usuario
+          </label>
+          <input
+            type="text"
+            name="nombreDeUsuario"
+            className="inputNombreUsario"
+            required
+          />
+          <label htmlFor="nombreCompleto" className="labelNombreCompleto">
+            Nombre completo
+          </label>
+          <input
+            type="text"
+            name="nombreCompleto"
+            className="inputNombreCompleto"
+          />
+          <label htmlFor="numTel" className="labelNumeroTel">
+            Número de teléfono
+          </label>
+          <input type="text" name="numTel" className="inputNumeroTel" />
+          <label htmlFor="edad" className="labelEdad">
+            Edad
+          </label>
+          <input type="text" name="edad" className="inputEdad" required />
+          <label htmlFor="correo" className="labelCorreo">
+            Correo electrónico
+          </label>
+          <input type="email" name="correo" className="inputCorreo" required />
+          <label htmlFor="password" className="labelPassword">
+            Contraseña
+          </label>
+          <input
+            type="password"
+            name="password"
+            className="inputPassword"
+            required
+          />
+
+          <button className="botonRegister" onClick={handlerClick}>
+            Registrate
+          </button>
+          <div className="iniciarSesionLink">
+            <Link to="/Login">
+              <label>Iniciar sesión</label>
+            </Link>
+          </div>
+          <div className="regresarLink">
+            <Link to="/">
+              <label>Regresar</label>
+            </Link>
+          </div>
         </div>
       </form>
     </>

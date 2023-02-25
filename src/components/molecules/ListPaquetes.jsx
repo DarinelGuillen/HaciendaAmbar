@@ -1,24 +1,23 @@
 import { useState, useEffect, useContext } from "react";
 import UserContext from "../../contexts/UserContext";
-
 import RecuadroPaquete from "../atoms/RecuadroPaquete";
 import "../../assets/style/ListPaquetes.css";
 
 function ListPaquetes() {
   const [paquetes, setPaquete] = useState([]);
-  const { isLoged, setIsLoged } = useContext(UserContext);
+  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
 
   useEffect(() => {
-    if (isLoged) {
+    if (isLoggedIn) {
       fetch("http://haciendaambar.iothings.com.mx:3000/paquetes")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
-          //   console.log("data id on useEffect", data[0]._id);
+          //console.log(data);
+          //   //console.log("data id on useEffect", data[0]._id);
           setPaquete(data);
         });
     }
-  }, [isLoged]);
+  }, [isLoggedIn]);
 
   return (
     <>
@@ -26,10 +25,10 @@ function ListPaquetes() {
         <h2>Lista de Paquetes </h2>
 
         <div className="prueba">
-          {isLoged &&
+          {isLoggedIn &&
             paquetes.map((paquete) => {
-              console.log("///data id", paquete._id);
-              console.log("/data Price", paquete.precio);
+              //console.log("///data id", paquete._id);
+              //console.log("/data Price", paquete.precio);
               return (
                 <RecuadroPaquete
                   _id={paquete._id}

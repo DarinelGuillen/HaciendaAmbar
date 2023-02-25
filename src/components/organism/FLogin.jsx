@@ -14,7 +14,7 @@ function FLogin() {
   const formDataL = useRef();
   const navigate = useNavigate();
   const formL = useRef();
-  const { isLoged, setIsLoged } = useContext(UserContext);
+  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
   const { isIduser, setIsiduser } = useContext(IdContex);
   const [Label, setLabel] = useState("");
@@ -29,11 +29,11 @@ function FLogin() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log("DATA.....", data);
+        //console.log("DATA.....", data);
         if (data.datos && data.datos.length === 3) {
           const [id, admin, nombreDeUsuario] = data.datos;
           setIsAdmin(admin);
-          setIsLoged(true);
+          setIsLoggedIn(true);
           setIsiduser(id);
           setLabel("");
           admin ? navigate("/Admin") : navigate("/CommonUser");
@@ -47,36 +47,35 @@ function FLogin() {
   };
 
   return (
-<>
-
-  <div className="formLoginG">
-    <img className="LogosGeneric" src={imgLogin} alt="" />
-  <div className="contenedorFormulario">
-    <form ref={formDataL}>
-          <div className="ordenamiento">
-            <label className="labelTitulo">Inicio de sesión</label>
-            <label htmlFor="username">Username</label>
-            <input type="text" name="nombreDeUsuario" />
-            <label htmlFor="password">Password</label>
-            <input type="password" name="contrasenia" />
-            <button className="botonFlogin" onClick={handlerClick}>Iniciar Sesion </button>
-          <Link to="/">
-            <label>Landing</label>
-          </Link>
-          <Link to="/">
-            <label>Olvide mi contraseña</label>
-          </Link>
-          <Link to="/">
-            <label>Registrarte</label>
-          </Link>
-        <label>{Label}</label>
-     </div>
-  </form>
-  </div>
-
-  </div>
-  
-</>
+    <>
+      <div className="formLoginG">
+        <img className="LogosGeneric" src={imgLogin} alt="" />
+        <div className="contenedorFormulario">
+          <form ref={formDataL}>
+            <div className="ordenamiento">
+              <label className="labelTitulo">Inicio de sesión</label>
+              <label htmlFor="username">Username</label>
+              <input type="text" name="nombreDeUsuario" />
+              <label htmlFor="password">Password</label>
+              <input type="password" name="contrasenia" />
+              <button className="botonFlogin" onClick={handlerClick}>
+                Iniciar Sesion{" "}
+              </button>
+              <Link to="/">
+                <label>Landing</label>
+              </Link>
+              <Link to="/">
+                <label>Olvide mi contraseña</label>
+              </Link>
+              <Link to="/">
+                <label>Registrarte</label>
+              </Link>
+              <label>{Label}</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }
 export default FLogin;

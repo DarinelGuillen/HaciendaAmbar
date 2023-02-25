@@ -1,10 +1,10 @@
-import TestAdminView from "../components/molecules/TestAdminView";
+import AdminView from "../components/molecules/AdminView";
 function Admin() {
-    return ( 
-        <>
-        <TestAdminView/>
-        </>
-     );
+  return (
+    <>
+      <AdminView />
+    </>
+  );
 }
 
 export default Admin;

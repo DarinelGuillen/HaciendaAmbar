@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import iconoFooter from "../../assets/img/logoBlancoNegro.svg"
 import iconoRedes from "../../assets/img/IconoRedes.svg"
 import Icon from "../atoms/Icon"
