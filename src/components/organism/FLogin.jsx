@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+/* import InputStyled from "../atoms/InputStyled"; */
 
 import LabelStyled from "../atoms/LabelStyled";
 import UserContext from "../../contexts/UserContext";
@@ -56,7 +57,8 @@ function FLogin() {
             <div className="ordenamiento">
               <label className="labelTitulo">Inicio de sesión</label>
               <label htmlFor="username">Username</label>
-              <input type="text" name="nombreDeUsuario" />
+              {/* <InputStyled type={"text"} placeholder={"User Name"} inputBorder={3}/> */}
+              <input type="text" name="nombreDeUsuario" /> 
               <label htmlFor="password">Password</label>
               <input type="password" name="contrasenia" />
               <LabelStyled danger={true} label={Label}></LabelStyled>
