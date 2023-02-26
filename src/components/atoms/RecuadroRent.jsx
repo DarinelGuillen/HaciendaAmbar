@@ -1,10 +1,10 @@
-import ButtonStyled from "../atoms/ButtonStyled";
+import ButtonStyled from "./ButtonStyled";
 import "../../assets/style/moleculescss/RecuadroRent.css"
 function RecuadroRent({_id, precioTotal,fechaInicio,estadoRenta,observaciones,fechaFinalizacion, id}) {
   const handlerClickAceptRent=(e, id)=>{
     e.preventDefault();
     console.log("Call handlerClickAceptRent =ID=: ",id);
-
+    
   }
   const handlerClickRejectRent=(e, id)=>{
     e.preventDefault();
@@ -15,7 +15,8 @@ function RecuadroRent({_id, precioTotal,fechaInicio,estadoRenta,observaciones,fe
   return ( 
     
       <div className="RecuadroRent">
-        <label>KEY : {_id} </label>
+        <label>KEY : </label>
+        <label>{_id} </label>
         <label>{precioTotal}</label>
         <label>{fechaInicio}</label>
         <label>{estadoRenta}</label>

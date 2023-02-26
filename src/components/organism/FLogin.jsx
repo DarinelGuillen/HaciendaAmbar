@@ -2,8 +2,9 @@ import { useRef } from "react";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
-
 import { Link } from "react-router-dom";
+
+import LabelStyled from "../atoms/LabelStyled";
 import UserContext from "../../contexts/UserContext";
 import AdminContext from "../../contexts/AdminContext";
 import IdContex from "../../contexts/IdContex";
@@ -58,6 +59,7 @@ function FLogin() {
               <input type="text" name="nombreDeUsuario" />
               <label htmlFor="password">Password</label>
               <input type="password" name="contrasenia" />
+              <LabelStyled danger={true} label={Label}></LabelStyled>
               <button className="botonFlogin" onClick={handlerClick}>
                 Iniciar Sesion{" "}
               </button>
@@ -70,7 +72,7 @@ function FLogin() {
               <Link to="/">
                 <label>Registrarte</label>
               </Link>
-              <label>{Label}</label>
+              
             </div>
           </form>
         </div>

@@ -1,5 +1,4 @@
-import ListRent from "../components/organism/ListRent";
-import AdminView from "../components/molecules/AdminView";
+import ListRent from "../components/molecules/ListRent";
 function Admin() {
   return (
     <>
