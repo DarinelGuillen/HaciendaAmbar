@@ -1,8 +1,9 @@
+import ListRent from "../components/organism/ListRent";
 import AdminView from "../components/molecules/AdminView";
 function Admin() {
   return (
     <>
-      <AdminView />
+    <ListRent/>
     </>
   );
 }

@@ -4,7 +4,7 @@ function AdminView() {
   return (
     <>
       <h1>VIEW ADMIN</h1>
-      <table class="default">
+      <table className="default">
         <tr>
           <th>Usuario</th>
           <th>Nombre de paquete</th>
@@ -12,6 +12,7 @@ function AdminView() {
           <th>Fin de renta</th>
           <th>Costo</th>
         </tr>
+
         <tr>
           <td>Dario Antonio</td>
           <td>Albercazo Ámbar</td>

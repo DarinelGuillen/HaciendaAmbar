@@ -22,30 +22,7 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
       .catch((error) => console.error(error));
 
     navigate("/RentPackage");
-    /*  //Make API call using the id parameter
-     const URI = `http://haciendaambar.iothings.com.mx:3000/paquetes/${id}`;
-     const options = {
-       method: "POST",
-       headers: { "Content-Type": "application/json" },
-       body: JSON.stringify({
-         // Add your request body here
-       }),
-     };
-
-     fetch(URI, options)
-      .then((response) => {
-         //console.log("Response:", response);
-        return response.json();
-       })
-       .then((data) => {
-         //console.log("Data:", data);
-         alert(JSON.stringify(data));
-       })
-       .catch((error) => {
-         //console.log("Error:", error);
-       }); */
-
-    // // Redirect to a different page after making the API call
+    
   };
 
   return (
@@ -62,15 +39,3 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
 }
 
 export default RecuadroPaquete;
-
-// fetch(URI, options)
-//   .then((response) => {
-//     //console.log("Response:", response);
-//     return response.json();
-//   })
-//   .then((data) => {
-//     //console.log("Data:", data);
-//   })
-//   .catch((error) => {
-//     //console.log("Error:", error);
-//   });

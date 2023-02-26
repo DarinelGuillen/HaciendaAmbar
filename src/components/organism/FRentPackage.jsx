@@ -49,25 +49,25 @@ function FRentPackage() {
 
   return (
     <>
-      <div class="login-box">
+      <div className="login-box">
         <label className="labelPackage" htmlFor="fechaInicio">
           Fecha de inicio
         </label>
         <form ref={formSignIn}>
-          <div class="user-box">
+          <div className="user-box">
             <input type="datetime-local" name="fechaInicio" />
           </div>
           <label className="labelPackage" htmlFor="fechaFinalizacion">
             Fecha de finalización
           </label>
-          <div class="user-box">
+          <div className="user-box">
             <input type="datetime-local" name="fechaFinalizacion" />
           </div>
 
           <label className="labelPackage" htmlFor="observaciones">
             observaciones
           </label>
-          <div class="user-box">
+          <div className="user-box">
             <input type="text" name="observaciones" />
           </div>
           <button
