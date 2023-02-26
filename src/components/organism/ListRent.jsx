@@ -20,7 +20,7 @@ function ListRent() {
     <>
       <div>
         <h1>Restas pendientes a aceptar</h1>
-
+        <div className="ContaineListRent">
         {isAdmin &&
           Rents.map((rent) => (
             <RecuadroRent
@@ -33,6 +33,7 @@ function ListRent() {
               fechaFinalizacion={rent.fechaFinalizacion}
             />
           ))}
+          </div>
       </div>
     </>
   );
