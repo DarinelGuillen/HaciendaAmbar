@@ -31,6 +31,7 @@ function ListPaquetes() {
               //console.log("/data Price", paquete.precio);
               return (
                 <RecuadroPaquete
+                  key={paquete._id}
                   _id={paquete._id}
                   nombrePaquete={paquete.nombrePaquete}
                   precio={paquete.precio}

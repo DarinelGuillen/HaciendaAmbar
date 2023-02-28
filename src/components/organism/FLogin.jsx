@@ -72,7 +72,6 @@ function FLogin() {
               <Link to="/">
                 <label>Registrarte</label>
               </Link>
-              
             </div>
           </form>
         </div>

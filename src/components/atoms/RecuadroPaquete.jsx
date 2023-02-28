@@ -22,7 +22,6 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
       .catch((error) => console.error(error));
 
     navigate("/RentPackage");
-    
   };
 
   return (

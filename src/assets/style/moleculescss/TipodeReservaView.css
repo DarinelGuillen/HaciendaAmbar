@@ -1,0 +1,73 @@
+
+
+/* set full width for FContaineMain and adjust height automatically */
+.FContaineMain {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* set full width for CContainerMain and adjust height automatically */
+  .CContainerMain {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* set left section to take up 50% of the width and align to the left */
+  .left {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+  }
+  .left p {
+    font-size: 1.9rem; /* adjust the value to your liking */
+  } 
+  
+  /* set right section to take up 50% of the width and align to the right */
+  .rightIMG {
+    width: 50%;
+    display: inline-block;
+    float: right;
+  }
+  
+  /* adjust image width to fit the right div */
+  .rightIMG img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* add some padding and margin for better layout */
+  .left, .rightIMG {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* add some style to the button */
+  .ejemplobutton {
+    background-color: rgb(28, 28, 195);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* adjust layout for smaller screens */
+  @media (max-width: 768px) {
+    .left, .rightIMG {
+      width: 100%;
+      float: none;
+    }
+  }
+  
+  /* flip the order of left and right sections in the second CContainerMain */
+  .CContainerMain:nth-of-type(2) .left {
+    order: 2;
+  }
+  
+  .CContainerMain:nth-of-type(2) .rightIMG {
+    order: 1;
+  }
+  
