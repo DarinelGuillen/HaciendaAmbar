@@ -20,7 +20,7 @@ function FRentPackage() {
     //console.log("ISPAQUETE CONTEXT IDDDDD\n", isPaquete._id, "\n");
     //console.log("IDD USER CONTEXT isLoggedIn\n", isIduser, "\n");
     const formData = new FormData(formSignIn.current);
-    const URI = "http://haciendaambar.iothings.com.mx:3000/rentasUsuario";
+    const URI = "https://haciendaambar.iothings.com.mx/rentasUsuario";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

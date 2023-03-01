@@ -22,16 +22,22 @@ function Header() {
               <Link className="loginNav" to="/Login">
                 Iniciar sesión
               </Link>
-              <Link className="loginNav" to="/SingIn">
-                Registrate
+              <Link className="loginNav" to="/">
+                Contacto
+              </Link>
+              <Link className="loginNav" to="/">
+                Sobre nosotros
+              </Link>
+              <Link className="loginNav" to="/">
+                Tipos de reservas
+              </Link>
+              <Link className="loginNav" to="/">
+                Mi Cuenta
               </Link>
             </>
           ) : (
             <Link to="/">log out</Link>
           )}
-          <Label label={"Tipos de reserva"}></Label>
-          <Label label={"Contacto"}></Label>
-          <Label label={"Acerca de nosotros"}></Label>
         </div>
       </div>
 

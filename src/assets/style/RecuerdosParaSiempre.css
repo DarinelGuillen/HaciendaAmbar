@@ -1,75 +1,62 @@
-.RecuerdosParaSiempreMain{
-    display: flex;
-    justify-content: flex-end;
-    height: 90vh;
-    background: rgba(116, 57, 58, 0.8);
-   
-    
-}
-.tituloRecuerdosParaSiempre{
-    width: 40%;
-    margin: 4%;
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 450;
-    font-size: 2em;
-    text-align: start;  
-    color: #FFFFFF;
-}
-.titulio{
-    text-align: center;
-}
-.imagenRCPS{
-    float: left;
-    max-width: 800px; 
-}
-.cards{
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
 
-}
-.id_martin{
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 71px;
-    text-align: center;
-    color: #4B4B4C;
-}
-
-.acercaDeNosotros{
+.contenedorPadreRecuerdosParaSiempre{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    font-size: 1.4rem;
-    line-height: 35px;
-    text-align: center;
-    gap: 10px;
-    width: 100%;
-    height: 804px;    
-    font-family: 'Quattrocento', serif;
-    font-style: normal;
-    color: #000000;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.txt{
-    font-family: 'Quattrocento', serif;
+.titulo h1{
+    font-family: 'Quattrocento';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 71px;
+    font-size: 50px;
+    line-height: 55px;
     text-align: center;
     color: #4B4B4C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
-.iconoAboutUs{
+.cardsPadre{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    color: #4B4B4C;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 17px 488px;    
-    width: 1438px;
-    height: 398.52px;
-   
-    
+    flex-flow: column wrap;
+    text-align:justify;
+    width: 40%;
+    padding-left: 3%;
+    margin: 5%;
+}
+.titulio{
+
+    display: flex;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    color: #4B4B4C;
+    text-align: start;
+    margin-top: 8%;
+}
+
+.titulio label{
+    margin-left: 4%;
+}
+
+.cardDisplay{
+    display: flex;
+    justify-content: space-around;
+}
+.imagenCardDerecha{
+    height: 100%;
+    width: 40%;
+}
+.imagenCardDerecha img{
+    width: 90%;
+    height: auto;
 }

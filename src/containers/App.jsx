@@ -36,13 +36,13 @@ function App() {
                 <Route path="/Login" element={<Login />} />
                 <Route path="/SingIn" element={<SingIn />} />
                 <Route element={<ProtectedParentRoute isLoggedIn={isLoggedIn} />}>
-                  <Route path="/General" element={<General />} />
-                  <Route path="/CommonUser" element={<CommonUser />} />
-                  <Route path="/RentPackage" element={<RentPackage />} />
-                </Route>
-                <Route element={<ProtectedParentRouteAdmin isLoggedIn={isAdmin} />}>
-                  <Route path="/Admin" element={<Admin />} />
-                </Route>
+                <Route path="/General" element={<General />} />
+                <Route path="/CommonUser" element={<CommonUser />} />
+                <Route path="/RentPackage" element={<RentPackage />} />
+              </Route>
+              <Route element={<ProtectedParentRouteAdmin isLoggedIn={isAdmin} />}>
+              <Route path="/Admin" element={<Admin />} />
+              </Route>
               </Routes>
             </IdContex.Provider>
           </PaqueteContext.Provider>

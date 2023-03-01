@@ -9,7 +9,7 @@ function ListPaquetes() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      fetch("http://haciendaambar.iothings.com.mx:3000/paquetes")
+      fetch("https://haciendaambar.iothings.com.mx/paquetes")
         .then((response) => response.json())
         .then((data) => {
           //console.log(data);

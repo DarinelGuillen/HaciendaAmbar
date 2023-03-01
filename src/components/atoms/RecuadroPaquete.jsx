@@ -13,7 +13,7 @@ function RecuadroPaquete({ _id, nombrePaquete, precio, img, descripcion }) {
     alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
     //haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
-    fetch(`http://haciendaambar.iothings.com.mx:3000/paquetes/${paqueteID}`)
+    fetch(`https://haciendaambar.iothings.com.mx/paquetes/${paqueteID}`)
       .then((response) => response.json())
       .then((data) => {
         //console.log(data);

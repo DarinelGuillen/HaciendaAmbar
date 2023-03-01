@@ -1,5 +1,6 @@
 
 import RecuerdosParaSiempre from "../components/molecules/RecuerdosParaSiempre";
+import CarruselPaquetes from "../components/molecules/CarruselPaquetes";
 import Footer from "../components/molecules/Footer";
 import Header from "../components/molecules/Header";
 import Slider from "../components/atoms/Slider";
@@ -16,6 +17,7 @@ function Landing() {
     {/* se borro Main */}
     <Slider imagenes={mockImagenes}/>
     <RecuerdosParaSiempre></RecuerdosParaSiempre>
+    <CarruselPaquetes></CarruselPaquetes>
     
     <Footer></Footer>
 </>

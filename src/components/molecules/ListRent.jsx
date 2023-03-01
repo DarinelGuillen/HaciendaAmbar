@@ -8,7 +8,7 @@ function ListRent() {
 
   useEffect(() => {
     isAdmin
-      ? fetch("http://haciendaambar.iothings.com.mx:3000/rentasUsuario")
+      ? fetch("https://haciendaambar.iothings.com.mx/rentasUsuario")
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
