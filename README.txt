@@ -1,3 +1,3 @@
-haciendaambar.iothings.com.mx:3000
+https://haciendaambar.iothings.com.mx
 
-localhost:3000
+http://localhost:3000

@@ -14,7 +14,8 @@ function Header() {
     <>
       <div className="navBar">
         <div className="iconoAmbar">
-          <img src="src/assets/img/LogoColor.png"></img>
+          <Link className="loginNav" to="/"><img src="src/assets/img/LogoColor.png"></img></Link>
+          
         </div>
         <div className="pruebita">
           {!isLoggedIn ? (
@@ -29,9 +30,9 @@ function Header() {
           ) : (
             <Link to="/">log out</Link>
           )}
-          <Label label={"Tipos de reserva"}></Label>
-          <Label label={"Contacto"}></Label>
-          <Label label={"Acerca de nosotros"}></Label>
+          <Link className="loginNav" to="/TypesRents">Tipos de reserva </Link>
+          <Link className="loginNav" to="/Contact">Contacto</Link>
+          <Link className="loginNav" to="/AboutUs">Acerca de nosotros</Link>
         </div>
       </div>
 

@@ -26,7 +26,7 @@ function FLogin() {
     const formData = new FormData(formDataL.current);
     const userName = formData.get("nombreDeUsuario");
     const contrasenia = formData.get("contrasenia");
-    const url = `http://haciendaambar.iothings.com.mx:3000/users/${userName}/${contrasenia}`;
+    const url = `https://haciendaambar.iothings.com.mx/users/${userName}/${contrasenia}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -58,7 +58,7 @@ function FLogin() {
               <label className="labelTitulo">Inicio de sesión</label>
               <label htmlFor="username">Username</label>
               {/* <InputStyled type={"text"} placeholder={"User Name"} inputBorder={3}/> */}
-              <input type="text" name="nombreDeUsuario" /> 
+              <input type="text" name="nombreDeUsuario" />
               <label htmlFor="password">Password</label>
               <input type="password" name="contrasenia" />
               <LabelStyled danger={true} label={Label}></LabelStyled>

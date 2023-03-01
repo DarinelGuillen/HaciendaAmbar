@@ -1,14 +1,14 @@
 import Header from "../components/molecules/Header";
-import PrintPackage from "../components/organism/PrintPackage";
+import ContactView from "../components/organism/ContactView"
 import Footer from "../components/molecules/Footer";
-function RentPackage() {
+function Contact() {
     return ( 
         <>
         <Header/>
-        <PrintPackage/>
+        <ContactView/>
         <Footer/>
         </>
      );
 }
 
-export default RentPackage;
+export default Contact;
