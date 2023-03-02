@@ -16,7 +16,7 @@ function ListPaquetes() {
   };
 
   useEffect(() => {
-    fetch("https://haciendaambar.iothings.com.mx/paquetes")
+    fetch("http://localhost:3000/paquetes")
       .then((response) => response.json())
       .then((data) => {
         //console.log(data);
@@ -105,7 +105,7 @@ function ListPaquetes() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      fetch("https://haciendaambar.iothings.com.mx/paquetes")
+      fetch("http://localhost:3000/paquetes")
         .then((response) => response.json())
         .then((data) => {
           //console.log(data);

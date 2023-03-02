@@ -19,10 +19,10 @@ function RecuadroPaquete({
     //console.log("IDIDIDIDIDIDID", id);
     console.log("restric IM false, in RecuadroPaquete from");
 
-    alert("Tu renta Fue procesada correctamente!");
+    //alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
     //haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
-    fetch(`https://haciendaambar.iothings.com.mx/paquetes/${paqueteID}`)
+    fetch(`http://localhost:3000/paquetes/${paqueteID}`)
       .then((response) => response.json())
       .then((data) => {
         //console.log(data);

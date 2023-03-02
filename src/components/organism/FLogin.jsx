@@ -26,7 +26,7 @@ function FLogin() {
     const formData = new FormData(formDataL.current);
     const userName = formData.get("nombreDeUsuario");
     const contrasenia = formData.get("contrasenia");
-    const url = `https://haciendaambar.iothings.com.mx/users/${userName}/${contrasenia}`;
+    const url = `http://localhost:3000/users/${userName}/${contrasenia}`;
 
     fetch(url)
       .then((response) => response.json())
