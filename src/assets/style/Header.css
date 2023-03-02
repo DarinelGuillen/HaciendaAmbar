@@ -16,17 +16,18 @@
     padding: 0%;
     justify-content:left;
 }
-.pruebita{
+.contenedorNavBar{
     display:flex;
     justify-content:space-evenly;
-    width: 70vw;
+    width: 50vw;
     align-items: center;
     font-style: normal;
     font-weight: 700;
     font-size: 1em;
     line-height: 17px;
     text-align: center;
-    color: #4B4B4C;
+    color: #4B4B4C; 
+    
 }
 .links{
     padding-top: 50px;
@@ -35,3 +36,4 @@
     text-decoration: none;
     color: #4B4B4C;
 }
+

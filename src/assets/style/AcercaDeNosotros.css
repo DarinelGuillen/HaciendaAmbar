@@ -1,0 +1,15 @@
+.acercaDeNosotrosTitulo{
+    display: flex;
+    justify-content: center;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    padding-top: 3%;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #4B4B4C;   
+}
+.gallery__img:nth-child(1){
+    background-image: url('');
+}

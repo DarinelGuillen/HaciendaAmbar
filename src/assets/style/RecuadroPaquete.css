@@ -9,16 +9,39 @@
     display: flex;
     flex-flow: column wrap;
     text-align: center;
-    height: 40vh;
-    width: 19vw;
-    justify-content: center;
+    height: 55vh;
+    width: 30vw;
+    justify-content: space-evenly;
     align-content: center;
-    background: rgba(116, 57, 58, 0.4);
-    background-repeat: no-repeat;
-    background-image: url("../img/iconoPaquetes.png");
+    background: #ffffff;
+    box-shadow: 0px 10px 20px rgba(75, 60, 60, 0.25);
+    border-radius: 10px;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+
 }
 .botonCard{
-    border-radius: 10px;
-    width: 6vw;
-    height: 5vh;
+    border:none;
+    border-radius: 20px;
+    justify-content: center;
+    width: 25vw;
+    height: 3vh;
+    background-color: #4B4B4C;
+    color: #FFFFFF;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+.botonCard:hover{
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+}
+.cardCompleta:hover{
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
 }

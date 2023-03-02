@@ -19,7 +19,7 @@ function PrintPackage() {
     //console.log("ISPAQUETE CONTEXT\n", isPaquete, "\n");
     //console.log("ISPAQUETE CONTEXT IDDDDD\n", isPaquete._id, "\n");
     //console.log("IDD USER CONTEXT isLoggedIn\n", isIduser, "\n");
-    const URI = "https://haciendaambar.iothings.com.mx/rentasUsuario";
+    const URI = "http://localhost:3000/rentasUsuario";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

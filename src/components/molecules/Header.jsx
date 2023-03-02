@@ -17,7 +17,7 @@ function Header() {
           <Link className="loginNav" to="/"><img src="src/assets/img/LogoColor.png"></img></Link>
           
         </div>
-        <div className="pruebita">
+        <div className="contenedorNavBar">
           {!isLoggedIn ? (
             <>
               <Link className="loginNav" to="/Login">

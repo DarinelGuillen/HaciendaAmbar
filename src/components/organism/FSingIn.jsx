@@ -10,7 +10,7 @@ function FSingIn() {
     e.preventDefault();
     //console.log("handlerClick called");
     const formData = new FormData(formSingIn.current);
-    const URI = "https://haciendaambar.iothings.com.mx/users";
+    const URI = "http://localhost:3000/users";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

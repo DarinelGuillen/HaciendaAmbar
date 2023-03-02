@@ -5,6 +5,7 @@ import Footer from "../components/molecules/Footer";
 import Header from "../components/molecules/Header";
 import Slider from "../components/atoms/Slider";
 import ListPaquetes from "../components/molecules/ListPaquetes";
+import AcercaDeNosotros from "../components/molecules/AcercaDeNosotros";
 function Landing() {
   const mockImagenes = [
 		'https://scontent.ftgz3-1.fna.fbcdn.net/v/t39.30808-6/279867919_400251142107021_3419976306744714578_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeEA9z6msgCldV8J8C7UShRKQmy3n_yzyGVCbLef_LPIZWhSuy1x744eRihlJq2qCdWFxIiictrj4YdWj0BTSKSW&_nc_ohc=DJcWE4ZtiuQAX9nrDJM&_nc_ht=scontent.ftgz3-1.fna&oh=00_AfCKXWHz7z6mY9X0TdXHwjyjXNvKHAHZqSfL0FxXffDGeQ&oe=63FBF5D5',
@@ -13,11 +14,11 @@ function Landing() {
 	];
   return (
     <>
-    <Header></Header>
-    <ListPaquetes/>
+    <Header/>
     <Slider imagenes={mockImagenes}/>
-    <RecuerdosParaSiempre></RecuerdosParaSiempre>
-    <CarruselPaquetes></CarruselPaquetes>
+    <RecuerdosParaSiempre/>
+    <ListPaquetes/>
+    <AcercaDeNosotros/>
     
     <Footer></Footer>
 </>
