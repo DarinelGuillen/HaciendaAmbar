@@ -72,7 +72,7 @@ function PrintPackage() {
     //   })
     //   .catch((error) => console.error(error));
     alert("Tu X paquete a sido agregado al Tu carrito\n")
-    navigate("/TypesRents");
+    //navigate("/TypesRents");
   };
 
   return (

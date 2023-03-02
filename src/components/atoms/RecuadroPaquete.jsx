@@ -23,20 +23,20 @@ function RecuadroPaquete({
     //alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
     //haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
-    fetch(`http://localhost:3000/paquetes/${paqueteID}`)
-      .then((response) => response.json())
-      .then((data) => {
-        //console.log(data);
-        console.log("DATAAAAA========", data);
-        setIsPaquete(data);
-        setTimeout(() => {
-          console.log(
-            "const { isPaquete, setIsPaquete } = useContext(PaqueteContext);  =",
-            isPaquete
-          );
-        }, 1000);
-      })
-      .catch((error) => console.error(error));
+    // fetch(`http://localhost:3000/paquetes/${paqueteID}`)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     //console.log(data);
+    //     console.log("DATAAAAA========", data);
+    //     setIsPaquete(data);
+    //     setTimeout(() => {
+    //       console.log(
+    //         "const { isPaquete, setIsPaquete } = useContext(PaqueteContext);  =",
+    //         isPaquete
+    //       );
+    //     }, 1000);
+    //   })
+    //   .catch((error) => console.error(error));
 
     navigate("/RentPackage");
   };
