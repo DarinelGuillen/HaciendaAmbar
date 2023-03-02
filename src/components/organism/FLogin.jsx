@@ -44,8 +44,8 @@ function FLogin() {
           setLabel(data.message || "Error desconocido");
         }
       })
-      .catch(() => {
-        setLabel("Algo inesperado a pasado de nuestro lado");
+      .catch((err) => {
+        setLabel(err,"Algo inesperado a pasado de nuestro lado");
       });
   };
 
