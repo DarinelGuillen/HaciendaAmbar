@@ -58,7 +58,7 @@ function FLogin() {
               <label className="labelTitulo">Inicio de sesión</label>
               <label htmlFor="username">Username</label>
               {/* <InputStyled type={"text"} placeholder={"User Name"} inputBorder={3}/> */}
-              <input type="text" name="nombreDeUsuario" /> 
+              <input type="text" name="nombreDeUsuario" />
               <label htmlFor="password">Password</label>
               <input type="password" name="contrasenia" />
               <LabelStyled danger={true} label={Label}></LabelStyled>

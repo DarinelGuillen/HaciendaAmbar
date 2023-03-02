@@ -1,14 +1,14 @@
 import Header from "../components/molecules/Header";
-import PrintPackage from "../components/organism/PrintPackage";
+import TipodeReservaView from "../components/organism/TipodeReservaView";
 import Footer from "../components/molecules/Footer";
-function RentPackage() {
+function TypesRents() {
     return ( 
         <>
         <Header/>
-        <PrintPackage/>
+        <TipodeReservaView/>
         <Footer/>
         </>
      );
 }
 
-export default RentPackage;
+export default TypesRents;

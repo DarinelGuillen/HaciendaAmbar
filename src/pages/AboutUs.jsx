@@ -1,14 +1,14 @@
 import Header from "../components/molecules/Header";
-import PrintPackage from "../components/organism/PrintPackage";
+import AboutUsContent from "../components/organism/AboutUsContent";
 import Footer from "../components/molecules/Footer";
-function RentPackage() {
-    return ( 
+function AboutUs() {
+    return (
         <>
         <Header/>
-        <PrintPackage/>
+        <AboutUsContent/>
         <Footer/>
         </>
-     );
+      );
 }
 
-export default RentPackage;
+export default AboutUs;
