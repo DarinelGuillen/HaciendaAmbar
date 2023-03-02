@@ -69,7 +69,7 @@ function RecuadroPaquete({
             <TextoCard span={"Descripción"}></TextoCard>
           </div>
 
-          <button onClick={(e) => handlerClickPaquete(e, _id)}>Rentarlo</button>
+          <button className="botonCard" onClick={(e) => handlerClickPaquete(e, _id)}>Rentarlo</button>
         </div>
       )}
     </>

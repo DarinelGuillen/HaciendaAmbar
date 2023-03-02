@@ -77,17 +77,16 @@ function PrintPackage() {
 
   return (
     <>
-      <div>
-        <label>PRECIO:{isPaquete.precio}</label>
-        <label>nombrePaquete:{isPaquete.nombrePaquete}</label>
-        <label>descripcion:{isPaquete.descripcion}</label>
+    <div className="contenedorPadre">
+      <div className="contenedorPaquete">
+        <label className="contenedorPaquete">PRECIO:${isPaquete.precio}</label>
+        <label className="infoPaquete">Nombre De Paquete:{isPaquete.nombrePaquete}</label>
+        <label className="infoPaquete">Descripción:{isPaquete.descripcion}</label>
       </div>
-      <button
-        className="botonFormularioPackage"
-        onClick={handleClickTerminateRent}
-      >
+      <button className="botonFormularioPackage" onClick={handleClickTerminateRent}>
         Agregar al carrito X paquete
       </button>
+    </div>
     </>
   );
 }
