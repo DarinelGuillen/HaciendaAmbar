@@ -21,8 +21,27 @@
     float: left;
     text-align: center;
   }
+  .tituloTipoRenta{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+    color: #9C2727;
+  }
   .left p {
     font-size: 1.9rem; /* adjust the value to your liking */
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.1em;
+    color: rgba(0, 0, 0, 0.8);
   } 
   
   /* set right section to take up 50% of the width and align to the right */
@@ -34,7 +53,8 @@
   
   /* adjust image width to fit the right div */
   .rightIMG img {
-    width: 100%;
+ 
+    width: 60%;
     height: auto;
   }
   
@@ -46,13 +66,25 @@
   
   /* add some style to the button */
   .ejemplobutton {
-    background-color: rgb(28, 28, 195);
+    background-color: #9C2727;
     color: white;
+    width: 40%;
+    height: 10%;
     border: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 0.7rem;
     cursor: pointer;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+  
   }
+.ejemplobutton:hover{
+  transform: scale3d(1.5, 1.5, 0.3);
+  -webkit-transform: scale3d(1.5, 1.5, 0.3);
+  -moz-transform: scale3d(1.5, 1.5, 0.3);
+}
+   
   
   /* adjust layout for smaller screens */
   @media (max-width: 768px) {

@@ -2,7 +2,9 @@ import { useState } from "react";
 import TdeRCortoPlazo from "./TdeRCortoPlazo";
 import TdeRNormal from "./TdeRNormal";
 import TdeRUltimoMinuto from "./TdeRUltimoMinuto";
-import ejemploimg from "../../assets/img/imgCarrusel1.png";
+import ejemploimg1 from "../../assets/img/imgCarrusel1p.png";
+import ejemploimg2 from "../../assets/img/imgCarrusel2.png";
+import ejemploimg3 from "../../assets/img/imgCarrusel3.png";
 import "../../assets/style/moleculescss/TipodeReservaView.css";
 function TipodeReservaView() {
   const [viewNum, setViewNum] = useState(0);
@@ -39,7 +41,7 @@ function TipodeReservaView() {
           
           <div className="CContainerMain">
             <div className="left">
-              <h1>Reserva Corto Plazo</h1>
+              <h1 className="tituloTipoRenta">Reserva Corto Plazo</h1>
               <p>
                 Para el tipo de reserva a corto plazo se debe tomar en cuenta el
                 reducclassNameo número de paquetes que están disponible, sin
@@ -50,12 +52,12 @@ function TipodeReservaView() {
               </button>
             </div>
             <div className="rightIMG">
-              <img src={ejemploimg}></img>
+              <img src={ejemploimg1}></img>
             </div>
           </div>
           <div className="CContainerMain">
             <div className="left">
-              <h1>Reserva Normal</h1>
+              <h1 className="tituloTipoRenta">Reserva Normal</h1>
               <p>
                 El tipo de reserva normal es en la cual se lleva con anticipo y
                 se puede ver con detallamiento y el alcance del evento a
@@ -66,12 +68,12 @@ function TipodeReservaView() {
               </button>
             </div>
             <div className="rightIMG">
-              <img src={ejemploimg}></img>
+              <img src={ejemploimg2}></img>
             </div>
           </div>
           <div className="CContainerMain">
             <div className="left">
-              <h1>Reserva último Minuto</h1>
+              <h1 className="tituloTipoRenta">Reserva último Minuto</h1>
               <p>
                 En este tipo de reserva están limitados los paquetes a incluir,
                 ya que en unos casos es de suma vitalclassNamead tener más
@@ -82,7 +84,7 @@ function TipodeReservaView() {
               </button>
             </div>
             <div className="rightIMG">
-              <img src={ejemploimg}></img>
+              <img src={ejemploimg3}></img>
             </div>
           </div>
         </div>

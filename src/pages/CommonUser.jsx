@@ -1,5 +1,6 @@
 import Header from "../components/molecules/Header"
 import Footer from "../components/molecules/Footer"
+import AcercaDeNosotros from "../components/molecules/AcercaDeNosotros";
 // import TipodeReservaView from "../components/molecules/TipodeReservaView";
 
 import RecuerdosParaSiempre from "../components/molecules/RecuerdosParaSiempre";
@@ -10,8 +11,9 @@ function CommonUser() {
         <>
         <Header/>
         <Slider/>
-        <ListPaquetes/>
         <RecuerdosParaSiempre/>
+        <ListPaquetes/>
+        <AcercaDeNosotros/>
         <Footer/>
         </>
     );
