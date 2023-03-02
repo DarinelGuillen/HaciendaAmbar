@@ -45,6 +45,34 @@ function PrintPackage() {
         navigate("/CommonUser");
       })
       .catch((error) => console.error(error));
+    // const URI = "http://localhost:3000/rentasUsuario";
+    // const options = {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({
+    //     idPaquete: isPaquete._id, //
+    //     idUser: isIduser,
+    //     fechaInicio: "",
+    //     fechaFinalizacion: "",
+    //     fechaDeReserva: date,
+    //     precioTotal: isPaquete.precio,
+    //     estadoRenta: false,
+    //     observaciones: "",
+    //     SeEjecutoConExitoLarenta: false,
+    //   }),
+    // };
+    // fetch(URI, options)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     //console.log("RENTAL CREATED", data);
+    //     console.log("data", data);
+    //     alert("Renta creada con éxito");
+    //     alert("Él Administrador se contactará con usted");
+    //     navigate("/CommonUser");
+    //   })
+    //   .catch((error) => console.error(error));
+    alert("Tu X paquete a sido agregado al Tu carrito\n")
+    navigate("/TypesRents");
   };
 
   return (
@@ -58,7 +86,7 @@ function PrintPackage() {
         className="botonFormularioPackage"
         onClick={handleClickTerminateRent}
       >
-        Terminar
+        Agregar al carrito X paquete
       </button>
     </>
   );

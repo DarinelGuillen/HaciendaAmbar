@@ -1,7 +1,7 @@
 import { useState } from "react";
-import TdeRCortoPlazo from "../molecules/TdeRCortoPlazo";
-import TdeRNormal from "../molecules/TdeRNormal";
-import TdeRUltimoMinuto from "../molecules/TdeRUltimoMinuto";
+import TdeRCortoPlazo from "./TdeRCortoPlazo";
+import TdeRNormal from "./TdeRNormal";
+import TdeRUltimoMinuto from "./TdeRUltimoMinuto";
 import ejemploimg from "../../assets/img/imgCarrusel1.png";
 import "../../assets/style/moleculescss/TipodeReservaView.css";
 function TipodeReservaView() {
@@ -13,19 +13,30 @@ function TipodeReservaView() {
         <>
         <TdeRCortoPlazo/>
         <button className="ejemplobutton" onClick={() => setViewNum(0)}>
-          Cancelar Aqui ira la pagina de reserva Corto Plazo
+          Cancelar o regresar
         </button>
         </>
       ) : viewNum === 2 ? (
+        <>
+        <TdeRNormal/>
         <button className="ejemplobutton" onClick={() => setViewNum(0)}>
           regresar2!
         </button>
+        </>
+        
       ) : viewNum === 3 ? (
+        <>
+        <TdeRUltimoMinuto/>
         <button className="ejemplobutton" onClick={() => setViewNum(0)}>
           Regresar 3!
         </button>
+        </>
+        
       ) : (
+        <>
+        <h1>Elije que tipo de reserva Que mas te covenza</h1>
         <div className="FContaineMain">
+          
           <div className="CContainerMain">
             <div className="left">
               <h1>Reserva Corto Plazo</h1>
@@ -75,6 +86,7 @@ function TipodeReservaView() {
             </div>
           </div>
         </div>
+        </>
       )}
     </>
   );
