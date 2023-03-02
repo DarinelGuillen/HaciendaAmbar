@@ -15,10 +15,8 @@ function PrintPackage() {
   const navigate = useNavigate();
   const handleClickTerminateRent = (e) => {
     e.preventDefault();
-    //console.log("handleClickTerminateRent called");
-    //console.log("ISPAQUETE CONTEXT\n", isPaquete, "\n");
-    //console.log("ISPAQUETE CONTEXT IDDDDD\n", isPaquete._id, "\n");
-    //console.log("IDD USER CONTEXT isLoggedIn\n", isIduser, "\n");
+
+    /*
     const URI = "http://localhost:3000/rentasUsuario";
     const options = {
       method: "POST",
@@ -45,6 +43,12 @@ function PrintPackage() {
         navigate("/CommonUser");
       })
       .catch((error) => console.error(error));
+    */
+    //console.log("handleClickTerminateRent called");
+    //console.log("ISPAQUETE CONTEXT\n", isPaquete, "\n");
+    //console.log("ISPAQUETE CONTEXT IDDDDD\n", isPaquete._id, "\n");
+    //console.log("IDD USER CONTEXT isLoggedIn\n", isIduser, "\n");
+    
     // const URI = "http://localhost:3000/rentasUsuario";
     // const options = {
     //   method: "POST",
@@ -72,7 +76,7 @@ function PrintPackage() {
     //   })
     //   .catch((error) => console.error(error));
     alert("Tu X paquete a sido agregado al Tu carrito\n")
-    //navigate("/TypesRents");
+    navigate("/TypesRents");
   };
 
   return (
