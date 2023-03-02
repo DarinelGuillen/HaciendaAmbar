@@ -10,6 +10,219 @@
     text-align: center;
     color: #4B4B4C;   
 }
-.gallery__img:nth-child(1){
-    background-image: url('');
+.gallery{
+    display: flex;
+    height: 80vh;
+    width: 95%;
+    margin: 60px auto;
 }
+.gallery__img{
+    width: 80px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: flex .5s;
+    flex: 1;
+    display: grid;
+
+    --message: '¡Renta ya!';
+    --clip: circle(0 at center);
+    --transition: clip-path .2s;
+}
+.gallery__img::before{
+    content: var(--message);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: 'Quattrocento';
+    font-size: 2rem;
+    color: aliceblue;
+    clip-path: var(--clip);
+    transition: var(--transition);
+}
+
+.gallery__img:hover{
+    flex: 6;
+    --clip: circle(100% at center);
+    --transition: clip-path .4s .5s;
+}
+
+.gallery__img:nth-child(1){
+    background-image: url('src/assets/img/imgx2.png');
+}
+.gallery__img:nth-child(2){
+    background-image: url('src/assets/img/imgx3.png');
+}
+.gallery__img:nth-child(3){
+    background-image: url('src/assets/img/imgx4.jpeg');
+}
+.gallery__img:nth-child(4){
+    background-image: url('src/assets/img/imgx5.jpeg');
+}
+.gallery__img:nth-child(5){
+    background-image: url('src/assets/img/imgx6.jpeg');
+}
+.gallery__img:nth-child(6){
+    background-image: url('src/assets/img/imgx8.jpeg');
+}
+.contactito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contactanostitulo{
+    display: flex;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    justify-content: center;
+    color: #4B4B4C;
+    text-align: start;
+    margin-top: 8%;
+}
+.contact-form {
+    
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+  }
+  
+  .contact-form label {
+    color: black;
+  }
+  
+  .contact-form .heading {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 12px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    font-family: 'Quattrocento';
+    font-style: normal;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    font-family: 'Quattrocento';
+    font-style: normal;
+    resize: none;
+    height: 50%;
+    width: 100%;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #C51515;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #C51515;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .padreAcercaDeNosotros{
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.75rem;
+    background-color: white;
+    width: 40vw;
+    height: 40vh;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+    0 2px 4px -2px rgba(0,0,0,.1);
+  }
+  
+  .header {
+    position: relative;
+    background-clip: border-box;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.75rem;
+    background-color: rgb(243, 33, 33);
+    box-shadow: 0 10px 15px -3px rgba(243, 33, 33, 0.4),0 4px 6px -4px rgba(33,150,243,.4);
+    height: 14rem;
+  }
+  
+  .info {
+    border: none;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  
+  .title {
+    color: rgb(38 50 56);
+    letter-spacing: 0;
+    line-height: 1.375;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer {
+    padding: 0.75rem;
+    border: 1px solid rgb(236 239 241);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 140, 255, 0.082);
+  }
+  
+  .tag {
+    font-weight: 300;
+    font-size: .75rem;
+    display: block;
+  }
+  
+  .action {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 6px -1px rgba(33,150,243,.4),0 2px 4px -2px rgba(33,150,243,.4);
+    color: rgb(255 255 255);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(237, 43, 43);
+    border-radius: 0.5rem;
+  }
+  
+  

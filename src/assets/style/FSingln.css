@@ -1,8 +1,14 @@
-.LogosGeneric{
+.padreimgRegister{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.imgRegister{
     width: 50vw;
     height: 100%;
     float: right;
-    max-width: 600px;
+    max-width: auto;
 }
 .ordenamiento{
     display: flex;
@@ -24,19 +30,27 @@
     color: #000000;
 }
 .labelTitulo{
-    font-family: 'Quattrocento', serif;
+    font-family: 'Quattrocento';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 33px;
     text-align: center;
-    color: #000000;
+    color: #000000;;
 }
 .botonRegister{
-    
+    font-family: 'Quattrocento';
+    font-style: normal;
     width: 25vw;
     height: 45px;
     color: #ffffff;
     background: #C51515;
     border-radius: 15px;
+    border: none;
+    margin-top: 3vw;
+}
+.iniciarSesionLink{
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
 }

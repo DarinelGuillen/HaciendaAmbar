@@ -41,11 +41,10 @@ function FSingIn() {
 
   return (
     <>
-      <img
-        className="LogosGeneric"
-        src="src/assets/img/imagenRegister.png"
-      ></img>
       <form ref={formSingIn}>
+      <div className="imgRegister">
+        <img className="LogosGeneric" src="src/assets/img/imgRegister.png"></img>
+      </div>
         <div className="ordenamiento">
           <div className="labelTitulo">
             <Label label={"Regístrate ahora"}></Label>
@@ -89,7 +88,6 @@ function FSingIn() {
             className="inputPassword"
             required
           />
-
           <button className="botonRegister" onClick={handlerClick}>
             Registrate
           </button>

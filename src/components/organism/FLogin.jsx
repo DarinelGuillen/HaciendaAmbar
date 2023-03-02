@@ -10,6 +10,7 @@ import UserContext from "../../contexts/UserContext";
 import AdminContext from "../../contexts/AdminContext";
 import IdContex from "../../contexts/IdContex";
 import imgLogin from "../../assets/img/img_login.jpg";
+import "../../assets/img/imgLogin.png"
 import "../../assets/style/FLogin.css";
 
 function FLogin() {
@@ -51,7 +52,9 @@ function FLogin() {
   return (
     <>
       <div className="formLoginG">
-        <img className="LogosGeneric" src={imgLogin} alt="" />
+        <div className="padreImgLogin">
+          <img className="LogosGeneric" src="src/assets/img/imgLogin.png" alt="" />
+        </div>
         <div className="contenedorFormulario">
           <form ref={formDataL}>
             <div className="ordenamiento">
@@ -65,14 +68,11 @@ function FLogin() {
               <button className="botonFlogin" onClick={handlerClick}>
                 Iniciar Sesion{" "}
               </button>
-              <Link to="/">
-                <label>Landing</label>
+              <Link to="/SingIn">
+                <label>Registrarme</label>
               </Link>
               <Link to="/">
-                <label>Olvide mi contraseña</label>
-              </Link>
-              <Link to="/">
-                <label>Registrarte</label>
+                <label> Regresar</label>
               </Link>
             </div>
           </form>
