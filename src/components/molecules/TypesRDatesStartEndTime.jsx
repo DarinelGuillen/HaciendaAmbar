@@ -11,13 +11,26 @@ function DatesStartEndTime() {
     e.preventDefault();
     const formDataR = new FormData(formDateReserva.current);
     let DatosDeR = {
-      rentaUsuario: isRentaUsuario,
       fechaDeEvento: formDataR.get("FechaDeEvento"),
       horaDeInicio: formDataR.get("HoraDeInicio"),
       horaDeFinalizacion: formDataR.get("HoraDeFinalizacion")
     };
+    
+    // 
+    let add = {};
+
+    if (isRentaUsuario) {
+      console.log("Tiene Algo");
+      add = {...isRentaUsuario, ...DatosDeR};
+    } else {
+      console.log("Vacio");
+      add = DatosDeR;
+    }
+    ///
+    
+
     setTimeout(() => {
-      setIsRentaUsuario(DatosDeR);
+      setIsRentaUsuario(add);
       console.log("Que soy isRentaUsuario=", isRentaUsuario);
       navigate("/EndRent")
     }, 2000);

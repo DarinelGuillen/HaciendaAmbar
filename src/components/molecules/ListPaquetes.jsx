@@ -16,7 +16,7 @@ function ListPaquetes() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/paquetes")
+    fetch("https://localhost/paquetes")
       .then((response) => response.json())
       .then((data) => {
         //console.log(data);
@@ -24,7 +24,7 @@ function ListPaquetes() {
         setPaquete(data);
         console.log("REAL?");
       });
-  },[]);
+  }, []);
 
   return (
     <>
@@ -106,7 +106,7 @@ function ListPaquetes() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      fetch("http://localhost:3000/paquetes")
+      fetch("https://localhost/paquetes")
         .then((response) => response.json())
         .then((data) => {
           //console.log(data);

@@ -8,7 +8,7 @@ function ListRent() {
 
   useEffect(() => {
     isAdmin
-      ? fetch("http://localhost:3000/rentasUsuario")
+      ? fetch("https://localhost/rentasUsuario")
           .then((response) => response.json())
           .then((data) => {
             console.log(data);

@@ -17,16 +17,17 @@ function PrintPackage() {
   const navigate = useNavigate();
   const handleClickTerminateRent = (e) => {
     e.preventDefault();
-
-    setIsRentaUsuario(isPaquete._id);
+    let data={
+      isPaqueteID:isPaquete._id
+    }
+    setIsRentaUsuario(data);
     setTimeout(() => {
-      console.log("PRINTPACKAGE ORGANISM   setIsRentaUsuario", isRentaUsuario);
-      console.log("isPaquete._id", isPaquete._id);
       setTimeout(() => {
         alert("Tu X paquete a sido agregado al Tu carrito\n");
         navigate("/TypesRents");
         console.log("PRINTPACKAGE ORGANISM   setIsRentaUsuario", isRentaUsuario);
       console.log("isPaquete._id", isPaquete._id);
+      console.log("isRentaUsuario", JSON.stringify(isRentaUsuario));
       }, 1000);
     }, 1000);
   };
