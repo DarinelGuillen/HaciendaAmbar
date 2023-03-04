@@ -60,7 +60,7 @@ function AcercaDeNosotros() {
       </div>
 
       <div>
-        <img src="src/assets/img/Contactanos.svg"></img>
+        <img loading="lazy" src="src/assets/img/Contactanos.svg"></img>
       </div>
     </div>
   );

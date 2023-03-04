@@ -10,7 +10,7 @@ import UserContext from "../../contexts/UserContext";
 import AdminContext from "../../contexts/AdminContext";
 import IdContex from "../../contexts/IdContex";
 import imgLogin from "../../assets/img/img_login.jpg";
-import "../../assets/img/imgLogin.png"
+import "../../assets/img/imgLogin.png";
 import "../../assets/style/FLogin.css";
 
 function FLogin() {
@@ -45,7 +45,7 @@ function FLogin() {
         }
       })
       .catch((err) => {
-        setLabel(err,"Algo inesperado a pasado de nuestro lado");
+        setLabel(err, "Algo inesperado a pasado de nuestro lado");
       });
   };
 
@@ -53,7 +53,12 @@ function FLogin() {
     <>
       <div className="formLoginG">
         <div className="padreImgLogin">
-          <img className="LogosGeneric" src="src/assets/img/imgLogin.png" alt="" />
+          <img
+            loading="lazy"
+            className="LogosGeneric"
+            src="src/assets/img/imgLogin.png"
+            alt=""
+          />
         </div>
         <div className="contenedorFormulario">
           <form ref={formDataL}>

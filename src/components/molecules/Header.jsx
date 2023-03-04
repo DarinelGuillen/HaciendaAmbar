@@ -14,8 +14,9 @@ function Header() {
     <>
       <div className="navBar">
         <div className="iconoAmbar">
-          <Link className="loginNav" to="/"><img src="src/assets/img/LogoColor.png"></img></Link>
-          
+          <Link className="loginNav" to="/">
+            <img loading="lazy" src="src/assets/img/LogoColor.png"></img>
+          </Link>
         </div>
         <div className="contenedorNavBar">
           {!isLoggedIn ? (
@@ -26,13 +27,21 @@ function Header() {
             </>
           ) : (
             <>
-              <Link className="loginNav" to="/">Mi Cuenta</Link>
+              <Link className="loginNav" to="/">
+                Mi Cuenta
+              </Link>
               <Link to="/">log out</Link>
             </>
           )}
-          <Link className="loginNav" to="/TypesRents">Tipos de reserva </Link>
-          <Link className="loginNav" to="/Contact">Contacto</Link>
-          <Link className="loginNav" to="/AboutUs">Acerca de nosotros</Link>
+          <Link className="loginNav" to="/TypesRents">
+            Tipos de reserva{" "}
+          </Link>
+          <Link className="loginNav" to="/Contact">
+            Contacto
+          </Link>
+          <Link className="loginNav" to="/AboutUs">
+            Acerca de nosotros
+          </Link>
         </div>
       </div>
 

@@ -3,9 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AdminContext from "../contexts/AdminContext";
 import AboutUs from "../pages/AboutUs";
-import IdContex from "../contexts/IdContex";
-import PaqueteContext from "../contexts/PaqueteContext";
-import UserContext from "../contexts/UserContext";
+import EndRent from "../pages/EndRent";
 import TypesRents from "../pages/TypesRents";
 import Admin from "../pages/Admin";
 import CommonUser from "../pages/CommonUser";
@@ -16,6 +14,12 @@ import Login from "../pages/Login";
 import RentPackage from "../pages/RentPackage";
 import SingIn from "../pages/SingIn";
 
+import IdContex from "../contexts/IdContex";
+import PaqueteContext from "../contexts/PaqueteContext";
+import UserContext from "../contexts/UserContext";
+import RentaDelUsuarioContext from "../contexts/RentaDelUsuarioContext"
+import TipoRentaContext from "../contexts/TipoRentaContext";
+
 import ProtectedParentRoute from "./ProtectedParentRoute";
 import ProtectedParentRouteAdmin from "./ProtectedParentRouteAdmin";
 
@@ -24,6 +28,8 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isPaquete, setIsPaquete] = useState(false);
   const [isIduser, setIsiduser] = useState("");
+  const [isRentaUsuario, setIsRentaUsuario] = useState("");
+  const [isTipoRenta, setIsTipoRenta] = useState("");
 
 
   return (
@@ -33,6 +39,8 @@ function App() {
         <AdminContext.Provider value={{ isAdmin, setIsAdmin }}>
           <PaqueteContext.Provider value={{ isPaquete, setIsPaquete }}>
             <IdContex.Provider value={{ isIduser, setIsiduser }}>
+              <RentaDelUsuarioContext.Provider value={{ isRentaUsuario, setIsRentaUsuario}}>
+                <TipoRentaContext.Provider value={{ isTipoRenta, setIsTipoRenta}}>
               <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/Login" element={<Login />} />
@@ -44,11 +52,14 @@ function App() {
                   <Route path="/CommonUser" element={<CommonUser />} />
                   <Route path="/RentPackage" element={<RentPackage />} />
                   <Route path="/TypesRents" element={<TypesRents />} />
+                  <Route path="/EndRent" element={<EndRent />} />
                 </Route>
                 <Route element={<ProtectedParentRouteAdmin isLoggedIn={isAdmin} />}>
                   <Route path="/Admin" element={<Admin />} />
                 </Route>
               </Routes>
+                </TipoRentaContext.Provider>
+              </RentaDelUsuarioContext.Provider>
             </IdContex.Provider>
           </PaqueteContext.Provider>
         </AdminContext.Provider>

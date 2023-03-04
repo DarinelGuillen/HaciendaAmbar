@@ -2,7 +2,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import PaqueteContext from "../../contexts/PaqueteContext";
 import TextoCard from "./textoCard";
-import "../../assets/img/LogoColor.png"
+import "../../assets/img/LogoColor.png";
 import "../../assets/style/RecuadroPaquete.css";
 function RecuadroPaquete({
   _id,
@@ -22,16 +22,16 @@ function RecuadroPaquete({
 
     //alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
-  // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
+    // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
     fetch(`http://localhost:3000/paquetes/${paqueteID}`)
       .then((response) => response.json())
       .then((data) => {
         //console.log(data);
-        console.log("DATAAAAA========", data);
+        console.log("RecuadroPaquete ATOMS\nDATAAAAAHERE BICHDA========", data);
         setIsPaquete(data);
         setTimeout(() => {
           console.log(
-            "const { isPaquete, setIsPaquete } = useContext(PaqueteContext);  =",
+            "RecuadroPAQUETE\n=",
             isPaquete
           );
         }, 1000);
@@ -52,24 +52,45 @@ function RecuadroPaquete({
         <div className="cardCompleta">
           <div className="CardInfo">
             <TextoCard span={nombrePaquete}></TextoCard>
-            <TextoCard span={"$"+precio}></TextoCard>
-            
-        <img className="logoCard" width={100} src="src/assets/img/LogoColor.png" alt="" />
-            <TextoCard span={"Para ver la descripción necesita registrarse"}></TextoCard>
+            <TextoCard span={"$" + precio}></TextoCard>
+
+            <img
+              loading="lazy"
+              className="logoCard"
+              width={100}
+              src="src/assets/img/LogoColor.png"
+              alt=""
+            />
+            <TextoCard
+              span={"Para ver la descripción necesita registrarse"}
+            ></TextoCard>
           </div>
 
-          <button className="botonCard" onClick={handlerClickFalse}>Ver más</button>
+          <button className="botonCard" onClick={handlerClickFalse}>
+            Ver más
+          </button>
         </div>
       ) : (
         <div className="cardCompleta">
           <div className="CardInfo">
             <TextoCard span={nombrePaquete}></TextoCard>
-            <TextoCard span={"$"+precio}></TextoCard>
-            <img className="logoCard" width={100} src="src/assets/img/LogoColor.png" alt="" />
+            <TextoCard span={"$" + precio}></TextoCard>
+            <img
+              loading="lazy"
+              className="logoCard"
+              width={100}
+              src="src/assets/img/LogoColor.png"
+              alt=""
+            />
             <TextoCard span={"Descripción"}></TextoCard>
           </div>
 
-          <button className="botonCard" onClick={(e) => handlerClickPaquete(e, _id)}>Rentarlo</button>
+          <button
+            className="botonCard"
+            onClick={(e) => handlerClickPaquete(e, _id)}
+          >
+            Rentarlo
+          </button>
         </div>
       )}
     </>

@@ -2,11 +2,15 @@ import styled from 'styled-components'
 
 const StyledInput = styled.input `
 
-background-color: ${props => props.inputBorder === 1 ? "blue" : props.inputBorder === 2 ? "green" : props.inputBorder === 3 ? "black" : "white" };
-border-radius:2em;
-width: ${props => props.inputBorder === 1 ? "100%" : "50%"}
+background-color: red;
+border-radius:0em;
+width: ${props => props.typeStyle === 1 ? "100%" : "50%"}
+
 `
-function InputStyled ({type,placeholder,inputBorder}){
-    return(<StyledInput type={type} placeholder={placeholder} inputBorder={inputBorder}/>);
+function InputStyled ({type,placeholder,typeStyle,value}){
+    return(
+    <StyledInput 
+    value={value}
+    type={type} placeholder={placeholder} typeStyle={typeStyle}/>);
 } 
 export default InputStyled;

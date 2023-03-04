@@ -1,7 +1,8 @@
+import DatesStartEndTime from "../molecules/TypesRDatesStartEndTime";
 function TdeRNormal() {
     return (
         <>
-        <h1> hola en TdeRNormal </h1>
+        <DatesStartEndTime/>
         </>
       );
 }
