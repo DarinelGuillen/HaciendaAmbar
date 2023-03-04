@@ -122,12 +122,13 @@
     width: 100%;
   }
   
-  .contact-form input, .contact-form textarea {
+  .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
     padding: 10px;
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
   }
+  
   
   .contact-form input:focus, .contact-form textarea:focus {
     outline: none;

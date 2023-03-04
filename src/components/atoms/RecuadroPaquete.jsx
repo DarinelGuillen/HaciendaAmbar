@@ -23,17 +23,14 @@ function RecuadroPaquete({
     //alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
     // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
-    fetch(`http://localhost:3000/paquetes/${paqueteID}`)
+    fetch(`https://localhost/paquetes/${paqueteID}`)
       .then((response) => response.json())
       .then((data) => {
         //console.log(data);
         console.log("RecuadroPaquete ATOMS\nDATAAAAAHERE BICHDA========", data);
         setIsPaquete(data);
         setTimeout(() => {
-          console.log(
-            "RecuadroPAQUETE\n=",
-            isPaquete
-          );
+          console.log("RecuadroPAQUETE\n=", isPaquete);
         }, 1000);
       })
       .catch((error) => console.error(error));
