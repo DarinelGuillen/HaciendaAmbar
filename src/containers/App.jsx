@@ -19,6 +19,7 @@ import PaqueteContext from "../contexts/PaqueteContext";
 import UserContext from "../contexts/UserContext";
 import RentaDelUsuarioContext from "../contexts/RentaDelUsuarioContext"
 import TipoRentaContext from "../contexts/TipoRentaContext";
+/* import "bootstrap/dist/css/bootstrap.min.css"; */
 
 import ProtectedParentRoute from "./ProtectedParentRoute";
 import ProtectedParentRouteAdmin from "./ProtectedParentRouteAdmin";

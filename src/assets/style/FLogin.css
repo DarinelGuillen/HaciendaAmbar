@@ -18,6 +18,17 @@
     box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
+.linksForms{
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2a2828;
+}
 
 label{
     font-family: 'Quattrocento', serif;
@@ -33,8 +44,8 @@ label{
     font-family: 'Quattrocento';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 33px;
+    font-size: 3rem;
+    line-height: 3rem;
     text-align: center;
     color: #000000;
 }
@@ -48,16 +59,40 @@ input{
     margin-bottom: 20px;
     border: none;
 }
+
 .botonFlogin{
-    font-family: 'Quattrocento';
-    font-style: normal;
     width: 25vw;
-    height: 45px;
-    color: #ffffff;
+    height: 40px;
     background: #C51515;
+    color: #ffffff;
     border-radius: 15px;
-    border: none;
-}
+    padding: 10px 25px;
+    font-family: 'Quattrocento';
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    
+   }
+   .botonFlogin:before {
+    height: 0%;
+    width: 2px;
+   }
+   
+   .botonFlogin:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                 -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+       inset -4px -4px 6px 0 rgba(255,255,255,.2),
+       inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+   }
+
+
 .contenedorFormulario{
     display: flex;
     align-items:center ;

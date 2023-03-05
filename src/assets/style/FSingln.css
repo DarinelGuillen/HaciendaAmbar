@@ -38,19 +38,53 @@
     text-align: center;
     color: #000000;;
 }
+
 .botonRegister{
-    font-family: 'Quattrocento';
-    font-style: normal;
     width: 25vw;
-    height: 45px;
-    color: #ffffff;
+    height: 40px;
     background: #C51515;
+    color: #ffffff;
     border-radius: 15px;
+    padding: 10px 25px;
+    font-family: 'Quattrocento';
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
     border: none;
-    margin-top: 3vw;
-}
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    
+   }
+   .botonRegister:before {
+    height: 0%;
+    width: 2px;
+   }
+   
+   .botonRegister:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                 -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+       inset -4px -4px 6px 0 rgba(255,255,255,.2),
+       inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+   }
+
 .iniciarSesionLink{
     display: flex;
     justify-content: space-between;
     padding: 4%;
+}
+.linksForms{
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2a2828;
 }

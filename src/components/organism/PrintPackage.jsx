@@ -36,16 +36,25 @@ function PrintPackage() {
     <>
       <div className="contenedorPadre">
         <div className="contenedorPaquete">
+          <label className="nombrePaquete">
+            Nombre De Paquete:{isPaquete.nombrePaquete}
+          </label>
           <label className="contenedorPaquete">
             PRECIO:${isPaquete.precio}
-          </label>
-          <label className="infoPaquete">
-            Nombre De Paquete:{isPaquete.nombrePaquete}
           </label>
           <label className="infoPaquete">
             Descripción:{isPaquete.descripcion}
           </label>
         </div>
+      </div>
+      <div className="contenedorPadreImagenes">
+        <img src="src/assets/img/enteladoYSeyDeFotos1.png"></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos2.png"></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos3.png"></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos4.png"></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos5.png"></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos6.png"></img>
+      </div>
         <button
           className="botonFormularioPackage"
           onClick={handleClickTerminateRent}
@@ -57,7 +66,6 @@ function PrintPackage() {
             Regresar
           </Link>
         </button>
-      </div>
     </>
   );
 }

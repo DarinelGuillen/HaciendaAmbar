@@ -74,10 +74,10 @@ function FLogin() {
                 Iniciar Sesion{" "}
               </button>
               <Link to="/SingIn">
-                <label>Registrarme</label>
+                <label className="linksForms">Registrarme</label>
               </Link>
               <Link to="/">
-                <label> Regresar</label>
+                <label className="linksForms">Regresar</label>
               </Link>
             </div>
           </form>

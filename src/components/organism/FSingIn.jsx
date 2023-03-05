@@ -95,16 +95,14 @@ function FSingIn() {
           <button className="botonRegister" onClick={handlerClick}>
             Registrate
           </button>
-          <div className="iniciarSesionLink">
+          
             <Link to="/Login">
-              <label>Iniciar sesión</label>
+              <label className="linksForms">Iniciar sesión</label>
             </Link>
-          </div>
-          <div className="regresarLink">
+          
             <Link to="/">
-              <label>Regresar</label>
+              <label className="linksForms">Regresar</label>
             </Link>
-          </div>
         </div>
       </form>
     </>
