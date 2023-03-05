@@ -2,7 +2,7 @@ import {useNavigate} from 'react-router-dom'
 import { useState, useRef, useContext } from "react";
 import RentaDelUsuarioContext from '../../contexts/RentaDelUsuarioContext';
 import ButtonStyled from "../atoms/ButtonStyled";
-import imgExampleBorrameOCambiameElNombrePuto from "../../assets/img/imgRecuerdos.png";
+
 function DatesStartEndTime() {
   const { isRentaUsuario, setIsRentaUsuario } = useContext(RentaDelUsuarioContext);
   const navigate = useNavigate();
@@ -41,28 +41,32 @@ function DatesStartEndTime() {
 
   return (
     <>
+      <h1 className="tituloTypeReserva1">Arma tu paquete de reserva a corto plazo</h1>
       <div className="FContaineMain">
         <div className="CContainerMain">
           <div className="left">
+          <h1 className="subTituloImg">¿Cúando quieres reservar?</h1>
+          <h2 className="subTituloImg2">Elige la mejor fecha para tu evento.</h2>
             <img
-              loading="lazy"
-              src={imgExampleBorrameOCambiameElNombrePuto}
+              src="src/assets/img/reservacionImg.png"
             ></img>
           </div>
-          <div className="rightIMG">
-            <form ref={formDateReserva}>
-              <label>Selecione la fecha de su evento</label>
-              <input type="date" name="FechaDeEvento" />
-              <label>Selecione la hora de inicio de su evento</label>
-              <input type="time" name="HoraDeInicio" />
-              <label>Hora de finalizacion del evento</label>
-              <input type="time" name="HoraDeFinalizacion" />
-              <ButtonStyled
-                onClick={handlerClickConfirmarReserva}
-                label={"Aceptar Confima Reserva"}
-                Danger={true}
-              />
-            </form>
+          <div className='contenedorPadreForm'>
+            
+              <form ref={formDateReserva}>
+                <label className='labelTypeReserva'>Fecha del evento</label>
+                <input type="date" name="FechaDeEvento" />
+                <label className='labelTypeReserva'>Hora de inicio</label>
+                <input type="time" name="HoraDeInicio" />
+                <label className='labelTypeReserva'>Hora de fin</label>
+                <input type="time" name="HoraDeFinalizacion" />
+                <div className='padreBotonTypeReserva'>
+                  <button className='botonTypeReserva' onClick={handlerClickConfirmarReserva}>
+                      Confirmar reserva
+                  </button>
+                </div>
+              </form>
+           
           </div>
         </div>
       </div>

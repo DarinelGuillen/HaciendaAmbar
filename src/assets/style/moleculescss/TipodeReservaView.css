@@ -1,4 +1,31 @@
-
+.tituloTypeReserva1{
+  justify-content: center;
+  display: flex;
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 55px;
+  text-align: center;
+  color: #4B4B4C;
+}
+.subTituloImg{
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 53px;
+  text-align: center;
+  color: #910000;
+}
+.subTituloImg2{
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 400;
+  font-size:1.5rem;
+  line-height: 40px;
+  color: #000000;
+}
 
 /* set full width for FContaineMain and adjust height automatically */
 .FContaineMain {
@@ -47,10 +74,44 @@
   /* set right section to take up 50% of the width and align to the right */
   .rightIMG {
     width: 50%;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: right;
   }
-  
+  .contenedorPadreForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+    margin-top: 15%;
+    margin-left: 5%;
+    background: rgba(75, 75, 76, 0.06);
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  .labelTypeReserva{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: #910000;
+  }
+  .botonTypeReserva{
+    height: 4vh;
+    width: 25vw;
+    background: #373737;
+    color: #ffffff;
+    border-radius: 15px;
+  }
+  .padreBotonTypeReserva{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   /* adjust image width to fit the right div */
   .rightIMG img {
  
@@ -63,13 +124,12 @@
     padding: 20px;
     box-sizing: border-box;
   }
-  
-  /* add some style to the button */
-  .ejemplobutton {
+  .botonCortoPlazo{
     background-color: #9C2727;
     color: white;
-    width: 40%;
-    height: 10%;
+    width: 20;
+    height: 15%;
+    margin-left: 15%;
     border: none;
     padding: 10px;
     border-radius: 0.7rem;
@@ -77,7 +137,27 @@
     transition: .5s, color .10s;
     -webkit-transition: .5s, color .10s;
     -moz-transition: .5s, color .10s;
+  }
+  .botonCortoPlazo:hover{
+    transform: scale3d(1.5, 1.5, 0.3);
+    -webkit-transform: scale3d(1.5, 1.5, 0.3);
+    -moz-transform: scale3d(1.5, 1.5, 0.3);
+  }
   
+  /* add some style to the button */
+  .ejemplobutton {
+    background-color: #9C2727;
+    color: white;
+    width: 20%;
+    height: 10%;
+    padding-left: 10%;
+    border: none;
+    padding: 10px;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
   }
 .ejemplobutton:hover{
   transform: scale3d(1.5, 1.5, 0.3);

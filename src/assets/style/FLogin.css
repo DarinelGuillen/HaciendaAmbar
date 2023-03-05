@@ -69,7 +69,6 @@ input{
     padding: 10px 25px;
     font-family: 'Quattrocento';
     font-weight: 500;
-    background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
