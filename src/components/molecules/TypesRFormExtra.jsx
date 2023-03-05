@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef, useContext } from "react";
 import { useChecked } from "../js/useChecked";
 import { CheckBox } from "../atoms/Checkbox";
@@ -8,59 +8,92 @@ import ButtonStyled from "../atoms/ButtonStyled";
 import InputStyled from "../atoms/InputStyled";
 import TipoRentaContext from "../../contexts/TipoRentaContext";
 import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
-
+import UserContext from "../../contexts/UserContext";
+import IdContex from "../../contexts/IdContex";
 import "../../assets/style/moleculescss/TypesRFormExtra.css";
 function TypesRFormExtra() {
+  const { isIduser, setIsiduser } = useContext(IdContex);
+  const { isTipoRenta, setIsTipoRenta } = useContext(TipoRentaContext);
   const { isRentaUsuario, setIsRentaUsuario } = useContext(
     RentaDelUsuarioContext
   );
   const [checkObj, setCheckObj] = useState({});
   const [RentaIndividuales, setRentaIndividuales] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { isTipoRenta, setIsTipoRenta } = useContext(TipoRentaContext);
   const DatosDeReserva = useRef();
+  const navigate = useNavigate();
 
   const handlerClickConfirmarCampos = (e) => {
     e.preventDefault();
-    console.log(checked);
-    // setCheckObj(checked)
-    //Obtengo Los
+    const observacionesForm = new FormData(DatosDeReserva.current);
+    // console.log(checked);
+
     const trueKeys = Object.entries(checked)
       .filter(([key, value]) => value === true)
       .map(([key, value]) => key);
-
-    console.log("trueKeys", trueKeys);
-    // RentaIndividuales.map((rentas) => {
-    //   console.log("NUM1");
-    //   checkObj.map((check)=>{
-    //     console.log("check", check);
-    //   });
-    // });
+    // console.log("trueKeys", trueKeys);
     let trueKey = trueKeys;
-    console.log("39 let trueKey=(trueKeys)" + trueKey);
+    // console.log("39 let trueKey=(trueKeys)" + trueKey);
     setIsRentaUsuario({
       ...isRentaUsuario,
       newArray: trueKey,
     });
     setTimeout(() => {
       console.log("45 isRentaUsuario=" + JSON.stringify(isRentaUsuario));
-      // console.log("CHECK=" + JSON.stringify(checked));
+      console.log("CHECK=" + JSON.stringify(checked));
+    }, 2000);
+
+    ////POST Fetch
+    // Datos De JSON
+    const currentDate = new Date();
+    const CurrentDate = currentDate.toISOString();
+    console.log("isIduser",isIduser);
+    const nuevaRenta = {
+      idPaquete:  String(isRentaUsuario.isPaqueteID || "No ID"),
+      idUser: String(isIduser),
+      fechaInicio: String(isRentaUsuario.fechaDeEvento),
+      horaDeInicio: String(isRentaUsuario.horaDeInicio),
+      horaDeFinalizacion: String(isRentaUsuario.horaDeFinalizacion),
+      fechaDeReserva: String(CurrentDate),
+      Extras: isRentaUsuario.newArray,
+      estadoRenta: true,
+      observaciones: String(observacionesForm.get("Observaciones")),
+      SeEjecutoConExitoLarenta: false,
+    }
+   
+    console.log("nuevaRenta\n" + JSON.stringify(nuevaRenta));
+    // fetch
+    setTimeout(() => {
+      fetch("https://localhost/rentasUsuario", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(nuevaRenta),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          console.log("INSIDE FETCH");
+          // navigate("/CommonUser")
+        })
+        .catch((error) => console.error(error));
     }, 2000);
   };
 
-  const checkedInitial = RentaIndividuales.reduce((obj, rentaIndividuale) => {
-    if (isTipoRenta === 1 && rentaIndividuale.cortoPlazo === true) {
-      obj[rentaIndividuale._id] = false;
-    } else if (isTipoRenta === 2 && rentaIndividuale.normal === true) {
-      obj[rentaIndividuale._id] = false;
-    } else if (isTipoRenta === 3 && rentaIndividuale.ultimoMinuto === true) {
-      obj[rentaIndividuale._id] = false;
+  const checkedInitial = RentaIndividuales.reduce((obj, RentaIndividual) => {
+    if (isTipoRenta === 1 && RentaIndividual.cortoPlazo === true) {
+      obj[RentaIndividual._id] = false;
+    } else if (isTipoRenta === 2 && RentaIndividual.normal === true) {
+      obj[RentaIndividual._id] = false;
+    } else if (isTipoRenta === 3 && RentaIndividual.ultimoMinuto === true) {
+      obj[RentaIndividual._id] = false;
     }
     return obj;
   }, {});
-  
+
   const [checked, handleClickCheckBox] = useChecked(checkedInitial);
-  
+
   useEffect(() => {
     fetch("https://localhost/rentaIndividuales")
       .then((response) => response.json())
@@ -69,7 +102,7 @@ function TypesRFormExtra() {
         console.log(RentaIndividuales, "RentaIndividuales");
       });
     setTimeout(() => {
-      console.log("isLoading chab¿nge");
+      console.log("isLoading changed");
       setIsLoading(true);
     }, 3000);
   }, []);
@@ -82,24 +115,24 @@ function TypesRFormExtra() {
         <label htmlFor="user">
           Ingresa algun comentario a destacar al Admin
         </label>
-        <input type="text" id="user" name="user" />
+        <input type="text" id="user" name="Observaciones" />
 
         <>
           {!isLoading ? (
             <>
-              <div class="loader">
-                <div class="cell d-0"></div>
-                <div class="cell d-1"></div>
-                <div class="cell d-2"></div>
+              <div className="loader">
+                <div className="cell d-0"></div>
+                <div className="cell d-1"></div>
+                <div className="cell d-2"></div>
 
-                <div class="cell d-1"></div>
-                <div class="cell d-2"></div>
+                <div className="cell d-1"></div>
+                <div className="cell d-2"></div>
 
-                <div class="cell d-2"></div>
-                <div class="cell d-3"></div>
+                <div className="cell d-2"></div>
+                <div className="cell d-3"></div>
 
-                <div class="cell d-3"></div>
-                <div class="cell d-4"></div>
+                <div className="cell d-3"></div>
+                <div className="cell d-4"></div>
               </div>
             </>
           ) : (
@@ -125,7 +158,7 @@ function TypesRFormExtra() {
                 </>
               ) : isTipoRenta === 2 && RentaIndividual.normal === true ? (
                 <>
-                 <div
+                  <div
                     key={RentaIndividual._id}
                     className="renta-individual-wrapper"
                   >
