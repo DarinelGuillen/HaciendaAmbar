@@ -59,6 +59,7 @@ function TypesRFormExtra() {
       estadoRenta: true,
       observaciones: String(observacionesForm.get("Observaciones")),
       SeEjecutoConExitoLarenta: false,
+      LinkFotos: "LINK HERE",
     }
    
     console.log("nuevaRenta\n" + JSON.stringify(nuevaRenta));

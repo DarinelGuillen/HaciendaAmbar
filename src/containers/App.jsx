@@ -11,6 +11,7 @@ import Contact from "../pages/Contact";
 import General from "../pages/General";
 import Landing from "../pages/Landing";
 import Login from "../pages/Login";
+import MyAccount from "../pages/MyAccount";
 import RentPackage from "../pages/RentPackage";
 import SingIn from "../pages/SingIn";
 
@@ -54,6 +55,7 @@ function App() {
                   <Route path="/RentPackage" element={<RentPackage />} />
                   <Route path="/TypesRents" element={<TypesRents />} />
                   <Route path="/EndRent" element={<EndRent />} />
+                  <Route path="/MyAccount" element={<MyAccount />} />
                 </Route>
                 <Route element={<ProtectedParentRouteAdmin isLoggedIn={isAdmin} />}>
                   <Route path="/Admin" element={<Admin />} />
