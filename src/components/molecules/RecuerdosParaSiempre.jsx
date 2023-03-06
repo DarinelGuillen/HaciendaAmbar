@@ -15,7 +15,10 @@ function RecuerdosParaSiempre() {
     <>
       <div className="contenedorPadreRecuerdosParaSiempre">
         <div className="titulo">
+          <center>
           <h1>Los 5 mandamientos del invitado</h1>
+          </center>
+          
         </div>
       </div>
 

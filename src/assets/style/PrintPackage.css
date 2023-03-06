@@ -75,13 +75,13 @@
   }
   .contenedorPadre{
     display: flex;
+    width: 100%;
     flex-direction: column;
     font-family: 'Quattrocento';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 55px;
-    width: auto;
     text-align: justify;
     color: #4D0A0B;
   }
