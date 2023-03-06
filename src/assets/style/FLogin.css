@@ -8,6 +8,10 @@
     float: right;
     max-width: auto;
 }
+.icnoRedesLogin{
+   display: flex;
+   justify-content: center;
+}
 .ordenamiento{
     display: flex;
     flex-direction: column;

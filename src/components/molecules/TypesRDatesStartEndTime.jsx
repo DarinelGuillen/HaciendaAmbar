@@ -41,7 +41,7 @@ function DatesStartEndTime() {
 
   return (
     <>
-      <h1 className="tituloTypeReserva1">Arma tu paquete de reserva a corto plazo</h1>
+      
       <div className="FContaineMain">
         <div className="CContainerMain">
           <div className="left">

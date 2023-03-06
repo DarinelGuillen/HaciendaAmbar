@@ -80,6 +80,14 @@ function FLogin() {
                 <label className="linksForms">Regresar</label>
               </Link>
             </div>
+              <div className="icnoRedesLogin">
+              <Link to="https://www.facebook.com/ambar.haciendamx">
+                <Link to="https://www.instagram.com/ambar.haciendamx/">
+                
+                    <img src="src/assets/img/IconoRedes.svg"></img>
+                </Link>
+              </Link>
+              </div>
           </form>
         </div>
       </div>
