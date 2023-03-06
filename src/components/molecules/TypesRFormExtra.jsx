@@ -96,16 +96,18 @@ function TypesRFormExtra() {
   const [checked, handleClickCheckBox] = useChecked(checkedInitial);
 
   useEffect(() => {
+    console.log("useEffect","https://localhost/rentaIndividuales");
     fetch("https://localhost/rentaIndividuales")
       .then((response) => response.json())
-      .then((data) => {
+      .then((data) => {console.log(data);
         setRentaIndividuales(data);
         console.log(RentaIndividuales, "RentaIndividuales");
+        setTimeout(() => {
+          console.log("isLoading changed");
+          setIsLoading(true);
+        }, 4000);
       });
-    setTimeout(() => {
-      console.log("isLoading changed");
-      setIsLoading(true);
-    }, 3000);
+    
   }, []);
 
   return (
