@@ -3,61 +3,24 @@ import { useContext } from "react";
 
 import Label from "../atoms/Label";
 import UserContext from "../../contexts/UserContext";
-
+import TipoRentaContext from "../../contexts/TipoRentaContext";
 import "../../assets/img/LogoColor.png";
 import "../../assets/style/Header.css";
 
 function Header() {
   const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+  const { isTipoRenta, setIsTipoRenta } = useContext(TipoRentaContext);
 
   return (
     <>
-      {/*  <div className="navBar">
-        <div className="iconoAmbar">
-          <Link className="loginNav" to="/">
-            <img loading="lazy" src="src/assets/img/LogoColor.png"></img>
-          </Link>
-        </div>
-        <div className="contenedorNavBar">
-          {!isLoggedIn ? (
-            <>
-              <Link className="loginNav" to="/Login">
-                Iniciar sesión
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link className="loginNav" to="/">
-                Mi Cuenta
-              </Link>
-              <Link to="/">log out</Link>
-            </>
-          )}
-          <Link className="loginNav" to="/TypesRents">
-            Tipos de reserva{" "}
-          </Link>
-          <Link className="loginNav" to="/Contact">
-            Contacto
-          </Link>
-          <Link className="loginNav" to="/AboutUs">
-            Acerca de nosotros
-          </Link>
-        </div>
-      </div>
-
-      <br />  */}
-      {/*  <Link to="/General">General</Link> */}
-
       <div className="divHeader">
-        <a href="" className="logo">
-          <Link to="/">
-            <img
-              loading="lazy"
-              className="iconoAmbar"
-              src="src/assets/img/LogoColor.png"
-            ></img>
-          </Link>
-        </a>
+        <Link to="/">
+          <img
+            loading="lazy"
+            className="iconoAmbar"
+            src="src/assets/img/LogoColor.png"
+          ></img>
+        </Link>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label className="menu-icon" htmlFor="menu-btn">
           <span className="navicon"></span>
@@ -66,49 +29,37 @@ function Header() {
           {!isLoggedIn ? (
             <>
               <li>
-                <a>
-                  <Link className="loginNav" to="/Login">
-                    Iniciar sesión
-                  </Link>
-                </a>
+                <Link className="loginNav" to="/Login">
+                  Iniciar sesión
+                </Link>
               </li>
             </>
           ) : (
             <>
               <li>
-                <a>
-                  <Link className="loginNav" to="/">
-                    Mi Cuenta
-                  </Link>
-                </a>
+                <Link className="loginNav" to="/MyAccount">
+                  <button onClick={()=>setIsTipoRenta(0)}>Mi Cuenta</button>
+                </Link>
               </li>
               <li>
-                <a>
-                  <Link to="/">log out</Link>
-                </a>
+                <Link to="/">log out</Link>
               </li>
             </>
           )}
           <li>
-            <a>
-              <Link className="loginNav" to="/TypesRents">
-                Tipos de reserva{" "}
-              </Link>
-            </a>
+            <Link className="loginNav" to="/TypesRents">
+              Tipos de reserva
+            </Link>
           </li>
           <li>
-            <a>
-              <Link className="loginNav" to="/Contact">
-                Contacto
-              </Link>
-            </a>
+            <Link className="loginNav" to="/Contact">
+              Contacto
+            </Link>
           </li>
           <li>
-            <a>
-              <Link className="loginNav" to="/AboutUs">
-                Acerca de nosotros
-              </Link>
-            </a>
+            <Link className="loginNav" to="/AboutUs">
+              Acerca de nosotros
+            </Link>
           </li>
         </ul>
       </div>

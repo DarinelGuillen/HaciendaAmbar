@@ -26,6 +26,7 @@ function Slider({ imagenes }) {
         {imagenes.map((imagen, index) => {
           return (
             <div
+              key={index}
               className={
                 imagenActual === index
                   ? `${estilos.slide} ${estilos.active}`
@@ -36,7 +37,6 @@ function Slider({ imagenes }) {
                 <img
                   loading="lazy"
                   className={estilos.imgSlider}
-                  key={index}
                   src={imagen}
                   alt="imagen"
                 />
