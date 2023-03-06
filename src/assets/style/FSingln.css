@@ -4,6 +4,10 @@
     align-items: center;
 
 }
+.icnoRedesLogin{
+    display: flex;
+    justify-content: center;
+ }
 .imgRegister{
     width: 50vw;
     height: 100%;

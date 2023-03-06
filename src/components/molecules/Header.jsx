@@ -30,7 +30,9 @@ function Header() {
             <>
               <li>
                 <Link className="loginNav" to="/Login">
-                  Iniciar sesión
+                  <a>
+                    Iniciar sesión
+                  </a>
                 </Link>
               </li>
             </>
@@ -38,27 +40,37 @@ function Header() {
             <>
               <li>
                 <Link className="loginNav" to="/MyAccount">
-                  <button onClick={()=>setIsTipoRenta(0)}>Mi Cuenta</button>
+                  <a>
+                    <button onClick={()=>setIsTipoRenta(0)}>Mi Cuenta</button>
+                  </a>
                 </Link>
               </li>
               <li>
-                <Link to="/">log out</Link>
+                <a>
+                  <Link to="/">log out</Link>
+                </a>
               </li>
             </>
           )}
           <li>
             <Link className="loginNav" to="/TypesRents">
-              Tipos de reserva
+              <a>
+                Tipos de reserva
+              </a>
             </Link>
           </li>
           <li>
             <Link className="loginNav" to="/Contact">
-              Contacto
+              <a>
+                Contacto
+              </a>
             </Link>
           </li>
           <li>
             <Link className="loginNav" to="/AboutUs">
-              Acerca de nosotros
+              <a>
+                Acerca de nosotros
+              </a>
             </Link>
           </li>
         </ul>
