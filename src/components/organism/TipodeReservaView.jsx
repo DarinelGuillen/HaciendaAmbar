@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import TdeRCortoPlazo from "./TdeRCortoPlazo";
 import TdeRNormal from "./TdeRNormal";
 import TdeRUltimoMinuto from "./TdeRUltimoMinuto";
+import TipoRentaContext from "../../contexts/TipoRentaContext";
 import ejemploimg1 from "../../assets/img/imgCarrusel1p.png";
 import ejemploimg2 from "../../assets/img/imgCarrusel2.png";
 import ejemploimg3 from "../../assets/img/imgCarrusel3.png";
 import "../../assets/style/moleculescss/TipodeReservaView.css";
 function TipodeReservaView() {
   const [viewNum, setViewNum] = useState(0);
+  const {isTipoRenta, setIsTipoRenta} = useContext(TipoRentaContext);
+
+  const HandlerClickTipoDerenta = (e, num) => {
+  e.preventDefault();
+  alert("TIPO DE RENTA. num = "+ num)
+  setIsTipoRenta(num)
+  console.log(isTipoRenta);
+  setViewNum(num)
+  };
 
   return (
     <>
@@ -47,7 +57,7 @@ function TipodeReservaView() {
                 reducclassNameo número de paquetes que están disponible, sin
                 embargo se puede rentar el tiempo que usted mismo límite.
               </p>
-              <button className="ejemplobutton" onClick={() => setViewNum(1)}>
+              <button className="ejemplobutton"onClick={(e) => HandlerClickTipoDerenta(e, 1)}>
                 ¡Resevar!
               </button>
             </div>
@@ -63,7 +73,7 @@ function TipodeReservaView() {
                 se puede ver con detallamiento y el alcance del evento a
                 realizar.
               </p>
-              <button className="ejemplobutton" onClick={() => setViewNum(2)}>
+              <button className="ejemplobutton" onClick={(e) => HandlerClickTipoDerenta(e, 2)}>
                 ¡Resevar!
               </button>
             </div>
@@ -79,7 +89,7 @@ function TipodeReservaView() {
                 ya que en unos casos es de suma vitalclassNamead tener más
                 tiempo para hacer uso de dichos paquetes.
               </p>
-              <button className="ejemplobutton" onClick={() => setViewNum(3)}>
+              <button className="ejemplobutton" onClick={(e) => HandlerClickTipoDerenta(e, 3)}>
                 ¡Resevar!
               </button>
             </div>

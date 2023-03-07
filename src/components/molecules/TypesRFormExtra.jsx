@@ -47,9 +47,9 @@ function TypesRFormExtra() {
     // Datos De JSON
     const currentDate = new Date();
     const CurrentDate = currentDate.toISOString();
-    console.log("isIduser",isIduser);
+    console.log("isIduser", isIduser);
     const nuevaRenta = {
-      idPaquete:  String(isRentaUsuario.isPaqueteID || "No ID"),
+      idPaquete: String(isRentaUsuario.isPaqueteID || "No ID"),
       idUser: String(isIduser),
       fechaInicio: String(isRentaUsuario.fechaDeEvento),
       horaDeInicio: String(isRentaUsuario.horaDeInicio),
@@ -60,8 +60,8 @@ function TypesRFormExtra() {
       observaciones: String(observacionesForm.get("Observaciones")),
       SeEjecutoConExitoLarenta: false,
       LinkFotos: "LINK HERE",
-    }
-   
+    };
+
     console.log("nuevaRenta\n" + JSON.stringify(nuevaRenta));
     // fetch
     setTimeout(() => {
@@ -96,20 +96,21 @@ function TypesRFormExtra() {
   const [checked, handleClickCheckBox] = useChecked(checkedInitial);
 
   useEffect(() => {
-    console.log("useEffect","https://localhost/rentaIndividuales");
     fetch("https://localhost/rentaIndividuales")
       .then((response) => response.json())
-      .then((data) => {console.log(data);
+      .then((data) => {
+        console.log("Data:" + data)
         setRentaIndividuales(data);
+        setIsLoading(true);
         console.log(RentaIndividuales, "RentaIndividuales");
-        setTimeout(() => {
-          console.log("isLoading changed");
-          setIsLoading(true);
-        }, 4000);
       });
-    
-  }, []);
+      // setTimeout(() => {
+      //   console.log("isLoading changed");
+      //   setIsLoading(true);
+      // }, 3000);
+  }, [isLoading]);
 
+  
   return (
     <>
       <form ref={DatosDeReserva}>
@@ -138,71 +139,74 @@ function TypesRFormExtra() {
                 <div className="cell d-4"></div>
               </div>
             </>
-          ) : (
-            RentaIndividuales.map((RentaIndividual) => {
-              return isTipoRenta === 1 &&
-                RentaIndividual.cortoPlazo === true ? (
-                <>
-                  <div
-                    key={RentaIndividual._id}
-                    className="renta-individual-wrapper"
-                  >
-                    <CheckBox
-                      key={RentaIndividual._id}
-                      name={RentaIndividual._id}
-                      checked={checked[RentaIndividual._id]}
-                      setChecked={(e) =>
-                        handleClickCheckBox(e, RentaIndividual._id)
-                      }
-                      label={RentaIndividual.value}
-                      className="renta-individual-checkbox"
-                    />
-                  </div>
-                </>
-              ) : isTipoRenta === 2 && RentaIndividual.normal === true ? (
-                <>
-                  <div
-                    key={RentaIndividual._id}
-                    className="renta-individual-wrapper"
-                  >
-                    <CheckBox
-                      key={RentaIndividual._id}
-                      name={RentaIndividual._id}
-                      checked={checked[RentaIndividual._id]}
-                      setChecked={(e) =>
-                        handleClickCheckBox(e, RentaIndividual._id)
-                      }
-                      label={RentaIndividual.value}
-                      className="renta-individual-checkbox"
-                    />
-                  </div>
-                </>
-              ) : isTipoRenta === 3 && RentaIndividual.ultimoMinuto === true ? (
-                <>
-                  <div
-                    key={RentaIndividual._id}
-                    className="renta-individual-wrapper"
-                  >
-                    <CheckBox
-                      key={RentaIndividual._id}
-                      name={RentaIndividual._id}
-                      checked={checked[RentaIndividual._id]}
-                      setChecked={(e) =>
-                        handleClickCheckBox(e, RentaIndividual._id)
-                      }
-                      label={RentaIndividual.value}
-                      className="renta-individual-checkbox"
-                    />
-                  </div>
-                </>
-              ) : null;
-            })
-          )}
+          ) : ( 
+         
+          RentaIndividuales.map((RentaIndividual) => {
+            console.log("Acá andamos" + JSON.stringify(RentaIndividual));
+            console.log("Tipo renta: " + isTipoRenta);
+            return isTipoRenta === 1 && RentaIndividual.cortoPlazo === true ? (
+              <div
+                key={RentaIndividual._id}
+                className="renta-individual-wrapper"
+              >
+                <CheckBox
+                  key={RentaIndividual._id}
+                  name={RentaIndividual._id}
+                  checked={checked[RentaIndividual._id]}
+                  setChecked={(e) =>
+                    handleClickCheckBox(e, RentaIndividual._id)
+                  }
+                  label={RentaIndividual.value}
+                  className="renta-individual-checkbox"
+                />
+              </div>
+            ) : isTipoRenta === 2 && RentaIndividual.normal === true ? (
+              <div
+                key={RentaIndividual._id}
+                className="renta-individual-wrapper"
+              >
+                <CheckBox
+                  key={RentaIndividual._id}
+                  name={RentaIndividual._id}
+                  checked={checked[RentaIndividual._id]}
+                  setChecked={(e) =>
+                    handleClickCheckBox(e, RentaIndividual._id)
+                  }
+                  label={RentaIndividual.value}
+                  className="renta-individual-checkbox"
+                />
+              </div>
+            ) : isTipoRenta === 3 && RentaIndividual.ultimoMinuto === true ? (
+              <div
+                key={RentaIndividual._id}
+                className="renta-individual-wrapper"
+              >
+                <CheckBox
+                  key={RentaIndividual._id}
+                  name={RentaIndividual._id}
+                  checked={checked[RentaIndividual._id]}
+                  setChecked={(e) =>
+                    handleClickCheckBox(e, RentaIndividual._id)
+                  }
+                  label={RentaIndividual.value}
+                  className="renta-individual-checkbox"
+                />
+              </div>
+            ) : null;
+          })
+        )}
         </>
         <ButtonStyled
           onClick={handlerClickConfirmarCampos}
           label={"Confirma extra extra paquete data algo "}
           Danger={false}
+        />
+        <ButtonStyled
+           onClick={(event) => {
+            event.preventDefault();
+            setIsLoading(!isLoading);}}
+          label={"setIsLoading "}
+          Danger={true}
         />
 
         <Link className="loginNav" to="/TypesRents">
