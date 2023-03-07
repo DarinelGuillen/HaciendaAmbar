@@ -14,9 +14,19 @@ function MyAccountView() {
 
   const [load, setload] = useState(false);
   const hadlerSeeExtras = (e) => {
-    console.log("namesExtras"+JSON.stringify(namesExtras));
-    console.log(namesExtras.length,"(namesExtras.length");
-    setseeExtras(true);
+    const newNamesExtras = [];
+    allRentaIndividuales.forEach((rentas) => {
+      if (isExtras.includes(rentas._id)) {
+        newNamesExtras.push(rentas.value);
+      }
+    });
+    setnamesExtras(newNamesExtras);
+    console.log("namesExtras", namesExtras);
+    console.log(namesExtras.length, "(namesExtras.length)");
+    setTimeout(() => {
+    setseeExtras(!seeExtras);
+      
+    }, 500);
   };
 
   useEffect(() => {
@@ -34,13 +44,6 @@ function MyAccountView() {
         });
       setload(true);
 
-      allRentaIndividuales.map((rentas) => {
-        isExtras.map((extras) => {
-          rentas._id === extras ? (
-            setnamesExtras((prevNamesExtras) => prevNamesExtras.concat(rentas.precioAprox))
-          ) : null;
-        });
-      });
       // setTimeout(() => {
       //   console.log(JSON.stringify(isRentaUser), "\nload", load);
       // }, 1000);
@@ -82,19 +85,20 @@ function MyAccountView() {
                     <label>Extras</label>
                     {seeExtras ? (
                       <>
-                      <h1>hola</h1>
-                        {namesExtras.map((ex)=>{
-                          <>
-                          <label >{ex}</label>
-                          </>
+                        
+                        {namesExtras.map((namesExtra) => {
+                          return <>
+                          {console.log("dentro map ")}
+                            <label>{namesExtra}</label>
+                          </>;
                         })}
                       </>
                     ) : (
-                      <>none extras</>
+                      <></>
                     )}
                     <ButtonStyled
                       onClick={hadlerSeeExtras}
-                      label={"Confirma extra extra paquete data algo "}
+                      label={"ver extra extra paquete data algo "}
                       Danger={false}
                     />
                   </>

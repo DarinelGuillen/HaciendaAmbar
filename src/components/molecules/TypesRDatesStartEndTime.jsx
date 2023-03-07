@@ -29,11 +29,9 @@ function DatesStartEndTime() {
     ///
     
 
-    setTimeout(() => {
       setIsRentaUsuario(add);
       console.log("Que soy isRentaUsuario=", isRentaUsuario);
       navigate("/EndRent")
-    }, 2000);
     //console.log("Que soy isRentaUsuario=", isRentaUsuario);
   
     // navigate("/EndRent")

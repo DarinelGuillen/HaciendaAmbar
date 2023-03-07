@@ -76,7 +76,8 @@ function TypesRFormExtra() {
         .then((data) => {
           console.log(data);
           console.log("INSIDE FETCH");
-          // navigate("/CommonUser")
+          
+          navigate("/MyAccount")
         })
         .catch((error) => console.error(error));
     }, 2000);
@@ -99,10 +100,10 @@ function TypesRFormExtra() {
     fetch("https://localhost/rentaIndividuales")
       .then((response) => response.json())
       .then((data) => {
-        console.log("Data:" + data)
+        // console.log("Data:" + data)
         setRentaIndividuales(data);
         setIsLoading(true);
-        console.log(RentaIndividuales, "RentaIndividuales");
+        // console.log(RentaIndividuales, "RentaIndividuales");
       });
       // setTimeout(() => {
       //   console.log("isLoading changed");
@@ -142,8 +143,8 @@ function TypesRFormExtra() {
           ) : ( 
          
           RentaIndividuales.map((RentaIndividual) => {
-            console.log("Acá andamos" + JSON.stringify(RentaIndividual));
-            console.log("Tipo renta: " + isTipoRenta);
+            // console.log("Acá andamos" + JSON.stringify(RentaIndividual));
+            // console.log("Tipo renta: " + isTipoRenta);
             return isTipoRenta === 1 && RentaIndividual.cortoPlazo === true ? (
               <div
                 key={RentaIndividual._id}
