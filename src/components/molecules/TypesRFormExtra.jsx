@@ -10,6 +10,7 @@ import TipoRentaContext from "../../contexts/TipoRentaContext";
 import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
 import UserContext from "../../contexts/UserContext";
 import IdContex from "../../contexts/IdContex";
+import "../../assets/img/imgTypeRentEnd.png"
 import "../../assets/style/moleculescss/TypesRFormExtra.css";
 function TypesRFormExtra() {
   const { isIduser, setIsiduser } = useContext(IdContex);
@@ -114,15 +115,19 @@ function TypesRFormExtra() {
   
   return (
     <>
+      <h1 className="tituloTypesRFormExtra">Arma tu paquete de reserva a corto plazo</h1>
       <form ref={DatosDeReserva}>
-        <h1>Elige los campos a considerar en tu evento</h1>
-        <label>XXX</label>
-        <label htmlFor="user">
-          Ingresa algun comentario a destacar al Admin
-        </label>
-        <input type="text" id="user" name="Observaciones" />
+      <div className="contenedor1TypesRFormExtra">
+        <label className="textoTypesRFormExtra1">En reserva corto plazo te ofrecemos lo siguiente.</label>
+        <label className="textoTypesRFormExtra2">Tú eliges como disfrutar tus recuerdos y a tu gusto.</label>
+        <label className="textoTypesRFormExtra3">Se aplica promoción en algunos paquetes.Reserva con 50% de anticipo, más depósito en garantía (Reembolsable)</label>
+        <label htmlFor="user" className="labelTypesRFormExtra">Ingresa algun comentario a destacar al Admin</label>
+        <input className="inputTypesRFormExtra" type="text" id="user" name="Observaciones" />
+        <img src="src/assets/img/imgTypeRentEnd.png"></img>
+      </div>
 
-        <>
+      <div className="contenedorTypesRFormExtra">
+      <>
           {!isLoading ? (
             <>
               <div className="loader">
@@ -140,6 +145,7 @@ function TypesRFormExtra() {
                 <div className="cell d-4"></div>
               </div>
             </>
+            
           ) : ( 
          
           RentaIndividuales.map((RentaIndividual) => {
@@ -213,6 +219,7 @@ function TypesRFormExtra() {
         <Link className="loginNav" to="/TypesRents">
           <ButtonStyled Danger={true} label={"Cancelar "}></ButtonStyled>
         </Link>
+        </div>
       </form>
     </>
   );

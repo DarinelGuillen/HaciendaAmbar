@@ -1,8 +1,72 @@
+
+.tituloTypesRFormExtra{
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 55px;
+  text-align: center;
+  color: #4B4B4C;
+}
+.contenedor1TypesRFormExtra{
+  width: 50%;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+
+.textoTypesRFormExtra1{
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: #910000;
+}
+.textoTypesRFormExtra2{
+  font-family: 'Quattrocento';
+  font-style: normal;
+  padding-top: 5%;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+}
+.textoTypesRFormExtra3{
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 5%;
+  font-size: 28px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+}
+.labelTypesRFormExtra{
+  font-family: 'Quattrocento';
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 5%;
+  font-size: 28px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+}
+.inputTypesRFormExtra{
+  width: 90%;
+  margin: 5%
+
+}
+.contenedor2TypesRFormExtra{
+  width: 50%;
+}
+
 .renta-individual-wrapper {
     display: flex;
     align-items: center;
-    background-color: rgb(236, 203, 203);
     width: 70%;
+    
   }
   @media (max-width: 767px) {
     .renta-individual-wrapper {
