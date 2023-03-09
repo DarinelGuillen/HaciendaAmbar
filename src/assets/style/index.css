@@ -1,12 +1,11 @@
-* {
-    box-sizing: border-box;
-}
 
-html {
-    background-color: rgb(255, 255, 255);
-    
-}
 
-body {
+*{
     margin: 0;
-}
+    box-sizing: border-box;
+    }
+    html{
+        background-color: rgb(255, 255, 255);
+        /* font-family: none; */
+        /* font-size: 62.5%; */
+    }

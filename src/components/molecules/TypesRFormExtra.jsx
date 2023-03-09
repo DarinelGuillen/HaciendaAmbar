@@ -56,7 +56,7 @@ function TypesRFormExtra() {
       horaDeFinalizacion: String(isRentaUsuario.horaDeFinalizacion),
       fechaDeReserva: String(CurrentDate),
       Extras: isRentaUsuario.newArray,
-      estadoRenta: true,
+      estadoRenta: false,
       observaciones: String(observacionesForm.get("Observaciones")),
       SeEjecutoConExitoLarenta: false,
       LinkFotos: "LINK HERE",
@@ -202,13 +202,13 @@ function TypesRFormExtra() {
           label={"Confirma extra extra paquete data algo "}
           Danger={false}
         />
-        <ButtonStyled
+        {/* <ButtonStyled
            onClick={(event) => {
             event.preventDefault();
             setIsLoading(!isLoading);}}
           label={"setIsLoading "}
           Danger={true}
-        />
+        /> */}
 
         <Link className="loginNav" to="/TypesRents">
           <ButtonStyled Danger={true} label={"Cancelar "}></ButtonStyled>

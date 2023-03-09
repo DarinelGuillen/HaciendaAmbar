@@ -20,6 +20,7 @@ import PaqueteContext from "../contexts/PaqueteContext";
 import UserContext from "../contexts/UserContext";
 import RentaDelUsuarioContext from "../contexts/RentaDelUsuarioContext"
 import TipoRentaContext from "../contexts/TipoRentaContext";
+import ViewContext from "../contexts/ViewContext";
 /* import "bootstrap/dist/css/bootstrap.min.css"; */
 
 import ProtectedParentRoute from "./ProtectedParentRoute";
@@ -32,6 +33,7 @@ function App() {
   const [isIduser, setIsiduser] = useState("");
   const [isRentaUsuario, setIsRentaUsuario] = useState("");
   const [isTipoRenta, setIsTipoRenta] = useState("");
+  const [IsViewContext, setIsViewContext] = useState(0);
 
 
   return (
@@ -42,7 +44,8 @@ function App() {
           <PaqueteContext.Provider value={{ isPaquete, setIsPaquete }}>
             <IdContex.Provider value={{ isIduser, setIsiduser }}>
               <RentaDelUsuarioContext.Provider value={{ isRentaUsuario, setIsRentaUsuario}}>
-                <TipoRentaContext.Provider value={{ isTipoRenta, setIsTipoRenta}}>
+              <TipoRentaContext.Provider value={{ isTipoRenta, setIsTipoRenta}}>
+                <ViewContext.Provider value={{ IsViewContext, setIsViewContext}}>
               <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/Login" element={<Login />} />
@@ -61,6 +64,7 @@ function App() {
                   <Route path="/Admin" element={<Admin />} />
                 </Route>
               </Routes>
+              </ViewContext.Provider>
                 </TipoRentaContext.Provider>
               </RentaDelUsuarioContext.Provider>
             </IdContex.Provider>

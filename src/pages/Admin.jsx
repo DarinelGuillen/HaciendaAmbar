@@ -1,8 +1,8 @@
-import ListRent from "../components/molecules/ListRent";
+import AdminListRent from "../components/molecules/AdminListRent"
 function Admin() {
   return (
     <>
-    <ListRent/>
+    <AdminListRent/>
     </>
   );
 }
