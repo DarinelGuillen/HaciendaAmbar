@@ -1,11 +1,16 @@
 import { useState, useEffect, useContext } from "react";
 
+import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
 import AdminContext from "../../contexts/AdminContext";
 import ButtonStyled from "../../components/atoms/ButtonStyled";
 import ViewContext from "../../contexts/ViewContext";
 function Tuplas(props) {
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
   const {IsViewContext, setIsViewContext } = useContext(ViewContext);
+  const {isRentaUsuario, setIsRentaUsuario} = useContext(RentaDelUsuarioContext);
+
+  
+  
 
   const rent = props.rent;
   const VIEW = props.view;
@@ -23,6 +28,26 @@ function Tuplas(props) {
 
     });
   };
+  const handlerClickVermas = (e,idPaquete,idUser)=>{
+    e.preventDefault();
+    console.log(idPaquete+"//"+idUser)
+    let url=`https://localhost/rentasUsuario/${idPaquete}`
+    let url2=`https://localhost/users/${idUser}`
+    let concat =[];
+    fetch(url)
+    .then((response)=>response.json())
+    .then((data) =>{
+      concat.push(data)
+    });
+    fetch(url2)
+    .then((response)=> response.json())
+    .then((data1)=>{
+      concat.push(data1)
+    });
+    setIsRentaUsuario(concat);
+    console.log("es el nombre "+JSON.stringify(isRentaUsuario[0].nombreCompleto));
+    setIsViewContext(3);  
+  }
   const handlerClickFinalizarRenta = (e, id, estadoRenta) => {
     console.log("🚀 ~ file: Tuplas.jsx:25 ~ handlerClickFinalizarRenta ~ id:", id)
     console.log("🚀 ~ file: Tuplas.jsx:25 ~ handlerClickFinalizarRenta ~ estadoRenta:", estadoRenta)
@@ -67,9 +92,11 @@ function Tuplas(props) {
             </td>
             <td>
               <ButtonStyled
-                
+                onClick={(e) => handlerClickVermas(e, rent._id,rent.idUser)}
                 label={"Ver mas detalles "}
                 Danger={true}
+
+
               />
             </td>
           </>

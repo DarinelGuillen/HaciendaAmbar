@@ -1,11 +1,14 @@
 import { useState, useEffect, useContext } from "react";
 import AdminContext from "../../contexts/AdminContext";
+import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
 import Tuplas from "../atoms/Tuplas";
 import ButtonStyled from "../atoms/ButtonStyled";
 import ViewContext from "../../contexts/ViewContext";
 import "../../assets/style/moleculescss/AdminListRent.css";
+import { json } from "react-router-dom";
 
 function AdminListRent() {
+  const {isRentaUsuario, setIsRentaUsuario} = useContext(RentaDelUsuarioContext);
   const [rentsEstadoF, setRentsEstadoF] = useState([]);
   const [SeEjecutoConExitoLarenta, setSeEjecutoConExitoLarenta] = useState([]);
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
@@ -69,7 +72,8 @@ function AdminListRent() {
             label={"Ganancias"}
             Danger={true}
           />
-          {IsViewContext===1||IsViewContext===2?(<>
+          {IsViewContext===1||IsViewContext===2?(
+          <>
             <table className="table_container">
             <thead>
               <tr>
@@ -85,9 +89,11 @@ function AdminListRent() {
               </tr>
             </thead>
             <tbody>
+            
             {IsViewContext === 1 ? (
                 rentsEstadoF.map((rent) => (
                   <Tuplas key={rent._id} rent={rent}  />
+                  
                 ))
               ) : (
                 SeEjecutoConExitoLarenta.map((rent) => (
@@ -96,6 +102,15 @@ function AdminListRent() {
               )}
             </tbody>
           </table>
+          </>): IsViewContext===3?(<>
+          <p>aqui esta ver mas</p>
+          {isRentaUsuario == undefined ? (<>
+          
+          <p> {isRentaUsuario[0]}</p>
+          </>):(<>
+            <h1>nulo</h1>
+            </>) }
+          
           </>):(<></>)}
           
              
