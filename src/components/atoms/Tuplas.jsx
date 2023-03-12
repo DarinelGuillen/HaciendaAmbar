@@ -6,63 +6,67 @@ import ButtonStyled from "../../components/atoms/ButtonStyled";
 import ViewContext from "../../contexts/ViewContext";
 function Tuplas(props) {
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
-  const {IsViewContext, setIsViewContext } = useContext(ViewContext);
-  const {isRentaUsuario, setIsRentaUsuario} = useContext(RentaDelUsuarioContext);
-
-  
-  
+  const { IsViewContext, setIsViewContext } = useContext(ViewContext);
+  const { isRentaUsuario, setIsRentaUsuario } = useContext(
+    RentaDelUsuarioContext
+  );
 
   const rent = props.rent;
   const VIEW = props.view;
   const handlerClickAprobarRenta = (e, id) => {
     e.preventDefault();
     console.log("APROVADA", id, " VIEW= ", VIEW);
-    let url=`https://localhost/rentasUsuario/${id}`
+    let url = `https://localhost/rentasUsuario/${id}`;
     fetch(url, {
-      method: 'PUT'
+      method: "PUT",
     })
-    .then((response) => response.json())
-    .then((data) => {
-      setIsAdmin(true)
-      console.log("🚀 ~ file: Tuplas.jsx:13 ~ .then ~ data:", data);
-
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        setIsAdmin(true);
+        console.log("🚀 ~ file: Tuplas.jsx:13 ~ .then ~ data:", data);
+      });
   };
-  const handlerClickVermas = (e,idPaquete,idUser)=>{
+  const handlerClickVermas = (e, idPaquete, idUser) => {
     e.preventDefault();
-    console.log(idPaquete+"//"+idUser)
-    let url=`https://localhost/rentasUsuario/${idPaquete}`
-    let url2=`https://localhost/users/${idUser}`
-    let concat =[];
+    console.log(idPaquete + "//" + idUser);
+    let url = `https://localhost/rentasUsuario/${idPaquete}`;
+    let url2 = `https://localhost/users/${idUser}`;
+    let concat = [];
     fetch(url)
-    .then((response)=>response.json())
-    .then((data) =>{
-      concat.push(data)
-    });
-    fetch(url2)
-    .then((response)=> response.json())
-    .then((data1)=>{
-      concat.push(data1)
-    });
-    setIsRentaUsuario(concat);
-    console.log("es el nombre "+JSON.stringify(isRentaUsuario[0].nombreCompleto));
-    setIsViewContext(3);  
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        concat.push(data);
+        fetch(url2)
+          .then((response) => response.json())
+          .then((data1) => {
+            concat.push(data1);
+            setIsRentaUsuario(concat);
+            setIsViewContext(3);
+            console.log("es el nombre " + JSON.stringify(isRentaUsuario[0].nombreCompleto));
+          });
+      });
+  };
   const handlerClickFinalizarRenta = (e, id, estadoRenta) => {
-    console.log("🚀 ~ file: Tuplas.jsx:25 ~ handlerClickFinalizarRenta ~ id:", id)
-    console.log("🚀 ~ file: Tuplas.jsx:25 ~ handlerClickFinalizarRenta ~ estadoRenta:", estadoRenta)
+    console.log(
+      "🚀 ~ file: Tuplas.jsx:25 ~ handlerClickFinalizarRenta ~ id:",
+      id
+    );
+    console.log(
+      "🚀 ~ file: Tuplas.jsx:25 ~ handlerClickFinalizarRenta ~ estadoRenta:",
+      estadoRenta
+    );
     e.preventDefault();
     alert("FINALIZADO");
 
-    let url=`https://localhost/rentasUsuario/${id}/${estadoRenta}`
-    fetch(url,{
-      method: 'PUT'
+    let url = `https://localhost/rentasUsuario/${id}/${estadoRenta}`;
+    fetch(url, {
+      method: "PUT",
     })
-        .then((response) => response.json())
-        .then((data) => {
-          setIsAdmin(true)
-          console.log("🚀 ~ file: Tuplas.jsx:24 ~ .then ~ data:", data)
-        });
+      .then((response) => response.json())
+      .then((data) => {
+        setIsAdmin(true);
+        console.log("🚀 ~ file: Tuplas.jsx:24 ~ .then ~ data:", data);
+      });
   };
   return (
     <>
@@ -92,11 +96,9 @@ function Tuplas(props) {
             </td>
             <td>
               <ButtonStyled
-                onClick={(e) => handlerClickVermas(e, rent._id,rent.idUser)}
+                onClick={(e) => handlerClickVermas(e, rent._id, rent.idUser)}
                 label={"Ver mas detalles "}
                 Danger={true}
-
-
               />
             </td>
           </>
@@ -104,7 +106,9 @@ function Tuplas(props) {
           <>
             <td>
               <ButtonStyled
-                onClick={(e) => handlerClickFinalizarRenta(e, rent._id, rent.estadoRenta)}
+                onClick={(e) =>
+                  handlerClickFinalizarRenta(e, rent._id, rent.estadoRenta)
+                }
                 label={"Completar"}
                 Danger={true}
               />

@@ -103,12 +103,48 @@ function AdminListRent() {
             </tbody>
           </table>
           </>): IsViewContext===3?(<>
-          <p>aqui esta ver mas</p>
           {isRentaUsuario == undefined ? (<>
-          
-          <p> {isRentaUsuario[0]}</p>
+          <p> error en el paquete</p>
           </>):(<>
-            <h1>nulo</h1>
+          {console.log("nulo"+JSON.stringify(isRentaUsuario[0]))}
+            <div className="cont-vermas">
+                <h1>Información de Reservas</h1>
+                
+                <table className="table-vermas">
+                  <tr>
+                    <th>Fecha de Inicio</th>
+                    <td>{isRentaUsuario[0].returnRenta[0].fechaInicio}</td>
+                  </tr>
+                  <tr>
+                    <th>Hora de Inicio</th>
+                    <td>{isRentaUsuario[0].returnRenta[0].horaDeInicio}</td>
+                  </tr>
+                  <tr>
+                    <th>Hora de Finalización</th>
+                    <td>{isRentaUsuario[0].returnRenta[0].horaDeFinalizacion}</td>
+                  </tr>
+                  <tr>
+                    <th>Fecha de Reserva</th>
+                    <td> {isRentaUsuario[0].returnRenta[0].fechaDeReserva}</td>
+                  </tr>
+                  <tr>
+                    <th>Extras</th>
+                    <td>{isRentaUsuario[0].returnRenta[0].Extras[0]}</td>
+                  </tr>
+                  <tr>
+                    <th>Observaciones</th>
+                    <td>{isRentaUsuario[0].returnRenta[0].observaciones}</td>
+                  </tr>
+                  <tr>
+                    <th>Nombre de Usuario</th>
+                    <td>{isRentaUsuario[1].nombreCompleto}</td>
+                  </tr>
+                  <tr>
+                    <th>Correo Electrónico</th>
+                    <td>{isRentaUsuario[1].correo}</td>
+                  </tr>
+                </table>
+        	</div>
             </>) }
           
           </>):(<></>)}

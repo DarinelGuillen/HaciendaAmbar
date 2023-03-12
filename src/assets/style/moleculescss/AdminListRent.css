@@ -25,6 +25,28 @@
   .table_container tr:hover {
     background-color: #f5f5f5;
   }
+  .cont-vermas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .table-vermas {
+    max-width: 100%;
+    width: 100%;
+  }
+  table th {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-weight: normal;
+  }
+  
+  table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
   
  
   
