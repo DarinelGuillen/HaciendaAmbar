@@ -25,13 +25,16 @@
 .linksForms{
     font-family: 'Quattrocento', serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 0.7rem;
-    line-height: 0.7rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    font-weight: 350;
+    padding: 5%;
+    font-size: 1rem;
+    line-height: 1rem;
     color: #2a2828;
+}
+.padreLinks{
+    display: flex;   
+   flex-direction: column;
+   align-items: center;
 }
 
 label{
@@ -124,4 +127,118 @@ input{
 }
 .inputsLogin{
     border: none;
+}
+.fondoDegradadoCard{
+    background: rgba(75, 75, 76, 0.06);
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.fomrCardLogin{
+    width: 50%;
+    height: 50%;
+}
+.linkFormLogin{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.card-body{
+    width: 100%;
+}
+.cardcitaLogin{
+    width: 40%;
+    height: 20%;
+    background: rgba(75, 75, 76, 0.06);
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.cardcitaLogin2{
+    width: 40%;
+    height: 20%;
+    background: rgba(75, 75, 76, 0.06);
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+
+
+:root {
+    --color-dark: #15181f;
+    --color-dark-x: #2d343f;
+    --color-dark-xx: #1f232b;
+    --color-light: #ffffff;
+    --color-grey: #f5f6f8;
+}
+.contenedorLogincito{
+    font-family: 'Quattrocento', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: var(--color-grey);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+
+.bg-light {
+    background-color: var(--color-light)!important;
+}
+
+
+
+.p-6 {
+    padding: 4rem 7rem;
+}
+
+.contact-box {
+    padding: 0;
+}
+
+.btn {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    min-width: 10rem;
+}
+
+.btn-outline-dark {
+    border: 2px solid var(--color-dark-xx);
+}
+
+
+.form-control {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 1.5rem 1rem;
+}
+
+.login-bg {
+    background-image: url('src/assets/img/imgLogin.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.testiomonial {
+    bottom: 10px
+}
+
+@media (max-width: 575.98px) {
+    .p-6 {
+        padding: 2rem;
+    }
+
+    .contact-box {
+        padding: 0;
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) { 
+    .register-bg {
+        min-height: 50vh;
+    }
 }

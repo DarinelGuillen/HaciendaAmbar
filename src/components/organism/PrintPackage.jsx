@@ -55,6 +55,7 @@ function PrintPackage() {
         <img src="src/assets/img/enteladoYSeyDeFotos5.png"></img>
         <img src="src/assets/img/enteladoYSeyDeFotos6.png"></img>
       </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3822.8880082936394!2d-93.10041072883605!3d16.632388853086912!3m2!1i1024!2i768!4f13.1!2m1!1sRivera%20Nandayal%C3%BA%20No.%207%20Suchiapa%20Chiapas!5e0!3m2!1ses!2smx!4v1678470746122!5m2!1ses!2smx" width="100%" height="100%" style={{ border:0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>       
         <button
           className="botonFormularioPackage"
           onClick={handleClickTerminateRent}

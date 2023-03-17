@@ -1,20 +1,23 @@
 import Header from "../components/molecules/Header"
-import Footer from "../components/molecules/Footer"
+import Banner from "../components/atoms/Banner";
+import GroupCard from "../components/atoms/GroupCard";
+import History from "../components/atoms/History";
+import FormContactUs from "../components/atoms/FormContactUs";
+import Carrusel from "../components/atoms/Carrusel";
 import AcercaDeNosotros from "../components/molecules/AcercaDeNosotros";
+
 // import TipodeReservaView from "../components/molecules/TipodeReservaView";
 
-import RecuerdosParaSiempre from "../components/molecules/RecuerdosParaSiempre";
-import ListPaquetes from "../components/molecules/ListPaquetes";
-import Slider from "../components/atoms/Slider";
 function CommonUser() {
     return (  
         <>
         <Header/>
-        <Slider/>
-        <RecuerdosParaSiempre/>
-        <ListPaquetes/>
+        <Carrusel></Carrusel>
+        <Banner></Banner>
+        <GroupCard></GroupCard>
+        <History></History>
         <AcercaDeNosotros/>
-        <Footer/>
+        <FormContactUs></FormContactUs>
         </>
     );
 }

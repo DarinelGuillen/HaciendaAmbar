@@ -1,0 +1,21 @@
+.espacio{
+    margin-top: 45px;
+}
+.titulo5Mandamientos{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #4B4B4C;
+}
+.parrafo{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    color: #4B4B4C;
+}
+.card{
+    border: transparent;
+    box-shadow: none;
+}
