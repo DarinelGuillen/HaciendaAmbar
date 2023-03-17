@@ -6,6 +6,7 @@
     }
     html{
         background-color: rgb(255, 255, 255);
+        scroll-behavior: smooth;
         /* font-family: none; */
         /* font-size: 62.5%; */
     }

@@ -84,11 +84,89 @@
     font-family: 'Quattrocento', serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 0.7rem;
-    line-height: 0.7rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
     padding-top: 1em;
     display: flex;
     align-items: center;
     text-align: center;
     color: #2a2828;
+}
+:root {
+    --color-dark: #15181f;
+    --color-dark-x: #2d343f;
+    --color-dark-xx: #1f232b;
+    --color-light: #ffffff;
+    --color-grey: #f5f6f8;
+}
+.contenedorLogincito{
+    font-family: 'Quattrocento', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: var(--color-grey);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+
+.bg-light {
+    background-color: var(--color-light)!important;
+}
+
+
+
+.p-6 {
+    padding: 4rem 7rem;
+}
+
+.contact-box {
+    padding: 0;
+}
+
+.btn {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    min-width: 10rem;
+}
+
+.btn-outline-dark {
+    border: 2px solid var(--color-dark-xx);
+}
+
+
+.form-control {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 1.5rem 1rem;
+}
+
+.register-bg {
+    background-image: url('src/assets/img/imgRegister.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.testiomonial {
+    bottom: 10px
+}
+
+@media (max-width: 575.98px) {
+    .p-6 {
+        padding: 2rem;
+    }
+
+    .contact-box {
+        padding: 0;
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) { 
+    .register-bg {
+        min-height: 50vh;
+    }
 }

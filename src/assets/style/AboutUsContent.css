@@ -1,0 +1,346 @@
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+  
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about .content ul li {
+    padding-left: 28px;
+    position: relative;
+  }
+  
+  .about .content ul li+li {
+    margin-top: 10px;
+  }
+  
+  .about .content ul i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 20px;
+    color: #3498db;
+    line-height: 1;
+  }
+  
+  .about .content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about .content .btn-learn-more {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.3s;
+    line-height: 1;
+    color: #b00303;
+    animation-delay: 0.8s;
+    margin-top: 6px;
+    border: 2px solid #9C2727;
+  }
+  
+  .about .content .btn-learn-more:hover {
+    background: #d85757;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+    padding-top: 0;
+  }
+  
+  .counts .content {
+    padding: 0;
+  }
+  .imgAboutUsUnsplash{
+    border-radius: 2%;
+  }
+  
+  .counts .content h3 {
+    font-weight: 700;
+    font-size: 34px;
+    color: #222222;
+  }
+  
+  .counts .content p {
+    margin-bottom: 0;
+  }
+  
+  .counts .content .count-box {
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  .counts .content .count-box i {
+    display: block;
+    font-size: 36px;
+    color: #3498db;
+    float: left;
+    line-height: 0;
+  }
+  
+  .counts .content .count-box span {
+    font-size: 36px;
+    line-height: 30px;
+    display: block;
+    font-weight: 700;
+    color: #222222;
+    margin-left: 50px;
+  }
+  
+  .counts .content .count-box p {
+    padding: 15px 0 0 0;
+    margin: 0 0 0 50px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #484848;
+  }
+  
+  .counts .content .count-box a {
+    font-weight: 600;
+    display: block;
+    margin-top: 20px;
+    color: #484848;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .counts .content .count-box a:hover {
+    color: #6f6f6f;
+  }
+  
+  @media (max-width: 1024px) {
+    .counts .image {
+      text-align: center;
+    }
+  
+    .counts .image img {
+      max-width: 70%;
+    }
+  }
+  
+  @media (max-width: 667px) {
+    .counts .image img {
+      max-width: 100%;
+    }
+  }
+  .segundaSecAbout2{
+    padding-top: 5%;
+  }
+  .segundaSecAbout1{
+    padding-top: 5%;
+  }
+  .team .member {
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team .member .member-img {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team .member .social {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    background: rgba(255, 255, 255, 0.85);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team .member .social a {
+    transition: color 0.3s;
+    color: #222222;
+    margin: 0 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team .member .social a i {
+    line-height: 0;
+  }
+  
+  .team .member .social a:hover {
+    color: #3498db;
+  }
+  
+  .team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+  }
+  
+  .team .member .member-info {
+    padding: 25px 15px;
+  }
+  
+  .team .member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #222222;
+  }
+  
+  .team .member .member-info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaaaaa;
+  }
+  
+  .team .member .member-info p {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: #777777;
+  }
+  
+  .team .member:hover .social {
+    opacity: 1;
+  }
+  
+
+  body{margin-top:20px;}
+
+.team-list img {
+  width: 50%;
+}
+
+.team-list .content {
+  width: 50%;
+}
+
+.team-list .content .follow {
+  position: absolute;
+  bottom: 24px;
+}
+
+.team-list:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.team, .team-list {
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+.team .content .title, .team-list .content .title {
+  font-size: 18px;
+}
+
+.team .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .member-position, .team .team-social {
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+  left: 0;
+  margin: auto 10%;
+  z-index: 99;
+}
+
+.team .team-social {
+  bottom: 40px;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+.team:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.team:hover .overlay {
+  opacity: 0.6;
+}
+
+.team:hover .team-social {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .team-list img,
+  .team-list .content {
+    width: 100%;
+    float: none !important;
+  }
+  .team-list img .follow,
+  .team-list .content .follow {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.social-icon.social li a {
+    color: #adb5bd;
+    border-color: #adb5bd;
+}
+.social-icon li a {
+    color: #35404e;
+    border: 1px solid #35404e;
+    display: inline-block;
+    height: 32px;
+    text-align: center;
+    font-size: 15px;
+    width: 32px;
+    line-height: 30px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+.rounded {
+    border-radius: 5px !important;
+}
+
+.para-desc {
+    max-width: 600px;
+}
+.text-muted {
+    color: #8492a6 !important;
+}
+
+.section-title .title {
+    letter-spacing: 0.5px;
+    font-size: 30px;
+}
+.bootdey{
+  padding: 5%;
+}

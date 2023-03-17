@@ -1,26 +1,21 @@
-
-import RecuerdosParaSiempre from "../components/molecules/RecuerdosParaSiempre";
-import CarruselPaquetes from "../components/molecules/CarruselPaquetes";
-import Footer from "../components/molecules/Footer";
 import Header from "../components/molecules/Header";
-import Slider from "../components/atoms/Slider";
-import ListPaquetes from "../components/molecules/ListPaquetes";
-import AcercaDeNosotros from "../components/molecules/AcercaDeNosotros";
+import Carrusel from "../components/atoms/Carrusel";
+import Banner from "../components/atoms/Banner";
+import GroupCard from "../components/atoms/GroupCard";
+import History from "../components/atoms/History";
+import FormContactUs from "../components/atoms/FormContactUs";
 function Landing() {
-  const mockImagenes = [
-		'../../../src/assets/img/slider1.jpeg','../../../src/assets/img/slider2.jpeg',
-    '../../../src/assets/img/slider3.jpeg','../../../src/assets/img/slider4.jpeg'
-	];
+ 
+	
   return (
     <>
-    <Header/>
-    <Slider imagenes={mockImagenes}/>
-    <RecuerdosParaSiempre/>
-    <ListPaquetes/>
-    <AcercaDeNosotros/>
-    
-    <Footer></Footer>
-</>
+      <Header/>
+      <Carrusel></Carrusel>
+      <Banner></Banner>
+      <GroupCard></GroupCard>
+      <History></History>
+      <FormContactUs></FormContactUs>
+    </>
   );
 }
 export default Landing;

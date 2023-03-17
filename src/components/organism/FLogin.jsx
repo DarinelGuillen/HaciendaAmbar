@@ -51,48 +51,73 @@ function FLogin() {
 
   return (
     <>
-      <div className="formLoginG">
+      <center>
+        <div className="contenedorLogincito ">
+          <section className="contact-box">
+            <div className="row no-gutters">
+              <div className="col-xl-7 col-lg-12 d-flex">
+                <div className="container align-self-center p-6">
+                  <h1 className="font-weight-bold mb-3 ">Inicio de sesión</h1>
+                  <p className="text-muted mb-5">Ingresa la siguiente información para inicio de sesión</p>        
+                    <form ref={formDataL}>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="username">Nombre de usuario</label>
+                          <input type="text" className="form-control" name="nombreDeUsuario" placeholder="Ingresa tu nombre de usuario"/>
+                      </div>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="password">Contraseña </label>
+                          <input type="password" className="form-control" name="contrasenia" placeholder="Ingresa tu contraseña"/>
+                      </div>
+                      <button className="btn btn-primary width-100" onClick={handlerClick}>Iniciar Sesion{" "}</button>
+                      <div className="padreLinks">
+                        <div>
+                          <Link to="/SingIn">
+                            <label className="linksForms">Registrarme</label>
+                          </Link>
+                        </div>
+                        <div>
+                          <Link to="/">
+                            <label className="linksForms">Regresar</label>
+                          </Link>
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                <div class="col-xl-5 col-lg-12 login-bg">    
+              </div>
+            </div>
+          </section>
+        </div>
+      </center>
+    </>
+  );
+}
+export default FLogin;
+
+
+
+   /*   <div className="formLoginG">
         <div className="padreImgLogin">
-          <img
-            loading="lazy"
-            className="LogosGeneric"
-            src="src/assets/img/imgLogin.png"
-            alt=""
-          />
+          
         </div>
         <div className="contenedorFormulario">
           <form ref={formDataL}>
             <div className="ordenamiento">
               <label className="labelTitulo">Inicio de sesión</label>
               <label htmlFor="username">Username</label>
-              {/* <InputStyled type={"text"} placeholder={"User Name"} inputBorder={3}/> */}
+            
               <input type="text" name="nombreDeUsuario" />
               <label htmlFor="password">Password</label>
               <input type="password" name="contrasenia" />
+
               <LabelStyled danger={true} label={Label}></LabelStyled>
               <button className="botonFlogin" onClick={handlerClick}>
                 Iniciar Sesion{" "}
               </button>
-              <Link to="/SingIn">
-                <label className="linksForms">Registrarme</label>
-              </Link>
-              <Link to="/">
-                <label className="linksForms">Regresar</label>
-              </Link>
+              
             </div>
-              <div className="icnoRedesLogin">
-                <Link to="https://www.facebook.com/ambar.haciendamx">
-                  <Link to="https://www.instagram.com/ambar.haciendamx/">
-                    <Link to="https://api.whatsapp.com/send?phone=%2B529613668435&data=AWAsSSfCKixiYnRUKHZTjvVM72qZl_bSyDTccLOxU433b-X9E2-t3KYWZEru2K_o91M4rccWJ0NNohh7mO5dg5chWGuR8ZS5LfU8lEOy8T8b6PA_n07helSnlZEfUVkQg3Y3sIPyl6Lhp5K0tB-Ty2yCC_h1OaghhVMVLIIERG0b8ta9-99hkZhiN7BaWB-hFe96V7jveQ-JnF0hWYDzAyE-lf5YLfe4dGOBkEO5wbvEfF14nqOXAxZBoyOAGe92SsiLpoKDh5vFUXW4lmuBIw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR2Oha7VF2UTVjToBVMFJ6x6vG3l15zo0SUVbfcSdO8ojawfvSK9y769_hg">
-                      <img src="src/assets/img/IconoRedes.svg"></img>
-                    </Link>
-                  </Link>
-                </Link>
-              </div>
+              
           </form>
         </div>
-      </div>
-    </>
-  );
-}
-export default FLogin;
+      </div>  */

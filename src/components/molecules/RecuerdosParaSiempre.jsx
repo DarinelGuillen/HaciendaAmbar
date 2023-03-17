@@ -1,12 +1,5 @@
-import Label from "../atoms/Label";
-import Icon from "../atoms/Icon";
-import RecuadroPaquete from "../atoms/RecuadroPaquete";
-import "../../assets/img/card1.svg";
-import "../../assets/img/card2.svg";
-import "../../assets/img/card3.svg";
-import "../../assets/img/card4.svg";
-import "../../assets/img/card5.svg";
-import "../../assets/img/imagenCardDerecha.png";
+
+
 
 import "../../assets/style/RecuerdosParaSiempre.css";
 
@@ -52,7 +45,7 @@ function RecuerdosParaSiempre() {
           </div>
         </div>
         <div className="imagenCardDerecha">
-          <img loading="lazy" src="src/assets/img/imagenCardDerecha.png"></img>
+          <img loading="lazy" ></img>
         </div>
       </div>
     </>

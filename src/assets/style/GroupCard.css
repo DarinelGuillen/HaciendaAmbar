@@ -1,0 +1,68 @@
+.paquetes{
+   padding: 2%;
+}
+.estilo-card{
+    border: transparent;
+    box-shadow: none;
+    margin-right: 20px;
+}
+.estilo-body{
+    align-items: center;
+}
+.imgIconoCardsPaquetes{
+    width: 60px;
+    margin-bottom: 20px;
+}
+.estiloTituloCard{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #910000;    
+}
+.textContentCard{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: justify;
+    color: #4D0A0B;
+}
+.botonPaquete{
+    width: 212px;
+    height: 31px;
+    background-color: #4B4B4C;
+    color: #ffffff;
+    border-radius: 15px;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    border: none;
+}
+.precioPaquetes{
+    font-weight: 900;
+    font-size: 20px;
+}
+.boderCard{
+    margin-right: 20px;
+}
+.cardBody{
+    align-items: center;
+}
+.roundedBBlock{
+    width: 60px;
+}
+.cardMargin{
+    margin-right: 20px;
+}
+.cardBody2{
+    align-items: center;
+}
+.imgCardBody{
+    width: 60px;
+}
+.cardMargin2{
+    margin-right: 20px;
+}

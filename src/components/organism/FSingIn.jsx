@@ -8,7 +8,7 @@ function FSingIn() {
 
   const handlerClick = (e) => {
     e.preventDefault();
-    //console.log("handlerClick called");
+    console.log("handlerClick called");
     const formData = new FormData(formSingIn.current);
     const URI = "https://localhost/users";
     const options = {
@@ -41,79 +41,61 @@ function FSingIn() {
 
   return (
     <>
-      <form ref={formSingIn}>
-        <div className="imgRegister">
-          <img
-            loading="lazy"
-            className="LogosGeneric"
-            src="src/assets/img/imgRegister.png"
-          ></img>
+      <center>
+        <div className="contenedorLogincito ">
+          <section className="contact-box">
+            <div className="row no-gutters">
+              <div className="col-xl-7 col-lg-12 d-flex">
+                <div className="container align-self-center p-6">
+                  <h1 className="font-weight-bold mb-3 ">Inicio de sesión</h1>
+                  <p className="text-muted mb-5">Ingresa la siguiente información para inicio de sesión</p>        
+                    <form ref={formSingIn}>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="nombreDeUsuario">Nombre de usuario</label>
+                          <input type="text" className="form-control" name="nombreDeUsuario" placeholder="Ingresa tu nombre de usuario" required/>
+                      </div>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="nombreCompleto">Nombre completo </label>
+                          <input type="text" className="form-control" name="nombreCompleto" placeholder="Ingresa tu nombre completo"/>
+                      </div>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="numTel">Número de teléfono</label>
+                          <input type="number" className="form-control" name="numTel" placeholder="Ingresa tu número de teléfono"/>
+                      </div>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="edad">Edad</label>
+                          <input type="number" className="form-control" name="edad" placeholder="Ingresa tu edad" required/>
+                      </div>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="correo">Correo eléctronico</label>
+                          <input type="email" className="form-control" name="correo" placeholder="Ingresa tu norreo eléctronico" required/>
+                      </div>
+                      <div className="form-group mb-3">
+                          <label className="font-weight-bold labelLogin" htmlFor="password">Contraseña </label>
+                          <input type="password" className="form-control" name="password" placeholder="Ingresa tu contraseña" required/>
+                      </div>
+                      <button className="btn btn-primary width-100" onClick={handlerClick}>Regístrate</button>
+                      <div className="padreLinks">
+                        <div>
+                          <Link to="/Login">
+                            <label className="linksForms">Iniciar sesión</label>
+                          </Link>
+                        </div>
+                        <div>
+                          <Link to="/">
+                            <label className="linksForms">Regresar</label>
+                          </Link>
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                <div className="col-xl-5 col-lg-12 register-bg">    
+              </div>
+            </div>
+          </section>
         </div>
-        <div className="ordenamiento">
-          <div className="labelTitulo">
-            <Label label={"Regístrate ahora"}></Label>
-          </div>
-
-          <label htmlFor="nombreDeUsuario" className="labelNombreUsuario">
-            Nombre de usuario
-          </label>
-          <input
-            type="text"
-            name="nombreDeUsuario"
-            className="inputNombreUsario"
-            required
-          />
-          <label htmlFor="nombreCompleto" className="labelNombreCompleto">
-            Nombre completo
-          </label>
-          <input
-            type="text"
-            name="nombreCompleto"
-            className="inputNombreCompleto"
-          />
-          <label htmlFor="numTel" className="labelNumeroTel">
-            Número de teléfono
-          </label>
-          <input type="text" name="numTel" className="inputNumeroTel" />
-          <label htmlFor="edad" className="labelEdad">
-            Edad
-          </label>
-          <input type="text" name="edad" className="inputEdad" required />
-          <label htmlFor="correo" className="labelCorreo">
-            Correo electrónico
-          </label>
-          <input type="email" name="correo" className="inputCorreo" required />
-          <label htmlFor="password" className="labelPassword">
-            Contraseña
-          </label>
-          <input
-            type="password"
-            name="password"
-            className="inputPassword"
-            required
-          />
-          <button className="botonRegister" onClick={handlerClick}>
-            Registrate
-          </button>
-          
-            <Link to="/Login">
-              <label className="linksForms">Iniciar sesión</label>
-            </Link>
-          
-            <Link to="/">
-              <label className="linksForms">Regresar</label>
-            </Link>
-        </div>
-          <div className="icnoRedesLogin">
-            <Link to="https://www.facebook.com/ambar.haciendamx">
-              <Link to="https://www.instagram.com/ambar.haciendamx/">
-                <Link to="https://api.whatsapp.com/send?phone=%2B529613668435&data=AWAsSSfCKixiYnRUKHZTjvVM72qZl_bSyDTccLOxU433b-X9E2-t3KYWZEru2K_o91M4rccWJ0NNohh7mO5dg5chWGuR8ZS5LfU8lEOy8T8b6PA_n07helSnlZEfUVkQg3Y3sIPyl6Lhp5K0tB-Ty2yCC_h1OaghhVMVLIIERG0b8ta9-99hkZhiN7BaWB-hFe96V7jveQ-JnF0hWYDzAyE-lf5YLfe4dGOBkEO5wbvEfF14nqOXAxZBoyOAGe92SsiLpoKDh5vFUXW4lmuBIw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR2Oha7VF2UTVjToBVMFJ6x6vG3l15zo0SUVbfcSdO8ojawfvSK9y769_hg">
-                  <img src="src/assets/img/IconoRedes.svg"></img>
-                </Link>
-              </Link>
-            </Link>
-          </div>
-      </form>
+      </center>
     </>
   );
 }
