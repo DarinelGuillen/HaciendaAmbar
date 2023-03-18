@@ -7,26 +7,36 @@ import "../../assets/style/Footer.css"
 function Footer() {
   return (
     <>
-    <div className="Footer">
-      <div className="iconoFooter">
-          <Icon  icon={iconoFooter}/>  
-          <Label label={"Recuerdos para siempre"}/>
+     
+
+     <footer class="row row-cols-5 py-5 my-5 border-top">
+
+          <div class="col">
+          </div>
+      
+      <center>
+        <div class="col">
+          <h5>Información</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Empresa</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Acerca de</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Empleo</a></li>
+          </ul>
+        </div>
+      </center>
+      <div class="col">
       </div>
-      <div className="informacion">
-        <Label label={"Empresa"}/>
-        <Label label={"Acerca de"}/>
-        <Label label={"Empleo"}/>
-      </div>
-      <div className="enlaces">
-        <Label label={"Enlaces útiles "}/>
-        <Label label={"Ayuda"}/>
-        <Label label={"Redes sociales"}/>
-      </div>
-      <div className="redesFooter">
-          <Icon icon={iconoRedes}/>
-          <Label label={"© 2022 Hacienda Ambar"}/>
-      </div>
-    </div>
+      <center>
+        <div class="col">
+          <h5>Enlaces</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Enlaces útiles</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ayuda</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Redes sociales</a></li>
+          </ul>
+        </div>
+      </center>
+    </footer>
     </>
   );
 }

@@ -4,6 +4,7 @@ import Banner from "../components/atoms/Banner";
 import GroupCard from "../components/atoms/GroupCard";
 import History from "../components/atoms/History";
 import FormContactUs from "../components/atoms/FormContactUs";
+import Footer from "../components/molecules/Footer";
 function Landing() {
  
 	
@@ -15,6 +16,7 @@ function Landing() {
       <GroupCard></GroupCard>
       <History></History>
       <FormContactUs></FormContactUs>
+      <Footer></Footer>
     </>
   );
 }

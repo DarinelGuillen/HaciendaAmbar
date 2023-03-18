@@ -5,6 +5,7 @@ import History from "../components/atoms/History";
 import FormContactUs from "../components/atoms/FormContactUs";
 import Carrusel from "../components/atoms/Carrusel";
 import AcercaDeNosotros from "../components/molecules/AcercaDeNosotros";
+import Footer from "../components/molecules/Footer";
 
 // import TipodeReservaView from "../components/molecules/TipodeReservaView";
 
@@ -18,6 +19,7 @@ function CommonUser() {
         <History></History>
         <AcercaDeNosotros/>
         <FormContactUs></FormContactUs>
+        <Footer></Footer>
         </>
     );
 }
