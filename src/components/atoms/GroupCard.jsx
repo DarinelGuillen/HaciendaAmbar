@@ -1,7 +1,37 @@
+import { useNavigate, Navigate } from "react-router-dom";
+import { useContext } from "react";
+
+import PaqueteContext from "../../contexts/PaqueteContext";
+
 import "../../assets/style/GroupCard.css"
 import "../../assets/style/BannerStyle.css"
 
 function GroupCard() {
+    const navigate = useNavigate();
+  const { isPaquete, setIsPaquete } = useContext(PaqueteContext);
+
+    const handlerClickPaquete = (e, id) => {
+        e.preventDefault();
+        //console.log("IDIDIDIDIDIDID", id);
+        console.log("restric IM false, in RecuadroPaquete from");
+    
+        //alert("Tu renta Fue procesada correctamente!");
+        const paqueteID = id;
+        // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
+        fetch(`https://localhost/paquetes/${paqueteID}`)
+          .then((response) => response.json())
+          .then((data) => {
+            //console.log(data);
+            console.log("RecuadroPaquete ATOMS\nDATAAAAAHERE BICHDA========", data);
+            setIsPaquete(data);
+            setTimeout(() => {
+              console.log("RecuadroPAQUETE\n=", isPaquete);
+            }, 1000);
+          })
+          .catch((error) => console.error(error));
+    
+        navigate("/RentPackage");
+      };
     return ( 
         <>
             <div class="container">
@@ -31,7 +61,10 @@ function GroupCard() {
                                                                 </p>
                                                             </p>
                                                             <center>
-                                                                <button class="botonPaquete">Ver más</button>    
+                                                            <button
+                                                                className="botonPaquete"
+                                                                onClick={(e) => handlerClickPaquete(e, "63ed95443676ecbfc0ffea7d")}
+                                                            >Ver mas</button>    
                                                             </center>
                                                         </div>
                                                     </div>
@@ -46,7 +79,10 @@ function GroupCard() {
                                                                 </p>
                                                             </p>
                                                             <center>
-                                                                <button class="botonPaquete">Ver más</button>    
+                                                            <button
+                                                                className="botonPaquete"
+                                                                onClick={(e) => handlerClickPaquete(e, "63edb9f47d9ee19c441923d3")}
+                                                                >Ver mas</button>
                                                             </center>
                                                         </div>
                                                     </div>
@@ -61,10 +97,17 @@ function GroupCard() {
                                                                 </p>
                                                             </p>
                                                             <center>
-                                                                <button class="botonPaquete">Ver más</button>    
+                                                            <button
+                                                                className="botonPaquete"
+                                                                onClick={(e) => handlerClickPaquete(e, "63f82e1d23fc8dc7c2152c35")}
+                                                            >
+                                                                Ver mas
+                                                            </button>
+                                                                
                                                             </center>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -86,7 +129,10 @@ function GroupCard() {
                                                                 </p>
                                                             </p>
                                                             <center>
-                                                                <button class="botonPaquete">Ver más</button>    
+                                                            <button
+                                                                className="botonPaquete"
+                                                                onClick={(e) => handlerClickPaquete(e, "64150066dc851cf1b4aed5ca")}
+                                                                >Ver mas</button>
                                                             </center>
                                                         </div>
                                                     </div>
@@ -101,7 +147,12 @@ function GroupCard() {
                                                                 </p>
                                                             </p>
                                                             <center>
-                                                                <button class="botonPaquete">Ver más</button>    
+                                                            <button
+                                                                className="botonPaquete"
+                                                                onClick={(e) => handlerClickPaquete(e, "64150131dc851cf1b4aed5cc")}
+                                                            >
+                                                                Ver mas
+                                                            </button>
                                                             </center>
                                                         </div>
                                                     </div>
@@ -116,7 +167,12 @@ function GroupCard() {
                                                                 </p>
                                                             </p>
                                                             <center>
-                                                                <button class="botonPaquete">Ver más</button>    
+                                                            <button
+                                                                className="botonPaquete"
+                                                                onClick={(e) => handlerClickPaquete(e, "6415014edc851cf1b4aed5cd")}
+                                                            >
+                                                                Ver mas
+                                                            </button>
                                                             </center>   
                                                         </div>
                                                     </div>

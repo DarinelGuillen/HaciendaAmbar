@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import AdminContext from "../contexts/AdminContext";
 import AboutUs from "../pages/AboutUs";
 import EndRent from "../pages/EndRent";
 import TypesRents from "../pages/TypesRents";
@@ -15,6 +14,7 @@ import MyAccount from "../pages/MyAccount";
 import RentPackage from "../pages/RentPackage";
 import SingIn from "../pages/SingIn";
 
+import AdminContext from "../contexts/AdminContext";
 import IdContex from "../contexts/IdContex";
 import PaqueteContext from "../contexts/PaqueteContext";
 import UserContext from "../contexts/UserContext";

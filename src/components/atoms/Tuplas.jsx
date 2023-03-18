@@ -73,7 +73,7 @@ function Tuplas(props) {
       <tr key={rent._id}>
         {/* <td>{rent._id}</td> */}
         <td>{rent.idPaquete}</td>
-        <td>{rent.idUser}</td>
+        
         <td>{rent.fechaInicio}</td>
         <td>{rent.horaDeInicio}</td>
         <td>{rent.horaDeFinalizacion}</td>
