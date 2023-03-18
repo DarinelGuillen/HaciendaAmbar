@@ -46,58 +46,50 @@ function TipodeReservaView() {
         
       ) : (
         <>
-        <h1>Elije que tipo de reserva Que mas te covenza</h1>
-        <div className="FContaineMain">
-          
-          <div className="CContainerMain">
-            <div className="left">
-              <h1 className="tituloTipoRenta">Reserva Corto Plazo</h1>
-              <p>
-                Para el tipo de reserva a corto plazo se debe tomar en cuenta el
-                reducclassNameo número de paquetes que están disponible, sin
-                embargo se puede rentar el tiempo que usted mismo límite.
-              </p>
-              <button className="ejemplobutton"onClick={(e) => HandlerClickTipoDerenta(e, 1)}>
-                ¡Resevar!
-              </button>
+          <p class="fs-1 tituloTiposDeRenta">Elije que tipo de reserva Que más te covenza</p>
+          <div class="card-group">
+            <div class="card">
+              <img src={ejemploimg1} class="card-img-top img-fluid" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title tituloTipoRenta">Reserva Corto Plazo</h5>
+                <p class="card-text informacionTipoRenta"> Para el tipo de reserva a corto plazo 
+                  se debe tomar en cuenta el reducido número de paquetes que
+                  están disponible, sin embargo se puede rentar el tiempo que 
+                  usted mismo límite.
+                </p>
+                <center>
+                  <button className="botonTipoDeRentas" onClick={(e) => HandlerClickTipoDerenta(e, 1)}>¡Resevar!</button>
+                </center>
+              </div>
             </div>
-            <div className="rightIMG">
-              <img src={ejemploimg1}></img>
+            <div class="card">
+              <img src={ejemploimg2} class="card-img-top img-fluid" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title tituloTipoRenta">Reserva Normal</h5>
+                <p class="card-text informacionTipoRenta">El tipo de reserva normal 
+                  es en la cual se lleva con anticipo y
+                  se puede ver con detallamiento y el alcance del evento a
+                  realizar.
+                </p>
+                <center>
+                  <button className="botonTipoDeRentas" onClick={(e) => HandlerClickTipoDerenta(e, 2)}>¡Resevar!</button>
+                </center>
+              </div>
             </div>
-          </div>
-          <div className="CContainerMain">
-            <div className="left">
-              <h1 className="tituloTipoRenta">Reserva Normal</h1>
-              <p>
-                El tipo de reserva normal es en la cual se lleva con anticipo y
-                se puede ver con detallamiento y el alcance del evento a
-                realizar.
-              </p>
-              <button className="ejemplobutton" onClick={(e) => HandlerClickTipoDerenta(e, 2)}>
-                ¡Resevar!
-              </button>
-            </div>
-            <div className="rightIMG">
-              <img src={ejemploimg2}></img>
-            </div>
-          </div>
-          <div className="CContainerMain">
-            <div className="left">
-              <h1 className="tituloTipoRenta">Reserva último Minuto</h1>
-              <p>
-                En este tipo de reserva están limitados los paquetes a incluir,
-                ya que en unos casos es de suma vitalclassNamead tener más
-                tiempo para hacer uso de dichos paquetes.
-              </p>
-              <button className="ejemplobutton" onClick={(e) => HandlerClickTipoDerenta(e, 3)}>
-                ¡Resevar!
-              </button>
-            </div>
-            <div className="rightIMG">
-              <img src={ejemploimg3}></img>
+            <div class="card">
+              <img src={ejemploimg3} class="card-img-top img-fluid" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title tituloTipoRenta">Reserva último Minuto</h5>
+                <p class="card-text informacionTipoRenta">En este tipo de reserva están
+                  limitados los paquetes a incluir, ya que en unos casos es de suma vitalidad 
+                  tener más tiempo para hacer uso de dichos paquetes.
+                </p>
+                <center>
+                  <button className="botonTipoDeRentas" onClick={(e) => HandlerClickTipoDerenta(e, 3)}>¡Resevar!</button>
+                </center>
+              </div>
             </div>
           </div>
-        </div>
         </>
       )}
     </>

@@ -53,10 +53,19 @@
     font-family: 'Quattrocento';
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
-    line-height: 50px;
     text-align: center;
     color: #9C2727;
+  }
+  .tituloTiposDeRenta{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    color: #9C2727;
+    margin: 6%;
+  }
+  .informacionTipoRenta{
+    text-align: justify;
   }
   .left p {
     font-size: 1.9rem; /* adjust the value to your liking */
@@ -125,21 +134,19 @@
     padding: 20px;
     box-sizing: border-box;
   }
-  .botonCortoPlazo{
+  .botonTipoDeRentas{
     background-color: #9C2727;
     color: white;
-    width: 20;
-    height: 15%;
-    margin-left: 15%;
-    border: none;
-    padding: 10px;
+    width: 40%;
+    height: 20%;
+    border: none;  
     border-radius: 0.7rem;
     cursor: pointer;
     transition: .5s, color .10s;
     -webkit-transition: .5s, color .10s;
     -moz-transition: .5s, color .10s;
   }
-  .botonCortoPlazo:hover{
+  .botonTipoDeRentas:hover{
     transform: scale3d(1.5, 1.5, 0.3);
     -webkit-transform: scale3d(1.5, 1.5, 0.3);
     -moz-transform: scale3d(1.5, 1.5, 0.3);
@@ -183,4 +190,12 @@
   .CContainerMain:nth-of-type(2) .rightIMG {
     order: 1;
   }
+
+  .TipoReservaView1Card{
+    max-width: 100%;
+  }
   
+/* .ajustesImg{
+  width: 50%;
+  height: 50%;
+} */
