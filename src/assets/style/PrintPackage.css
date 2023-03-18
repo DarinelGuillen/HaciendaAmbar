@@ -116,4 +116,11 @@
   justify-content: space-evenly;
   align-items: center;
 }
-  
+.paddingBtn{
+  margin: 1%;
+  color: #ffffff;
+  background-color: #910000;
+}
+.paddincito{
+  padding: 1%;
+}
