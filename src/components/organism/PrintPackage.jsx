@@ -36,15 +36,15 @@ function PrintPackage() {
     <>
       <div className="contenedorPadre">
         <div className="contenedorPaquete">
-          <label className="nombrePaquete">
+          <p className="fs-1 nombrePaquete">
             Nombre De Paquete:{isPaquete.nombrePaquete}
-          </label>
-          <label className="contenedorPaquete">
+          </p>
+          <p className="fs-3 contenedorPaquete">
             PRECIO:${isPaquete.precio}
-          </label>
-          <label className="infoPaquete">
+          </p>
+          <p className="fs-5 infoPaquete">
             Descripción:{isPaquete.descripcion}
-          </label>
+          </p>
         </div>
       </div>
       <div className="contenedorPadreImagenes">
