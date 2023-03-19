@@ -27,45 +27,37 @@ function DatesStartEndTime() {
       add = DatosDeR;
     }
     ///
-    
-
       setIsRentaUsuario(add);
       console.log("Que soy isRentaUsuario=", isRentaUsuario);
       navigate("/EndRent")
     //console.log("Que soy isRentaUsuario=", isRentaUsuario);
-  
     // navigate("/EndRent")
   };
 
   return (
     <>
-      
       <div className="FContaineMain">
         <div className="CContainerMain">
           <div className="left">
-          <h1 className="subTituloImg">¿Cúando quieres reservar?</h1>
-          <h2 className="subTituloImg2">Elige la mejor fecha para tu evento.</h2>
-            <img
-              src="src/assets/img/reservacionImg.png"
-            ></img>
+            <h1 className="fs-1 subTituloImg">¿Cúando quieres reservar?</h1>
+            <h2 className="fs-4 subTituloImg2">Elige la mejor fecha para tu evento.</h2>
+            <img src="src/assets/img/reservacionImg.png" className='img-fluid'></img>
           </div>
-          <div className='contenedorPadreForm'>
-            
-              <form ref={formDateReserva}>
-                <label className='labelTypeReserva'>Fecha del evento</label>
-                <input type="date" name="FechaDeEvento" />
-                <label className='labelTypeReserva'>Hora de inicio</label>
-                <input type="time" name="HoraDeInicio" />
-                <label className='labelTypeReserva'>Hora de fin</label>
-                <input type="time" name="HoraDeFinalizacion" />
-                <div className='padreBotonTypeReserva'>
-                  <button className='botonTypeReserva' onClick={handlerClickConfirmarReserva}>
-                      Confirmar reserva
-                  </button>
-                </div>
-              </form>
-           
-          </div>
+          <form ref={formDateReserva}>
+            <div class="mb-3">
+              <label class="form-label labelTypeReserva">Fecha del evento</label>
+              <input type="date" name="FechaDeEvento" class="form-control"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label labelTypeReserva">Hora de inicio</label>
+              <input type="time" name="HoraDeInicio" class="form-control"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label labelTypeReserva">Hora de fin</label>
+              <input type="time" name="HoraDeFinalizacion" class="form-control"/>
+            </div>
+            <button type="submit" class="btn btn-primary" onClick={handlerClickConfirmarReserva}>Confirmar reserva</button>
+          </form> 
         </div>
       </div>
     </>

@@ -23,25 +23,31 @@ function TipodeReservaView() {
     <>
       {viewNum === 1 ? (
         <>
-        <TdeRCortoPlazo/>
-        <button className="botonCortoPlazo" onClick={() => setViewNum(0)}>
-          Cancelar
-        </button>
+          <TdeRCortoPlazo/>
+          <div className="centradoBtnRegresar">
+            <button className="ejemplobutton" onClick={() => setViewNum(0)}>
+              Regresar
+            </button>
+          </div>
         </>
       ) : viewNum === 2 ? (
         <>
-        <TdeRNormal/>
-        <button className="ejemplobutton" onClick={() => setViewNum(0)}>
-          regresar2!
-        </button>
+          <TdeRNormal/>
+          <div className="centradoBtnRegresar">
+            <button className="ejemplobutton" onClick={() => setViewNum(0)}>
+              Regresar
+            </button>
+          </div>
         </>
         
       ) : viewNum === 3 ? (
         <>
-        <TdeRUltimoMinuto/>
-        <button className="ejemplobutton" onClick={() => setViewNum(0)}>
-          Regresar 3!
-        </button>
+          <TdeRUltimoMinuto/>
+          <div className="centradoBtnRegresar">
+            <button className="ejemplobutton" onClick={() => setViewNum(0)}>
+              Regresar
+            </button>
+          </div>
         </>
         
       ) : (

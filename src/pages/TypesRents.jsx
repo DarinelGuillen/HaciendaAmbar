@@ -8,7 +8,6 @@ function TypesRents() {
         <Header/>
         <TipodeReservaView/>
         <Footer></Footer>
-        
         </>
      );
 }

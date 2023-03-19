@@ -199,3 +199,9 @@
   width: 50%;
   height: 50%;
 } */
+
+.centradoBtnRegresar{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
