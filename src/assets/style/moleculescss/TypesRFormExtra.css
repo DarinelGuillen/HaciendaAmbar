@@ -8,10 +8,11 @@
   text-align: center;
   color: #4B4B4C;
 }
-.contenedor1TypesRFormExtra{
-  width: 50%;
-  justify-content: space-between;
+.contenedor1TypesRFormExtra{ 
   padding-top: 5%;
+}
+.estiloArmaTuPaquete{
+  width: 18rem;
 }
 
 .textoTypesRFormExtra1{
@@ -26,7 +27,8 @@
 .textoTypesRFormExtra2{
   font-family: 'Quattrocento';
   font-style: normal;
-  padding-top: 5%;
+  padding-left: 14%;
+  padding-top: 7%;
   font-weight: 400;
   font-size: 28px;
   line-height: 31px;
@@ -65,7 +67,7 @@
 .renta-individual-wrapper {
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 100%;
     
   }
   @media (max-width: 767px) {
