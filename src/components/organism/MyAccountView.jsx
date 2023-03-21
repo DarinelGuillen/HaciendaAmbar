@@ -63,8 +63,20 @@ function MyAccountView() {
   return (
     <>
       <div>
-        <h1>HOLAAAAAAAAA estoy en MyAccountView, Organism</h1>
-        <div>
+        <div class="px-4 py-5 my-5 text-center">
+          <img class="d-block mx-auto mb-4" src="src/assets/img/LogoColor.png" alt="" width="72" height="57"/>
+          <h1 class="display-5 fw-bold">Hacienda Ambar </h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Se mostrará el link de su carpeta drive posteriormente a su evento donde contendrá los bellos recuerdos del evento.</p>
+            <p>"Aquí"</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                {/* Aqui le puedes dar el guncionamiento si lo quieres a los botones */}
+              <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+            </div>
+          </div>
+        </div>
+      <div>
           {load ? (
             <>
               {isRentaUser.returnRenta &&
