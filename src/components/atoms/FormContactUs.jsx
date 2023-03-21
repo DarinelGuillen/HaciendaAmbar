@@ -15,8 +15,8 @@ function FormContactUs() {
                             <label className="form-label">Correo</label>
                             <input className="form-control" type="email" id="email-1" name="email" placeholder="Correo"/></div>
                         <div className="mb-3">
-                            <label className="form-label">Numero Telefónico</label>
-                            <input className="form-control" type="number" placeholder="Numero Telefónico"/>
+                            <label className="form-label">Número Telefónico</label>
+                            <input className="form-control" type="number" placeholder="Número Telefónico"/>
                         </div>
                         <div className="mb-3">
                             <div className="dropdown"><button className="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Tipo de paquete</button>

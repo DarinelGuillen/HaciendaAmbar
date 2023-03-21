@@ -41,11 +41,11 @@ function AboutUsContent() {
                         </p>
                     <br/>
                     <ul>
-                    <li>- Fácil acceso</li>
-                    <li>- Alta disponibilidad</li>
-                    <li>- Ubicado en zona turistica</li>
-                    <li>- Somos patrocinados por canales en chiapas</li>
-                    <li>- Retroalimentación de quejas o sugerencias con el fin de mejorar día con día</li>
+                    <li>- Fácil acceso.</li>
+                    <li>- Alta disponibilidad.</li>
+                    <li>- Ubicado en zona turística.</li>
+                    <li>- Somos patrocinados por canales en Chiapas.</li>
+                    <li>- Retroalimentación de quejas o sugerencias con el fin de mejorar día con día.</li>
                     </ul>
                 </div>
                 <div className="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
@@ -87,7 +87,7 @@ function AboutUsContent() {
                                         <div className="count-box">
                                             <i className="bi bi-clock"></i>
                                             <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" className="purecounter"></span>
-                                            <p><strong>Prioridad de</strong> ser uno de los lugares más turisticos de suchiapa.</p>
+                                            <p><strong>Prioridad de</strong> ser uno de los lugares más turísticos de Suchiapa.</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 d-md-flex align-items-md-stretch">

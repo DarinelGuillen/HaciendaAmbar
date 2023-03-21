@@ -122,13 +122,13 @@ function TypesRFormExtra() {
             <div className="contenedor1TypesRFormExtra">
               <label className="fs-2 textoTypesRFormExtra1">En reserva corto plazo te ofrecemos lo siguiente.</label>
               <label className="fs-5 text-center textoTypesRFormExtra2">Tú eliges como disfrutar tus recuerdos y a tu gusto.</label>
-              <label className="fs-6 textoTypesRFormExtra3">Se aplica promoción en algunos paquetes.Reserva con 50% de anticipo, más depósito en garantía (Reembolsable)</label>
+              <label className="fs-6 textoTypesRFormExtra3">Se aplica promoción en algunos paquetes. Reserva con 50% de anticipo, más depósito en garantía (Reembolsable)</label>
               <img className="img-fluid" src="src/assets/img/imgTypeRentEnd.png"></img>
             </div>
           </div>
           <div className="image col-xl-6 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
             <form ref={DatosDeReserva}>
-            <label htmlFor="user" className="labelTypesRFormExtra">Ingresa algun comentario a destacar al Admin</label>
+            <label htmlFor="user" className="labelTypesRFormExtra">Ingresa algún comentario a destacar al Admin</label>
             <input className="inputTypesRFormExtra" type="text" id="user" name="Observaciones" />
             <div className="contenedorTypesRFormExtra">
               <>
@@ -207,7 +207,7 @@ function TypesRFormExtra() {
                 </>
                 <ButtonStyled
                   onClick={handlerClickConfirmarCampos}
-                  label={"Confirma extra extra paquete data algo "}
+                  label={"Confirmación extra"}
                   Danger={false}
                 />
                 {/* <ButtonStyled

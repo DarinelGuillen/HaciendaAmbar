@@ -64,7 +64,7 @@ function GroupCard() {
                                                             <button
                                                                 className="botonPaquete"
                                                                 onClick={(e) => handlerClickPaquete(e, "63ed95443676ecbfc0ffea7d")}
-                                                            >Ver mas</button>    
+                                                            >Ver más</button>    
                                                             </center>
                                                         </div>
                                                     </div>
@@ -82,7 +82,7 @@ function GroupCard() {
                                                             <button
                                                                 className="botonPaquete"
                                                                 onClick={(e) => handlerClickPaquete(e, "63edb9f47d9ee19c441923d3")}
-                                                                >Ver mas</button>
+                                                                >Ver más</button>
                                                             </center>
                                                         </div>
                                                     </div>
@@ -101,7 +101,7 @@ function GroupCard() {
                                                                 className="botonPaquete"
                                                                 onClick={(e) => handlerClickPaquete(e, "63f82e1d23fc8dc7c2152c35")}
                                                             >
-                                                                Ver mas
+                                                                Ver más
                                                             </button>
                                                                 
                                                             </center>
@@ -132,7 +132,7 @@ function GroupCard() {
                                                             <button
                                                                 className="botonPaquete"
                                                                 onClick={(e) => handlerClickPaquete(e, "64150066dc851cf1b4aed5ca")}
-                                                                >Ver mas</button>
+                                                                >Ver más</button>
                                                             </center>
                                                         </div>
                                                     </div>
@@ -151,7 +151,7 @@ function GroupCard() {
                                                                 className="botonPaquete"
                                                                 onClick={(e) => handlerClickPaquete(e, "64150131dc851cf1b4aed5cc")}
                                                             >
-                                                                Ver mas
+                                                                Ver más
                                                             </button>
                                                             </center>
                                                         </div>
@@ -171,7 +171,7 @@ function GroupCard() {
                                                                 className="botonPaquete"
                                                                 onClick={(e) => handlerClickPaquete(e, "6415014edc851cf1b4aed5cd")}
                                                             >
-                                                                Ver mas
+                                                                Ver más
                                                             </button>
                                                             </center>   
                                                         </div>

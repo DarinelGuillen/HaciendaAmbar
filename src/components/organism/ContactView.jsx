@@ -34,8 +34,8 @@ function ContactView() {
                                 </div>
                                 <div className="col-md-6">
                                     <div className="about-sub">
-                                        <h6><i className="fa fa-check"></i> Areas multidiciplinarias</h6>
-                                        <h6><i className="fa fa-check"></i> Membresia</h6>
+                                        <h6><i className="fa fa-check"></i> Áreas multidisciplinarias</h6>
+                                        <h6><i className="fa fa-check"></i> Membresía</h6>
                                         <h6><i className="fa fa-check"></i> Eventos</h6>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ function ContactView() {
                                                 <div id="form-message-warning" className="mb-4">
                                                 </div>
                                                 <div id="form-message-success" className="mb-4">
-                                                    Rellena y envia el formulario!
+                                                    Rellena y envía el formulario!
                                                 </div>
                                             <form method="POST" id="contactForm" name="contactForm" novalidate="novalidate">
                                                 <div className="row">
@@ -73,7 +73,7 @@ function ContactView() {
                                                     </div>
                                                 <div className="col-md-6">
                                                     <div className="form-group">
-                                                        <input type="email" className="form-control" name="email" id="email" placeholder="Correo eléctronico"/>
+                                                        <input type="email" className="form-control" name="email" id="email" placeholder="Correo electrónico"/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-12">
@@ -106,7 +106,7 @@ function ContactView() {
                                                         <span className="fa fa-map-marker"></span>
                                                     </div>
                                                 <div className="text pl-3">
-                                                    <p><span>Dirección: </span><a href="Rivera Nandayalú No. 7, Suchiapa, Mexico">Rivera Nandayalú No. 7, Suchiapa, Mexico</a></p>
+                                                    <p><span>Dirección: </span><a href="Rivera Nandayalú No. 7, Suchiapa, México">Rivera Nandayalú No. 7, Suchiapa, México</a></p>
                                                 </div>
                                             </div>
                                         <div className="dbox w-100 d-flex align-items-center">
@@ -130,8 +130,8 @@ function ContactView() {
                                             <span className="fa fa-globe"></span>
                                         </div>
                                             <div className="text pl-3">
-                                                <p><span>facebook:</span> <a href="https://www.facebook.com/ambar.haciendamx">Hacienda Ambar</a></p>
-                                                <p><span>instragram:</span> <a href="https://www.instagram.com/ambar.haciendamx/">ambar.haciendamx</a></p>
+                                                <p><span>Facebook:</span> <a href="https://www.facebook.com/ambar.haciendamx">Hacienda Ambar</a></p>
+                                                <p><span>Instragram:</span> <a href="https://www.instagram.com/ambar.haciendamx/">ambar.haciendamx</a></p>
                                             </div>
                                         </div>
                                         </div>

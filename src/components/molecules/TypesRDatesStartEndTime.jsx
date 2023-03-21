@@ -39,7 +39,7 @@ function DatesStartEndTime() {
       <div className="FContaineMain">
         <div className="CContainerMain">
           <div className="left">
-            <h1 className="fs-1 subTituloImg">¿Cúando quieres reservar?</h1>
+            <h1 className="fs-1 subTituloImg">¿Cuando quieres reservar?</h1>
             <h2 className="fs-4 subTituloImg2">Elige la mejor fecha para tu evento.</h2>
             <img src="src/assets/img/reservacionImg.png" className='img-fluid'></img>
           </div>
