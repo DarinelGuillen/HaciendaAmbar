@@ -159,21 +159,41 @@ function MyAccountView() {
   return (
     <>
       <div>
-        <h1>HOLAAAAAAAAA estoy en MyAccountView, Organism</h1>
+        <div className="px-4 py-5 my-5 text-center ">
+            <img className="d-block mx-auto mb-4" src="src/assets/img/LogoColor.png" alt="" width="72" height="57"/>
+            <h1 className="display-5 fw-bold">Hacienda Ambar </h1>
+            <div className="col-lg-6 mx-auto">
+              <p className="lead mb-4">Se mostrará el link de su carpeta drive posteriormente a su evento donde contendrá los bellos recuerdos del evento.</p>
+              <p>"Aquí"</p>
+              <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                  {/* Aqui le puedes dar el guncionamiento si lo quieres a los botones */}
+                <button type="button" className="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+                <button type="button" className="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+              </div>
+            </div>
+          </div>
         <div>
           {load &&
             isRentaUser.map((renta) => {
               return (
                 <>
-                  <div key={renta._id}>
-                    <label>renta= {renta._id}</label>
+                <div className="card-group tamanoCartitaMyCount">
+                  <div className="card text-center">
+                    <div className="card-header">
+                      <label className="fs-5 text-center">Renta = {renta._id}</label>
+                    </div>
+                    <div className="card-body" key={renta._id}>
+                      <h5 className="fs-5 card-title">Genere un archivo de su renta en formato PDF</h5>
+                      <p className="card-text"></p>
+                      <button
+                        className="btn btn-primary btn-lg px-4 gap-3"
+                        onClick={(e) => generatePDF(e, renta)}
+                        >
+                          Archivo PDF
+                      </button>
+                    </div>
                   </div>
-                  <button
-                    className="botonCard"
-                    onClick={(e) => generatePDF(e, renta)}
-                  >
-                    generatePDF
-                  </button>
+                </div>
                 </>
               );
             })}
