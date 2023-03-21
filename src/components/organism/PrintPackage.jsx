@@ -48,19 +48,19 @@ function PrintPackage() {
         </div>
       </div>
       <div className="contenedorPadreImagenes">
-        <img src="src/assets/img/enteladoYSeyDeFotos1.png" class="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos2.png" class="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos3.png" class="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos4.png" class="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos5.png" class="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos6.png" class="img-thumbnail" alt="..."></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos1.png" className="img-thumbnail" alt="..."></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos2.png" className="img-thumbnail" alt="..."></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos3.png" className="img-thumbnail" alt="..."></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos4.png" className="img-thumbnail" alt="..."></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos5.png" className="img-thumbnail" alt="..."></img>
+        <img src="src/assets/img/enteladoYSeyDeFotos6.png" className="img-thumbnail" alt="..."></img>
       </div>
-      <div class="paddincito"></div>
+      <div className="paddincito"></div>
       <center>
         <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3822.8880082936394!2d-93.10041072883605!3d16.632388853086912!3m2!1i1024!2i768!4f13.1!2m1!1sRivera%20Nandayal%C3%BA%20No.%207%20Suchiapa%20Chiapas!5e0!3m2!1ses!2smx!4v1678470746122!5m2!1ses!2smx" width="80%" height="100%" style={{ border:0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>              
-      <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-sm paddingBtn" onClick={handleClickTerminateRent} >Agregar al carrito</button>
-        <button class="btn btn-sm paddingBtn" type="button"><Link to="/">Regresar</Link></button>
+      <div className="d-grid gap-2 d-md-block">
+        <button className="btn btn-sm paddingBtn" onClick={handleClickTerminateRent} >Agregar al carrito</button>
+        <button className="btn btn-sm paddingBtn" type="button"><Link to="/">Regresar</Link></button>
       </div>
       </center>
     </>

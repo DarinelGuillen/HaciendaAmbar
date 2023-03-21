@@ -84,7 +84,7 @@ function FLogin() {
                     </form>
                     </div>
                   </div>
-                <div class="col-xl-5 col-lg-12 login-bg">    
+                <div className="col-xl-5 col-lg-12 login-bg">    
               </div>
             </div>
           </section>

@@ -9,30 +9,30 @@ function Footer() {
     <>
      
 
-     <footer class="row row-cols-5 py-5 my-5 border-top">
+     <footer className="row row-cols-5 py-5 my-5 border-top">
 
-          <div class="col">
+          <div className="col">
           </div>
       
       <center>
-        <div class="col">
+        <div className="col">
           <h5>Información</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Empresa</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Acerca de</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Empleo</a></li>
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Empresa</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Acerca de</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Empleo</a></li>
           </ul>
         </div>
       </center>
-      <div class="col">
+      <div className="col">
       </div>
       <center>
-        <div class="col">
+        <div className="col">
           <h5>Enlaces</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Enlaces útiles</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ayuda</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Redes sociales</a></li>
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Enlaces útiles</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Ayuda</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Redes sociales</a></li>
           </ul>
         </div>
       </center>

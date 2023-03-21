@@ -44,19 +44,19 @@ function DatesStartEndTime() {
             <img src="src/assets/img/reservacionImg.png" className='img-fluid'></img>
           </div>
           <form ref={formDateReserva}>
-            <div class="mb-3">
-              <label class="form-label labelTypeReserva">Fecha del evento</label>
-              <input type="date" name="FechaDeEvento" class="form-control"/>
+            <div className="mb-3">
+              <label className="form-label labelTypeReserva">Fecha del evento</label>
+              <input type="date" name="FechaDeEvento" className="form-control"/>
             </div>
-            <div class="mb-3">
-              <label class="form-label labelTypeReserva">Hora de inicio</label>
-              <input type="time" name="HoraDeInicio" class="form-control"/>
+            <div className="mb-3">
+              <label className="form-label labelTypeReserva">Hora de inicio</label>
+              <input type="time" name="HoraDeInicio" className="form-control"/>
             </div>
-            <div class="mb-3">
-              <label class="form-label labelTypeReserva">Hora de fin</label>
-              <input type="time" name="HoraDeFinalizacion" class="form-control"/>
+            <div className="mb-3">
+              <label className="form-label labelTypeReserva">Hora de fin</label>
+              <input type="time" name="HoraDeFinalizacion" className="form-control"/>
             </div>
-            <button type="submit" class="btn btn-primary" onClick={handlerClickConfirmarReserva}>Confirmar reserva</button>
+            <button type="submit" className="btn btn-primary" onClick={handlerClickConfirmarReserva}>Confirmar reserva</button>
           </form> 
         </div>
       </div>

@@ -116,9 +116,9 @@ function TypesRFormExtra() {
   return (
     <>
       <h1 className="fs-1 tituloTypesRFormExtra">Arma tu paquete de reserva a corto plazo</h1>
-      <div class="container segundaSecAbout2">
-        <div class="row">
-          <div class="image col-xl-6 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+      <div className="container segundaSecAbout2">
+        <div className="row">
+          <div className="image col-xl-6 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
             <div className="contenedor1TypesRFormExtra">
               <label className="fs-2 textoTypesRFormExtra1">En reserva corto plazo te ofrecemos lo siguiente.</label>
               <label className="fs-5 text-center textoTypesRFormExtra2">Tú eliges como disfrutar tus recuerdos y a tu gusto.</label>
@@ -126,7 +126,7 @@ function TypesRFormExtra() {
               <img className="img-fluid" src="src/assets/img/imgTypeRentEnd.png"></img>
             </div>
           </div>
-          <div class="image col-xl-6 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+          <div className="image col-xl-6 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
             <form ref={DatosDeReserva}>
             <label htmlFor="user" className="labelTypesRFormExtra">Ingresa algun comentario a destacar al Admin</label>
             <input className="inputTypesRFormExtra" type="text" id="user" name="Observaciones" />

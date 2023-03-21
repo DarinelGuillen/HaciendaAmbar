@@ -10,60 +10,60 @@ import "../../assets/style/BannerStyle.css"
 function Banner() {
     return ( 
     <>
-        <div class="container">
-            <div class="row mb-5 espacio">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h1 className="titulo5Mandamientos">Los 5 mandamientos del invitado.</h1>
+        <div className="container">
+            <div className="row mb-5 espacio">
+                <div className="col-md-8 col-xl-6 text-center mx-auto">
+                    <h1 className="fs-1 titulo5Mandamientos">Los 5 mandamientos del invitado.</h1>
                 </div>
             </div>
         </div>
 
-        <div class="container segundaSecAbout2">
-            <div class="row">
-            <div class="col-md-6">
-                    <div class="p-4">
-                        <div class="d-flex">
-                            <img src="src/assets/img/Group5.svg" class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+        <div className="container segundaSecAbout2">
+            <div className="row">
+            <div className="col-md-6">
+                    <div className="p-4">
+                        <div className="d-flex">
+                            <img src="src/assets/img/Group5.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
-                                <p class="text-muted mb-0 parrafo">Abrirás la invitación cuando te la entreguen.</p>
+                                <p className="fs-3 text-muted mb-0 parrafo">Abrirás la invitación cuando te la entreguen.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <div class="d-flex">
-                            <img src="src/assets/img/Group4.svg" class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                    <div className="p-4">
+                        <div className="d-flex">
+                            <img src="src/assets/img/Group4.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
-                                <p class="text-muted mb-0 parrafo">Serás puntual y llegarás a la ceremonia.</p>
+                                <p className="fs-3 text-muted mb-0 parrafo">Serás puntual y llegarás a la ceremonia.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <div class="d-flex">
-                            <img src="src/assets/img/Group3.svg" class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                    <div className="p-4">
+                        <div className="d-flex">
+                            <img src="src/assets/img/Group3.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
-                                <p class="text-muted mb-0 parrafo">No pedirás un +1.</p>
+                                <p className="fs-3 text-muted mb-0 parrafo">No pedirás un +1.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <div class="d-flex">
-                            <img src="src/assets/img/Group2.svg" class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                    <div className="p-4">
+                        <div className="d-flex">
+                            <img src="src/assets/img/Group2.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
-                                <p class="text-muted mb-0 parrafo">No te molestarás si tus niños no estás invitados(es por tu bien).</p>
+                                <p className="fs-3 text-muted mb-0 parrafo">No te molestarás si tus niños no estás invitados(es por tu bien).</p>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <div class="d-flex">
-                            <img src="src/assets/img/Group1.svg" class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                    <div className="p-4">
+                        <div className="d-flex">
+                            <img src="src/assets/img/Group1.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
-                                <p class="text-muted mb-0 parrafo">Confirmarás asistencia lo antes posible y no cancelarás de último momento.</p>
+                                <p className="fs-3 text-muted mb-0 parrafo">Confirmarás asistencia lo antes posible y no cancelarás de último momento.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-                    <img src="src/assets/img/BannerIcono.png" alt="" class="img-fluid"/>
+                <div className="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+                    <img src="src/assets/img/BannerIcono.png" alt="" className="img-fluid"/>
                 </div>
             </div>
         </div>
