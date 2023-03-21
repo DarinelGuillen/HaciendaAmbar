@@ -17,16 +17,7 @@ function MyAccountView() {
   const [namesExtras, setnamesExtras] = useState([]);
 
   const [load, setload] = useState(false);
-  // function generatePDF(e, renta) {
-  //   e.preventDefault();
-  //   const documentDefinition = {
-  //     content: [
-  //       `Text: ${renta._id}`,
-
-  //     ],
-  //   };
-  //   pdfMake.createPdf(documentDefinition).download();
-  // }
+  
   function generatePDF(e, renta) {
     e.preventDefault();
     let extrasNames = [];
@@ -137,15 +128,9 @@ function MyAccountView() {
         );
         setIsRentaUser(data.rentasUsuario);
         setload(true);
-        // console.log(data.returnRenta[0].Extras,"_id");
-        // setIsExtras(data.returnRenta[0].Extras);
-        // console.log("====isExtras", JSON.stringify(isExtras));
       });
 
-    // setTimeout(() => {
-    //   console.log(JSON.stringify(isRentaUser), "\nload", load);
-    // }, 1000);
-    // }, 1000);
+  
   }, []);
 
   useEffect(() => {
@@ -159,30 +144,53 @@ function MyAccountView() {
   return (
     <>
       <div>
-        <div className="px-4 py-5 my-5 text-center ">
-            <img className="d-block mx-auto mb-4" src="src/assets/img/LogoColor.png" alt="" width="72" height="57"/>
-            <h1 className="display-5 fw-bold">Hacienda Ambar </h1>
-            <div className="col-lg-6 mx-auto">
-              <p className="lead mb-4">Se mostrará el link de su carpeta drive posteriormente a su evento donde contendrá los bellos recuerdos del evento.</p>
-              <p>"Aquí"</p>
-              <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                  {/* Aqui le puedes dar el guncionamiento si lo quieres a los botones */}
-                <button type="button" className="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-                <button type="button" className="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-              </div>
-            </div>
-          </div>
+        
         <div>
           {load &&
             isRentaUser.map((renta) => {
               return (
                 <>
-                <div className="card-group tamanoCartitaMyCount">
-                  <div className="card text-center">
-                    <div className="card-header">
-                      <label className="fs-5 text-center">Renta = {renta._id}</label>
+                <div className="card-group tamanoCartitaMyCount" key={renta._id}>
+                  <div className="card text-center" key={renta._id}>
+                    <div className="card-header" key={renta._id}>
+                      {!renta.SeEjecutoConExitoLarenta?(<>
+                      <label className="fs-5 text-center">Renta ID = {renta._id}</label>
+                      <label className="fs-5 text-center">fecha De Inicio = {renta.fechaInicio} {renta.horaDeInicio}</label>
+                      <label className="fs-5 text-center">Usted hizo la recerva = {renta.fechaDeReserva}</label>
+                      <label className="fs-5 text-center">Estado de renta = 
+                      {renta.estadoRenta?
+                      (<><label className="fs-5 text-center">Su renta a sido aprovada, pogase en contacto con 961-000-00-00 para cuarquier duda</label></>)
+                      :(<><label className="fs-5 text-center">En proceso de ser aprovada</label></>)}</label>
+                      <label className="fs-5 text-center">observaciones = {renta.observaciones}</label>
+                      
+                      
+                      </>):(<>
+                      <div>
+                        <div className="px-4 py-5 my-5 text-center ">
+                            <img className="d-block mx-auto mb-4" src="src/assets/img/LogoColor.png" alt="" width="72" height="57"/>
+                            <h1 className="display-5 fw-bold">Hacienda Ambar </h1>
+                            <div className="col-lg-6 mx-auto">
+                              <p className="lead mb-4">Se mostrará el link de su carpeta drive posteriormente a su evento donde contendrá los bellos recuerdos del evento.</p>
+                              <p>"La renta "{renta._id}"  a sido finalizada"</p>
+                              <p>"{renta.LinkFotos}"</p>
+                              <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                                  {/* Aqui le puedes dar el guncionamiento si lo quieres a los botones */}
+                                <button onClick={(e) => generatePDF(e, renta)} type="button" className="btn btn-primary btn-lg px-4 gap-3">Descargar datos PDF</button>
+                                {renta.LinkFotos==="LINK HERE"?(<>
+                                
+                                <label>Sus fotos todavia no an sido subidas</label>
+                                </>):(<>
+                                  <button type="button" className="btn btn-outline-secondary btn-lg px-4">Fotos</button>
+                                </>)}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>)}
+                     
                     </div>
-                    <div className="card-body" key={renta._id}>
+                    {!renta.SeEjecutoConExitoLarenta?(<>
+                      <div className="card-body" key={renta._id}>
                       <h5 className="fs-5 card-title">Genere un archivo de su renta en formato PDF</h5>
                       <p className="card-text"></p>
                       <button
@@ -192,6 +200,8 @@ function MyAccountView() {
                           Archivo PDF
                       </button>
                     </div>
+                    </>):(<></>)}
+                    
                   </div>
                 </div>
                 </>
