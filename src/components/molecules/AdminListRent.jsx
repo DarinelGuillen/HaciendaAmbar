@@ -53,7 +53,7 @@ function AdminListRent() {
   return (
     <>
       <div>
-        <h1>Rentas pendientes a aceptar ETC.</h1>
+        <h1 className="fs-1 titulo5Mandamientos text-center">Rentas pendientes a aceptar ETC.</h1>
         <div className="ContainerListRent">
           <ButtonStyled
             onClick={() => {
@@ -78,13 +78,12 @@ function AdminListRent() {
           />
           {IsViewContext === 1 || IsViewContext === 2 ? (
             // las vistas de Rentas pendientes Y rentas Afinalizar se encuentran en este parentheses
-            <>
-              <table className="table_container">
+            <>   
+              <table className="table table-responsive table-striped ">
                 <thead>
                   <tr>
                     {/* <th>ID</th> */}
                     <th>ID Paquete</th>
-                    
                     <th>Fecha de inicio</th>
                     <th>Hora de inicio</th>
                     <th>Hora de finalización</th>
@@ -172,7 +171,7 @@ function AdminListRent() {
           ) : IsViewContext===4?(
             // en este paretesis se encuentra la viata 4 de Ganacias o dashboars
           <>
-          <h1>VIEW NUM 4 PERRA</h1>
+          <h1>VIEW NUM 4 estilo Ñañinel</h1>
           
           
           </>):(
