@@ -173,7 +173,6 @@ function MyAccountView() {
             </div>
           </div>
       <div>
-       
           {load &&
             isRentaUser.map((renta) => {
               return (
@@ -190,66 +189,6 @@ function MyAccountView() {
                 </>
               );
             })}
-       
-          {load ? (
-            <>
-              {isRentaUser.returnRenta &&
-                isRentaUser.returnRenta.length > 0 && (
-                  <>
-                    <label>_id={isRentaUser.returnRenta[0]._id}</label>
-                    <label>idUser={isRentaUser.returnRenta[0].idUser}</label>
-                    <label>
-                      fechaInicio={isRentaUser.returnRenta[0].fechaInicio}
-                    </label>
-                    <label>
-                      horaDeInicio={isRentaUser.returnRenta[0].horaDeInicio}
-                    </label>
-                    <label>
-                      observaciones={isRentaUser.returnRenta[0].observaciones}
-                    </label>
-                    <label>={isRentaUser.returnRenta[0]._id}</label>
-                    <label>Extras</label>
-                    {seeExtras ? (
-                      <>
-                        
-                        {namesExtras.map((namesExtra) => {
-                          return <>
-                          {console.log("dentro map ")}
-                            <label>{namesExtra}</label>
-                          </>;
-                        })}
-                      </>
-                    ) : (
-                      <></>
-                    )}
-                    <ButtonStyled
-                      onClick={hadlerSeeExtras}
-                      label={"ver extra extra paquete data algo "}
-                      Danger={false}
-                    />
-                  </>
-                )}
-            </>
-          ) : (
-            <>
-              <>
-                <div className="loader">
-                  <div className="cell d-0"></div>
-                  <div className="cell d-1"></div>
-                  <div className="cell d-2"></div>
-
-                  <div className="cell d-1"></div>
-                  <div className="cell d-2"></div>
-
-                  <div className="cell d-2"></div>
-                  <div className="cell d-3"></div>
-
-                  <div className="cell d-3"></div>
-                  <div className="cell d-4"></div>
-                </div>
-              </>
-            </>
-          )}
         </div>
       </div>
     </>
