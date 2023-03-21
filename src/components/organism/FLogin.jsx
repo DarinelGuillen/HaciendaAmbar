@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 import LabelStyled from "../atoms/LabelStyled";
 import UserContext from "../../contexts/UserContext";
+import TokenContext from "../../contexts/TokenContext";
 import AdminContext from "../../contexts/AdminContext";
 import IdContex from "../../contexts/IdContex";
 import imgLogin from "../../assets/img/img_login.jpg";
@@ -20,10 +21,13 @@ function FLogin() {
   const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
   const { isIduser, setIsiduser } = useContext(IdContex);
+  const { isToken, setIsToken } = useContext(TokenContext);
   const [Label, setLabel] = useState("");
   const handlerClick = (e) => {
     e.preventDefault();
-
+    console.log(
+      "INTENTANDO LOGEARME"
+    );
     const formData = new FormData(formDataL.current);
     const userName = formData.get("nombreDeUsuario");
     const contrasenia = formData.get("contrasenia");
@@ -33,13 +37,15 @@ function FLogin() {
       .then((response) => response.json())
       .then((data) => {
         //console.log("DATA.....", data);
-        if (data.datos && data.datos.length === 3) {
-          const [id, admin, nombreDeUsuario] = data.datos;
+        if (data.datos && data.datos.length >= 3) {
+          const [id, admin, nombreDeUsuario, token] = data.datos;
           setIsAdmin(admin);
           setIsLoggedIn(true);
           setIsiduser(id);
+          setIsToken(token)
           setLabel("");
           admin ? navigate("/Admin") : navigate("/CommonUser");
+          console.log("TOKEN",isToken);
         } else {
           setLabel(data.message || "Error desconocido");
         }
@@ -94,30 +100,3 @@ function FLogin() {
   );
 }
 export default FLogin;
-
-
-
-   /*   <div className="formLoginG">
-        <div className="padreImgLogin">
-          
-        </div>
-        <div className="contenedorFormulario">
-          <form ref={formDataL}>
-            <div className="ordenamiento">
-              <label className="labelTitulo">Inicio de sesión</label>
-              <label htmlFor="username">Username</label>
-            
-              <input type="text" name="nombreDeUsuario" />
-              <label htmlFor="password">Password</label>
-              <input type="password" name="contrasenia" />
-
-              <LabelStyled danger={true} label={Label}></LabelStyled>
-              <button className="botonFlogin" onClick={handlerClick}>
-                Iniciar Sesion{" "}
-              </button>
-              
-            </div>
-              
-          </form>
-        </div>
-      </div>  */

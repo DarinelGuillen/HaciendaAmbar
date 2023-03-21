@@ -20,6 +20,7 @@ import PaqueteContext from "../contexts/PaqueteContext";
 import UserContext from "../contexts/UserContext";
 import RentaDelUsuarioContext from "../contexts/RentaDelUsuarioContext"
 import TipoRentaContext from "../contexts/TipoRentaContext";
+import TokenContext from "../contexts/TokenContext";
 import ViewContext from "../contexts/ViewContext";
 /* import "bootstrap/dist/css/bootstrap.min.css"; */
 
@@ -33,6 +34,7 @@ function App() {
   const [isIduser, setIsiduser] = useState("");
   const [isRentaUsuario, setIsRentaUsuario] = useState("");
   const [isTipoRenta, setIsTipoRenta] = useState("");
+  const [isToken, setIsToken] = useState("");
   const [IsViewContext, setIsViewContext] = useState(0);
 
 
@@ -45,6 +47,7 @@ function App() {
             <IdContex.Provider value={{ isIduser, setIsiduser }}>
               <RentaDelUsuarioContext.Provider value={{ isRentaUsuario, setIsRentaUsuario}}>
               <TipoRentaContext.Provider value={{ isTipoRenta, setIsTipoRenta}}>
+              <TokenContext.Provider value={{ isToken, setIsToken}}>
                 <ViewContext.Provider value={{ IsViewContext, setIsViewContext}}>
               <Routes>
                 <Route path="/" element={<Landing />} />
@@ -65,6 +68,7 @@ function App() {
                 </Route>
               </Routes>
               </ViewContext.Provider>
+                </TokenContext.Provider>
                 </TipoRentaContext.Provider>
               </RentaDelUsuarioContext.Provider>
             </IdContex.Provider>
