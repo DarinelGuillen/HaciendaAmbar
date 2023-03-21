@@ -75,7 +75,13 @@ function AdminListRent() {
             }}
             label={"dashboard||Ganacias"}
             Danger={true}
-          />
+          /><ButtonStyled
+          onClick={() => {
+            setIsViewContext(5);
+          }}
+          label={"Vista Num 5 So nesesario "}
+          Danger={true}
+        />
           {IsViewContext === 1 || IsViewContext === 2 ? (
             // las vistas de Rentas pendientes Y rentas Afinalizar se encuentran en este parentheses
             <>
@@ -172,11 +178,11 @@ function AdminListRent() {
           ) : IsViewContext===4?(
             // en este paretesis se encuentra la viata 4 de Ganacias o dashboars
           <>
-          <h1>VIEW NUM 4 PERRA</h1>
+          <h1>VIEW NUM 4 </h1>
           
           
           </>):(
-            <></>
+            <><h1>Posible vista 5 si necesario </h1></>
           )}
         </div>
       </div>
