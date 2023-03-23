@@ -1,0 +1,91 @@
+.classesitaFooter{
+    background-color: #5E5E5E;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}
+.contenedor1F{
+    margin-top: 30px;
+}
+.contenedor2F{
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.contenedor3F{
+    text-align: center;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    color: #ffffff;
+}
+.contenedor4F{
+    margin-top: 30px;
+}
+.contenedor5F{
+    margin-top: 30px;
+}
+.contenedor6F{
+    margin-top: 30px;
+}
+.contenedor7F{
+    text-align: center;
+}
+.contenedor8F{
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+.contenedor9F{
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+.contenedor10F{
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+.contenedor11F{
+    width: 40px;
+    height: 40px;
+}
+.contenedor12F{
+    width: 40px;
+    height: 40px;
+}
+.contenedor13F{
+    text-align: center;
+    margin-top: 50px;
+    color: #ffffff;
+}
+ .anclas{
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    color: #FFFDFD;
+} 
+
+ .link-secondary {
+    color: #ffffff!important;
+ }
+
+a:hover {
+    color: var(--bs-gray-300);
+  }
+.link-secondary:focus, .link-secondary:hover {
+    color: #f3f3f3!important;
+}
+a {
+    text-decoration: none;
+  }
+
+  .tituloEmpresa{
+    color: #ffffff;
+  }
+  .tituloEnlacesUtiles{
+    color: #ffffff;
+  }
