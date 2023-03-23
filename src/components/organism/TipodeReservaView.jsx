@@ -52,50 +52,63 @@ function TipodeReservaView() {
         
       ) : (
         <>
-          <p className="fs-1 tituloTiposDeRenta">Elije que tipo de reserva Que más te covenza</p>
-          <div className="card-group">
-            <div className="card">
-              <img src={ejemploimg1} className="card-img-top img-fluid" alt="..."/>
-              <div className="card-body">
-                <h5 className="card-title tituloTipoRenta">Reserva Corto Plazo</h5>
-                <p className="card-text informacionTipoRenta"> Para el tipo de reserva a corto plazo 
-                  se debe tomar en cuenta el reducido número de paquetes que
-                  están disponible, sin embargo se puede rentar el tiempo que 
-                  usted mismo límite.
-                </p>
-                <center>
-                  <button className="botonTipoDeRentas" onClick={(e) => HandlerClickTipoDerenta(e, 1)}>¡Resevar!</button>
-                </center>
+          <div class="container clasePadreContainerTDRV">
+            <div class="row tipReervaView">
+              <div class="col-md-6">
+                <h2 class="fs-1 text-center mb-4 tipReervaView2" >Reserva Corto Plazo</h2>
+                <form method="post tipReervaView3">
+                  <div class="mb-3">
+                    <p class="fs-2 tipReervaView4">Para el tipo de reserva a corto plazo 
+                      se debe tomar en cuenta el reducido número de paquetes que
+                      están disponible, sin embargo se puede rentar el tiempo que 
+                      usted mismo límite.
+                    </p>
+                  </div>
+                  <div>
+                    <button class="btn btn-primary d-block w-100" onClick={(e) => HandlerClickTipoDerenta(e, 1)}>¡Reservar! </button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6"><img class="w-100 h-100 fit-cover" src={ejemploimg1}/></div>
+            </div>
+            <div class="row tipReervaView5" >
+              <div class="col-md-6"><img class="w-100 h-100 fit-cover" src={ejemploimg2}/></div>
+                <div class="col-md-6">
+                  <h2 class="fs-1 text-center mb-4 tipReervaView6" >Reserva Normal</h2>
+                  <form method="post tipReervaView7">
+                    <div class="mb-3">
+                      <p class="fs-2 tipReervaView8" >El tipo de reserva normal 
+                        es en la cual se lleva con anticipo y
+                        se puede ver con detallamiento y el alcance del evento a
+                        realizar.
+                      </p>
+                    </div>
+                    <div>
+                      <button class="btn btn-primary d-block w-100" onClick={(e) => HandlerClickTipoDerenta(e, 2)}>¡Reservar! </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row tipReervaView">
+                <div class="col-md-6">
+                  <h2 class="fs-1 text-center mb-4 tipReervaView2" >Reserva Último Minuto</h2>
+                  <form method="post tipReervaView3">
+                    <div class="mb-3">
+                      <p class="fs-2 tipReervaView4">En este tipo de reserva están
+                        limitados los paquetes a incluir, ya que en unos casos es de suma vitalidad 
+                        tener más tiempo para hacer uso de dichos paquetes.
+                      </p>
+                    </div>
+                    <div>
+                      <button class="btn btn-primary d-block w-100" onClick={(e) => HandlerClickTipoDerenta(e, 3)}>¡Reservar!</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-6">
+                  <img class="w-100 h-100 fit-cover" src={ejemploimg3}/>
+                </div>
               </div>
             </div>
-            <div className="card">
-              <img src={ejemploimg2} className="card-img-top img-fluid" alt="..."/>
-              <div className="card-body">
-                <h5 className="card-title tituloTipoRenta">Reserva Normal</h5>
-                <p className="card-text informacionTipoRenta">El tipo de reserva normal 
-                  es en la cual se lleva con anticipo y
-                  se puede ver con detallamiento y el alcance del evento a
-                  realizar.
-                </p>
-                <center>
-                  <button className="botonTipoDeRentas" onClick={(e) => HandlerClickTipoDerenta(e, 2)}>¡Resevar!</button>
-                </center>
-              </div>
-            </div>
-            <div className="card">
-              <img src={ejemploimg3} className="card-img-top img-fluid" alt="..."/>
-              <div className="card-body">
-                <h5 className="card-title tituloTipoRenta">Reserva último Minuto</h5>
-                <p className="card-text informacionTipoRenta">En este tipo de reserva están
-                  limitados los paquetes a incluir, ya que en unos casos es de suma vitalidad 
-                  tener más tiempo para hacer uso de dichos paquetes.
-                </p>
-                <center>
-                  <button className="botonTipoDeRentas" onClick={(e) => HandlerClickTipoDerenta(e, 3)}>¡Resevar!</button>
-                </center>
-              </div>
-            </div>
-          </div>
         </>
       )}
     </>

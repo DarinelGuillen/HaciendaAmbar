@@ -1,5 +1,6 @@
 import { useRef, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
+
 import PaqueteContext from "../../contexts/PaqueteContext";
 import UserContext from "../../contexts/UserContext";
 import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
@@ -9,6 +10,7 @@ import "../../assets/style/PrintPackage.css";
 function PrintPackage() {
   const formSignIn = useRef();
   const { isPaquete, setIsPaquete } = useContext(PaqueteContext);
+  
   const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
   const { isIduser, setIsiduser } = useContext(IdContex);
   const { isRentaUsuario, setIsRentaUsuario } = useContext(RentaDelUsuarioContext);

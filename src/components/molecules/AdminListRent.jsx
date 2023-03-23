@@ -53,39 +53,35 @@ function AdminListRent() {
   return (
     <>
       <div>
-        <h1 className="fs-1 titulo5Mandamientos text-center">Rentas pendientes a aceptar ETC.</h1>
+        <h1 className="fs-1 titulo5Mandamientos text-center p-5">Rentas pendientes a aceptar ETC.</h1>
         <div className="ContainerListRent">
-          <ButtonStyled
+        <div className="fs-6 marginButtom">
+          <button className="botonFlogin"
             onClick={() => {
               setIsViewContext(1);
             }}
-            label={"Rentas pendientes"}
-            Danger={true}
-          />
-          <ButtonStyled
+          >Rentas pendientes</button>
+          <button className="botonFlogin"
             onClick={() => {
               setIsViewContext(2);
             }}
-            label={"Rentas a finalizar"}
-            Danger={true}
-          />
-          <ButtonStyled
+          >Rentas a finalizar</button>
+          <button className="botonFlogin"
             onClick={() => {
               setIsViewContext(4);
             }}
-            label={"dashboard||Ganacias"}
-            Danger={true}
-          /><ButtonStyled
+          >Dashboard||Ganacias</button>
+
+          <button className="botonFlogin"
           onClick={() => {
             setIsViewContext(5);
-          }}
-          label={"Vista Num 5 So nesesario "}
-          Danger={true}
-        />
+          }} 
+        >Vista Num 5 So nesesario </button>
+      </div>
           {IsViewContext === 1 || IsViewContext === 2 ? (
             // las vistas de Rentas pendientes Y rentas Afinalizar se encuentran en este parentheses
             <>   
-              <table className="table table-responsive table-striped ">
+              <table className="table table-responsive table-striped">
                 <thead>
                   <tr>
                     {/* <th>ID</th> */}
