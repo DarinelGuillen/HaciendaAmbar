@@ -20,6 +20,8 @@ function MyAccountView() {
   
   function generatePDF(e, renta) {
     e.preventDefault();
+    console.log("generatePDF");
+    console.log("renta== ? ",renta);
     let extrasNames = [];
       allRentaIndividuales.forEach((individual) => {
         if (renta.Extras.includes(individual._id)) {

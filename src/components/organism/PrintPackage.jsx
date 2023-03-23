@@ -21,15 +21,15 @@ function PrintPackage() {
       isPaqueteID:isPaquete._id
     }
     setIsRentaUsuario(data);
-    setTimeout(() => {
-      setTimeout(() => {
-        alert("Tu X paquete a sido agregado al Tu carrito\n");
+    // {setTimeout(() => {
+    //   setTimeout(() => 
+        // alert("Tu X paquete a sido agregado al Tu carrito\n");
         navigate("/TypesRents");
         console.log("PRINTPACKAGE ORGANISM   setIsRentaUsuario", isRentaUsuario);
       console.log("isPaquete._id", isPaquete._id);
       console.log("isRentaUsuario", JSON.stringify(isRentaUsuario));
-      }, 1000);
-    }, 1000);
+      // }, 1000);
+    // }, 1000);
   };
 
   return (
