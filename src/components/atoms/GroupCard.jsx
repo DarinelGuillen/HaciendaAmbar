@@ -1,6 +1,7 @@
 import { useNavigate, Navigate } from "react-router-dom";
 import { useContext } from "react";
 
+import TokenContext from "../../contexts/TokenContext" 
 import PaqueteContext from "../../contexts/PaqueteContext";
 
 import "../../assets/style/GroupCard.css"
@@ -9,6 +10,7 @@ import "../../assets/style/BannerStyle.css"
 function GroupCard() {
     const navigate = useNavigate();
   const { isPaquete, setIsPaquete } = useContext(PaqueteContext);
+  const { isToken, setIsToken } = useContext(TokenContext);
 
     const handlerClickPaquete = (e, id) => {
         e.preventDefault();
@@ -16,9 +18,19 @@ function GroupCard() {
         console.log("restric IM false, in RecuadroPaquete from");
     
         //alert("Tu renta Fue procesada correctamente!");
-        const paqueteID = id;
+        const URL = `https://localhost/paquetes/${id}`
+
+
         // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
-        fetch(`https://localhost/paquetes/${paqueteID}`)
+
+        let option = {
+            method : "GET",
+            headers : {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${isToken}`
+            }
+        }
+        fetch(URL, option)
           .then((response) => response.json())
           .then((data) => {
             //console.log(data);
