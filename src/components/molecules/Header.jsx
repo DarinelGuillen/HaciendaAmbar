@@ -50,11 +50,6 @@ function Header() {
               </>
             )}
               <li className="nav-item">
-                <Link to="/Contact">
-                  <a className="nav-link active">Contacto</a>
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link  to="/AboutUs">
                   <a className="nav-link active">Sobre nosotros</a>
                 </Link>
