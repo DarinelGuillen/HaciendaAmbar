@@ -200,6 +200,7 @@ function TypesRFormExtra() {
                           label={RentaIndividual.value}
                           className="renta-individual-checkbox"
                         />
+                        
                       </div>
                     ) : null;
                   })
@@ -210,6 +211,14 @@ function TypesRFormExtra() {
                   label={"Confirmación extra"}
                   Danger={false}
                 />
+                {/* <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
+                  <label class="form-check-label" for="disabledFieldsetCheck">
+                    Can't check this
+                  </label>
+                </div> */}
+
+                
                 {/* <ButtonStyled
                   onClick={(event) => {
                     event.preventDefault();

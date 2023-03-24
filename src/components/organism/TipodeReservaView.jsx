@@ -7,12 +7,15 @@ import ejemploimg1 from "../../assets/img/imgCarrusel1p.png";
 import ejemploimg2 from "../../assets/img/imgCarrusel2.png";
 import ejemploimg3 from "../../assets/img/imgCarrusel3.png";
 import "../../assets/style/moleculescss/TipodeReservaView.css";
+
+
 function TipodeReservaView() {
   const [viewNum, setViewNum] = useState(0);
   const {isTipoRenta, setIsTipoRenta} = useContext(TipoRentaContext);
 
   const HandlerClickTipoDerenta = (e, num) => {
   e.preventDefault();
+  
   alert("TIPO DE RENTA. num = "+ num)
   setIsTipoRenta(num)
   console.log(isTipoRenta);
@@ -53,35 +56,37 @@ function TipodeReservaView() {
       ) : (
         <>
           <div class="container clasePadreContainerTDRV">
-            <div class="row tipReervaView">
+            <div class="row tipReervaView sombra">
               <div class="col-md-6">
                 <h2 class="fs-1 text-center mb-4 tipReervaView2" >Reserva Corto Plazo</h2>
+                <div className="lineaTypeRents"></div>
                 <form method="post tipReervaView3">
                   <div class="mb-3">
-                    <p class="fs-2 tipReervaView4">Para el tipo de reserva a corto plazo 
+                    <center><p class="fs-2 tipReervaView4">Para el tipo de reserva a corto plazo 
                       se debe tomar en cuenta el reducido número de paquetes que
                       están disponible, sin embargo se puede rentar el tiempo que 
                       usted mismo límite.
-                    </p>
+                    </p></center>
                   </div>
                   <div>
                     <button class="btn btn-primary d-block w-100" onClick={(e) => HandlerClickTipoDerenta(e, 1)}>¡Reservar! </button>
                   </div>
                 </form>
               </div>
-              <div class="col-md-6"><img class="w-100 h-100 fit-cover" src={ejemploimg1}/></div>
+              <div class="col-md-6"><img class="img-fluid" src={ejemploimg1}/></div>
             </div>
-            <div class="row tipReervaView5" >
+            <div class="row tipReervaView5 sombra" >
               <div class="col-md-6"><img class="w-100 h-100 fit-cover" src={ejemploimg2}/></div>
                 <div class="col-md-6">
                   <h2 class="fs-1 text-center mb-4 tipReervaView6" >Reserva Normal</h2>
+                  <div className="lineaTypeRents"></div>
                   <form method="post tipReervaView7">
                     <div class="mb-3">
-                      <p class="fs-2 tipReervaView8" >El tipo de reserva normal 
+                      <center><p class="fs-2 tipReervaView8" >El tipo de reserva normal 
                         es en la cual se lleva con anticipo y
                         se puede ver con detallamiento y el alcance del evento a
                         realizar.
-                      </p>
+                      </p></center>
                     </div>
                     <div>
                       <button class="btn btn-primary d-block w-100" onClick={(e) => HandlerClickTipoDerenta(e, 2)}>¡Reservar! </button>
@@ -89,15 +94,16 @@ function TipodeReservaView() {
                   </form>
                 </div>
               </div>
-              <div class="row tipReervaView">
+              <div class="row tipReervaView sombra">
                 <div class="col-md-6">
                   <h2 class="fs-1 text-center mb-4 tipReervaView2" >Reserva Último Minuto</h2>
+                  <div className="lineaTypeRents"></div>
                   <form method="post tipReervaView3">
                     <div class="mb-3">
-                      <p class="fs-2 tipReervaView4">En este tipo de reserva están
+                      <center><p class="fs-2 tipReervaView4">En este tipo de reserva están
                         limitados los paquetes a incluir, ya que en unos casos es de suma vitalidad 
                         tener más tiempo para hacer uso de dichos paquetes.
-                      </p>
+                      </p></center>
                     </div>
                     <div>
                       <button class="btn btn-primary d-block w-100" onClick={(e) => HandlerClickTipoDerenta(e, 3)}>¡Reservar!</button>

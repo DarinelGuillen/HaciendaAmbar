@@ -20,7 +20,7 @@ function History() {
                         <div className="p-4">
                             <div className="d-flex">
                                 <div>
-                                    <h4 className="fs-1 h4contenedorHistory">Hacienda Ámbar es un complejo turístico ubicado en la Rivera Nandayalú del municipio de Suchiapa, Chiapas.</h4>
+                                    <p className="fs-1 h4contenedorHistory"><a className="fs-1 formaTextoHystoria">Hacienda Ámbar</a> es un complejo turístico ubicado en la Rivera Nandayalú del municipio de Suchiapa, Chiapas.</p>
                                     <p className="fs-2 pcontenedorHistory">La cual ha decidido iniciar su camino en el área de la prestación de servicios a través de la celebración de eventos sociales, culturales, empresariales y de destino.</p>
                                 </div>
                             </div>

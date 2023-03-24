@@ -68,7 +68,9 @@
     line-height: 17px;
     color: #FFFDFD;
 } 
-
+.listitaPrueba{
+    list-style:none
+}
  .link-secondary {
     color: #ffffff!important;
  }

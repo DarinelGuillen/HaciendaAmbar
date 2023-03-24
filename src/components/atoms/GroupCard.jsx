@@ -207,7 +207,7 @@ function GroupCard() {
                                     </a>
                                 </div>
 
-                                <ol className="carousel-indicators">
+                                <ol className="carousel-indicators invisible">
                                     <li data-bs-target="#carousel-2" data-bs-slide-to="0" className="active"></li>
                                     <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
                                 </ol>

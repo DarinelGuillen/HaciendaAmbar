@@ -31,6 +31,11 @@
     line-height: 1rem;
     color: #2a2828;
 }
+.sombra{
+    background: rgba(75, 75, 76, 0.06);
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
 .padreLinks{
     display: flex;   
    flex-direction: column;
@@ -90,6 +95,7 @@ input{
     height: 0%;
     width: 2px;
    }
+   contenedorLogincito
    
    .botonFlogin:hover {
     box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
@@ -178,6 +184,7 @@ input{
     background-color: var(--color-grey);
     color: var(--color-light);
     letter-spacing: .05rem;
+    
 }
 
 .bg-light {

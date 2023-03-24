@@ -19,5 +19,33 @@
 }
 .pcontenedorHistory{
     font-size: 40px;
+    margin-top: 19%;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: justify;
+    
+    color: rgba(0, 0, 0, 0.8);
 }
+.formaTextoHystoria{
+    color: #840000;
+    font-family: 'Quattrocento';
+    font-style: normal;
+    line-height: 55px;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: justify;
+}
+.formaTextoHystoria1{
+    font-family: 'Quattrocento';
+    text-align: justify;
+    font-style: normal;
+    line-height: 55px;
+    font-weight: 400;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
 

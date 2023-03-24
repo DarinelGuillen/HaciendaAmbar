@@ -46,7 +46,7 @@ function FSingIn() {
           <section className="contact-box">
             <div className="row no-gutters">
               <div className="col-xl-7 col-lg-12 d-flex">
-                <div className="container align-self-center p-6">
+                <div className="container align-self-center p-6 sombra">
                   <h1 className="font-weight-bold mb-3 ">Inicio de sesión</h1>
                   <p className="text-muted mb-5">Ingresa la siguiente información para inicio de sesión</p>        
                     <form ref={formSingIn}>
@@ -85,6 +85,19 @@ function FSingIn() {
                           <Link to="/">
                             <label className="linksForms">Regresar</label>
                           </Link>
+                        </div>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col">
+                              <a href="tel:529613668435"><img src="src/assets/img/WhatsAppicono.png"  alt="..."/></a>
+                            </div>
+                            <div class="col">
+                              <a href="https://www.instagram.com/ambar.haciendamx/"><img src="src/assets/img/Instagramicono.png" /></a>
+                            </div>
+                            <div class="col">
+                              <a href="https://www.facebook.com/ambar.haciendamx"><img src="src/assets/img/Facebookicono.png" alt="..."/></a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </form>

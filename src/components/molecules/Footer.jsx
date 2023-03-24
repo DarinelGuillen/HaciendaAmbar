@@ -13,14 +13,14 @@ function Footer() {
                 </div>
                 <div className="col-md-3 contenedor4F">
                     <h3 className="fs-6 titulo tituloEmpresa">Empresa</h3>
-                    <ul className="list-und">
-                        <li><a className="link-secondary " href="#">Acerca de</a></li>
-                        <li><a className="link-secondary " href="#">Empleo</a></li>
+                    <ul className="list-und listitaPrueba">
+                        <li><a className="link-secondary" href="#">Acerca de</a></li>
+                        <li><a className="link-secondary" href="#">Empleo</a></li>
                     </ul>
                 </div>
                 <div className="col-md-3 contenedor5F">
                     <h3 className="fs-6 titulo tituloEnlacesUtiles">Enlaces útiles</h3>
-                    <ul className="list-und">
+                    <ul className="list-und listitaPrueba">
                         <li><a className="link-secondary " href="#">Ayuda</a></li>
                         <li><a className="link-secondary " href="#">Redes sociales</a></li>
                     </ul>

@@ -4,6 +4,9 @@ import "../../assets/style/ContactView.css"
 function FormContactUs() {
     return ( 
         <>
+            <div className="col-md-8 col-xl-6 text-center mx-auto">
+                <h1 className="fs-1 titulo5Mandamientos">Contactanos</h1>
+            </div>
             <section className="ftco-section">
                 <div className="container">
                     <div className="row justify-content-center">
@@ -17,7 +20,7 @@ function FormContactUs() {
                                 <div className="row no-gutters">
                                     <div className="col-md-7 d-flex align-items-stretch">
                                         <div className="contact-wrap w-100 p-md-5 p-4">
-                                            <h3 className="mb-4">Contactanos</h3>
+                                            
                                                 <div id="form-message-warning" className="mb-4">
                                                 </div>
                                                 <div id="form-message-success" className="mb-4">
