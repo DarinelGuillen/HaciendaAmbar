@@ -232,44 +232,36 @@ function TypesRFormExtra() {
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                      <div class="row align-items-center no-gutters">
-                        <div class="form-check">
-                       {/*  Aqui puedes poner la logica de los checkBox */}
-                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
-                          <label class="form-check-label" for="disabledFieldsetCheck">
-                            Can't check this
-                          </label>
-                        </div>
+                      <div class="form-check">
+                     {/*  Darinel aqui metele la logica */}
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Default checkbox
+                        </label>
                       </div>
                     </li>
                     <li class="list-group-item">
-                      <div class="row align-items-center no-gutters">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
-                          <label class="form-check-label" for="disabledFieldsetCheck">
-                            Can't check this
-                          </label>
-                        </div>
-                      </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label>
+                    </div>
                     </li>
                     <li class="list-group-item">
-                      <div class="row align-items-center no-gutters">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
-                          <label class="form-check-label" for="disabledFieldsetCheck">
-                            Can't check this
-                          </label>
-                        </div>
-                      </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                      </label>
+                    </div>
                     </li>
                     <li class="list-group-item">
-                      <div class="row align-items-center no-gutters">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
-                          <label class="form-check-label" for="disabledFieldsetCheck">
-                            Can't check this
-                          </label>
-                        </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Default checkbox
+                        </label>
                       </div>
                     </li>
                   </ul>
