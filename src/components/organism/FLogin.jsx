@@ -89,23 +89,23 @@ function FLogin() {
                           </Link>
                         </div>
                       </div>
+                      <div class="container clasesRedes">
+                        <div class="row">
+                          <div class="col">
+                            <a href="tel:529613668435"><img src="src/assets/img/WhatsAppicono.png"  alt="..."/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.instagram.com/ambar.haciendamx/"><img src="src/assets/img/Instagramicono.png" /></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.facebook.com/ambar.haciendamx"><img src="src/assets/img/Facebookicono.png" alt="..."/></a>
+                          </div>
+                        </div>
+                      </div>
                     </form>
                     </div>
                   </div>
                 <div className="col-xl-5 col-lg-12 login-bg">    
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="tel:529613668435"><img src="src/assets/img/WhatsAppicono.png"  alt="..."/></a>
-                </div>
-                <div class="col">
-                  <a href="https://www.instagram.com/ambar.haciendamx/"><img src="src/assets/img/Instagramicono.png" /></a>
-                </div>
-                <div class="col">
-                  <a href="https://www.facebook.com/ambar.haciendamx"><img src="src/assets/img/Facebookicono.png" alt="..."/></a>
-                </div>
               </div>
             </div>
           </section>

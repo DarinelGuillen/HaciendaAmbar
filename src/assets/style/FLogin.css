@@ -103,8 +103,9 @@ input{
        inset -4px -4px 6px 0 rgba(255,255,255,.2),
        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
    }
-
-
+.clasesRedes{
+    margin-top: 5%;
+}
 .contenedorFormulario{
     display: flex;
     align-items:center ;

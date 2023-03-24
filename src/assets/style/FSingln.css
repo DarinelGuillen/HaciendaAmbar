@@ -4,7 +4,9 @@
     align-items: center;
 
 }
-
+.clasesRedes{
+    margin-top: 5%;
+}
 .icnoRedesLogin{
     display: flex;
     justify-content: center;

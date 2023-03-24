@@ -86,7 +86,7 @@ function FSingIn() {
                             <label className="linksForms">Regresar</label>
                           </Link>
                         </div>
-                        <div class="container">
+                        <div class="container clasesRedes">
                           <div class="row">
                             <div class="col">
                               <a href="tel:529613668435"><img src="src/assets/img/WhatsAppicono.png"  alt="..."/></a>
