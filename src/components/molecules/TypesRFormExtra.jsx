@@ -226,9 +226,57 @@ function TypesRFormExtra() {
                   label={"setIsLoading "}
                   Danger={true}
                 /> */}
-              <Link className="loginNav" to="/TypesRents">
-                <ButtonStyled Danger={true} label={"Cancelar "}></ButtonStyled>
-              </Link>
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="fw-bold m-0 text-center">Elige los campos a considerar en tu evento</h6>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <div class="row align-items-center no-gutters">
+                        <div class="form-check">
+                       {/*  Aqui puedes poner la logica de los checkBox */}
+                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
+                          <label class="form-check-label" for="disabledFieldsetCheck">
+                            Can't check this
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="row align-items-center no-gutters">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
+                          <label class="form-check-label" for="disabledFieldsetCheck">
+                            Can't check this
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="row align-items-center no-gutters">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
+                          <label class="form-check-label" for="disabledFieldsetCheck">
+                            Can't check this
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="row align-items-center no-gutters">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
+                          <label class="form-check-label" for="disabledFieldsetCheck">
+                            Can't check this
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <Link className="loginNav" to="/TypesRents">
+                  <ButtonStyled Danger={true} label={"Cancelar "}></ButtonStyled>
+                </Link>
               </div>
             </form>
           </div>
