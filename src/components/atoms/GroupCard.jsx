@@ -15,6 +15,22 @@ function GroupCard() {
     const handlerClickPaquete = (e, id) => {
         e.preventDefault();
         //console.log("IDIDIDIDIDIDID", id);
+        Swal.fire({
+            title: '¿Desea visualizar el paquete seleccionado?',
+            text: "Seleccione una casilla",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'No',
+                <Link to="/"></Link>
+              )
+            }
+          })
         console.log("restric IM false, in RecuadroPaquete from");
     
         //alert("Tu renta Fue procesada correctamente!");

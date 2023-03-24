@@ -15,8 +15,14 @@ function TipodeReservaView() {
 
   const HandlerClickTipoDerenta = (e, num) => {
   e.preventDefault();
-  
-  alert("TIPO DE RENTA. num = "+ num)
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Tu tipo de renta ha sido la número'+ ' ' +num,
+    showConfirmButton: false,
+    timer: 3500
+  })
+  //alert("TIPO DE RENTA. num = "+ num)
   setIsTipoRenta(num)
   console.log(isTipoRenta);
   setViewNum(num)
