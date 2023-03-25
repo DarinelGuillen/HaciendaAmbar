@@ -22,7 +22,8 @@ function MyAccountView() {
 
   function generatePDF(e, renta) {
     e.preventDefault();
-    console.log("generatePDF");
+    console.log("HOLA");
+        console.log("generatePDF");
     console.log("renta== ? ", renta);
     let extrasNames = [];
     allRentaIndividuales.forEach((individual) => {
@@ -62,7 +63,7 @@ function MyAccountView() {
               const documentDefinition = {
                 content: [
                   {
-                    text: "Título del documentoHacienda Hambar",
+                    text: "Hacienda Hambar",
                     style: "header",
                   },
                   { text: "ID de Renta: ", bold: true, fontSize: 30 },
@@ -135,10 +136,11 @@ function MyAccountView() {
 
   useEffect(() => {
     // setTimeout(() => {
-    console.log(" HAS CHANGE AND USEEFFECT ACTIVATE");
+    console.log(" HAS CHANGE AND USEEFFECT ACTIVATE isIduser", isIduser);
     let id = isIduser;
 
     let url = `https://localhost/rentasUsuario/${id}/x`;
+    console.log("URL= ", url);
     let options = {
       method: "GET",
       headers: {
@@ -152,7 +154,7 @@ function MyAccountView() {
       .then((data) => {
         console.log(
           "🚀 ~ file: MyAccountView.jsx:164 ~ .then ~ data.rentasUsuario:",
-          data.rentasUsuario
+          JSON.stringify(data)
         );
 
         setIsRentaUser(data.rentasUsuario);
@@ -179,7 +181,8 @@ function MyAccountView() {
     <>
       <div>
         <div>
-          {load &&
+          <h1>HOLAAAAAAAAAAAAAAAAAAAAAAA BorrrAME </h1>
+          {load && isRentaUser.length>=0 &&
             isRentaUser.map((renta) => {
               return (
                 <>

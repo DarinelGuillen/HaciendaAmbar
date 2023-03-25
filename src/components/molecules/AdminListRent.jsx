@@ -42,7 +42,7 @@ function AdminListRent() {
       fetch(url, option)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          console.log("🚀 ~ file: AdminListRent.jsx:45 ~ .then ~ data:", data)
           setRentsEstadoF(data);
         });
 
@@ -51,6 +51,7 @@ function AdminListRent() {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
+          console.log("🚀 ~ file: AdminListRent.jsx:54 ~ .then ~ data:", data)
           setSeEjecutoConExitoLarenta(data);
         });
     } else {
