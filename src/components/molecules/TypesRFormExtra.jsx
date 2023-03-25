@@ -255,21 +255,19 @@ function TypesRFormExtra() {
                             </div>
                           ) : null;
                         })}
+                        <center>
+                          <button className="p-1 botonPaquete"
+                            onClick={handlerClickConfirmarCampos}
+                            >Reservar ahora
+                          </button>
+                        </center>
+                        <Link className="loginNav" to="/TypesRents">
+                          <a>Regresar</a>
+                        </Link>
                       </div>
                     </>
                   )}
                 </>
-                <ButtonStyled
-                  onClick={handlerClickConfirmarCampos}
-                  label={"Confirmación extra"}
-                  Danger={false}
-                />
-                <Link className="loginNav" to="/TypesRents">
-                  <ButtonStyled
-                    Danger={true}
-                    label={"Cancelar "}
-                  ></ButtonStyled>
-                </Link>
               </div>
             </form>
           </div>
