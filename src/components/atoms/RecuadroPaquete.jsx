@@ -1,6 +1,7 @@
 import { useNavigate, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import PaqueteContext from "../../contexts/PaqueteContext";
+import TokenContext from "../../contexts/TokenContext";
 import TextoCard from "./textoCard";
 import "../../assets/img/LogoColor.png";
 import "../../assets/style/RecuadroPaquete.css";
@@ -14,6 +15,7 @@ function RecuadroPaquete({
 }) {
   const navigate = useNavigate();
   const { isPaquete, setIsPaquete } = useContext(PaqueteContext);
+  const { isToken, setIsToken } = useContext(TokenContext);
 
   const handlerClickPaquete = (e, id) => {
     e.preventDefault();
@@ -23,11 +25,19 @@ function RecuadroPaquete({
     //alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
     // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
-    fetch(`https://localhost/paquetes/${paqueteID}`)
+    const URL = `https://localhost/paquetes/${paqueteID}`;
+
+    let option = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${isToken}`,
+      },
+    };
+
+    fetch(URL, option)
       .then((response) => response.json())
       .then((data) => {
-        //console.log(data);
-        console.log("RecuadroPaquete ATOMS\nDATAAAAAHERE BICHDA========", data);
         setIsPaquete(data);
         setTimeout(() => {
           console.log("RecuadroPAQUETE\n=", isPaquete);

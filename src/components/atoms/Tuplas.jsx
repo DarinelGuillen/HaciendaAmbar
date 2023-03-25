@@ -17,9 +17,14 @@ function Tuplas(props) {
     e.preventDefault();
     console.log("APROVADA", id, " VIEW= ", VIEW);
     let url = `https://localhost/rentasUsuario/${id}`;
-    fetch(url, {
+    let optio = {
       method: "PUT",
-    })
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${isToken}`,
+      },
+    };
+    fetch(url, optio)
       .then((response) => response.json())
       .then((data) => {
         setIsAdmin(true);
@@ -32,17 +37,27 @@ function Tuplas(props) {
     let url = `https://localhost/rentasUsuario/${idPaquete}`;
     let url2 = `https://localhost/users/${idUser}`;
     let concat = [];
-    fetch(url)
+    let options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${isToken}`,
+      },
+    };
+
+    fetch(url, options)
       .then((response) => response.json())
       .then((data) => {
         concat.push(data);
-        fetch(url2)
+        fetch(url2, options)
           .then((response) => response.json())
           .then((data1) => {
             concat.push(data1);
             setIsRentaUsuario(concat);
             setIsViewContext(3);
-            console.log("es el nombre " + JSON.stringify(isRentaUsuario[0].nombreCompleto));
+            console.log(
+              "es el nombre " + JSON.stringify(isRentaUsuario[0].nombreCompleto)
+            );
           });
       });
   };
@@ -59,9 +74,15 @@ function Tuplas(props) {
     alert("FINALIZADO");
 
     let url = `https://localhost/rentasUsuario/${id}/${estadoRenta}`;
-    fetch(url, {
+    let opt = {
       method: "PUT",
-    })
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${isToken}`,
+      },
+    };
+
+    fetch(url, opt)
       .then((response) => response.json())
       .then((data) => {
         setIsAdmin(true);
@@ -73,7 +94,7 @@ function Tuplas(props) {
       <tr key={rent._id}>
         {/* <td>{rent._id}</td> */}
         <td>{rent.idPaquete}</td>
-        
+
         <td>{rent.fechaInicio}</td>
         <td>{rent.horaDeInicio}</td>
         <td>{rent.horaDeFinalizacion}</td>
