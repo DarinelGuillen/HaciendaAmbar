@@ -2,9 +2,11 @@ import { useState, useEffect, useContext } from "react";
 
 import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
 import AdminContext from "../../contexts/AdminContext";
+import TokenContext from "../../contexts/TokenContext";
 import ButtonStyled from "../../components/atoms/ButtonStyled";
 import ViewContext from "../../contexts/ViewContext";
 function Tuplas(props) {
+  const { isToken, setIsToken } = useContext(TokenContext);
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
   const { IsViewContext, setIsViewContext } = useContext(ViewContext);
   const { isRentaUsuario, setIsRentaUsuario } = useContext(
@@ -21,7 +23,7 @@ function Tuplas(props) {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${isToken}`,
+        "Authorization": `Bearer ${isToken}`,
       },
     };
     fetch(url, optio)
@@ -48,16 +50,16 @@ function Tuplas(props) {
     fetch(url, options)
       .then((response) => response.json())
       .then((data) => {
+        console.log("🚀 ~ file: Tuplas.jsx:53 ~ .then ~ data1:", JSON.stringify(data))
         concat.push(data);
         fetch(url2, options)
           .then((response) => response.json())
           .then((data1) => {
+            console.log("🚀 ~ file: Tuplas.jsx:58 ~ .then ~ data1:", JSON.stringify(data1))
             concat.push(data1);
             setIsRentaUsuario(concat);
             setIsViewContext(3);
-            console.log(
-              "es el nombre " + JSON.stringify(isRentaUsuario[0].nombreCompleto)
-            );
+            
           });
       });
   };

@@ -2,11 +2,12 @@ import { useState, useEffect, useContext } from "react";
 import AdminContext from "../../contexts/AdminContext";
 import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
 import TipoRentaContext from "../../contexts/TipoRentaContext";
+import TokenContext from "../../contexts/TokenContext";
+
 import Tuplas from "../atoms/Tuplas";
 import ButtonStyled from "../atoms/ButtonStyled";
 import ViewContext from "../../contexts/ViewContext";
 import "../../assets/style/moleculescss/AdminListRent.css";
-import { json } from "react-router-dom";
 
 function AdminListRent() {
   const { isRentaUsuario, setIsRentaUsuario } = useContext(
@@ -17,19 +18,11 @@ function AdminListRent() {
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
   const { IsViewContext, setIsViewContext } = useContext(ViewContext);
   const { isAllRentas, setIsAllRentas } = useContext(TipoRentaContext);
-
-  // /aceptar por el administrador
-  // https://localhost/rentasUsuario/estadoFalse
-  //Requiere
-  // https://localhost/rentasUsuario/ID
-
-  // finalizar por el adminitrador
-  // https://localhost/rentasUsuario/Finalizar
-  //button finalizar requier
-  // https://localhost/rentasUsuario/ID/true
+  const { isToken, setIsToken }=useContext(TokenContext)
   useEffect(() => {
     console.log("FFFFFFFFFFFF");
-    if (isAdmin) {
+  console.log("🚀 ~ file: AdminListRent.jsx:51 ~ useEffect ~ useEffect:", isToken)
+    
       let option = {
         method: "GET",
         headers: {
@@ -54,9 +47,7 @@ function AdminListRent() {
           console.log("🚀 ~ file: AdminListRent.jsx:54 ~ .then ~ data:", data)
           setSeEjecutoConExitoLarenta(data);
         });
-    } else {
-      console.log("you are not Admin");
-    }
+    
   }, [IsViewContext]);
 
   return (
@@ -131,13 +122,13 @@ function AdminListRent() {
           ) : IsViewContext === 3 ? (
             // En este ? se encuentra la vista ver mas detalles de X renta
             <>
-              {isRentaUsuario == undefined ? (
+              {isRentaUsuario == undefined&&isRentaUsuario==null&&isRentaUsuario.lenght<=0? (
                 <>
                   <p> error en el paquete</p>
                 </>
               ) : (
                 <>
-                  {console.log("nulo" + JSON.stringify(isRentaUsuario[0]))}
+                  {console.log("nulo" + JSON.stringify(isRentaUsuario))}
                   <div className="cont-vermas">
                     <h1>Información de Reservas</h1>
                     <ButtonStyled
