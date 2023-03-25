@@ -42,8 +42,14 @@ function TypesRFormExtra() {
       newArray: trueKey,
     });
     setTimeout(() => {
-      console.log("45 isRentaUsuario=" + JSON.stringify(isRentaUsuario));
-      console.log("CHECK=" + JSON.stringify(checked));
+      console.log(
+        "🚀 ~ file: TypesRFormExtra.jsx:48 ~ setTimeout ~ checked:",
+        JSON.stringify(checked)
+      );
+      console.log(
+        "🚀 ~ file: TypesRFormExtra.jsx:46 ~ setTimeout ~ isRentaUsuario:",
+        JSON.stringify(isRentaUsuario)
+      );
     }, 2000);
 
     ////POST Fetch
@@ -51,21 +57,7 @@ function TypesRFormExtra() {
     const currentDate = new Date();
     const CurrentDate = currentDate.toISOString();
     console.log("isIduser", isIduser);
-    const nuevaRenta = {
-      idPaquete: String(isRentaUsuario.isPaqueteID || "No ID"),
-      idUser: String(isIduser),
-      fechaInicio: String(isRentaUsuario.fechaDeEvento),
-      horaDeInicio: String(isRentaUsuario.horaDeInicio),
-      horaDeFinalizacion: String(isRentaUsuario.horaDeFinalizacion),
-      fechaDeReserva: String(CurrentDate),
-      Extras: isRentaUsuario.newArray,
-      estadoRenta: false,
-      observaciones: String(observacionesForm.get("Observaciones")),
-      SeEjecutoConExitoLarenta: false,
-      LinkFotos: "LINK HERE",
-    };
-
-    console.log("nuevaRenta\n" + JSON.stringify(nuevaRenta));
+    
     // fetch
     setTimeout(() => {
       let url = "https://localhost/rentasUsuario";
@@ -73,15 +65,29 @@ function TypesRFormExtra() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${isToken}`,
+          Authorization: `Bearer ${isToken}`,
         },
+        body: JSON.stringify({
+          idPaquete: String(isRentaUsuario.isPaqueteID || "No ID"),
+          idUser: String(isIduser),
+          fechaInicio: String(isRentaUsuario.fechaDeEvento),
+          horaDeInicio: String(isRentaUsuario.horaDeInicio),
+          horaDeFinalizacion: String(isRentaUsuario.horaDeFinalizacion),
+          fechaDeReserva: String(CurrentDate),
+          Extras: isRentaUsuario.newArray,
+          estadoRenta: false,
+          observaciones: String(observacionesForm.get("Observaciones")),
+          SeEjecutoConExitoLarenta: false,
+          LinkFotos: "LINK HERE",
+        }),
       };
+      console.log("🚀 ~ file: TypesRFormExtra.jsx:84 ~ setTimeout ~ options:", JSON.stringify(options))
+
       fetch(url, options)
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
           console.log("INSIDE FETCH");
-
           navigate("/MyAccount");
         })
         .catch((error) => console.error(error));
@@ -106,7 +112,7 @@ function TypesRFormExtra() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${isToken}`,
+        Authorization: `Bearer ${isToken}`,
       },
     })
       .then((response) => response.json())
@@ -215,7 +221,7 @@ function TypesRFormExtra() {
                                       />
                                     </div>
                                   </div>
-                                    <div id="id_martin"></div>
+                                  <div id="id_martin"></div>
                                 </li>
                               </ul>
                             </div>
@@ -256,9 +262,11 @@ function TypesRFormExtra() {
                           ) : null;
                         })}
                         <center>
-                          <button className="p-1 botonPaquete"
+                          <button
+                            className="p-1 botonPaquete"
                             onClick={handlerClickConfirmarCampos}
-                            >Reservar ahora
+                          >
+                            Reservar ahora
                           </button>
                         </center>
                         <Link className="loginNav" to="/TypesRents">

@@ -152,11 +152,6 @@ function MyAccountView() {
     fetch(url, options)
       .then((response) => response.json())
       .then((data) => {
-        console.log(
-          "🚀 ~ file: MyAccountView.jsx:164 ~ .then ~ data.rentasUsuario:",
-          JSON.stringify(data)
-        );
-
         setIsRentaUser(data.rentasUsuario);
         setload(true);
       });
@@ -174,7 +169,6 @@ function MyAccountView() {
       .then((response) => response.json())
       .then((data) => {
         setallRentaIndividuales(data);
-        console.log(data, "allRentaIndividuales");
       });
   }, []);
   return (
@@ -186,7 +180,7 @@ function MyAccountView() {
             isRentaUser.map((renta) => {
               return (
                 <>
-                  {console.log(renta)}
+                  {/* {console.log(renta._id)} */}
                   <div
                     className="card-group tamanoCartitaMyCount"
                     key={renta._id}

@@ -20,6 +20,7 @@ function DatesStartEndTime() {
     let add = {};
 
     if (isRentaUsuario) {
+      console.log("🚀 ~ file: TypesRDatesStartEndTime.jsx:23 ~ handlerClickConfirmarReserva ~ isRentaUsuario:", isRentaUsuario)
       console.log("Tiene Algo");
       add = {...isRentaUsuario, ...DatosDeR};
     } else {
