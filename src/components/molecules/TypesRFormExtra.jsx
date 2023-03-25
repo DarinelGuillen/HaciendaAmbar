@@ -207,8 +207,7 @@ function TypesRFormExtra() {
                                   <div class="row align-items-center no-gutters">
                                     <div class="form-check">
                                       {/*   Tu Input-Dario*/}
-                                      <input  class="form-check-input"  type="checkbox" id="disabledFieldsetCheck" disabled/>
-                                      <label class="form-check-label" for="disabledFieldsetCheck">{RentaIndividual.value}</label>
+                                      
                                       {/* END tu input */}
                                       {/* mi input cehckbox -DARINEL */}
                                       <CheckBox
