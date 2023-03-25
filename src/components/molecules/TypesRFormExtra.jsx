@@ -186,13 +186,7 @@ function TypesRFormExtra() {
                     </>
                   ) : (
                     <>
-                      <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                          <h6 class="fw-bold m-0 text-center">
-                            Elige los campos a considerar en tu evento
-                          </h6>
-                        </div>
-
+                      <div class="card shadow mb-4 ">
                         {RentaIndividuales.map((RentaIndividual) => {
                           // console.log("Acá andamos" + JSON.stringify(RentaIndividual));
                           // console.log("Tipo renta: " + isTipoRenta);
@@ -205,11 +199,7 @@ function TypesRFormExtra() {
                               <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
                                   <div class="row align-items-center no-gutters">
-                                    <div class="form-check">
-                                      {/*   Tu Input-Dario*/}
-                                      
-                                      {/* END tu input */}
-                                      {/* mi input cehckbox -DARINEL */}
+                                    <div class="form-check marginleftCheck">
                                       <CheckBox
                                         key={RentaIndividual._id}
                                         name={RentaIndividual._id}
@@ -223,9 +213,9 @@ function TypesRFormExtra() {
                                         label={RentaIndividual.value}
                                         className="renta-individual-checkbox"
                                       />
-                                      {/* fin mi input checkBOX */}
                                     </div>
                                   </div>
+                                    <div id="id_martin"></div>
                                 </li>
                               </ul>
                             </div>
@@ -269,27 +259,11 @@ function TypesRFormExtra() {
                     </>
                   )}
                 </>
-
                 <ButtonStyled
                   onClick={handlerClickConfirmarCampos}
                   label={"Confirmación extra"}
                   Danger={false}
                 />
-                {/* <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled/>
-                  <label class="form-check-label" for="disabledFieldsetCheck">
-                    Can't check this
-                  </label>
-                </div> */}
-
-                {/* <ButtonStyled
-                  onClick={(event) => {
-                    event.preventDefault();
-                    setIsLoading(!isLoading);}}
-                  label={"setIsLoading "}
-                  Danger={true}
-                /> */}
-
                 <Link className="loginNav" to="/TypesRents">
                   <ButtonStyled
                     Danger={true}

@@ -97,7 +97,14 @@
     border-radius: 4px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   }
-  
+  .marginleftCheck{
+    margin: 5%;
+  }
+  #id_martin{
+    border: 0.5px solid #A70000;
+    transform: rotate(-0.12deg);
+    width: 100%;
+  }
   .renta-individual-checkbox input[type="checkbox"]:checked::after {
     content: "\2713";
     width: 100%;
