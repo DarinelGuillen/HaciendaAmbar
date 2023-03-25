@@ -2,6 +2,7 @@ import {useNavigate} from 'react-router-dom'
 import { useState, useRef, useContext } from "react";
 import RentaDelUsuarioContext from '../../contexts/RentaDelUsuarioContext';
 import ButtonStyled from "../atoms/ButtonStyled";
+import "../../assets/style/TypesRDatesStartEndTime.css"; 
 
 function DatesStartEndTime() {
   const { isRentaUsuario, setIsRentaUsuario } = useContext(RentaDelUsuarioContext);
@@ -44,21 +45,55 @@ function DatesStartEndTime() {
             <h2 className="fs-4 subTituloImg2">Elige la mejor fecha para tu evento.</h2>
             <img src="src/assets/img/reservacionImg.png" className='img-fluid'></img>
           </div>
-          <form ref={formDateReserva}>
-            <div className="mb-3">
-              <label className="form-label labelTypeReserva">Fecha del evento</label>
-              <input type="date" name="FechaDeEvento" className="form-control"/>
+            <div class="card ">
+              <div class="card-body ">
+                <blockquote class="blockquote mb-0 pruebaBG">
+                  <form ref={formDateReserva}>
+                    <div class="card contenedorAgendarFecha">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group">
+                          <p>
+                            <button class="botonTypesRDatesStartEndTime" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              Fecha de evento
+                            </button>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body pruebaBG1">
+                              <input type="date" name="FechaDeEvento" className="form-control"/>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group">
+                          <p>
+                            <button class="botonTypesRDatesStartEndTime" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              Hora de inicio
+                            </button>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body pruebaBG">
+                              <input type="time" name="HoraDeInicio" className="form-control"/>      
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group">
+                          <p>
+                            <button class="botonTypesRDatesStartEndTime" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              Hora de fin
+                            </button>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body pruebaBG">
+                              <input type="time" name="HoraDeFinalizacion" className="form-control"/> 
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <button type="submit" className="botonEnvioFormTypesRDates" onClick={handlerClickConfirmarReserva}>Confirmar reserva</button>
+                    </div>
+                  </form>
+                </blockquote>
+              </div>
             </div>
-            <div className="mb-3">
-              <label className="form-label labelTypeReserva">Hora de inicio</label>
-              <input type="time" name="HoraDeInicio" className="form-control"/>
-            </div>
-            <div className="mb-3">
-              <label className="form-label labelTypeReserva">Hora de fin</label>
-              <input type="time" name="HoraDeFinalizacion" className="form-control"/>
-            </div>
-            <button type="submit" className="btn btn-primary" onClick={handlerClickConfirmarReserva}>Confirmar reserva</button>
-          </form> 
         </div>
       </div>
     </>
