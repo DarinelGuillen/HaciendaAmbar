@@ -65,7 +65,7 @@ function FLogin() {
             <div className="row no-gutters">
               <div className="col-xl-7 col-lg-12 d-flex">
 
-                <div className="container align-self-center p-6 sombra">
+                <div className="container align-self-center p-6 sombrita">
                   <h1 className="font-weight-bold mb-3 ">Inicio de sesión</h1>
                   <p className="text-muted mb-5">Ingresa la siguiente información para inicio de sesión</p>        
                     <form ref={formDataL}>
