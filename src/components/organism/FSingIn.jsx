@@ -24,19 +24,21 @@ function FSingIn() {
         password: formData.get("password"),
       }),
     };
-
+    
     fetch(URI, options)
-      .then((response) => {
-        //console.log("Response:", response);
-        return response.json();
-      })
-      .then((data) => {
-        //console.log("Data:", data);
-        // alert(JSON.stringify(data));
-      })
-      .catch((error) => {
-        //console.log("Error:", error);
-      });
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log("Data:", data);
+    alert(JSON.stringify(data));
+  })
+  .catch((error) => {
+    console.log("Error:", error);
+  });
   };
 
   return (

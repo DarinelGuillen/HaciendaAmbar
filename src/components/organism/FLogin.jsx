@@ -39,13 +39,14 @@ function FLogin() {
         //console.log("DATA.....", data);
         if (data.datos && data.datos.length >= 3) {
           const [id, admin, nombreDeUsuario, token] = data.datos;
+          console.log("TOKEN ", token);
           setIsAdmin(admin);
           setIsLoggedIn(true);
           setIsiduser(id);
           setIsToken(token)
           setLabel("");
           admin ? navigate("/Admin") : navigate("/CommonUser");
-          console.log("TOKEN",isToken);
+          
         } else {
           setLabel(data.message || "Error desconocido");
         }
