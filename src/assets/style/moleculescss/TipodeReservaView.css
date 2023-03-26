@@ -170,7 +170,7 @@
   .ejemplobutton {
     background-color: #9C2727;
     color: white;
-    width: 20%;
+    width: 100%;
     height: 10%;
     padding-left: 10%;
     border: none;
@@ -181,11 +181,7 @@
     -webkit-transition: .5s, color .10s;
     -moz-transition: .5s, color .10s;
   }
-.ejemplobutton:hover{
-  transform: scale3d(1.5, 1.5, 0.3);
-  -webkit-transform: scale3d(1.5, 1.5, 0.3);
-  -moz-transform: scale3d(1.5, 1.5, 0.3);
-}
+
    
   
   /* adjust layout for smaller screens */

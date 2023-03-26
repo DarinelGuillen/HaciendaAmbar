@@ -95,17 +95,19 @@ function AdminListRent() {
           {IsViewContext === 1 || IsViewContext === 2 ? (
             // las vistas de Rentas pendientes Y rentas Afinalizar se encuentran en este parentheses
             <>
-              <table className="table table-responsive table-striped">
+              <table className="table-responsive table-hover">
                 <thead>
                   <tr>
-                    {/* <th>ID</th> */}
-                    <th>ID Paquete</th>
-                    <th>Fecha de inicio</th>
-                    <th>Hora de inicio</th>
-                    <th>Hora de finalización</th>
-                    <th>Fecha de reserva</th>
-                    <th>Extras</th>
-                    <th>Observaciones</th>
+                    <th scope="row">-</th>
+                    <th scope="col">ID Paquete</th>
+                    <th scope="col">Fecha de inicio</th>
+                    <th scope="col">Hora de inicio</th>
+                    <th scope="col">Hora de finalización</th>
+                    <th scope="col">Fecha de reserva</th>
+                    <th scope="col">Extras</th>
+                    <th scope="col">Observaciones</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -131,15 +133,7 @@ function AdminListRent() {
                   {console.log("nulo" + JSON.stringify(isRentaUsuario))}
                   <div className="cont-vermas">
                     <h1>Información de Reservas</h1>
-                    <ButtonStyled
-                      onClick={() => {
-                        setIsViewContext(1);
-                      }}
-                      label={"Regresar"}
-                      Danger={true}
-                    />
-
-                    <table className="table-vermas">
+                    <table className="table-responsive">
                       <tr>
                         <th>Fecha de Inicio</th>
                         <td>{isRentaUsuario[0].returnRenta[0].fechaInicio}</td>
@@ -180,6 +174,7 @@ function AdminListRent() {
                         <td>{isRentaUsuario[1].correo}</td>
                       </tr>
                     </table>
+                    <button className="regresarBTNAdmin" onClick={() => {setIsViewContext(1);}}>Regresar</button>
                   </div>
                 </>
               )}

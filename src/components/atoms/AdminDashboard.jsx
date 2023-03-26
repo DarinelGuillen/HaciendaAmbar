@@ -1,54 +1,18 @@
 import "../../assets/style/AdminDashboard.css"
 import "../js/chartArea"
+import "../js/graficaDeBarras"
 
 
 function AdminDashboard() {
     return ( 
        <>
-          {/*   <!-- Area Chart --> 
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                 <!-- Card Header - Dropdown --> 
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                 <!-- Card Body --> 
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                    <hr/>
-                                    Styling for the area chart can be found in the
-                                    <code>/js/chart-area.js</code> file.
-                                </div>
-                            </div> 
- */}
+
+{/*  ñañinel esta etiqueta solo hace falta importar el js pero ño pude aiuda */}
+        <canvas id="densityChart" width="600" height="400"></canvas>
+{/* ------------------------------------------------------------------------------------------------- */}
+
+
+
           <div id="page-top">
             <div id="wrapper">
               <div className="d-flex flex-column" id="content-wrapper">
@@ -149,15 +113,14 @@ function AdminDashboard() {
                             </div>
                           </div>
                         </div>
-                       
-
                       </div>
                     </div>
                   </div><a className="border rounded d-inline scroll-to-top" href="#page-top"><i className="fas fa-angle-up"></i></a>
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
+          
        </>
 
      );

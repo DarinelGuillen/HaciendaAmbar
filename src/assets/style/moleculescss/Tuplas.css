@@ -1,0 +1,43 @@
+.verMasDetallesBTN{
+    background-color: #5E5E5E;
+    color: white;
+    width: 100%;
+    height: 10%;
+    padding-left: 10%;
+    border: none;
+    padding: 10px;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+.aprobarRentaBTN{
+    background-color:#7bb38d;
+    color: white;
+    width: 100%;
+    height: 10%;
+    padding-left: 10%;
+    border: none;
+    padding: 10px;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+.regresarBTNAdmin{
+    background-color: #5E5E5E;
+    color: white;
+    width: 10%;
+    margin: 3%;
+    height: 10%;
+    padding-left: 10%;
+    border: none;
+    padding: 10px;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s; 
+}

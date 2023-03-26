@@ -5,6 +5,8 @@ import AdminContext from "../../contexts/AdminContext";
 import TokenContext from "../../contexts/TokenContext";
 import ButtonStyled from "../../components/atoms/ButtonStyled";
 import ViewContext from "../../contexts/ViewContext";
+import "../../assets/style/moleculescss/Tuplas.css";
+
 function Tuplas(props) {
   const { isToken, setIsToken } = useContext(TokenContext);
   const { isAdmin, setIsAdmin } = useContext(AdminContext);
@@ -94,6 +96,7 @@ function Tuplas(props) {
   return (
     <>
       <tr key={rent._id}>
+        <th scope="row">-</th>
         {/* <td>{rent._id}</td> */}
         <td>{rent.idPaquete}</td>
 
@@ -111,30 +114,16 @@ function Tuplas(props) {
         {IsViewContext === 1 ? (
           <>
             <td>
-              <ButtonStyled
-                onClick={(e) => handlerClickAprobarRenta(e, rent._id)}
-                label={"Aprobar Renta"}
-                Danger={false}
-              />
+              <button className="aprobarRentaBTN" onClick={(e) => handlerClickAprobarRenta(e, rent._id)}>Aprobar Renta</button>
             </td>
             <td>
-              <ButtonStyled
-                onClick={(e) => handlerClickVermas(e, rent._id, rent.idUser)}
-                label={"Ver mas detalles "}
-                Danger={true}
-              />
+              <button className="verMasDetallesBTN" onClick={(e) => handlerClickVermas(e, rent._id, rent.idUser)}>Ver más detalles</button>
             </td>
           </>
         ) : (
           <>
             <td>
-              <ButtonStyled
-                onClick={(e) =>
-                  handlerClickFinalizarRenta(e, rent._id, rent.estadoRenta)
-                }
-                label={"Completar"}
-                Danger={true}
-              />
+              <button className="aprobarRentaBTN" onClick={(e) => handlerClickFinalizarRenta(e, rent._id, rent.estadoRenta)}>Completar</button>
             </td>
           </>
         )}
