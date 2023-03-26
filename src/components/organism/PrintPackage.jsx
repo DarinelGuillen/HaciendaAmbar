@@ -36,28 +36,29 @@ function PrintPackage() {
 
   return (
     <>
-      <div className="contenedorPadre">
+      <div className="">
         {console.log(JSON.stringify(isPaquete))}
-        <div className="contenedorPaquete">
-          <p className="fs-1 nombrePaquete">
-            Nombre De Paquete:{isPaquete.nombrePaquete}
+        <div className="">
+          <p className="fs-0 p-2 text-center tituloPaqueteInfo">
+            {isPaquete.nombrePaquete}
           </p>
-          <p className="fs-3 contenedorPaquete">
+          <p className="fs-1 p-2 precioPaqueteInfo">
             PRECIO:${isPaquete.precio}
           </p>
-          <p className="fs-5 infoPaquete">
-            Incluye:{isPaquete.descripcion}
+          <p className="fs-5 informacionPaquetesAmbar">
+            <label className="fs-2 subTituloPaquetes">Nuestro paquete incluye:</label>
+            {isPaquete.descripcion}
           </p>
           {/*Los nuevos datos aqui Dario */}
           {/* Cortecia */}
           {isPaquete.elemDeCortesia=="null"?(<> </>):(<>
-            <label>Elementos de cortecia</label>
-          <label>{isPaquete.elemDeCortesia}</label>
+            <label className="fs-2 subTituloPaquetes">Elementos de cortecía</label>
+          <label className="fs-5 informacionPaquetesAmbar">{isPaquete.elemDeCortesia}</label>
           </>)}
           {/* Adicionales */}
           {isPaquete.adicionales=="null"?(<> </>):(<>
-            <label> Adicionales</label>
-          <label>{isPaquete.adicionales}</label>
+            <label className="fs-2 subTituloPaquetes">Adicionales</label>
+          <label className="fs-5 informacionPaquetesAmbar">{isPaquete.adicionales}</label>
           </>)}
 
         </div>
