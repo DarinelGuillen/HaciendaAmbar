@@ -8,6 +8,9 @@
 .chart-container>div {
     margin-bottom: 1rem;
     width: 100%;
+background: #F8F8F8;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
 }
 
 .chart-container>div canvas {
@@ -20,7 +23,8 @@
     }
 
     .left40 {
-        width: 40%;
+        width: 80%;
+        height: 50%;
     }
 
     .center30 {
@@ -29,6 +33,7 @@
 
     .rigth30 {
         width: 30%;
+        height: 50%;
     }
 
     .chart-container {

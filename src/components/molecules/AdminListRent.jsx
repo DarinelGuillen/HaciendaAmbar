@@ -5,10 +5,8 @@ import TipoRentaContext from "../../contexts/TipoRentaContext";
 import TokenContext from "../../contexts/TokenContext";
 import AdminDashboard from "../atoms/AdminDashboard";
 import Tuplas from "../atoms/Tuplas";
-import ButtonStyled from "../atoms/ButtonStyled";
 import ViewContext from "../../contexts/ViewContext";
 import "../../assets/style/moleculescss/AdminListRent.css";
-
 // import MyFunction from "../js/graficaDeBarras"
 
 function AdminListRent() {
@@ -72,11 +70,11 @@ function AdminListRent() {
   return (
     <>
       <div>
-        <h1 className="fs-1 titulo5Mandamientos text-center p-5">
-          Rentas pendientes a aceptar ETC.
+        <h1 className="fs-1 titulo5Mandamientos text-center p-4">
+          Informes
         </h1>
         <div className="ContainerListRent">
-          <div className="fs-6 marginButtom">
+          <div className="marginButtom">
             <button
               className="botonFlogin"
               onClick={() => {
@@ -101,24 +99,24 @@ function AdminListRent() {
             >
               Dashboard||Ganacias
             </button>
-            {/* <button className="botonFlogin" onClick={e=>handlerClickDashboard(e,4)}>Activar función.....</button> */}
+          <button className="botonFlogin" onClick={e=>handlerClickDashboard(e,4)}>Activar función.....</button> 
 
-            <button
+          <button
               className="botonFlogin"
               onClick={() => {
                 setIsViewContext(5);
               }}
             >
               Vista Num 5 So nesesario{" "}
-            </button>
+            </button> 
           </div>
           {IsViewContext === 1 || IsViewContext === 2 ? (
             // las vistas de Rentas pendientes Y rentas Afinalizar se encuentran en este parentheses
             <>
-              <table className="table-responsive table-hover">
+              <table className="table-responsive table-hover text-center acomodacionTabla">
                 <thead>
                   <tr>
-                    <th scope="row">-</th>
+                    <th scope="row ">-</th>
                     <th scope="col">ID Paquete</th>
                     <th scope="col">Fecha de inicio</th>
                     <th scope="col">Hora de inicio</th>
@@ -153,9 +151,9 @@ function AdminListRent() {
               ) : (
                 <>
                   {console.log("nulo" + JSON.stringify(isRentaUsuario))}
-                  <div className="cont-vermas">
+                  <div className="cont-vermas ">
                     <h1>Información de Reservas</h1>
-                    <table className="table-responsive">
+                    <table className="table-responsive ">
                       <tr>
                         <th>Fecha de Inicio</th>
                         <td>{isRentaUsuario[0].returnRenta[0].fechaInicio}</td>
@@ -211,7 +209,6 @@ function AdminListRent() {
           ) : IsViewContext === 4 ? (
             // en este paretesis se encuentra la viata 4 de Ganacias o dashboars
             <>
-              <h1>VIEW NUM 4 estilo Ñañinel,.....</h1>
               <AdminDashboard/>
             </>
           ) : (

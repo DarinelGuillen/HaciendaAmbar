@@ -27,13 +27,13 @@ function AdminDashboard() {
 
   useEffect(() => {
     const data2 = {
-      labels: ["Paquete 1", "Paquete 2", "Paquete 3", "Paquete 4"],
+      labels: ["Paquete matoymente vendido", "Paquete menormente vendido", "Paquete normalmente vendido"],
       datasets: [
         {
           label: "Porcentaje de paquetes",
-          data: [40, 10, 30, 20],
-          backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED"],
-          hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED"],
+          data: [40, 10, 30],
+          backgroundColor: ["#ED0302", "#9C2727", "#74393A"],
+          hoverBackgroundColor: ["#4B4B4C", "#4B4B4C", "#4B4B4C"],
         },
       ],
     };
@@ -42,11 +42,11 @@ function AdminDashboard() {
   useEffect(() => {
     //Este num 3
     const data = {
-      labels: ["A", "B", "C", "D", "E"],
+      labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
       datasets: [
         {
-          label: "Datos",
-          data: [10, 20, 30, 40, 50],
+          label: "Ingresos",
+          data: [10, 20, 30, 40, 50, 80, 10, 20, 30, 40, 50, 100],
           backgroundColor: [
             "#FF6384",
             "#36A2EB",
