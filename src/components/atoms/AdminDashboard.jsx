@@ -7,11 +7,9 @@ function AdminDashboard() {
     return ( 
        <>
 
-{/*  ñañinel esta etiqueta solo hace falta importar el js pero ño pude aiuda */}
+       {/*  ñañinel esta etiqueta solo hace falta importar el js pero ño pude aiuda */}
         <canvas id="densityChart" width="600" height="400"></canvas>
 {/* ------------------------------------------------------------------------------------------------- */}
-
-
 
           <div id="page-top">
             <div id="wrapper">

@@ -1,4 +1,4 @@
-
+/* 
 
 var densityCanvas = document.getElementById("densityChart");
 
@@ -16,4 +16,4 @@ var barChart = new Chart(densityCanvas, {
     labels: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
     datasets: [densityData]
   }
-});
+}); */
