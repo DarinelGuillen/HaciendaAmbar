@@ -1,0 +1,43 @@
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.chart-container>div {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.chart-container>div canvas {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .chart-container>div {
+        width: 30%;
+    }
+
+    .left40 {
+        width: 40%;
+    }
+
+    .center30 {
+        width: 30%;
+    }
+
+    .rigth30 {
+        width: 30%;
+    }
+
+    .chart-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .chart-container>div {
+        margin-bottom: 0;
+    }
+}
