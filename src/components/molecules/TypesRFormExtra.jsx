@@ -26,73 +26,55 @@ function TypesRFormExtra() {
   const DatosDeReserva = useRef();
   const navigate = useNavigate();
 
-  const handlerClickConfirmarCampos = (e) => {
+  const handlerClickConfirmarCampos = async (e) => {
     e.preventDefault();
     const observacionesForm = new FormData(DatosDeReserva.current);
-    // console.log(checked);
-
-    const trueKeys = Object.entries(checked)
+    const trueKeys = await Object.entries(checked)
       .filter(([key, value]) => value === true)
       .map(([key, value]) => key);
-    // console.log("trueKeys", trueKeys);
     let trueKey = trueKeys;
-    // console.log("39 let trueKey=(trueKeys)" + trueKey);
     setIsRentaUsuario({
       ...isRentaUsuario,
       newArray: trueKey,
     });
-    setTimeout(() => {
-      console.log(
-        "🚀 ~ file: TypesRFormExtra.jsx:48 ~ setTimeout ~ checked:",
-        JSON.stringify(checked)
-      );
-      console.log(
-        "🚀 ~ file: TypesRFormExtra.jsx:46 ~ setTimeout ~ isRentaUsuario:",
-        JSON.stringify(isRentaUsuario)
-      );
-    }, 2000);
-
-    ////POST Fetch
-    // Datos De JSON
+    console.log("trueKey:", trueKey);
+    console.log("trueKeys:", trueKeys);
     const currentDate = new Date();
     const CurrentDate = currentDate.toISOString();
     console.log("isIduser", isIduser);
-    
-    // fetch
-    setTimeout(() => {
-      let url = "https://localhost/rentasUsuario";
-      let options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${isToken}`,
-        },
-        body: JSON.stringify({
-          idPaquete: String(isRentaUsuario.isPaqueteID || "No ID"),
-          idUser: String(isIduser),
-          fechaInicio: String(isRentaUsuario.fechaDeEvento),
-          horaDeInicio: String(isRentaUsuario.horaDeInicio),
-          horaDeFinalizacion: String(isRentaUsuario.horaDeFinalizacion),
-          fechaDeReserva: String(CurrentDate),
-          Extras: isRentaUsuario.newArray,
-          estadoRenta: false,
-          observaciones: String(observacionesForm.get("Observaciones")),
-          SeEjecutoConExitoLarenta: false,
-          LinkFotos: "LINK HERE",
-        }),
-      };
-      console.log("🚀 ~ file: TypesRFormExtra.jsx:84 ~ setTimeout ~ options:", JSON.stringify(options))
-
-      fetch(url, options)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          console.log("INSIDE FETCH");
-          navigate("/MyAccount");
-        })
-        .catch((error) => console.error(error));
-    }, 2000);
+    let url = "https://localhost/rentasUsuario";
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${isToken}`,
+      },
+      body: JSON.stringify({
+        idPaquete: String(isRentaUsuario.isPaqueteID || "No ID"),
+        idUser: String(isIduser),
+        fechaInicio: String(isRentaUsuario.fechaDeEvento),
+        horaDeInicio: String(isRentaUsuario.horaDeInicio),
+        horaDeFinalizacion: String(isRentaUsuario.horaDeFinalizacion),
+        fechaDeReserva: String(CurrentDate),
+        Extras: isRentaUsuario.newArray ||trueKey,
+        estadoRenta: false,
+        observaciones: String(observacionesForm.get("Observaciones")),
+        SeEjecutoConExitoLarenta: false,
+        LinkFotos: "LINK HERE",
+      }),
+    };
+    console.log("🚀 ~ file: TypesRFormExtra.jsx:66 ~ handlerClickConfirmarCampos ~ options:", JSON.stringify(options))
+    try {
+      const response = await fetch(url, options);
+      const data = await response.json();
+      console.log("data:", data);
+      console.log("INSIDE FETCH");
+      navigate("/MyAccount");
+    } catch (error) {
+      console.error(error);
+    }
   };
+  
 
   const checkedInitial = RentaIndividuales.reduce((obj, RentaIndividual) => {
     if (isTipoRenta === 1 && RentaIndividual.cortoPlazo === true) {

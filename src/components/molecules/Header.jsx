@@ -11,7 +11,10 @@ import "../../assets/img/LogoColor.png"
 function Header() {
   const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
   const { isTipoRenta, setIsTipoRenta } = useContext(TipoRentaContext);
-
+  const HandlerClickLogOut=(e)=>{
+    e.preventDefault()
+    setIsLoggedIn(false)
+  }
   return (
     <>
 
@@ -44,7 +47,7 @@ function Header() {
                 </li>
                 <li className="nav-item">
                   <Link to="/">
-                    <a className="nav-link active">log out</a>
+                  <a className="nav-link active" onClick={(e) => HandlerClickLogOut(e)}>Log out</a>
                   </Link>
                 </li>
               </>
