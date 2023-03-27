@@ -209,37 +209,55 @@ function TypesRFormExtra() {
                             </div>
                           ) : isTipoRenta === 2 &&
                             RentaIndividual.normal === true ? (
-                            <div
-                              key={RentaIndividual._id}
-                              className="renta-individual-wrapper"
+                          <div
+                            key={RentaIndividual._id}
+                            className="renta-individual-wrapper"
                             >
-                              <CheckBox
-                                key={RentaIndividual._id}
-                                name={RentaIndividual._id}
-                                checked={checked[RentaIndividual._id]}
-                                setChecked={(e) =>
-                                  handleClickCheckBox(e, RentaIndividual._id)
-                                }
-                                label={RentaIndividual.value}
-                                className="renta-individual-checkbox"
-                              />
-                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                <div class="row align-items-center no-gutters">
+                                  <div class="form-check marginleftCheck">
+                                    <CheckBox
+                                      key={RentaIndividual._id}
+                                      name={RentaIndividual._id}
+                                      checked={checked[RentaIndividual._id]}
+                                      setChecked={(e) =>
+                                        handleClickCheckBox(e, RentaIndividual._id)
+                                      }
+                                    label={RentaIndividual.value}
+                                    className="renta-individual-checkbox"
+                                    />
+                                  </div>
+                                </div>
+                                <div id="id_martin"></div>
+                              </li>
+                            </ul>
+                          </div>
                           ) : isTipoRenta === 3 &&
                             RentaIndividual.ultimoMinuto === true ? (
                             <div
                               key={RentaIndividual._id}
                               className="renta-individual-wrapper"
                             >
-                              <CheckBox
-                                key={RentaIndividual._id}
-                                name={RentaIndividual._id}
-                                checked={checked[RentaIndividual._id]}
-                                setChecked={(e) =>
-                                  handleClickCheckBox(e, RentaIndividual._id)
-                                }
-                                label={RentaIndividual.value}
-                                className="renta-individual-checkbox"
-                              />
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                  <div class="row align-items-center no-gutters">
+                                    <div class="form-check marginleftCheck">
+                                      <CheckBox
+                                        key={RentaIndividual._id}
+                                        name={RentaIndividual._id}
+                                        checked={checked[RentaIndividual._id]}
+                                        setChecked={(e) =>
+                                          handleClickCheckBox(e, RentaIndividual._id)
+                                        }
+                                        label={RentaIndividual.value}
+                                        className="renta-individual-checkbox"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div id="id_martin"></div>
+                                </li>
+                              </ul>
                             </div>
                           ) : null;
                         })}
