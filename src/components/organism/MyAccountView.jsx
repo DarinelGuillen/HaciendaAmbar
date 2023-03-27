@@ -175,7 +175,6 @@ function MyAccountView() {
     <>
       <div>
         <div>
-          <h1>HOLAAAAAAAAAAAAAAAAAAAAAAA BorrrAME </h1>
           {load && isRentaUser.length>=0 &&
             isRentaUser.map((renta) => {
               return (
