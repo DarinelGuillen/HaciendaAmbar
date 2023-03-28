@@ -298,6 +298,64 @@ function GroupCard() {
                   </div>
                 </div>
 
+
+                
+
+                <div className="carousel-item">
+                  <div className="container d-flex flex-column justify-content-center h-100">
+                    <div className="row">
+                      <div className="col">
+                        <div className="card-group">
+                          <div className="card estilo-card">
+                            <div className="card-body estilo-body">
+                              <img
+                                src="src/assets/img/LogoColor.png"
+                                className="rounded mx-auto d-block imgIconoCardsPaquetes"
+                              ></img>
+                              <h4 className="fs-3 card-tittle estiloTituloCard">
+                               DJ y Pista Led
+                              </h4>
+                              <p className="card-text textContentCard">
+                                {" "}
+                                Nuestro paquete incluye:
+                                <br />
+                                <br />- 1 DJ Versátil por 5 hrs.
+                                <br />
+                                <p className="precioPaquetes">$12,000.00</p>
+                              </p>
+                              <center>
+                                <button
+                                  className="botonPaquete"
+                                  onClick={(e) =>
+                                    handlerClickPaquete(
+                                      e,
+                                      "64150066dc851cf1b4aed5ca"
+                                    )
+                                  }
+                                >
+                                  Ver más
+                                </button>
+                              </center>
+                            </div>
+                          </div>
+                          <div className="card estilo-card">
+                            <div className="card-body estilo-body">
+                         
+                            </div>
+                          </div>
+                          <div className="card estilo-card">
+                            <div className="card-body estilo-body">
+                          
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
                 <div>
                   <a
                     className="carousel-control-prev"
@@ -317,6 +375,15 @@ function GroupCard() {
                     <span className="carousel-control-next-icon"></span>
                     <span className="visually-hidden">Next</span>
                   </a>
+                  <a
+                    className="carousel-control-prev"
+                    href="#carousel-2"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </a>
                 </div>
 
                 <ol className="carousel-indicators invisible">
@@ -332,141 +399,6 @@ function GroupCard() {
           </div>
         </div>
       </div>
-
-      {/*  <div className="container">
-                <div className="row">
-                    <div className="col-md-8 col-xl-6 text-center mx-auto">
-                        <h2>Paquetes</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="carousel slide" data-bs-ride="false" id="carousel-2">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="container d-flex flex-column justify-content-center h-100">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="card-group">
-                                                    <div class="card boderCard">
-                                                        <div class="card-body cardBody">
-                                                            <img class="rounded mx-auto d-block roundedBBlock" src="assets/img/image%202.png" />
-                                                            <h4 class="card-title">Entelado y Set de fotos.</h4>
-                                                            <p class="card-text">Nuestro paquete incluye:<br/>
-                                                                <br/>Tiras de luces led colgantes.
-                                                                <br/>Aro Colgante de Cerezos/ Hilos Chinos/ Pedrería.<br/>
-                                                                <br/>Elementos de cortesía.<br/>
-                                                                <br/>Mesa blanca en madera tallada para mesa principal.<br/>
-                                                                <br/>$10,500.00
-                                                            </p>
-                                                            <button class="btn btn-primary" type="button">Ver más</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card boderCard">
-                                                        <div class="card-body cardBody">
-                                                            <img class="rounded mx-auto d-block roundedBBlock" src="assets/img/image%202.png" />
-                                                            <h4 class="card-title">Entelado y Set de fotos.</h4>
-                                                            <p class="card-text">Nuestro paquete incluye:<br/>
-                                                                <br/>Tiras de luces led colgantes.
-                                                                <br/>Aro Colgante de Cerezos/ Hilos Chinos/ Pedrería.<br/>
-                                                                <br/>Elementos de cortesía.<br/>
-                                                                <br/>Mesa blanca en madera tallada para mesa principal.<br/>
-                                                                <br/>$10,500.00
-                                                            </p>
-                                                            <button class="btn btn-primary" type="button">Ver más</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card boderCard">
-                                                        <div class="card-body cardBody">
-                                                            <img class="rounded mx-auto d-block roundedBBlock" src="assets/img/image%202.png" />
-                                                            <h4 class="card-title">Entelado y Set de fotos.</h4>
-                                                            <p class="card-text">Nuestro paquete incluye:<br/>
-                                                                <br/>Tiras de luces led colgantes.
-                                                                <br/>Aro Colgante de Cerezos/ Hilos Chinos/ Pedrería.<br/>
-                                                                <br/>Elementos de cortesía.<br/>
-                                                                <br/>Mesa blanca en madera tallada para mesa principal.<br/>
-                                                                <br/>$10,500.00
-                                                            </p>
-                                                            <button class="btn btn-primary" type="button">Ver más</button>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container d-flex flex-column justify-content-center h-100">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="card-group">
-                                                    <div class="card boderCard">
-                                                        <div class="card-body cardBody">
-                                                            <img class="rounded mx-auto d-block roundedBBlock" src="assets/img/image%202.png" />
-                                                            <h4 class="card-title">Entelado y Set de fotos.</h4>
-                                                            <p class="card-text">Nuestro paquete incluye:<br/>
-                                                                <br/>Tiras de luces led colgantes.
-                                                                <br/>Aro Colgante de Cerezos/ Hilos Chinos/ Pedrería.<br/>
-                                                                <br/>Elementos de cortesía.<br/>
-                                                                <br/>Mesa blanca en madera tallada para mesa principal.<br/>
-                                                                <br/>$10,500.00
-                                                            </p>
-                                                            <button class="btn btn-primary" type="button">Ver más</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card boderCard">
-                                                        <div class="card-body cardBody">
-                                                            <img class="rounded mx-auto d-block roundedBBlock" src="assets/img/image%202.png" />
-                                                            <h4 class="card-title">Entelado y Set de fotos.</h4>
-                                                            <p class="card-text">Nuestro paquete incluye:<br/>
-                                                                <br/>Tiras de luces led colgantes.
-                                                                <br/>Aro Colgante de Cerezos/ Hilos Chinos/ Pedrería.<br/>
-                                                                <br/>Elementos de cortesía.<br/>
-                                                                <br/>Mesa blanca en madera tallada para mesa principal.<br/>
-                                                                <br/>$10,500.00
-                                                            </p>
-                                                            <button class="btn btn-primary" type="button">Ver más</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card boderCard">
-                                                        <div class="card-body cardBody">
-                                                            <img class="rounded mx-auto d-block imgIconoCardsPaquetes" src="src/assets/img/LogoColor.png" />
-                                                            <h4 class="card-title">Entelado y Set de fotos.</h4>
-                                                            <p class="card-text">Nuestro paquete incluye:<br/>
-                                                                <br/>Tiras de luces led colgantes.
-                                                                <br/>Aro Colgante de Cerezos/ Hilos Chinos/ Pedrería.<br/>
-                                                                <br/>$10,500.00
-                                                            </p>
-                                                            <button class="btn btn-primary" type="button">Ver más</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </a>
-                            </div>
-
-                            <ol class="carousel-indicators">
-                                <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
-                                <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
-                            </ol>
-
-                        </div>
-                    </div>
-                </div>
-            </div> */}
     </>
   );
 }
