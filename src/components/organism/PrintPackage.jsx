@@ -1,5 +1,5 @@
 import { useRef, useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, json } from "react-router-dom";
 
 import PaqueteContext from "../../contexts/PaqueteContext";
 import UserContext from "../../contexts/UserContext";
@@ -28,7 +28,8 @@ function PrintPackage() {
         // alert("Tu X paquete a sido agregado al Tu carrito\n");
         navigate("/TypesRents");
         console.log("PRINTPACKAGE ORGANISM   setIsRentaUsuario", isRentaUsuario);
-      console.log("isPaquete._id", isPaquete._id);
+        console.log("ispaqueteIMG",JSON.stringify(isPaquete.img));
+      console.log("isPaquete._id",  JSON.stringify(isPaquete));
       console.log("isRentaUsuario", JSON.stringify(isRentaUsuario));
       // }, 1000);
     // }, 1000);
@@ -64,12 +65,9 @@ function PrintPackage() {
         </div>
       </div>
       <div className="contenedorPadreImagenes">
-        <img src="src/assets/img/enteladoYSeyDeFotos1.png" className="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos2.png" className="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos3.png" className="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos4.png" className="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos5.png" className="img-thumbnail" alt="..."></img>
-        <img src="src/assets/img/enteladoYSeyDeFotos6.png" className="img-thumbnail" alt="..."></img>
+        {isPaquete.img &&isPaquete.img.map((img)=>{
+          return <img src={img} className="img-thumbnail" alt="..."/>;
+        })}
       </div>
       <div className="paddincito"></div>
       <center>
