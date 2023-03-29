@@ -174,7 +174,7 @@ function TypesRFormExtra() {
                     </>
                   ) : (
                     <>
-                      <div class="card shadow mb-4 ">
+                      <div className="card shadow mb-4 ">
                         {RentaIndividuales.map((RentaIndividual) => {
                           // console.log("Acá andamos" + JSON.stringify(RentaIndividual));
                           // console.log("Tipo renta: " + isTipoRenta);
@@ -184,10 +184,10 @@ function TypesRFormExtra() {
                               key={RentaIndividual._id}
                               className="renta-individual-wrapper"
                             >
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                  <div class="row align-items-center no-gutters">
-                                    <div class="form-check marginleftCheck">
+                              <ul className="list-group list-group-flush">
+                                <li className="list-group-item">
+                                  <div className="row align-items-center no-gutters">
+                                    <div className="form-check marginleftCheck">
                                       <CheckBox
                                         key={RentaIndividual._id}
                                         name={RentaIndividual._id}
@@ -213,10 +213,10 @@ function TypesRFormExtra() {
                             key={RentaIndividual._id}
                             className="renta-individual-wrapper"
                             >
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                <div class="row align-items-center no-gutters">
-                                  <div class="form-check marginleftCheck">
+                            <ul className="list-group list-group-flush">
+                              <li className="list-group-item">
+                                <div className="row align-items-center no-gutters">
+                                  <div className="form-check marginleftCheck">
                                     <CheckBox
                                       key={RentaIndividual._id}
                                       name={RentaIndividual._id}
@@ -239,10 +239,10 @@ function TypesRFormExtra() {
                               key={RentaIndividual._id}
                               className="renta-individual-wrapper"
                             >
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                  <div class="row align-items-center no-gutters">
-                                    <div class="form-check marginleftCheck">
+                              <ul className="list-group list-group-flush">
+                                <li className="list-group-item">
+                                  <div className="row align-items-center no-gutters">
+                                    <div className="form-check marginleftCheck">
                                       <CheckBox
                                         key={RentaIndividual._id}
                                         name={RentaIndividual._id}

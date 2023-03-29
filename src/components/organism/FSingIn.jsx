@@ -88,15 +88,15 @@ function FSingIn() {
                             <label className="linksForms">Regresar</label>
                           </Link>
                         </div>
-                        <div class="container clasesRedes">
-                          <div class="row">
-                            <div class="col">
+                        <div className="container clasesRedes">
+                          <div className="row">
+                            <div className="col">
                               <a href="tel:529613668435"><img src="src/assets/img/WhatsAppicono.png"  alt="..."/></a>
                             </div>
-                            <div class="col">
+                            <div className="col">
                               <a href="https://www.instagram.com/ambar.haciendamx/"><img src="src/assets/img/Instagramicono.png" /></a>
                             </div>
-                            <div class="col">
+                            <div className="col">
                               <a href="https://www.facebook.com/ambar.haciendamx"><img src="src/assets/img/Facebookicono.png" alt="..."/></a>
                             </div>
                           </div>
