@@ -75,7 +75,7 @@ function AdminListRent() {
         </h1>
         <div className="ContainerListRent">
           <div className="marginButtom">
-            <button
+            <center><button
               className="botonFlogin"
               onClick={() => {
                 setIsViewContext(1);
@@ -97,18 +97,9 @@ function AdminListRent() {
                 setIsViewContext(4);
               }}
             >
-              Dashboard||Ganacias
-            </button>
-          <button className="botonFlogin" onClick={e=>handlerClickDashboard(e,4)}>Activar función.....</button> 
-
-          <button
-              className="botonFlogin"
-              onClick={() => {
-                setIsViewContext(5);
-              }}
-            >
-              Vista Num 5 So nesesario{" "}
-            </button> 
+              Dashboard
+            </button></center>
+         
           </div>
           {IsViewContext === 1 || IsViewContext === 2 ? (
             // las vistas de Rentas pendientes Y rentas Afinalizar se encuentran en este parentheses
@@ -213,7 +204,7 @@ function AdminListRent() {
             </>
           ) : (
             <>
-              <h1>Posible vista 5 si necesario </h1>
+              
             </>
           )}
         </div>

@@ -12,13 +12,13 @@ function AdminDashboard() {
 
   useEffect(() => {
     const data1 = {
-      labels: ["Categoría 1", "Categoría 2", "Categoría 3"],
+      labels: ["Corto plazo", "Normal", "Último minuto"],
       datasets: [
         {
           label: "Porcentaje de ventas",
-          data: [30, 40, 30],
-          backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-          hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+          data: [15, 80, 5],
+          backgroundColor: ["#ED0302", "#ED0302", "#ED0302"],
+          hoverBackgroundColor: ["#ED0302", "#ED0302", "#ED0302"],
         },
       ],
     };
@@ -39,47 +39,7 @@ function AdminDashboard() {
     };
     setChartData2(data2);
   }, []);
-  useEffect(() => {
-    //Este num 3
-    const data = {
-      labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-      datasets: [
-        {
-          label: "Ingresos",
-          data: [10, 20, 30, 40, 50, 80, 40, 20, 60, 40, 50, 100],
-          backgroundColor: [
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-            "#ED0302",
-          ],
-          hoverBackgroundColor: [
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-            "#4B4B4C",
-          ],
-        },
-      ],
-    };
-    setChartData3(data);
-  }, []);
+
 
   useEffect(() => {
     if (chartRef1.current) {
@@ -124,7 +84,6 @@ function AdminDashboard() {
           <canvas id="myChart2"></canvas>
         </div>
         <div className="rigth30">
-          <canvas id="myChart3"></canvas>
         </div>
       </div>
     </>
