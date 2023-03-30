@@ -63,7 +63,7 @@ function MyAccountView() {
               const documentDefinition = {
                 content: [
                   {
-                    text: "Hacienda Hambar",
+                    text: "Hacienda Ambar",
                     style: "header",
                   },
                   { text: "ID de Renta: ", bold: true, fontSize: 30 },
@@ -80,7 +80,7 @@ function MyAccountView() {
                   //USER
                   { text: "ID de Usuario: ", bold: true },
                   { text: renta.idUser },
-                  { text: " name: ", bold: true },
+                  { text: " Nombre: ", bold: true },
                   { text: data.nombreCompleto },
                   { text: "Contacto: ", bold: true },
                   { text: data.correo },
@@ -196,15 +196,15 @@ function MyAccountView() {
                               {renta.horaDeInicio}
                             </label>
                             <label className="fs-5 text-center">
-                              Usted hizo la recerva = {renta.fechaDeReserva}
+                              Usted hizo la reserva = {renta.fechaDeReserva}
                             </label>
                             <label className="fs-5 text-center">
                               Estado de renta =
                               {renta.estadoRenta ? (
                                 <>
                                   <label className="fs-5 text-center">
-                                    Su renta a sido aprovada, pogase en contacto
-                                    con 961-000-00-00 para cuarquier duda
+                                    Su renta ha sido aprovada, pogase en contacto
+                                    con +52 961-366-8435 para cuarquier duda
                                   </label>
                                 </>
                               ) : (
@@ -240,7 +240,7 @@ function MyAccountView() {
                                     los bellos recuerdos del evento.
                                   </p>
                                   <p>
-                                    "La renta "{renta._id}" a sido finalizada"
+                                    "La renta "{renta._id}" ha sido finalizada"
                                   </p>
                                   <p>"{renta.LinkFotos}"</p>
                                   <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -255,7 +255,7 @@ function MyAccountView() {
                                     {renta.LinkFotos === "LINK HERE" ? (
                                       <>
                                         <label>
-                                          Sus fotos todavia no an sido subidas
+                                          Sus fotos todavía no han sido subidas
                                         </label>
                                       </>
                                     ) : (

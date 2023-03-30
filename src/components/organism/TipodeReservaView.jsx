@@ -90,7 +90,7 @@ function TipodeReservaView() {
                     <div className="mb-3">
                       <center><p className="fs-2 tipReervaView8" >El tipo de reserva normal 
                         es en la cual se lleva con anticipo y
-                        se puede ver con detallamiento y el alcance del evento a
+                        se puede ver con mayor detalle y el alcance del evento a
                         realizar.
                       </p></center>
                     </div>

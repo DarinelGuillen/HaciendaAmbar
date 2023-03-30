@@ -53,7 +53,7 @@ function PrintPackage() {
           {/*Los nuevos datos aqui Dario */}
           {/* Cortecia */}
           {isPaquete.elemDeCortesia=="null"?(<> </>):(<>
-            <label className="fs-2 subTituloPaquetes">Elementos de cortecía</label>
+            <label className="fs-2 subTituloPaquetes">Elementos de cortesía</label>
           <label className="fs-5 informacionPaquetesAmbar">{isPaquete.elemDeCortesia}</label>
           </>)}
           {/* Adicionales */}
