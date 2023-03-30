@@ -21,3 +21,7 @@
   background-color: transparent;
   border: none;
 }
+.borderNavbarcito{
+  border-color: rgb(191, 36, 36) 1rem;
+  color: #b62020;
+}
