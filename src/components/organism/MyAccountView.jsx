@@ -7,6 +7,7 @@ import TipoRentaContext from "../../contexts/TipoRentaContext";
 import "../../assets/style/moleculescss/TypesRFormExtra.css";
 import ButtonStyled from "../atoms/ButtonStyled";
 import IMGTESTLOGO from "../../assets/img/LogoColor.png";
+// import PruebaPdf from "../../containers/PruebaPdf";
 function MyAccountView() {
   const { isTipoRenta, setIsTipoRenta } = useContext(TipoRentaContext);
   const { isIduser, setIsiduser } = useContext(IdContex);
