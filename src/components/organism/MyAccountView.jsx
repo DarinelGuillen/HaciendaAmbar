@@ -65,89 +65,94 @@ function MyAccountView() {
               let x=30
               // Agrega los datos al documento
               doc.setFontSize(12);
-              doc.text("Hacienda Hambar ", 5, 5);
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
+              doc.text("Hacienda Hambar ", 90, 5);
+              doc.setFont("Quattrocento","bold");
               doc.text("ID de Renta: ", 10, 10);
-              doc.setFont("helvetica","normal");
-              doc.text(renta._id||"none", 40, 10);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta._id||"none", 37, 10);
 
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("ID de Paquete: ", 10, 20);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.idPaquete||"none", 40, 20);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.idPaquete||"none", 38, 20);
 
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("Nombre del paquete: ", 10, 30);
-              doc.setFont("helvetica","normal");
-              doc.text(paquete.nombrePaquete||"none", 60, 30);
+              doc.setFont("Quattrocento","normal");
+              doc.text(paquete.nombrePaquete||"none", 50, 30);
               
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("Precio: ", 10, 40);
-              doc.setFont("helvetica","normal");
-              doc.text(JSON.stringify(paquete.precio)||"none", 40, 40);
+              doc.setFont("Quattrocento","normal");
+              doc.text("$" + JSON.stringify(paquete.precio)||"none", 25, 40);
 
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("ID de Usuario: ", 10, 50);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.idUser||"none", 40, 50);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.idUser||"none", 38, 50);
 
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("Nombre: ", 10, 60);
-              doc.setFont("helvetica","normal");
-              doc.text(data.nombreCompleto||"none", 40, 60);
+              doc.setFont("Quattrocento","normal");
+              doc.text(data.nombreCompleto||"none", 27, 60);
 
-              doc.setFont("helvetica","bold");
-              doc.text("Contacto: ", 10, 70);
-              doc.setFont("helvetica","normal");
-              doc.text(data.correo||"none", 40, 70);
-              doc.text(data.numTel||"none", 40, 75);
+              doc.setFont("Quattrocento","bold");
+              doc.text("Correo eléctronico: ", 10, 70);
+              doc.setFont("Quattrocento","normal");
+              doc.text(data.correo||"none", 48, 70);
 
-              doc.setFont("helvetica","bold");
-              doc.text("Fecha de Inicio: ", 10, 80);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.fechaInicio||"none", 40, 80);
+              doc.setFont("Quattrocento","bold");
+              doc.text("Número de teléfono: ", 10, 80);
+              doc.setFont("Quattrocento","normal");
+              doc.text(data.numTel||"none", 49, 80);
 
-              doc.setFont("helvetica","bold");
-              doc.text("Hora de Inicio: ", 10, 90);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.horaDeInicio||"none", 50, 90);
+              doc.setFont("Quattrocento","bold");
+              doc.text("Fecha de Inicio: ", 10, 90);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.fechaInicio||"none", 40, 90);
 
-              doc.setFont("helvetica","bold");
-              doc.text("Hora de Finalización: ", 10, 100);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.horaDeFinalizacion||"none", 40, 100);
+              doc.setFont("Quattrocento","bold");
+              doc.text("Hora de Inicio: ", 10, 100);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.horaDeInicio||"none", 38, 100);
 
-              doc.setFont("helvetica","bold");
-              doc.text("Fecha de Reserva: ", 10, 110);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.fechaDeReserva|| "Sin fecha de reserva", 50, 110);
+              doc.setFont("Quattrocento","bold");
+              doc.text("Hora de Finalización: ", 10, 110);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.horaDeFinalizacion||"none", 50, 110);
+
+              doc.setFont("Quattrocento","bold");
+              doc.text("Fecha de Reserva: ", 10, 120);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.fechaDeReserva|| "Sin fecha de reserva", 45, 120);
               let y = 130;
               if (extrasNames.length > 0&&extrasNames) {
-                doc.setFont("helvetica", "bold");
-                doc.text("Extras: ", 40, 120);
-                doc.setFont("helvetica", "normal");
+                doc.setFont("Quattrocento", "bold");
+                doc.text("Extras: ", 10, 100);
+                doc.setFont("Quattrocento", "normal");
                 
                 extrasNames.forEach((extra) => {
-                  doc.text(extra, 20, y);
+                  doc.text(extra, 5, y);
                   y += 10;
                 });
               }
               
 
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("Estado de la Renta: ", 10, y+10);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.estadoRenta ? "Activa" : "Inactiva", 40, y+20);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.estadoRenta ? "Activa" : "Inactiva", 10, y+20);
 
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("Observaciones: ", 10, y + 40);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.observaciones||"none", 40, y+50);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.observaciones||"none", 10, y+50);
 
-              doc.setFont("helvetica","bold");
+              doc.setFont("Quattrocento","bold");
               doc.text("¿Se ejecutó con éxito la renta?: ", 10, y+60);
-              doc.setFont("helvetica","normal");
-              doc.text(renta.SeEjecutoConExitoLarenta ? "No" : "Yes", 40, y+70);
+              doc.setFont("Quattrocento","normal");
+              doc.text(renta.SeEjecutoConExitoLarenta ? "No" : "Yes", 10, y+70);
 
               
               doc.save("HaciendaHambar.pdf");
