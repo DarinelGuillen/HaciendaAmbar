@@ -1,13 +1,13 @@
 import { useEffect, useContext, useState } from "react";
-import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
+import React from 'react';
+import jsPDF from 'jspdf';
 import IdContex from "../../contexts/IdContex";
 import TokenContext from "../../contexts/TokenContext";
 import TipoRentaContext from "../../contexts/TipoRentaContext";
 import "../../assets/style/moleculescss/TypesRFormExtra.css";
 import ButtonStyled from "../atoms/ButtonStyled";
 import IMGTESTLOGO from "../../assets/img/LogoColor.png";
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+// import PruebaPdf from "../../containers/PruebaPdf";
 function MyAccountView() {
   const { isTipoRenta, setIsTipoRenta } = useContext(TipoRentaContext);
   const { isIduser, setIsiduser } = useContext(IdContex);
@@ -23,7 +23,7 @@ function MyAccountView() {
   function generatePDF(e, renta) {
     e.preventDefault();
     console.log("HOLA");
-        console.log("generatePDF");
+    console.log("generatePDF");
     console.log("renta== ? ", renta);
     let extrasNames = [];
     allRentaIndividuales.forEach((individual) => {
@@ -41,7 +41,7 @@ function MyAccountView() {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${isToken}`,
+          Authorization: `Bearer ${isToken}`,
         },
       };
       fetch(url, options)
@@ -55,73 +55,103 @@ function MyAccountView() {
           fetch(url2, options)
             .then((response) => response.json())
             .then((data) => {
-              console.log(
-                "🚀 ~ file: MyAccountView.jsx:54 ~ fetch ~ data:",
-                data
-              );
+              console.log("paquete\n",JSON.stringify(paquete));
+              console.log("data\n",JSON.stringify(data));
+              console.log("renta\n",JSON.stringify(renta));
+              console.log("extrasNames\n",JSON.stringify(extrasNames));
+              /////////////////////7
+              // Crea una instancia de jsPDF
+              const doc = new jsPDF();
+              let x=30
+              // Agrega los datos al documento
+              doc.setFontSize(12);
+              doc.text("Hacienda Hambar ", 5, 5);
+              doc.setFont("helvetica","bold");
+              doc.text("ID de Renta: ", 10, 10);
+              doc.setFont("helvetica","normal");
+              doc.text(renta._id||"none", 40, 10);
 
-              const documentDefinition = {
-                content: [
-                  {
-                    text: "Hacienda Ambar",
-                    style: "header",
-                  },
-                  { text: "ID de Renta: ", bold: true, fontSize: 30 },
-                  { text: renta._id },
-                  "\n",
-                  //PAQUETE
-                  { text: "ID de Paquete: ", bold: true },
-                  { text: renta.idPaquete },
-                  { text: "Nombre del paquete: ", bold: true },
-                  { text: paquete.nombrePaquete },
-                  { text: "Precio: ", bold: true },
-                  { text: paquete.precio },
-                  "\n",
-                  //USER
-                  { text: "ID de Usuario: ", bold: true },
-                  { text: renta.idUser },
-                  { text: " Nombre: ", bold: true },
-                  { text: data.nombreCompleto },
-                  { text: "Contacto: ", bold: true },
-                  { text: data.correo },
-                  { text: data.numTel },
-                  "\n",
-                  { text: "Fecha de Inicio: ", bold: true },
-                  { text: renta.fechaInicio },
-                  { text: "     Hora de Inicio: ", bold: true },
-                  { text: renta.horaDeInicio },
-                  "\n",
-                  { text: "Hora de Finalización: ", bold: true },
-                  { text: renta.horaDeFinalizacion },
-                  "\n",
-                  { text: "Fecha de Reserva: ", bold: true },
-                  { text: renta.fechaDeReserva },
-                  "\n",
-                  { text: "Extras: ", bold: true },
-                  { ul: extrasNames },
-                  "\n",
-                  { text: "Estado de la Renta: ", bold: true },
-                  { text: renta.estadoRenta ? "Activa" : "Inactiva" },
-                  "\n",
-                  { text: "Observaciones: ", bold: true },
-                  { text: renta.observaciones },
-                  "\n",
-                  { text: "¿Se ejecutó con éxito la renta?: ", bold: true },
-                  { text: renta.SeEjecutoConExitoLarenta ? "Sí" : "No" },
-                ],
-                header: {
-                  text: "Hacienda Hambar",
-                  style: "header",
-                },
-                styles: {
-                  header: {
-                    fontSize: 58,
-                    bold: true,
-                    margin: [0, 10, 0, 0],
-                  },
-                },
-              };
-              pdfMake.createPdf(documentDefinition).download("HambarDoc.pdf");
+              doc.setFont("helvetica","bold");
+              doc.text("ID de Paquete: ", 10, 20);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.idPaquete||"none", 40, 20);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Nombre del paquete: ", 10, 30);
+              doc.setFont("helvetica","normal");
+              doc.text(paquete.nombrePaquete||"none", 60, 30);
+              
+              doc.setFont("helvetica","bold");
+              doc.text("Precio: ", 10, 40);
+              doc.setFont("helvetica","normal");
+              doc.text(JSON.stringify(paquete.precio)||"none", 40, 40);
+
+              doc.setFont("helvetica","bold");
+              doc.text("ID de Usuario: ", 10, 50);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.idUser||"none", 40, 50);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Nombre: ", 10, 60);
+              doc.setFont("helvetica","normal");
+              doc.text(data.nombreCompleto||"none", 40, 60);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Contacto: ", 10, 70);
+              doc.setFont("helvetica","normal");
+              doc.text(data.correo||"none", 40, 70);
+              doc.text(data.numTel||"none", 40, 75);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Fecha de Inicio: ", 10, 80);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.fechaInicio||"none", 40, 80);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Hora de Inicio: ", 10, 90);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.horaDeInicio||"none", 50, 90);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Hora de Finalización: ", 10, 100);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.horaDeFinalizacion||"none", 40, 100);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Fecha de Reserva: ", 10, 110);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.fechaDeReserva|| "Sin fecha de reserva", 50, 110);
+              let y = 130;
+              if (extrasNames.length > 0&&extrasNames) {
+                doc.setFont("helvetica", "bold");
+                doc.text("Extras: ", 40, 120);
+                doc.setFont("helvetica", "normal");
+                
+                extrasNames.forEach((extra) => {
+                  doc.text(extra, 20, y);
+                  y += 10;
+                });
+              }
+              
+
+              doc.setFont("helvetica","bold");
+              doc.text("Estado de la Renta: ", 10, y+10);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.estadoRenta ? "Activa" : "Inactiva", 40, y+20);
+
+              doc.setFont("helvetica","bold");
+              doc.text("Observaciones: ", 10, y + 40);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.observaciones||"none", 40, y+50);
+
+              doc.setFont("helvetica","bold");
+              doc.text("¿Se ejecutó con éxito la renta?: ", 10, y+60);
+              doc.setFont("helvetica","normal");
+              doc.text(renta.SeEjecutoConExitoLarenta ? "No" : "Yes", 40, y+70);
+
+              
+              doc.save("HaciendaHambar.pdf");
+              //////////////////////
             })
             .catch((err) => console.error(err));
         })
@@ -145,7 +175,7 @@ function MyAccountView() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${isToken}`,
+        Authorization: `Bearer ${isToken}`,
       },
     };
 
@@ -161,7 +191,7 @@ function MyAccountView() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${isToken}`,
+        Authorization: `Bearer ${isToken}`,
       },
     };
 
@@ -171,11 +201,13 @@ function MyAccountView() {
         setallRentaIndividuales(data);
       });
   }, []);
+
   return (
     <>
       <div>
         <div>
-          {load && isRentaUser.length>=0 &&
+          {load &&
+            isRentaUser.length >= 0 &&
             isRentaUser.map((renta) => {
               return (
                 <>
@@ -203,8 +235,9 @@ function MyAccountView() {
                               {renta.estadoRenta ? (
                                 <>
                                   <label className="fs-5 text-center">
-                                    Su renta ha sido aprovada, pogase en contacto
-                                    con +52 961-366-8435 para cuarquier duda
+                                    Su renta ha sido aprovada, pogase en
+                                    contacto con +52 961-366-8435 para cuarquier
+                                    duda
                                   </label>
                                 </>
                               ) : (
