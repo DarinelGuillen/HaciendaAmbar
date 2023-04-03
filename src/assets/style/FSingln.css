@@ -144,7 +144,7 @@
 }
 
 .register-bg {
-    background-image: url('src/assets/img/imgRegister.png');
+    background-image: url('../img/imgRegister.png');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;

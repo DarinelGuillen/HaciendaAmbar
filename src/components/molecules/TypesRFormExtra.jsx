@@ -11,6 +11,7 @@ import RentaDelUsuarioContext from "../../contexts/RentaDelUsuarioContext";
 import UserContext from "../../contexts/UserContext";
 import IdContex from "../../contexts/IdContex";
 import TokenContext from "../../contexts/TokenContext";
+import typerent from "../../assets/img/imgTypeRentEnd.png"
 import "../../assets/img/imgTypeRentEnd.png";
 import "../../assets/style/moleculescss/TypesRFormExtra.css";
 function TypesRFormExtra() {
@@ -42,7 +43,7 @@ function TypesRFormExtra() {
     const currentDate = new Date();
     const CurrentDate = currentDate.toISOString();
     console.log("isIduser", isIduser);
-    let url = "https://localhost/rentasUsuario";
+    let url = "https://apihaciendaambar.iothings.com.mx/rentasUsuario";
     let options = {
       method: "POST",
       headers: {
@@ -90,7 +91,7 @@ function TypesRFormExtra() {
   const [checked, handleClickCheckBox] = useChecked(checkedInitial);
 
   useEffect(() => {
-    fetch("https://localhost/rentaIndividuales", {
+    fetch("https://apihaciendaambar.iothings.com.mx/rentaIndividuales", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -134,7 +135,7 @@ function TypesRFormExtra() {
               </label>
               <img
                 className="img-fluid"
-                src="src/assets/img/imgTypeRentEnd.png"
+                src={typerent}
               ></img>
             </div>
           </div>

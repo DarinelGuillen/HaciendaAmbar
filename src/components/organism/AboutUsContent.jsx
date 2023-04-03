@@ -1,5 +1,9 @@
 import "../../assets/style/AboutUsContent.css"
 import "../../assets/img/imgAboutUsUnsplash.jpg"
+import about from "../../assets/img/imgAboutUsUnsplash.jpg"
+import dario from "../../assets/img/nanio.png"
+import merlin from "../../assets/img/menin.png"
+import darinel from "../../assets/img/naninel.png"
 
 function AboutUsContent() {
     return ( 
@@ -64,7 +68,7 @@ function AboutUsContent() {
             <div className="container segundaSecAbout2">
                 <div className="row">
                     <div className="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-                        <img src="src/assets/img/imgAboutUsUnsplash.jpg" alt="" className="img-fluid imgAboutUsUnsplash"/>
+                        <img src={about} alt="" className="img-fluid imgAboutUsUnsplash"/>
                     </div>
                         <div className="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
                             <div className="content d-flex flex-column justify-content-center">
@@ -118,7 +122,7 @@ function AboutUsContent() {
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-12 mt-4 pt-2">
                         <div className="team text-center rounded p-3 py-4">
-                            <img src="src/assets/img/nanio.png" className="img-fluid avatar avatar-medium shadow rounded-pill" alt=""/>
+                            <img src={dario} className="img-fluid avatar avatar-medium shadow rounded-pill" alt=""/>
                             <div className="content mt-3">
                                 <h4 className="title mb-0">Darío Antonio Gutiérrez Álvarez</h4>
                                 <small className="text-muted">Product Owner</small>
@@ -135,7 +139,7 @@ function AboutUsContent() {
                     
                     <div className="col-lg-4 col-md-12 col-12 mt-4 pt-2">
                         <div className="team text-center rounded p-3 py-4">
-                            <img src="src/assets/img/menin.png" className="img-fluid avatar avatar-medium shadow rounded-pill" alt=""/>
+                            <img src={merlin} className="img-fluid avatar avatar-medium shadow rounded-pill" alt=""/>
                             <div className="content mt-3">
                                 <h4 className="title mb-0">José Ángel Ortega Merlin</h4>
                                 <small className="text-muted">Master Scrum</small>
@@ -152,7 +156,7 @@ function AboutUsContent() {
                     
                     <div className="col-lg-4 col-md-12 col-12 mt-4 pt-2">
                         <div className="team text-center rounded p-3 py-4">
-                            <img src="src/assets/img/naninel.png" className="img-fluid avatar avatar-medium shadow rounded-pill" alt=""/>
+                            <img src={darinel} className="img-fluid avatar avatar-medium shadow rounded-pill" alt=""/>
                             <div className="content mt-3">
                                 <h4 className="title mb-0">Christian Darinel Escobar Guillen</h4>
                                 <small className="text-muted">Scrum Team</small>

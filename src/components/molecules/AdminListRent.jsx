@@ -34,7 +34,7 @@ function AdminListRent() {
       },
     };
 
-    let url = "https://localhost/rentasUsuario/estadoFalse";
+    let url = "https://apihaciendaambar.iothings.com.mx/rentasUsuario/estadoFalse";
     fetch(url, option)
       .then((response) => response.json())
       .then((data) => {
@@ -42,7 +42,7 @@ function AdminListRent() {
         setRentsEstadoF(data);
       });
 
-    let url2 = "https://localhost/rentasUsuario/Finalizar";
+    let url2 = "https://apihaciendaambar.iothings.com.mx/rentasUsuario/Finalizar";
     fetch(url2, option)
       .then((response) => response.json())
       .then((data) => {

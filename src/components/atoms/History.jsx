@@ -1,6 +1,6 @@
 import "../../assets/style/History.css"
 import "../../assets/style/BannerStyle.css"
-
+import imgh from "../../assets/img/imgHistory.png"
 function History() {
     return ( 
         <>
@@ -14,7 +14,7 @@ function History() {
             <div className="container segundaSecAbout2">
                 <div className="row">
                     <div className="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-                        <img src="src/assets/img/imgHistory.png" alt="" className="img-fluid"/>
+                        <img src={imgh} alt="" className="img-fluid"/>
                     </div>
                     <div className="col-md-6">
                         <div className="p-4">

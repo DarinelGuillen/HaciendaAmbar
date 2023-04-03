@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LogoLogin from "../../assets/img/LogoColor.png";
+import imgwhats from "../../assets/img/WhatsAppicono.png"
+import imgInstagram from "../../assets/img/Instagramicono.png"
+import imgfacebook from "../../assets/img/Facebookicono.png"
 import "../../assets/style/FSingln.css";
 import Label from "../atoms/Label";
 function FSingIn() {
@@ -10,7 +13,7 @@ function FSingIn() {
     e.preventDefault();
     console.log("handlerClick called");
     const formData = new FormData(formSingIn.current);
-    const URI = "https://localhost/users";
+    const URI = "https://apihaciendaambar.iothings.com.mx/users";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -91,13 +94,13 @@ function FSingIn() {
                         <div className="container clasesRedes">
                           <div className="row">
                             <div className="col">
-                              <a href="tel:529613668435"><img src="src/assets/img/WhatsAppicono.png"  alt="..."/></a>
+                              <a href="tel:529613668435"><img src={imgwhats}  alt="..."/></a>
                             </div>
                             <div className="col">
-                              <a href="https://www.instagram.com/ambar.haciendamx/"><img src="src/assets/img/Instagramicono.png" /></a>
+                              <a href="https://www.instagram.com/ambar.haciendamx/"><img src={imgInstagram} /></a>
                             </div>
                             <div className="col">
-                              <a href="https://www.facebook.com/ambar.haciendamx"><img src="src/assets/img/Facebookicono.png" alt="..."/></a>
+                              <a href="https://www.facebook.com/ambar.haciendamx"><img src={imgfacebook} alt="..."/></a>
                             </div>
                           </div>
                         </div>

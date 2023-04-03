@@ -11,6 +11,9 @@ import TokenContext from "../../contexts/TokenContext";
 import AdminContext from "../../contexts/AdminContext";
 import IdContex from "../../contexts/IdContex";
 import imgLogin from "../../assets/img/img_login.jpg";
+import imgwhats from "../../assets/img/WhatsAppicono.png"
+import imgInstagram from "../../assets/img/Instagramicono.png"
+import imgfacebook from "../../assets/img/Facebookicono.png"
 import "../../assets/img/imgLogin.png";
 import "../../assets/style/FLogin.css";
 
@@ -31,7 +34,7 @@ function FLogin() {
     const formData = new FormData(formDataL.current);
     const userName = formData.get("nombreDeUsuario");
     const contrasenia = formData.get("contrasenia");
-    const url = `https://localhost/users/${userName}/${contrasenia}`;
+    const url = `https://apihaciendaambar.iothings.com.mx/users/${userName}/${contrasenia}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -93,13 +96,13 @@ function FLogin() {
                       <div className="container clasesRedes">
                         <div className="row">
                           <div className="col">
-                            <a href="tel:529613668435"><img src="src/assets/img/WhatsAppicono.png"  alt="..."/></a>
+                            <a href="tel:529613668435"><img src={imgwhats}  alt="..."/></a>
                           </div>
                           <div className="col">
-                            <a href="https://www.instagram.com/ambar.haciendamx/"><img src="src/assets/img/Instagramicono.png" /></a>
+                            <a href="https://www.instagram.com/ambar.haciendamx/"><img src={imgInstagram} /></a>
                           </div>
                           <div className="col">
-                            <a href="https://www.facebook.com/ambar.haciendamx"><img src="src/assets/img/Facebookicono.png" alt="..."/></a>
+                            <a href="https://www.facebook.com/ambar.haciendamx"><img src={imgfacebook} alt="..."/></a>
                           </div>
                         </div>
                       </div>

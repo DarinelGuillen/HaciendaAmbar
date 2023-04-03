@@ -20,7 +20,7 @@ function Tuplas(props) {
   const handlerClickAprobarRenta = (e, id) => {
     e.preventDefault();
     console.log("APROVADA", id, " VIEW= ", VIEW);
-    let url = `https://localhost/rentasUsuario/${id}`;
+    let url = `https://apihaciendaambar.iothings.com.mx/rentasUsuario/${id}`;
     let optio = {
       method: "PUT",
       headers: {
@@ -38,8 +38,8 @@ function Tuplas(props) {
   const handlerClickVermas = (e, idPaquete, idUser) => {
     e.preventDefault();
     console.log(idPaquete + "//" + idUser);
-    let url = `https://localhost/rentasUsuario/${idPaquete}`;
-    let url2 = `https://localhost/users/${idUser}`;
+    let url = `https://apihaciendaambar.iothings.com.mx/rentasUsuario/${idPaquete}`;
+    let url2 = `https://apihaciendaambar.iothings.com.mx/users/${idUser}`;
     let concat = [];
     let options = {
       method: "GET",
@@ -77,7 +77,7 @@ function Tuplas(props) {
     e.preventDefault();
     alert("FINALIZADO");
 
-    let url = `https://localhost/rentasUsuario/${id}/${estadoRenta}`;
+    let url = `https://apihaciendaambar.iothings.com.mx/rentasUsuario/${id}/${estadoRenta}`;
     let opt = {
       method: "PUT",
       headers: {

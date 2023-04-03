@@ -1,9 +1,9 @@
-import "../../assets/img/Group1.svg"
-import "../../assets/img/Group2.svg"
-import "../../assets/img/Group3.svg"
-import "../../assets/img/Group4.svg"
-import "../../assets/img/Group5.svg"
-import "../../assets/img/BannerIcono.png"
+import group1 from "../../assets/img/Group1.svg"
+import group2 from"../../assets/img/Group2.svg"
+import group3 from "../../assets/img/Group3.svg"
+import group4 from"../../assets/img/Group4.svg"
+import group5 from"../../assets/img/Group5.svg"
+import iconBanner from"../../assets/img/BannerIcono.png"
 
 import "../../assets/style/BannerStyle.css"
 
@@ -23,7 +23,7 @@ function Banner() {
             <div className="col-md-6">
                     <div className="p-4">
                         <div className="d-flex">
-                            <img src="src/assets/img/Group5.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                            <img src={group5} className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
                                 <p className="fs-3 text-muted mb-0 parrafo">Abrirás la invitación cuando te la entreguen.</p>
                             </div>
@@ -31,7 +31,7 @@ function Banner() {
                     </div>
                     <div className="p-4">
                         <div className="d-flex">
-                            <img src="src/assets/img/Group4.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                            <img src={group4} className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
                                 <p className="fs-3 text-muted mb-0 parrafo">Serás puntual y llegarás a la ceremonia.</p>
                             </div>
@@ -39,7 +39,7 @@ function Banner() {
                     </div>
                     <div className="p-4">
                         <div className="d-flex">
-                            <img src="src/assets/img/Group3.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                            <img src={group3} className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
                                 <p className="fs-3 text-muted mb-0 parrafo">No pedirás un +1.</p>
                             </div>
@@ -47,7 +47,7 @@ function Banner() {
                     </div>
                     <div className="p-4">
                         <div className="d-flex">
-                            <img src="src/assets/img/Group2.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                            <img src={group2} className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
                                 <p className="fs-3 text-muted mb-0 parrafo">No te molestarás si tus niños no estás invitados(es por tu bien).</p>
                             </div>
@@ -55,7 +55,7 @@ function Banner() {
                     </div>
                     <div className="p-4">
                         <div className="d-flex">
-                            <img src="src/assets/img/Group1.svg" className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
+                            <img src={group1} className="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50"></img>
                             <div>
                                 <p className="fs-3 text-muted mb-0 parrafo">Confirmarás asistencia lo antes posible y no cancelarás de último momento.</p>
                             </div>
@@ -63,7 +63,7 @@ function Banner() {
                     </div>
                 </div>
                 <div className="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-                    <img src="src/assets/img/BannerIcono.png" alt="" className="img-fluid"/>
+                    <img src={iconBanner} alt="" className="img-fluid"/>
                 </div>
             </div>
         </div>

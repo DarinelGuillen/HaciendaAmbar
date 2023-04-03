@@ -4,6 +4,7 @@ import { useContext } from "react";
 import Label from "../atoms/Label";
 import UserContext from "../../contexts/UserContext";
 import TipoRentaContext from "../../contexts/TipoRentaContext";
+import imgLogotipo from "../../assets/img/LogoColor.png"
 import "../../assets/img/LogoColor.png";
 import "../../assets/style/Header.css";
 import "../../assets/img/LogoColor.png"
@@ -21,7 +22,7 @@ function Header() {
         <div class="container-fluid">
           <Link to="/">
             <a className="navbar-brand ">
-              <img loading="lazy" className="logoNavbar" src="src/assets/img/LogoColor.png"></img>
+              <img loading="lazy" className="logoNavbar" src={imgLogotipo}></img>
             </a>
           </Link>
           <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

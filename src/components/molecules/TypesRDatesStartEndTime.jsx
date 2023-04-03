@@ -2,6 +2,7 @@ import {useNavigate} from 'react-router-dom'
 import { useState, useRef, useContext } from "react";
 import RentaDelUsuarioContext from '../../contexts/RentaDelUsuarioContext';
 import ButtonStyled from "../atoms/ButtonStyled";
+import imgrenta from "../../assets/img/reservacionImg.png"
 import "../../assets/style/TypesRDatesStartEndTime.css"; 
 
 function DatesStartEndTime() {
@@ -43,7 +44,7 @@ function DatesStartEndTime() {
           <div className="left">
             <h1 className="fs-1 subTituloImg">¿Cuándo quieres reservar?</h1>
             <h2 className="fs-4 subTituloImg2">Elige la mejor fecha para tu evento.</h2>
-            <img src="src/assets/img/reservacionImg.png" className='img-fluid'></img>
+            <img src={imgrenta} className='img-fluid'></img>
           </div>
             <div className="card ">
               <div className="card-body ">

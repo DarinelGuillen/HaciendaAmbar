@@ -1,20 +1,20 @@
 import React from "react";
-import "../../assets/img/slider1.jpeg"
-import "../../assets/img/slider2.jpeg"
-import "../../assets/img/slider3.jpeg"
+import carrusel1 from "../../assets/img/slider1.jpeg"
+import carrusel2 from "../../assets/img/slider2.jpeg"
+import carrusel3 from "../../assets/img/slider3.jpeg"
 
 function Carrusel() {
     return ( 
         <div id="carouselExample" className="carousel slide">
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="src/assets/img/slider1.jpeg" className="d-block w-100" alt="..."></img>
+                    <img src={carrusel1} className="d-block w-100" alt="..."></img>
                 </div>
                 <div className="carousel-item">
-                    <img src="src/assets/img/slider2.jpeg" className="d-block w-100" alt="..."></img>
+                    <img src={carrusel2} className="d-block w-100" alt="..."></img>
                 </div>
                 <div className="carousel-item">
-                    <img src="src/assets/img/slider3.jpeg" className="d-block w-100" alt="..."></img>
+                    <img src={carrusel3} className="d-block w-100" alt="..."></img>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

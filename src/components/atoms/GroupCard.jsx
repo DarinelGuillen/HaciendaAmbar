@@ -1,9 +1,8 @@
 import { useNavigate, Navigate } from "react-router-dom";
 import { useContext } from "react";
-
 import TokenContext from "../../contexts/TokenContext";
 import PaqueteContext from "../../contexts/PaqueteContext";
-
+import logoColor from "../../assets/img/LogoColor.png"
 import "../../assets/style/GroupCard.css";
 import "../../assets/style/BannerStyle.css";
 
@@ -28,7 +27,7 @@ function GroupCard() {
         console.log("restric IM false, in RecuadroPaquete from");
 
         //alert("Tu renta Fue procesada correctamente!");
-        const URL = `https://localhost/paquetes/${id}`;
+        const URL = `https://apihaciendaambar.iothings.com.mx/paquetes/${id}`;
 
         // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
 
@@ -59,6 +58,7 @@ function GroupCard() {
     });
   };
   return (
+    
     <>
       <div className="container">
         <div className="row paquetes">
@@ -82,7 +82,7 @@ function GroupCard() {
                           <div className="card estilo-card">
                             <div className="card-body estilo-body">
                               <img
-                                src="src/assets/img/LogoColor.png"
+                                src={logoColor}
                                 className="rounded mx-auto d-block imgIconoCardsPaquetes"
                               ></img>
                               <h4 className="fs-3 card-tittle estiloTituloCard">
@@ -116,7 +116,7 @@ function GroupCard() {
                           <div className="card estilo-card">
                             <div className="card-body estilo-body">
                               <img
-                                src="src/assets/img/LogoColor.png"
+                                src={logoColor}
                                 className="rounded mx-auto d-block imgIconoCardsPaquetes"
                               ></img>
                               <h4 className="fs-3 card-tittle estiloTituloCard">
@@ -150,7 +150,7 @@ function GroupCard() {
                           <div className="card estilo-card">
                             <div className="card-body estilo-body">
                               <img
-                                src="src/assets/img/LogoColor.png"
+                                src={logoColor}
                                 className="rounded mx-auto d-block imgIconoCardsPaquetes"
                               ></img>
                               <h4 className="fs-3 card-tittle estiloTituloCard">
@@ -194,7 +194,7 @@ function GroupCard() {
                           <div className="card estilo-card">
                             <div className="card-body estilo-body">
                               <img
-                                src="src/assets/img/LogoColor.png"
+                                src={logoColor}
                                 className="rounded mx-auto d-block imgIconoCardsPaquetes"
                               ></img>
                               <h4 className="fs-3 card-tittle estiloTituloCard">
@@ -228,7 +228,7 @@ function GroupCard() {
                           <div className="card estilo-card">
                             <div className="card-body estilo-body">
                               <img
-                                src="src/assets/img/LogoColor.png"
+                                src={logoColor}
                                 className="rounded mx-auto d-block imgIconoCardsPaquetes"
                               ></img>
                               <h4 className="fs-3 card-tittle estiloTituloCard">
@@ -261,7 +261,7 @@ function GroupCard() {
                           <div className="card estilo-card">
                             <div className="card-body estilo-body">
                               <img
-                                src="src/assets/img/LogoColor.png"
+                                src={logoColor}
                                 className="rounded mx-auto d-block imgIconoCardsPaquetes"
                               ></img>
                               <h4 className="fs-3 card-tittle estiloTituloCard">
@@ -309,7 +309,7 @@ function GroupCard() {
                           <div className="card estilo-card">
                             <div className="card-body estilo-body">
                               <img
-                                src="src/assets/img/LogoColor.png"
+                                src={logoColor}
                                 className="rounded mx-auto d-block imgIconoCardsPaquetes"
                               ></img>
                               <h4 className="fs-3 card-tittle estiloTituloCard">

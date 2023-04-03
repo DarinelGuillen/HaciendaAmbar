@@ -229,7 +229,7 @@ input{
 }
 
 .login-bg {
-    background-image: url('src/assets/img/imgLogin.png');
+    background-image: url('../img/imgLogin.png');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;

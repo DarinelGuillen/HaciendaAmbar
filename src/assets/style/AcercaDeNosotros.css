@@ -48,22 +48,22 @@
 }
 
 .gallery__img:nth-child(1){
-  background-image: url('src/assets/img/gymImg.jpg');
+  background-image: url('../img/gymImg.jpg');
 }
 .gallery__img:nth-child(2){
-  background-image: url('src/assets/img/eventoImg.jpg');
+  background-image: url('../img//eventoImg.jpg');
 }
 .gallery__img:nth-child(3){
-  background-image: url('src/assets/img/imgx4.jpeg');
+  background-image: url('../img/imgx4.jpeg');
 }
 .gallery__img:nth-child(4){
-  background-image: url('src/assets/img/bodaImg.jpg');
+  background-image: url('../img//bodaImg.jpg');
 }
 .gallery__img:nth-child(5){
-  background-image: url('src/assets/img/baileImg.jpeg');
+  background-image: url('../img//bodaImg.jpg');
 }
 .gallery__img:nth-child(6){
-  background-image: url('src/assets/img/natacionImg.jpg');
+  background-image: url('../img//natacionImg.jpg');
 }
 .contactito{
     display: flex;

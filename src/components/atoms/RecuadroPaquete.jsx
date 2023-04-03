@@ -25,7 +25,7 @@ function RecuadroPaquete({
     //alert("Tu renta Fue procesada correctamente!");
     const paqueteID = id;
     // haciendaambar.iothings.com.mx:3000  haciendaambar.iothings.com.mx:3000
-    const URL = `https://localhost/paquetes/${paqueteID}`;
+    const URL = `https://apihaciendaambar.iothings.com.mx/paquetes/${paqueteID}`;
 
     let option = {
       method: "GET",

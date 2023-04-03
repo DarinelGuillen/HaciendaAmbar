@@ -1,14 +1,14 @@
 import "../../assets/style/Footer.css"
-
+import logoByN from "../../assets/img/logoBlancoNegro.svg"
 
 function Footer() {
   return (
     <>
-
+<img src="" alt="" />
     <footer className="classesitaFooter">
         <div className="container">
             <div className="row">
-                <div className="col-md-3 contenedor1F"><img className="img-fluid rounded mx-auto d-block contenedor2F" src="src/assets/img/logoBlancoNegro.svg" />
+                <div className="col-md-3 contenedor1F"><img className="img-fluid rounded mx-auto d-block contenedor2F" src={logoByN} />
                     <p className="mb-0 contenedor3F" >Recuerdos para siempre</p>
                 </div>
                 <div className="col-md-3 contenedor4F">
